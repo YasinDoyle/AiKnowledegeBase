@@ -13,6 +13,28 @@ export default defineConfig({
     electron({
       main: {
         entry: 'src/main/index.ts',
+        vite: {
+          build: {
+            rollupOptions: {
+              // 主进程的 node_modules 运行时加载，不打包
+              external: [
+                '@node-rs/jieba',
+                '@node-rs/jieba/dict.js',
+                '@lancedb/lancedb',
+                'electron-updater',
+                'tesseract.js',
+                'word-extractor',
+                'ollama',
+                'openai',
+                '@modelcontextprotocol/sdk',
+                '@modelcontextprotocol/sdk/client/index.js',
+                '@modelcontextprotocol/sdk/client/stdio.js',
+                '@modelcontextprotocol/sdk/client/sse.js',
+                '@modelcontextprotocol/sdk/types.js',
+              ],
+            },
+          },
+        },
       },
       preload: {
         input: path.join(__dirname, 'src/preload/index.ts'),
