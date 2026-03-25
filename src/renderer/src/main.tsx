@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import 'virtual:uno.css' // UnoCSS 原子化样式
 import App from './App.tsx'
 import './index.css'
 

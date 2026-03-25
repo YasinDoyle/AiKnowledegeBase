@@ -1,0 +1,20 @@
+[
+    {
+        "title": "",
+        "supplierName": "DeepSeek",
+        "modelName": "deepseek-reasoner",
+        "capability": [
+            "llm"
+        ],
+        "status": false
+    },
+    {
+        "title": "",
+        "supplierName": "DeepSeek",
+        "modelName": "deepseek-chat",
+        "capability": [
+            "llm"
+        ],
+        "status": true
+    }
+]

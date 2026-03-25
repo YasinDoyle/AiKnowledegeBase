@@ -1,0 +1,930 @@
+{
+    "05615c1a95ddeace90ad24440f983327": {
+        "src": "对话列表获取成功",
+        "dst": "A párbeszédlista sikeres"
+    },
+    "bdc196907484423428a23b5a9f2814a5": {
+        "src": "对话创建成功",
+        "dst": "Sikeres párbeszéd létrehozása"
+    },
+    "ee770bfdd1805e8cb4ca1bad3caff336": {
+        "src": "获取模型列表时出错:",
+        "dst": "Hiba történt a modelllista beállítása közben:"
+    },
+    "73df54c21fa6d0a9d953af3ebd8ef150": {
+        "src": "大模型列表获取成功",
+        "dst": "A nagy modelllista sikeres beszerzése"
+    },
+    "9dae2de765c7e7f2edfd0ee42141933d": {
+        "src": "对话信息获取成功",
+        "dst": "Sikeresen megszerzett párbeszédinformációk"
+    },
+    "bf06ec1c99bbe9c731f7a34a9fff2a12": {
+        "src": "对话删除成功",
+        "dst": "A beszélgetés sikeres törlése"
+    },
+    "8628f14c34a603a0025a756b1fbb8e70": {
+        "src": "标题修改成功",
+        "dst": "A cím módosítása sikeres"
+    },
+    "f4760a6a2df559ce407cd9977efa619f": {
+        "src": "标题修改失败",
+        "dst": "A cím módosítása nem sikerült"
+    },
+    "d8b930e39589293e2d50a4f6c5d6b2dd": {
+        "src": "指定对话不可用",
+        "dst": "A megadott párbeszéd nem elérhető"
+    },
+    "dc63a0a39902e51b457fa128839f84f9": {
+        "src": "对话历史删除成功",
+        "dst": "A párbeszédelőzmények sikeresen törlése"
+    },
+    "664b5cdade033b16264e6a2fdfefa782": {
+        "src": "已阻止大模型继续生成内容",
+        "dst": "Megtiltották a nagy modellek tartalom további létrehozását"
+    },
+    "ac1bec126ca2352d8d7750cacf5006dd": {
+        "src": "最后一条历史对话记录获取成功",
+        "dst": "Az utolsó történelmi beszélgetési feljegyzés sikeresen megszereződött"
+    },
+    "fb559ab354303d1927dcd9f0f2dffa23": {
+        "src": "获取成功",
+        "dst": "Szerezzen sikert"
+    },
+    "b03d40f307508d236826bfc5e45d0562": {
+        "src": "获取语言列表时出错:",
+        "dst": "Hiba történt a nyelvek listájának beszerzésekor:"
+    },
+    "56f0a1c0bc0408556c5810ea4f219dd4": {
+        "src": "获取失败",
+        "dst": "Nem sikerült beszerezni"
+    },
+    "6299544f596ad80461788ca5f39171ee": {
+        "src": "设置语言为: {}",
+        "dst": "A nyelv beállítása: {}"
+    },
+    "f6088e4ae24e551baa0f7a697b867695": {
+        "src": "设置成功",
+        "dst": "Beállítás sikeres"
+    },
+    "b61c81771ecd0e6612d96dba6226f31a": {
+        "src": "设置语言时出错:",
+        "dst": "Hiba a nyelv beállításához:"
+    },
+    "9f96034c4d8dab42c66159ab111fef13": {
+        "src": "设置失败",
+        "dst": "A beállítás nem sikerült"
+    },
+    "7a47c2769120bfa5c61af3a0efc8a920": {
+        "src": "获取客户端语言包时出错:",
+        "dst": "Hiba az ügyfélnyelvi csomag beszerzéséhez:"
+    },
+    "8a25a145fb07ad167b69734fc636c78b": {
+        "src": "获取客户端语言包失败",
+        "dst": "Nem sikerült beszerezni az ügyfélnyelvcsomagot"
+    },
+    "cf924548d2b18aca6d145ab4683e2f90": {
+        "src": "获取服务端语言包时出错:",
+        "dst": "Hiba történt a kiszolgáló nyelvcsomagok beszerzésekor:"
+    },
+    "76fa8844f0569b9064597b268be1daf7": {
+        "src": "获取服务端语言包失败",
+        "dst": "Nem sikerült letölteni a kiszolgáló nyelvi csomagját"
+    },
+    "c5f0021f83003f6404ffb710affe2118": {
+        "src": "模型管理器信息获取成功",
+        "dst": "Modellmenedzser információk sikeres beszerzése"
+    },
+    "811f543fd407958fcb1814162e71e723": {
+        "src": "安装成功",
+        "dst": "A telepítés sikeres"
+    },
+    "fc7667efe2b9a47f6576a0c6323d0a9c": {
+        "src": "获取安装进度成功",
+        "dst": "A telepítés sikeres beszerzése"
+    },
+    "0007d170de017dafc266aa03926d7f00": {
+        "src": "删除成功",
+        "dst": "Törlés sikeres"
+    },
+    "13526728c7306eeddb5c023c1e195982": {
+        "src": "不支持的管理器",
+        "dst": "Nem támogatott kezelő"
+    },
+    "5cec8e5fbc2892462b44d18ec8666c05": {
+        "src": "正在安装,请稍后...",
+        "dst": "Telepítés folyamatban, kérjük később..."
+    },
+    "9639082228cdb4fde37745de2dfd305c": {
+        "src": "获取 Windows 系统信息时出错:",
+        "dst": "Hiba történt a Windows rendszerinformációk beszerzésekor:"
+    },
+    "6bbd72c8a7b6f492af917e341743e6ea": {
+        "src": "获取 Linux 系统信息时出错:",
+        "dst": "Hiba történt a Linux rendszerinformációk beszerzésekor:"
+    },
+    "fbd89eebc8d7f4a9599e7accf4ad4611": {
+        "src": "获取 MacOS 系统信息时出错:",
+        "dst": "Hiba történt a MacOS rendszerinformációk beszerzésekor:"
+    },
+    "843dfa423705e064a1c074f356e53880": {
+        "src": "获取 GPU 信息时出错:",
+        "dst": "Hiba történt a GPU-információk beszerzése közben:"
+    },
+    "aacf8da608ec0807ac1d44c3c3387b07": {
+        "src": "根据您的硬件配置，可以流畅运行大部分中大规模的模型，如：32b、27b、24b、14b、7b 等",
+        "dst": "A hardver konfigurációja alapján zökkenőmentesen futtatja a legtöbb közepes és nagy méretű modellt, mint például: 32 b, 27 b, 24 b, 14 b, 7 b stb."
+    },
+    "1411c5e4708da8c28039942123c5e608": {
+        "src": "您的硬件配置适合选择中等规模的模型，如: 7b、14b、16b 等",
+        "dst": "A hardveres konfiguráció alkalmas a közepes méretű modellek kiválasztásához, például: 7b, 14b, 16b stb."
+    },
+    "9764c415129911627729558f92e8399e": {
+        "src": "由于硬件资源有限，建议选择轻量级的模型，如: 1b、2b 等",
+        "dst": "A korlátozott hardveres erőforrások miatt ajánlott egy könnyű modellt választani, mint például: 1b, 2b stb."
+    },
+    "f4f5776af542ce50f8d69326432d65b6": {
+        "src": "获取配置信息时出现未知错误:",
+        "dst": "Ismeretlen hiba a beállítási információk beszerzése során:"
+    },
+    "bf2b114e3d4cc375d7b481221220ad94": {
+        "src": "获取配置信息时出现未知错误",
+        "dst": "Ismeretlen hiba a beállítási információk beszerzésekor"
+    },
+    "5d517e230392009681892ca5b2a41a16": {
+        "src": "获取配置信息成功",
+        "dst": "A beállítási információk sikeres beszerzése"
+    },
+    "ca643d2878309a3834621ee41cdfe08d": {
+        "src": "获取 Windows 磁盘信息时出错:",
+        "dst": "Hiba történt a Windows lemezinformatiók beszerzésekor:"
+    },
+    "751a8273696cf0318f1ea6d68fe0fac1": {
+        "src": "获取 Linux 磁盘信息时出错:",
+        "dst": "Hiba történt a Linux-lemez-információk beszerzésekor:"
+    },
+    "e4c7a88025ab29b40b8351ddff8000e9": {
+        "src": "获取 macOS 磁盘信息时出错:",
+        "dst": "Hiba történt a macOS lemezinformatiók beszerzésekor:"
+    },
+    "69be671786f62ce872f87de1ab761746": {
+        "src": "修改成功",
+        "dst": "A módosítás sikeres"
+    },
+    "30d2e8aced6e01dce51c128fb7fbec6b": {
+        "src": "获取 ollama 版本时出错:",
+        "dst": "Hiba történt az ollama verzió beszerzésekor:"
+    },
+    "00cc036b9849caaaa5bf1dd5c88d1d9c": {
+        "src": "获取 Ollama 模型列表时出错:",
+        "dst": "Hiba történt az Ollama modelllistájának beszerzésekor:"
+    },
+    "066b33ac21cc2449cd527261d6517d32": {
+        "src": "安装模型时出错:",
+        "dst": "Hiba történt a modell telepítésekor:"
+    },
+    "836e86f09ce4ca2d490784ca8b23c1e1": {
+        "src": "删除模型时出错:",
+        "dst": "Hiba történt a modell törlésekor:"
+    },
+    "8bd39e4ef48df961cc7945f71003f399": {
+        "src": "安装完成",
+        "dst": "A telepítés befejeződött"
+    },
+    "4d851dfe645fbf1404edfdcee554b211": {
+        "src": "安装过程中出现错误:",
+        "dst": "Hiba történt a telepítés során:"
+    },
+    "90ea4be02cb3d6186a83a6455b1002f6": {
+        "src": "下载过程中出现错误:",
+        "dst": "Hiba történt a letöltés során:"
+    },
+    "0503045a8c17ef64efc3fb426177c4a9": {
+        "src": "安装过程中出现未知错误:",
+        "dst": "Ismeretlen hiba történt a telepítés során:"
+    },
+    "07799fa97490558541940d5ed28707c9": {
+        "src": "Windows 环境变量设置成功。",
+        "dst": "A Windows környezetváltozó beállítása sikeres volt."
+    },
+    "8a449cba5038b62ad8638c0417acfa50": {
+        "src": "Ollama 已重新启动。",
+        "dst": "Az Ollama újraindított."
+    },
+    "7fb8175222322cbd364e42ee3208bbae": {
+        "src": "Linux 环境变量设置成功。",
+        "dst": "A Linux környezetváltozó beállítása sikeres."
+    },
+    "b9f87f25f7b36bc90b9da65a63bd7ac3": {
+        "src": "macOS 环境变量设置成功。",
+        "dst": "A macOS környezetváltozója sikeresen állított be."
+    },
+    "8687d6a143f3272fbba2b973efa618f2": {
+        "src": "不支持的操作系统",
+        "dst": "Nem támogatott operációs rendszerek"
+    },
+    "b5c02ff4e8dcd3513c9054b3e12ad3af": {
+        "src": "设置 Ollama 模型存储目录或重启服务时出错:",
+        "dst": "Hiba történt az Ollama-modell tárolási könyvtárának beállítása vagy a szolgáltatás újraindítása során:"
+    },
+    "5cc8c0c58160b874bbdb3a70684103f7": {
+        "src": "Ollama 进程已结束。",
+        "dst": "Az Ollama folyamat véget ért."
+    },
+    "5127dbe6588bf6da8f7efd6c3715e6a3": {
+        "src": "结束 Ollama 进程时可能未找到进程:",
+        "dst": "Előfordulhat, hogy a folyamat nem található meg az Ollama folyamat befejezésekor:"
+    },
+    "79d3abe929f67f0644a78bf32adb3a89": {
+        "src": "复制",
+        "dst": "másolat"
+    },
+    "43fc77886b7fbcd658f0ccdba36bd5a0": {
+        "src": "剪切",
+        "dst": "nyírás"
+    },
+    "eafbece1016a6af76cce466e55ad9f00": {
+        "src": "粘贴",
+        "dst": "Beillesztés"
+    },
+    "66eeacd93a7c1bda93906fe908ad11a0": {
+        "src": "全选",
+        "dst": "Az összes kijelölése"
+    },
+    "e61ce3c024c634b7eac671f775d42bd5": {
+        "src": "粘贴选中内容",
+        "dst": "A kiválasztás beillesztése"
+    },
+    "d0ed01d1ce91f630b6b01b581b424bf7": {
+        "src": "打开链接",
+        "dst": "Nyissa meg a linket"
+    },
+    "4d775d4cd79e2ed6a2fc66fd1e7139c8": {
+        "src": "显示",
+        "dst": "kijelző"
+    },
+    "c3992269b4bced00356095dc9c5be6d2": {
+        "src": "退出",
+        "dst": "kijelentkezés"
+    },
+    "34fc43634c9c77b3ea0dcb82998d9931": {
+        "src": "\\n\\n---\\n**内容不完整:** 用户手动停止生成",
+        "dst": "\\n\\n---\\n**A tartalom nem teljes:** A felhasználó manuálisan leállítja a létrehozást"
+    },
+    "85812730fff04e6cf132295e2a466c34": {
+        "src": "Ollama 服务未启动，正在尝试启动...",
+        "dst": "Az Ollama szolgáltatás nem indult, megpróbálja elindítani..."
+    },
+    "a96701c2edc6b67b08aad68806de66d1": {
+        "src": "Ollama 服务启动失败",
+        "dst": "Az Ollama szolgáltatás indítása sikertelen"
+    },
+    "59a8097435b23ff097b5a10695750cd1": {
+        "src": "将为您重新下载，并断点续传。",
+        "dst": "Az Ön számára újra letölthető és megszakítható."
+    },
+    "7e288921875993b65048dd42c9e07aab": {
+        "src": "意外中断",
+        "dst": "Váratlan megszakítás"
+    },
+    "850779f5ac5dcd45297a8d011b3a8a69": {
+        "src": "检测到下载速度异常，正在尝试重新连接下载节点...",
+        "dst": "Rendkívüli letöltési sebességet észleltek, a letöltési csomópontot próbáljuk újra csatlakozni..."
+    },
+    "43485c0f3ca76f0c06b718b8e782b59b": {
+        "src": "分享列表获取成功",
+        "dst": "A lista megosztása sikeres"
+    },
+    "9f047f09d5053c466c253438ed51a310": {
+        "src": "创建分享目录失败",
+        "dst": "Nem sikerült létrehozni a megosztási könyvtárat"
+    },
+    "04a691b377c91da599d5b4b62b0cb114": {
+        "src": "创建成功",
+        "dst": "Sikeres létrehozás"
+    },
+    "d5fd0f4de69840bd343d8e7c99c91d20": {
+        "src": "分享不存在",
+        "dst": "Megosztás nem létezik"
+    },
+    "a94e00ed1acea8fff7590037ca22dd29": {
+        "src": "分享 ID 不存在",
+        "dst": "A megosztás azonosítója nem létezik"
+    },
+    "87e5479f384e7a6a3b82fba6b6a6107b": {
+        "src": "中断成功",
+        "dst": "Sikeres megszakítás"
+    },
+    "0f82b0c2286850759e50950c544747df": {
+        "src": "聊天出错",
+        "dst": "Hiba történt a csevegés"
+    },
+    "e743764113bc591e2abf5c6a779ed4db": {
+        "src": "暂不支持远程中断",
+        "dst": "Távoli megszakítás nem támogatott"
+    },
+    "61fc5b543cf9ca131751930d043fa17a": {
+        "src": "以下内容是基于用户发送的消息的搜索结果",
+        "dst": "Az alábbiak a felhasználó által küldött üzenetek keresési eredményei alapján"
+    },
+    "f37dd4d6515506a21fb175abda4201f3": {
+        "src": "在我给你的搜索结果中，每个结果都是[搜索结果 X begin]...[搜索结果 X end]格式的，X代表每篇文章的数字索引。另外搜索结果中可能包含一些不相关的信息，你可以根据需要选择其中的内容。",
+        "dst": "Az általam megadott keresési eredmények között minden találat [keresési eredmény X start] A keresési eredmények X vég formátumban vannak, ahol X az egyes cikkek numerikus indexét jelenti. Ezenkívül a keresési eredmények tartalmazhatnak néhány lényegtelen információt, és Ön választhatja ki a tartalmat igényeinek megfelelően."
+    },
+    "ba1a9ea044484679a131827298a9d934": {
+        "src": "在回答时，请注意以下几点",
+        "dst": "Amikor válaszol, kérjük, figyeljen a következő pontokra:"
+    },
+    "5a99b099ccfbc64ed2b57ba388ffea9b": {
+        "src": "今天是",
+        "dst": "Ma van"
+    },
+    "6c9ecc39673f2fc50b8d88b9b088e5cb": {
+        "src": "用户所在地点是",
+        "dst": "A felhasználó tartózkodási helye"
+    },
+    "82fae71f8e76a40b44eb0e2bbc577de6": {
+        "src": "不要在回答内容中提及搜索结果的具体来源，也不要提及搜索结果的具体排名。",
+        "dst": "Ne említse a keresési eredmények konkrét forrását vagy a keresési eredmények konkrét rangsorolását a válasz tartalmában."
+    },
+    "f90cd46d3c5c5df7c7f2f9510dcd4363": {
+        "src": "并非搜索结果的所有内容都与用户的问题密切相关，你需要结合问题，对搜索结果进行甄别、筛选。",
+        "dst": "A keresési eredmények nem minden tartalma szorosan kapcsolódik a felhasználó kérdéseihez, ezért a kérdéseket összekapcsolni kell a keresési eredmények ellenőrzéséhez és szűréséhez."
+    },
+    "6b966fd3eba4859f085c0083d7c7deb9": {
+        "src": "对于列举类的问题（如列举所有航班信息），尽量将答案控制在10个要点以内，并告诉用户可以查看搜索来源、获得完整信息。优先提供信息完整、最相关的列举项；如非必要，不要主动告诉用户搜索结果未提供的内容。",
+        "dst": "A kategóriákat felsoroló kérdések esetén (például az összes repülési információ felsorolása) próbálja meg a válaszokat a lehető legkevesebb 10 ponton belül szabályozni, és mondja meg a felhasználóknak, hogy megtekinthetik a keresési forrásokat, hogy teljes információkat kapjanak. a teljes és legrelevánsabb információk előnyben részesítése; Ha nem szükséges, ne tájékoztassa a felhasználókat arról, hogy a keresési eredmények nem tartalmazzák."
+    },
+    "12bd56226bdb7cb69414e173bdebc728": {
+        "src": "对于创作类的问题（如写论文），你需要解读并概括用户的题目要求，选择合适的格式，充分利用搜索结果并抽取重要信息，生成符合用户要求、极具思想深度、富有创造力与专业性的答案。你的创作篇幅需要尽可能延长，对于每一个要点的论述要推测用户的意图，给出尽可能多角度的回答要点，且务必信息量大、论述详尽。",
+        "dst": "A kreatív kérdésekhez (például a cikk írásához) el kell értened és összefoglalnod a felhasználó kérdéseit, meg kell választanod a megfelelő formátumot, ki kell használnod a keresési eredményeket, és fontos információkat kell kivonnod, hogy a felhasználó igényeinek megfelelő, alaposan gondolkodó, kreatív és professzionális válaszokat hozz létre. Az alkotásnak a lehető leghosszabbnak kell lennie, az egyes pontokra feltételezze a felhasználó szándékát, a lehető legtöbb szempontból válaszoljon a pontokra, és legyen fontos, hogy az információ legyen nagy és részletes."
+    },
+    "079f9dbb1a9d3308e731f8b146bf322a": {
+        "src": "如果回答很长，请尽量结构化、分段落总结。如果需要分点作答，尽量控制在5个点以内，并合并相关的内容。",
+        "dst": "Ha a válasz hosszú, próbálja meg a lehető legjobban strukturálni és bekezdésekre összefoglalni. Ha pontokat szeretne válaszolni, próbálja meg 5 ponton belül irányítani, és egyesítse a kapcsolódó tartalmat."
+    },
+    "8b19c30a0ad3f42133b61fae178bd3c5": {
+        "src": "对于客观类的问答，如果问题的答案非常简短，可以适当补充一到两句相关信息，以丰富内容。",
+        "dst": "Az objektív kategóriák kérdései és válaszai esetén, ha a kérdésre nagyon rövid a válasz, egy-két mondatot lehet megfelelően kiegészíteni a tartalom gazdagítása érdekében."
+    },
+    "1dc0481cca9559c2658bb335c0c6da36": {
+        "src": "你需要根据用户要求和回答内容选择合适、美观的回答格式，确保可读性强。",
+        "dst": "Válassza ki a megfelelő és szép válaszformátumot a felhasználói kérések és válaszok alapján, hogy biztosítsa az olvashatóságot."
+    },
+    "dfe86a3a0237b15117e443536d8a8493": {
+        "src": "你的回答应该综合多个相关网页来回答，不能重复引用一个网页。",
+        "dst": "A válasznak több kapcsolódó weboldalt kell kombinálnia, és nem lehet ismételten hivatkozni egy weboldalra."
+    },
+    "66358f764cc9866f726104ab602a9ee2": {
+        "src": "除非用户要求，否则你回答的语言需要和用户提问的语言保持一致。",
+        "dst": "Amennyiben a felhasználó nem kéri, az Ön által válaszolt nyelvnek összhangban kell lennie a felhasználó kérdésének nyelvével."
+    },
+    "5cd96302a8f07a13108452579fa7b572": {
+        "src": "用户消息为",
+        "dst": "Felhasználói üzenetek"
+    },
+    "80a82fe18f8b89062c82fbbb469c0399": {
+        "src": "你是一个擅长搜索网络和回答用户查询的人工智能模型。",
+        "dst": "Ön egy mesterséges intelligencia modell, aki jól tud keresni a hálózaton és válaszolni a felhasználói kérdésekre."
+    },
+    "e809bddbfdef253a7615ded187c2e622": {
+        "src": "根据提供的搜索结果生成信息丰富且与用户查询相关的回答。",
+        "dst": "Hozzon létre információs és releváns válaszokat a felhasználói kérdésekre a megadott keresési eredmények alapján."
+    },
+    "03e26e6e0cb5b4a5661b19da684f6a30": {
+        "src": "当前日期和时间为",
+        "dst": "Az aktuális dátum és idő"
+    },
+    "2042f4d4f883da80cf56699e40821419": {
+        "src": "用户所在地区为",
+        "dst": "A felhasználó tartózkodási helye:"
+    },
+    "5eb031925ea481457d8ac92773b19972": {
+        "src": "根据用户的问题，和上一个对话的内容，理解用户意图，生成一个用于搜索引擎搜索的问题，这个问题的搜索结果将会用于帮助智能模型回答用户问题，回答内容中只有一个问题，且只包含问题内容，不包含其它信息。",
+        "dst": "A felhasználó kérdésétől és az előző beszélgetés tartalmától függően a felhasználó szándékainak megértése és a keresőmotor kereséséhez szükséges kérdés létrehozása, amelynek a keresési eredményei segítenek az intelligens modellnek megválaszolni a felhasználó kérdéseit, és csak egy kérdésre válaszolnak, és csak a kérdés tartalmát tartalmazzák, és nem tartalmazzák egyéb információkat."
+    },
+    "de61f8ec91ac74a5aae83e1219bff6bd": {
+        "src": "今天的时间是",
+        "dst": "Ma az idő..."
+    },
+    "73aba3208ac5d16784b86c6eddb98c28": {
+        "src": "上一个对话",
+        "dst": "Előző beszélgetés"
+    },
+    "bccaaec817af6f08610f49a9acab6c33": {
+        "src": "后续问题",
+        "dst": "Következő kérdések"
+    },
+    "f81fc3025acbb1e6ff1322c56a519537": {
+        "src": "用于搜索的问题",
+        "dst": "Keresési kérdések"
+    },
+    "67b19578d0752ceb5bfc7abb46587f82": {
+        "src": "星期日",
+        "dst": "Vasárnap"
+    },
+    "5ce438210f58d2e52ba8fccd3d99cb67": {
+        "src": "星期一",
+        "dst": "Hétfő"
+    },
+    "34e5216bc310f8c4db8fbfe772156237": {
+        "src": "星期二",
+        "dst": "Kedd"
+    },
+    "711d996d87638acb6b93552fca140942": {
+        "src": "星期三",
+        "dst": "szerda"
+    },
+    "3df6af796b60302d6184ee1e02e090ab": {
+        "src": "星期四",
+        "dst": "Csütörtök"
+    },
+    "450ea3af464ff9f8a08600c0c1f7b82c": {
+        "src": "星期五",
+        "dst": "Péntek"
+    },
+    "1ae72f6826c2717962d123e8088116c2": {
+        "src": "星期六",
+        "dst": "Szombat"
+    },
+    "f8fbeae19402928ea0909596e2bf896f": {
+        "src": "上午",
+        "dst": "reggel"
+    },
+    "e2eb289cc37550406f297815e5fd3271": {
+        "src": "下午",
+        "dst": "Délután"
+    },
+    "74f3c097faa774665bc3f4913ed37d5c": {
+        "src": "未知地区",
+        "dst": "Ismeretlen terület"
+    },
+    "2837c06945d298b0bb32dba0cbc3c539": {
+        "src": "问题: ",
+        "dst": "Kérdés:"
+    },
+    "2e47c9b5e95f48f41f4f4c7e99a51e3c": {
+        "src": "回答: ",
+        "dst": "válasz:"
+    },
+    "e985627a72cd7d10ee196e7ae7978bde": {
+        "src": "回答:",
+        "dst": "Válasz:"
+    },
+    "098f9e940d9c0517f2a86758de701f1b": {
+        "src": "搜索结果",
+        "dst": "Keresési eredmények"
+    },
+    "30f7dd4ecdfa89a22c47ed6a743a7037": {
+        "src": "连接",
+        "dst": "kapcsolat"
+    },
+    "32c65d8d7431e76029678ec7bb73a5ab": {
+        "src": "标题",
+        "dst": "Cím"
+    },
+    "2d711b09bd0db0ad240cc83b30dd8014": {
+        "src": "内容",
+        "dst": "Tartalom"
+    },
+    "e7158b6c60cab4b337fd171b0f4e1a90": {
+        "src": "知识库组件正常",
+        "dst": "A tudásbázis összetevői normálisak"
+    },
+    "13a109691debc3eb78e2f77f2b6485cb": {
+        "src": "请先安装bge-m3:latest",
+        "dst": "Telepítse először a bge-m3: latest"
+    },
+    "299af36d68e3abcf35380a1983dd6819": {
+        "src": "知识库名称不能为空",
+        "dst": "A tudásbázis neve nem lehet üres"
+    },
+    "0a91f11455228e88c663edde9f62f6d8": {
+        "src": "知识库名称不能为vector_db",
+        "dst": "A tudásbázis neve nem lehet vector_db"
+    },
+    "6c2acda40bbb0f9d3815b271c4990882": {
+        "src": "指定知识库名称已存在",
+        "dst": "A tudásbázis nevének megadása már létezik"
+    },
+    "e3572dd02769cfd7e46a1b9877c6498d": {
+        "src": "知识库创建成功",
+        "dst": "Tudásbázis sikeres létrehozása"
+    },
+    "978b3c73e0a5163b71a7dd9fa371401b": {
+        "src": "知识库不存在",
+        "dst": "Tudásbázis nem létezik"
+    },
+    "586930318474afa34ba772b84d0e3a47": {
+        "src": "知识库删除成功",
+        "dst": "Tudásbázis sikeres törlése"
+    },
+    "c30122116a4c66b7ecdfe50a1ac71b7f": {
+        "src": "知识库修改成功",
+        "dst": "A tudásbázis sikeresen módosítása"
+    },
+    "c0795f34a87fcd1e4b035da51b2869af": {
+        "src": "文件路径不能为空",
+        "dst": "A fájl elérési útja nem lehet üres"
+    },
+    "fe9b59474a71661dd529d2279d980035": {
+        "src": "文件路径列表不能为空",
+        "dst": "A fájl útvonalak listája nem lehet üres"
+    },
+    "d9523e347c0a2971241d3ac4120a2854": {
+        "src": "文件不存在",
+        "dst": "a fájl nem létezik"
+    },
+    "679c4b3144c33adc7a3ddc09c173d2c8": {
+        "src": "文件上传成功",
+        "dst": "A fájl sikeres feltöltése"
+    },
+    "7fc78323135943edf1052b94fd10f990": {
+        "src": "文档名称不能为空",
+        "dst": "A dokumentumnév nem lehet üres"
+    },
+    "7c3cfe22ac6f31530a9ef74d9678305d": {
+        "src": "文档不存在",
+        "dst": "A dokumentum nem létezik"
+    },
+    "e1b4869d50b89963c92fed36d817d683": {
+        "src": "文档名称列表不能为空",
+        "dst": "A dokumentumnevek listája nem lehet üres"
+    },
+    "9760f9928a22ce2702ee7db8f92ed470": {
+        "src": "文档删除成功",
+        "dst": "A dokumentum törlése sikeresen"
+    },
+    "e9233122d7e5a63de7d802ced002c641": {
+        "src": "新文档名称不能为空",
+        "dst": "Az új dokumentumnév nem lehet üres"
+    },
+    "1ccc988fb083b9fc57772e4244bc1b3c": {
+        "src": "文档名称修改成功",
+        "dst": "A dokumentumnév sikeres módosítása"
+    },
+    "5fa802bef51f52b1f7bcf35ade3512cf": {
+        "src": "操作失败",
+        "dst": "A művelet nem sikerült"
+    },
+    "33130f5c465d732d68ebdfbb80f4284b": {
+        "src": "操作成功",
+        "dst": "A művelet sikeres volt"
+    },
+    "af3374317f93035c7b05d96b2373d651": {
+        "src": "以下内容是基于用户发送的消息的知识库检索结果",
+        "dst": "A következő tartalom a felhasználók által küldött üzenetek tudásbázis-visszakeresési eredményein alapul:"
+    },
+    "42f7696278cc9fb46842ff689c4d7693": {
+        "src": "在我给你的检索结果中，每个结果都是[检索结果 X begin]...[检索结果 X end]格式的，X代表每段知识内容的的数字索引。另外检索结果中可能包含一些不相关的信息，你可以根据需要选择其中的内容。",
+        "dst": "Az általam megadott keresési eredmények közül minden eredmény [Keresési eredmény X begin]... Az X vég formátumban az X az egyes ismeretek digitális indexét képviseli. Ezenkívül a keresési eredmények tartalmazhatnak néhány nem releváns információt, amelyeket szükség szerint kiválaszthatsz."
+    },
+    "62a354056ef9ad11ce6178292e3f70b3": {
+        "src": "不要在回答内容中提及检索结果的具体来源，也不要提及检索结果的具体排名。",
+        "dst": "Ne említse a keresési eredmények konkrét forrását és a keresési eredmények konkrét rangsorolását a válaszokban."
+    },
+    "42c790004f8809cee479461e64d56377": {
+        "src": "并非检索结果的所有内容都与用户的问题密切相关，你需要结合问题，对检索结果进行甄别、筛选。",
+        "dst": "A keresési eredmények nem minden tartalma szorosan kapcsolódik a felhasználó problémáihoz, ezért a kérdéseket összekapcsolni kell a keresési eredmények ellenőrzéséhez és szűréséhez."
+    },
+    "6dbd064709d5d6ecb805d7d3920c087a": {
+        "src": "对于列举类的问题（如列举所有航班信息），尽量将答案控制在10个要点以内，并告诉用户可以查看检索来源、获得完整信息。优先提供信息完整、最相关的列举项；如非必要，不要主动告诉用户检索结果未提供的内容。",
+        "dst": "A kérdések felsorolásához (például az összes járati információ felsorolásához) próbálja meg 10 kulcsponton belül tartani a választ, és tájékoztassa a felhasználót, hogy megtekintheti a keresési forrást, és teljes körű információt kaphat. Elsőbbséget kell biztosítani a teljes és legrelevánsabb felsorolt információk biztosításának; Amennyiben szükséges, ne tájékoztassa proaktívan a felhasználókat azokról a tartalmakról, amelyeket a keresési találatokban nem találtak meg."
+    },
+    "039d151f74cb8e630ae47a9be3fc7e40": {
+        "src": "对于创作类的问题（如写论文），你需要解读并概括用户的题目要求，选择合适的格式，充分利用检索结果并抽取重要信息，生成符合用户要求、极具思想深度、富有创造力与专业性的答案。你的创作篇幅需要尽可能延长，对于每一个要点的论述要推测用户的意图，给出尽可能多角度的回答要点，且务必信息量大、论述详尽。",
+        "dst": "A kreatív kérdésekhez (például a cikk írásához) el kell értened és összefoglalnod a felhasználó tárgyi követelményeit, a megfelelő formátumot kell kiválasztanod, ki kell használnod a keresési eredményeket, és fontos információkat kell kivonnod, hogy a felhasználó igényeinek megfelelő, alaposan gondolkodó, kreatív és professzionális válaszokat hozz létre. Az alkotásnak a lehető leghosszabbnak kell lennie, az egyes pontokra feltételezze a felhasználó szándékát, a lehető legtöbb szempontból válaszoljon a pontokra, és legyen fontos, hogy az információ legyen nagy és részletes."
+    },
+    "27dd62bde1d6558167ae77e97fcf728f": {
+        "src": "你是一个擅长检索网络和回答用户查询的人工智能模型。",
+        "dst": "Ön egy mesterséges intelligencia modell, aki jól keresi a hálózatot és válaszol a felhasználói kérdésekre."
+    },
+    "c125214e36f14b5fb4f33d6dccd8e2b8": {
+        "src": "根据提供的检索结果生成信息丰富且与用户查询相关的回答。",
+        "dst": "Információs és a felhasználói lekérdezéshez kapcsolódó válaszok létrehozása a megadott keresési eredmények alapján."
+    },
+    "efc8221ad85396ad566a79bbe44ea1e4": {
+        "src": "以下内容是基于用户发送的消息的检索结果",
+        "dst": "Az alábbiak a felhasználó által küldött üzenetek alapján találhatók:"
+    },
+    "a152d2aa2ce916d951f267e8d720f44b": {
+        "src": "根据用户的问题，和上一个对话的内容，理解用户意图，生成一个用于检索引擎检索的问题，这个问题的检索结果将会用于帮助智能模型回答用户问题，回答内容中只有一个问题，且只包含问题内容，不包含其它信息。",
+        "dst": "A felhasználó kérdésétől és az előző beszélgetés tartalmától függően, a felhasználó szándékainak megértése és a keresőmotor kereséséhez szükséges kérdés létrehozása segíti az intelligens modellt a felhasználó kérdéseinek megválaszolásában, és csak egy kérdésre válaszol, és csak a kérdés tartalmát tartalmazza, más információkat nem tartalmazza."
+    },
+    "ba8e98fd3e7bca856654d9e74884f57d": {
+        "src": "用于检索的问题",
+        "dst": "Kérdések a kereséshez"
+    },
+    "abb88af2e5bae65d45635080fafe23e4": {
+        "src": "检索结果",
+        "dst": "Keresési eredmények"
+    },
+    "26ca20b161c33362d88eb0ba0bc90751": {
+        "src": "来源",
+        "dst": "Forrás"
+    },
+    "40704569a8c280888588553b86ec7f9a": {
+        "src": "图片名称不能为空",
+        "dst": "A képnév nem lehet üres"
+    },
+    "da6d5ef2244a37d46d941dfc8562dd02": {
+        "src": "图片不存在",
+        "dst": "A kép nem létezik."
+    },
+    "03411ebecd9b7381523249f0112d0e27": {
+        "src": "你的回答应该综合多个相关知识片段来回答，不能重复引用一个知识片段。",
+        "dst": "A válasznak több kapcsolódó tudásrészt kell összefoglalnia, és nem lehet ismételten hivatkozni egy tudásrészre."
+    },
+    "1b31dbed84a6ca393a8275fca4c66c59": {
+        "src": "你是一个擅长根据知识库检索结果回答用户查询的人工智能模型。",
+        "dst": "Ön egy mesterséges intelligencia modell, amely kiválóan válaszol a felhasználói kérdésekre a tudásbázis keresési eredményei alapján."
+    },
+    "4c599487be1fd817d4e144c4502331db": {
+        "src": "根据提供的检索结果生成信息丰富且与用户查询相关的回答，如果知识库检索结果中有图片引用信息，可根据需要引用这些图片来强化内容结构。",
+        "dst": "Információs és felhasználói lekérdezéshez kapcsolódó válaszok létrehozása a megadott keresési eredmények alapján, és ha a Tudásbázis keresési eredményei képhivatkozásokat tartalmaznak, akkor ezeket a képeket szükség szerint hivatkozhatják a tartalomstruktúra megerősítéséhez."
+    },
+    "6715ab8742075a868a3aaa8caef38b67": {
+        "src": "不要提及检索结果的具体排名。",
+        "dst": "Ne említse a keresési eredmények konkrét rangsorolását."
+    },
+    "73fc1478be004898b85ee84eb9e258b2": {
+        "src": "并非检索结果的所有内容都与用户的问题密切相关，你需要结合用户的意图，对检索结果进行甄别、筛选。",
+        "dst": "A keresési eredmények nem minden tartalma szorosan kapcsolódik a felhasználó problémáihoz, és a keresési eredményeket a felhasználó szándékaival kell ellenőrizni és szűrni."
+    },
+    "57beb596805cbbaffe8c690e1329611b": {
+        "src": "对于列举类的问题（如列举所有航班信息），尽量将答案控制在10个要点以内，并告诉用户可以查看检索来源、获得完整信息。优先提供信息完整、最相关的列举项",
+        "dst": "A kategóriákat felsoroló kérdések esetén (például az összes repülési információ felsorolása) próbálja meg a válaszokat a lehető legkevesebb 10 ponton belül tartani, és mondja meg a felhasználóknak, hogy megtekinthetik a keresési forrásokat, hogy teljes információkat kapjanak. A teljes és legrelevánsabb listák előnyben részesítése"
+    },
+    "dc518bc56c69606aea350037fe9e9254": {
+        "src": "如果回答很长，请尽量结构化、分段落总结。如果需要分点作答。",
+        "dst": "Ha a válasz hosszú, kérjük, próbálja összefoglalni strukturált és bekezdésről bekezdésre. Ha pontokban kell válaszolnia."
+    },
+    "e52bb25a146139d8f90a0d3ec62b9a2b": {
+        "src": "你的回答结构要包含是什么？为什么？怎么做？这三要素。",
+        "dst": "Mi a válaszstruktúra? Miért? Hogyan? Ez a három elem."
+    },
+    "6c96024718300bf395fb132f298e96cf": {
+        "src": "调用模型接口时出错:",
+        "dst": "Hiba történt a modellfelület hívásakor:"
+    },
+    "36fee61ba46375552deae7844d136d70": {
+        "src": "调用模型接口时出错",
+        "dst": "Hiba a modellfelület hívása"
+    },
+    "19f4e893edbd98180b0b9960e883385a": {
+        "src": "文件读取或解析失败",
+        "dst": "Nem sikerült olvasni vagy elemezni a fájlt"
+    },
+    "3c24da7a412039b7591d2eeb8f7daaf4": {
+        "src": "文件写入失败",
+        "dst": "Nem sikerült írni a fájlra"
+    },
+    "0d2dd91380f3426336ba59a096977fa8": {
+        "src": "获取供应商信息失败",
+        "dst": "A beszállítói információk beszerzésének elmulasztása"
+    },
+    "b3ff9881f37c160158d9b3313576fcf7": {
+        "src": "模型供应商不存在",
+        "dst": "A modellbeszállító nem létezik"
+    },
+    "306be5d47591abbbf1c348ce4d28c6e5": {
+        "src": "模型已存在",
+        "dst": "A modell már létezik"
+    },
+    "3fdaeadf0e8a3154ae62784f04138c28": {
+        "src": "添加成功",
+        "dst": "Hozzáadva sikeresen"
+    },
+    "88ef9e602ae78075dfc3ca33d67a1527": {
+        "src": "模型不存在",
+        "dst": "A modell nem létezik"
+    },
+    "551badba57d659eddb826a0373cc5334": {
+        "src": "API配置正确",
+        "dst": "Az API megfelelően konfigurálva"
+    },
+    "23a0b70a2333f939785f0d2b3cbd761a": {
+        "src": "连接失败，请检查",
+        "dst": "Csatlakozás nem sikerült, ellenőrizze"
+    },
+    "a2735abf9e4a04fcb5610cfd3a525906": {
+        "src": "模型供应商已存在",
+        "dst": "Modellbeszállító már létezik"
+    },
+    "ae2b66f906c0cf9b1d72ab3c9e365f9e": {
+        "src": "请选安装或接入嵌入模型",
+        "dst": "Válassza ki a beágyazott modell telepítését vagy integrálását"
+    },
+    "624a89332771dcc40fa21051d2695277": {
+        "src": "以下是用户上传的文档内容，每个文档内容都是[用户文档 X begin]...[用户文档 X end]格式的，你可以根据需要选择其中的内容。",
+        "dst": "A következők a felhasználó által feltöltött dokumentum tartalma, minden dokumentum tartalma [User Document X start] A [User Document X end] formátumban kiválaszthatja a tartalmat az igényeinek megfelelően."
+    },
+    "5a37bcc89177672fc8743f323497fa49": {
+        "src": "用户输入的内容",
+        "dst": "A felhasználó által megadott tartalom"
+    },
+    "0e51fafaacc333cf882805ac55d25b05": {
+        "src": "用户文档",
+        "dst": "Felhasználói dokumentáció"
+    },
+    "c32ea20471d4fc6589aa4cb3b7c6bdec": {
+        "src": "以下是用户上传的文档内容",
+        "dst": "A következő a felhasználó által feltöltött dokumentum tartalma"
+    },
+    "20def7942674282277c3714ed7ea6ce0": {
+        "src": "图片",
+        "dst": "kép"
+    },
+    "29edf39066579d275e67123d77b2a5fa": {
+        "src": "OCR解析结果",
+        "dst": "OCR elemzési eredmények"
+    },
+    "b0ebf0b5aa7c221c8721231efe12d7a0": {
+        "src": "读取智能体配置文件失败",
+        "dst": "Nem sikerült elolvasni az intelligens ügynök konfigurációs fájlját"
+    },
+    "db0f5df7e68e83d493350e50f40ed997": {
+        "src": "智能体不存在",
+        "dst": "Az intelligens ügynök nem létezik."
+    },
+    "d655e84287c988ade7cfe68d4dada2b6": {
+        "src": "系统智能体不可修改",
+        "dst": "A rendszer intelligens ügynöke nem módosítható"
+    },
+    "70c5195c90f0a603b9e9fed6a7663446": {
+        "src": "系统智能体不可删除",
+        "dst": "A rendszer intelligens ügynöke nem törölhető"
+    },
+    "fb0601768be9cd93deb833a114ad7c78": {
+        "src": "选择目录",
+        "dst": "Könyvtár kiválasztása"
+    },
+    "0febbf0bcd828a7539eab0a376d3b338": {
+        "src": "请选择一个目录",
+        "dst": "Válasszon egy könyvtárat"
+    },
+    "e31f5cce916c480900e1aeb8cb0a9486": {
+        "src": "选择成功",
+        "dst": "Sikeresen kiválasztva"
+    },
+    "ecd727e29b12eae339b3ddd138b53527": {
+        "src": "未选择目录",
+        "dst": "Nincs kijelölve könyvtár"
+    },
+    "c6c4e4c1a00f4324728880ab8acf8151": {
+        "src": "指定模型存储路径不存在",
+        "dst": "A megadott modell tárolási útvonal nem létezik"
+    },
+    "d2873005ad058ad88ece7ea095c46e06": {
+        "src": "指定接口地址连接失败",
+        "dst": "Nem sikerült csatlakozni a megadott interfészcímhez"
+    },
+    "c5655ccf5c7dbd773172a838837e40aa": {
+        "src": "指定嵌入模型不存在: {}",
+        "dst": "A megadott beágyazási modell nem létezik: {}"
+    },
+    "76197630c54c7f976b48933e3bdafaa6": {
+        "src": "调用模型接口时出错了: {}",
+        "dst": "Hiba történt a modell felületének hívásakor: {}"
+    },
+    "728c67c32d5c103b679ee333f515a69a": {
+        "src": "写入成功",
+        "dst": "Írás sikeres"
+    },
+    "280b37d7a1f17c385ea6dde47dfc41ec": {
+        "src": "正在复制数据，请稍后再试",
+        "dst": "Adatok másolása, kérjük próbálja meg újra később"
+    },
+    "20bd376f1dcf30e141646f3f2f51bb72": {
+        "src": "请选择目录",
+        "dst": "Válasszon ki egy könyvtárat"
+    },
+    "31582ee87229b8fea578182a87ff83ab": {
+        "src": "指定的目录不存在",
+        "dst": "A megadott könyvtár nem létezik"
+    },
+    "3ffdaafdd221ff8b3dd0c679e1526dee": {
+        "src": "指定的目录不是空目录",
+        "dst": "A megadott könyvtár nem üres könyvtár"
+    },
+    "3bf2ac36f549cdcc9acabf04b76bc6cd": {
+        "src": "配置文件不存在，请先调用获取数据保存路径接口",
+        "dst": "A konfigurációs fájl nem létezik. Kérjük, hívja fel az interfészt az adatmentési útvonal először"
+    },
+    "199f51244f256a2dac58db7546e863d7": {
+        "src": "设置成功,正在复制数据，请稍后查看进度",
+        "dst": "Sikeres beállítás, adatmásolás, kérjük ellenőrizze az előrehaladást később"
+    },
+    "063e9a054a0da4622b295ea7e63760a7": {
+        "src": "请输入搜索内容",
+        "dst": "Kérjük, adja meg a keresési tartalmat"
+    },
+    "a2114d589a284cf6a4f1afae8a80b8ef": {
+        "src": "搜索成功",
+        "dst": "Keresés sikeres"
+    },
+    "bd92f05750f60e692526c39cbbe8a2f7": {
+        "src": "正在复制文件: {}",
+        "dst": "Fájl másolása: {}"
+    },
+    "562e6c6af7c01dc09d13e9cab6ecb8e5": {
+        "src": "复制完成",
+        "dst": "másolat befejezve"
+    },
+    "a8aa1a26aa28929c04f1ee950ed648bb": {
+        "src": "当前正在执行向量数据优化操作，请等待几分钟后再试",
+        "dst": "Jelenleg végez vektoradatok optimalizálási műveletet, kérjük várjon néhány percet, és próbálja meg újra"
+    },
+    "baf38fa62dda36de7703a251749bd2a5": {
+        "src": "知识库配置文件不存在",
+        "dst": "A tudásbázis konfigurációs fájlja nem létezik"
+    },
+    "7b873974661b9d8c3e537306535dced7": {
+        "src": "正在删除旧数据",
+        "dst": "Régi adatok törlése"
+    },
+    "6ae3994d1af89e22a5addf977b2240b1": {
+        "src": "复制失败，已撤回操作: {}",
+        "dst": "Másolás sikertelen, művelet visszavonva: {}"
+    },
+    "3229e49a006b9905ddceea86dc7dd100": {
+        "src": "未找到该服务器",
+        "dst": "A kiszolgáló nem található"
+    },
+    "0969524a648d833a3ada09655fc415e3": {
+        "src": "卸载成功",
+        "dst": "Sikeres eltávolítás"
+    },
+    "b0fac2cf519f031aafa78118193bca6e": {
+        "src": "该服务器已存在",
+        "dst": "A kiszolgáló már létezik"
+    },
+    "37558e86cf19e61c5d7856b9473bf2e8": {
+        "src": "环境变量格式错误",
+        "dst": "Környezeti változó formátumhiba"
+    },
+    "933b0c94ca2fc7bcd3e8f9b7a45a6020": {
+        "src": "参数格式错误",
+        "dst": "Paraméterformátumhiba"
+    },
+    "9d5bf2a10a520071f965d7e87b12676e": {
+        "src": "已安装",
+        "dst": "telepítették"
+    },
+    "6f5b5ee24a3c001dc9b920b8d3cd89fa": {
+        "src": "安装失败",
+        "dst": "Telepítés sikertelen"
+    },
+    "9d1114cd2c4f92b0332e4da02eb9e823": {
+        "src": "未找到MCP配置",
+        "dst": "MCP konfiguráció nem található"
+    },
+    "b0d425edb75f36b2e101934f060f18ec": {
+        "src": "配置文件格式错误",
+        "dst": "A konfigurációs fájlformátumhiba"
+    },
+    "3b108349b93f7c8c4e2346f8d48c092a": {
+        "src": "保存成功",
+        "dst": "Sikeresen mentve"
+    },
+    "8e08265b9ad1b23e31c6f10b1b450a1a": {
+        "src": "获取分享配置失败",
+        "dst": "Nem sikerült beszerezni a megosztási beállításokat"
+    },
+    "3ed9891e18c456ad43d94f4787177e18": {
+        "src": "[parseDocument]解析文档失败",
+        "dst": "[parseDocument] Failed to parse document"
+    },
+    "eac6385d9a5595b1a0a1910de0efaa74": {
+        "src": "[addDocument]插入数据失败",
+        "dst": "[addDocument] Adatbeszúrás sikertelen"
+    },
+    "e6c3a129268f0c576bf2b1171b5e9c8a": {
+        "src": "[embed]嵌入文档失败",
+        "dst": "[beágyazás] A dokumentum beágyazása nem sikerült"
+    },
+    "af2eb44eb9102da86521ce19e9bdc651": {
+        "src": "指定表不存在",
+        "dst": "A megadott táblázat nem létezik"
+    },
+    "cea29669c04aa0bac395ae35b19e9d30": {
+        "src": "优化成功,释放空间: {}",
+        "dst": "Optimalizálás sikeres, hely felszabadítása: {}"
+    },
+    "e7b52c69e07fc3ba8b10d48594a824ae": {
+        "src": "优化失败: {}",
+        "dst": "Optimalizálás sikertelen: {}"
+    },
+    "52b85c9108c92c7844c7e2ce64395f99": {
+        "src": "同步成功",
+        "dst": "Szinkronizálás sikeres"
+    },
+    "4f65712f09cfa8018771e114676c6791": {
+        "src": "模型连接失败:{}",
+        "dst": "A modellkapcsolat sikertelen: {}"
+    },
+    "7f0ad4565cb005693ed7e372ca64ca62": {
+        "src": "出错了: {}",
+        "dst": "Hiba történt: {}"
+    }
+}

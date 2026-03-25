@@ -1,0 +1,930 @@
+{
+    "05615c1a95ddeace90ad24440f983327": {
+        "src": "对话列表获取成功",
+        "dst": "Lista de conversas obtida com sucesso"
+    },
+    "bdc196907484423428a23b5a9f2814a5": {
+        "src": "对话创建成功",
+        "dst": "Diálogo criado com sucesso"
+    },
+    "ee770bfdd1805e8cb4ca1bad3caff336": {
+        "src": "获取模型列表时出错:",
+        "dst": "Erro ao obter a lista de modelos:"
+    },
+    "73df54c21fa6d0a9d953af3ebd8ef150": {
+        "src": "大模型列表获取成功",
+        "dst": "Grande lista de modelos com sucesso"
+    },
+    "9dae2de765c7e7f2edfd0ee42141933d": {
+        "src": "对话信息获取成功",
+        "dst": "Informações de diálogo com sucesso"
+    },
+    "bf06ec1c99bbe9c731f7a34a9fff2a12": {
+        "src": "对话删除成功",
+        "dst": "Remoção da conversa com sucesso"
+    },
+    "8628f14c34a603a0025a756b1fbb8e70": {
+        "src": "标题修改成功",
+        "dst": "Modificação do título com sucesso"
+    },
+    "f4760a6a2df559ce407cd9977efa619f": {
+        "src": "标题修改失败",
+        "dst": "Falha na modificação do título"
+    },
+    "d8b930e39589293e2d50a4f6c5d6b2dd": {
+        "src": "指定对话不可用",
+        "dst": "O diálogo especificado não está disponível"
+    },
+    "dc63a0a39902e51b457fa128839f84f9": {
+        "src": "对话历史删除成功",
+        "dst": "O histórico da janela foi apagado com sucesso"
+    },
+    "664b5cdade033b16264e6a2fdfefa782": {
+        "src": "已阻止大模型继续生成内容",
+        "dst": "Impedido que os grandes modelos continuem a gerar conteúdo"
+    },
+    "ac1bec126ca2352d8d7750cacf5006dd": {
+        "src": "最后一条历史对话记录获取成功",
+        "dst": "Última conversa histórica registrada com sucesso"
+    },
+    "fb559ab354303d1927dcd9f0f2dffa23": {
+        "src": "获取成功",
+        "dst": "Obter sucesso"
+    },
+    "b03d40f307508d236826bfc5e45d0562": {
+        "src": "获取语言列表时出错:",
+        "dst": "Erro ao obter a lista de idiomas:"
+    },
+    "56f0a1c0bc0408556c5810ea4f219dd4": {
+        "src": "获取失败",
+        "dst": "Falha na obtenção"
+    },
+    "6299544f596ad80461788ca5f39171ee": {
+        "src": "设置语言为: {}",
+        "dst": "Defina o idioma para: {}"
+    },
+    "f6088e4ae24e551baa0f7a697b867695": {
+        "src": "设置成功",
+        "dst": "Configuração bem sucedida"
+    },
+    "b61c81771ecd0e6612d96dba6226f31a": {
+        "src": "设置语言时出错:",
+        "dst": "Erro ao definir o idioma:"
+    },
+    "9f96034c4d8dab42c66159ab111fef13": {
+        "src": "设置失败",
+        "dst": "A configuração falhou"
+    },
+    "7a47c2769120bfa5c61af3a0efc8a920": {
+        "src": "获取客户端语言包时出错:",
+        "dst": "Erro ao obter o pacote de idioma do cliente:"
+    },
+    "8a25a145fb07ad167b69734fc636c78b": {
+        "src": "获取客户端语言包失败",
+        "dst": "Falha ao obter o pacote de idioma do cliente"
+    },
+    "cf924548d2b18aca6d145ab4683e2f90": {
+        "src": "获取服务端语言包时出错:",
+        "dst": "Erro ao obter o pacote de idiomas do servidor:"
+    },
+    "76fa8844f0569b9064597b268be1daf7": {
+        "src": "获取服务端语言包失败",
+        "dst": "Falha ao obter o pacote de idiomas do servidor"
+    },
+    "c5f0021f83003f6404ffb710affe2118": {
+        "src": "模型管理器信息获取成功",
+        "dst": "Informações do gerenciador de modelos obtidas com sucesso"
+    },
+    "811f543fd407958fcb1814162e71e723": {
+        "src": "安装成功",
+        "dst": "Instalação bem sucedida"
+    },
+    "fc7667efe2b9a47f6576a0c6323d0a9c": {
+        "src": "获取安装进度成功",
+        "dst": "Progresso da instalação obtido com sucesso"
+    },
+    "0007d170de017dafc266aa03926d7f00": {
+        "src": "删除成功",
+        "dst": "Excluir com sucesso"
+    },
+    "13526728c7306eeddb5c023c1e195982": {
+        "src": "不支持的管理器",
+        "dst": "Gestor Não Suportado"
+    },
+    "5cec8e5fbc2892462b44d18ec8666c05": {
+        "src": "正在安装,请稍后...",
+        "dst": "A instalar, mais tarde..."
+    },
+    "9639082228cdb4fde37745de2dfd305c": {
+        "src": "获取 Windows 系统信息时出错:",
+        "dst": "Ocorreu um erro ao obter informações do sistema Windows:"
+    },
+    "6bbd72c8a7b6f492af917e341743e6ea": {
+        "src": "获取 Linux 系统信息时出错:",
+        "dst": "Erro ao obter informações do sistema Linux:"
+    },
+    "fbd89eebc8d7f4a9599e7accf4ad4611": {
+        "src": "获取 MacOS 系统信息时出错:",
+        "dst": "Erro ao obter informações do sistema MacOS:"
+    },
+    "843dfa423705e064a1c074f356e53880": {
+        "src": "获取 GPU 信息时出错:",
+        "dst": "Erro ao obter informações da GPU:"
+    },
+    "aacf8da608ec0807ac1d44c3c3387b07": {
+        "src": "根据您的硬件配置，可以流畅运行大部分中大规模的模型，如：32b、27b、24b、14b、7b 等",
+        "dst": "Com base em sua configuração de hardware, ele pode executar suavemente a maioria dos modelos de média a grande escala, tais como: 32 b, 27 b, 24 b, 14 b, 7 b, etc"
+    },
+    "1411c5e4708da8c28039942123c5e608": {
+        "src": "您的硬件配置适合选择中等规模的模型，如: 7b、14b、16b 等",
+        "dst": "Sua configuração de hardware é adequada para escolher modelos de tamanho médio, como: 7b, 14b, 16b, etc."
+    },
+    "9764c415129911627729558f92e8399e": {
+        "src": "由于硬件资源有限，建议选择轻量级的模型，如: 1b、2b 等",
+        "dst": "Devido aos recursos limitados de hardware, é recomendado escolher modelos leves, como: 1b, 2b, etc."
+    },
+    "f4f5776af542ce50f8d69326432d65b6": {
+        "src": "获取配置信息时出现未知错误:",
+        "dst": "Ocorreu um erro desconhecido ao obter as informações de configuração:"
+    },
+    "bf2b114e3d4cc375d7b481221220ad94": {
+        "src": "获取配置信息时出现未知错误",
+        "dst": "Erro desconhecido ao obter informações de configuração"
+    },
+    "5d517e230392009681892ca5b2a41a16": {
+        "src": "获取配置信息成功",
+        "dst": "Obter informações de configuração com sucesso"
+    },
+    "ca643d2878309a3834621ee41cdfe08d": {
+        "src": "获取 Windows 磁盘信息时出错:",
+        "dst": "Erro ao obter informações do disco do Windows:"
+    },
+    "751a8273696cf0318f1ea6d68fe0fac1": {
+        "src": "获取 Linux 磁盘信息时出错:",
+        "dst": "Erro ao obter informações do disco Linux:"
+    },
+    "e4c7a88025ab29b40b8351ddff8000e9": {
+        "src": "获取 macOS 磁盘信息时出错:",
+        "dst": "Erro ao obter informações sobre o disco do macOS:"
+    },
+    "69be671786f62ce872f87de1ab761746": {
+        "src": "修改成功",
+        "dst": "Modificação bem sucedida"
+    },
+    "30d2e8aced6e01dce51c128fb7fbec6b": {
+        "src": "获取 ollama 版本时出错:",
+        "dst": "Erro ao obter a versão do ollama:"
+    },
+    "00cc036b9849caaaa5bf1dd5c88d1d9c": {
+        "src": "获取 Ollama 模型列表时出错:",
+        "dst": "Erro ao obter a lista de modelos Olama:"
+    },
+    "066b33ac21cc2449cd527261d6517d32": {
+        "src": "安装模型时出错:",
+        "dst": "Erro ao instalar o modelo:"
+    },
+    "836e86f09ce4ca2d490784ca8b23c1e1": {
+        "src": "删除模型时出错:",
+        "dst": "Erro ao excluir o modelo:"
+    },
+    "8bd39e4ef48df961cc7945f71003f399": {
+        "src": "安装完成",
+        "dst": "a instalação está concluída"
+    },
+    "4d851dfe645fbf1404edfdcee554b211": {
+        "src": "安装过程中出现错误:",
+        "dst": "Ocorreu um erro durante o processo de instalação:"
+    },
+    "0503045a8c17ef64efc3fb426177c4a9": {
+        "src": "安装过程中出现未知错误:",
+        "dst": "Erro desconhecido durante a instalação:"
+    },
+    "07799fa97490558541940d5ed28707c9": {
+        "src": "Windows 环境变量设置成功。",
+        "dst": "A configuração da variável de ambiente do Windows foi bem sucedida."
+    },
+    "8a449cba5038b62ad8638c0417acfa50": {
+        "src": "Ollama 已重新启动。",
+        "dst": "Ollama foi reiniciado."
+    },
+    "7fb8175222322cbd364e42ee3208bbae": {
+        "src": "Linux 环境变量设置成功。",
+        "dst": "A configuração da variável de ambiente Linux foi bem sucedida."
+    },
+    "b9f87f25f7b36bc90b9da65a63bd7ac3": {
+        "src": "macOS 环境变量设置成功。",
+        "dst": "A variável de ambiente do macOS foi configurada com sucesso."
+    },
+    "8687d6a143f3272fbba2b973efa618f2": {
+        "src": "不支持的操作系统",
+        "dst": "Sistema operacional não suportado"
+    },
+    "b5c02ff4e8dcd3513c9054b3e12ad3af": {
+        "src": "设置 Ollama 模型存储目录或重启服务时出错:",
+        "dst": "Erro ao configurar o diretório de armazenamento do modelo Ollama ou reiniciar o serviço:"
+    },
+    "5cc8c0c58160b874bbdb3a70684103f7": {
+        "src": "Ollama 进程已结束。",
+        "dst": "O processo Ollama terminou."
+    },
+    "5127dbe6588bf6da8f7efd6c3715e6a3": {
+        "src": "结束 Ollama 进程时可能未找到进程:",
+        "dst": "O processo Ollama pode não ser encontrado ao terminar:"
+    },
+    "79d3abe929f67f0644a78bf32adb3a89": {
+        "src": "复制",
+        "dst": "Copiar"
+    },
+    "43fc77886b7fbcd658f0ccdba36bd5a0": {
+        "src": "剪切",
+        "dst": "Corte"
+    },
+    "eafbece1016a6af76cce466e55ad9f00": {
+        "src": "粘贴",
+        "dst": "Colar"
+    },
+    "66eeacd93a7c1bda93906fe908ad11a0": {
+        "src": "全选",
+        "dst": "Selecionar tudo"
+    },
+    "e61ce3c024c634b7eac671f775d42bd5": {
+        "src": "粘贴选中内容",
+        "dst": "Colar a seleção"
+    },
+    "d0ed01d1ce91f630b6b01b581b424bf7": {
+        "src": "打开链接",
+        "dst": "Abrir ligação"
+    },
+    "90ea4be02cb3d6186a83a6455b1002f6": {
+        "src": "下载过程中出现错误:",
+        "dst": "Ocorreu um erro durante o download:"
+    },
+    "4d775d4cd79e2ed6a2fc66fd1e7139c8": {
+        "src": "显示",
+        "dst": "Mostrar"
+    },
+    "c3992269b4bced00356095dc9c5be6d2": {
+        "src": "退出",
+        "dst": "Sair"
+    },
+    "34fc43634c9c77b3ea0dcb82998d9931": {
+        "src": "\\n\\n---\\n**内容不完整:** 用户手动停止生成",
+        "dst": "\\n\\n---\\n**Conteúdo incompleto:** O usuário parou a geração manualmente"
+    },
+    "85812730fff04e6cf132295e2a466c34": {
+        "src": "Ollama 服务未启动，正在尝试启动...",
+        "dst": "O serviço Ollama não está iniciado, a tentar iniciar..."
+    },
+    "a96701c2edc6b67b08aad68806de66d1": {
+        "src": "Ollama 服务启动失败",
+        "dst": "O arranque do serviço Ollama falhou"
+    },
+    "59a8097435b23ff097b5a10695750cd1": {
+        "src": "将为您重新下载，并断点续传。",
+        "dst": "Será baixado novamente para você e interrompido."
+    },
+    "7e288921875993b65048dd42c9e07aab": {
+        "src": "意外中断",
+        "dst": "Interrupção inesperada"
+    },
+    "43485c0f3ca76f0c06b718b8e782b59b": {
+        "src": "分享列表获取成功",
+        "dst": "Compartilhar lista com sucesso"
+    },
+    "9f047f09d5053c466c253438ed51a310": {
+        "src": "创建分享目录失败",
+        "dst": "Não foi possível criar a pasta de partilha"
+    },
+    "d5fd0f4de69840bd343d8e7c99c91d20": {
+        "src": "分享不存在",
+        "dst": "Compartilhamento não existe"
+    },
+    "850779f5ac5dcd45297a8d011b3a8a69": {
+        "src": "检测到下载速度异常，正在尝试重新连接下载节点...",
+        "dst": "Detectada velocidade de download anormal, tentando reconectar o nó de download..."
+    },
+    "a94e00ed1acea8fff7590037ca22dd29": {
+        "src": "分享 ID 不存在",
+        "dst": "O ID da Partilha não existe"
+    },
+    "87e5479f384e7a6a3b82fba6b6a6107b": {
+        "src": "中断成功",
+        "dst": "Interrupção com sucesso"
+    },
+    "0f82b0c2286850759e50950c544747df": {
+        "src": "聊天出错",
+        "dst": "Erro de conversação"
+    },
+    "04a691b377c91da599d5b4b62b0cb114": {
+        "src": "创建成功",
+        "dst": "Criação bem sucedida"
+    },
+    "e743764113bc591e2abf5c6a779ed4db": {
+        "src": "暂不支持远程中断",
+        "dst": "Interruptão remota não suportada"
+    },
+    "61fc5b543cf9ca131751930d043fa17a": {
+        "src": "以下内容是基于用户发送的消息的搜索结果",
+        "dst": "Os resultados da pesquisa são baseados nas mensagens enviadas pelo usuário."
+    },
+    "f37dd4d6515506a21fb175abda4201f3": {
+        "src": "在我给你的搜索结果中，每个结果都是[搜索结果 X begin]...[搜索结果 X end]格式的，X代表每篇文章的数字索引。另外搜索结果中可能包含一些不相关的信息，你可以根据需要选择其中的内容。",
+        "dst": "Cada um dos resultados de pesquisa que lhe dei é [resultados de pesquisa X começar]... No formato X end, X representa o índice numérico de cada artigo. Além disso, os resultados de pesquisa podem conter informações irrelevantes que você pode selecionar conforme necessário."
+    },
+    "ba1a9ea044484679a131827298a9d934": {
+        "src": "在回答时，请注意以下几点",
+        "dst": "Ao responder, observe os seguintes pontos:"
+    },
+    "5a99b099ccfbc64ed2b57ba388ffea9b": {
+        "src": "今天是",
+        "dst": "Hoje é."
+    },
+    "6c9ecc39673f2fc50b8d88b9b088e5cb": {
+        "src": "用户所在地点是",
+        "dst": "Localização do usuário é"
+    },
+    "82fae71f8e76a40b44eb0e2bbc577de6": {
+        "src": "不要在回答内容中提及搜索结果的具体来源，也不要提及搜索结果的具体排名。",
+        "dst": "Não mencione a origem específica dos resultados de pesquisa ou a classificação específica dos resultados de pesquisa em suas respostas."
+    },
+    "f90cd46d3c5c5df7c7f2f9510dcd4363": {
+        "src": "并非搜索结果的所有内容都与用户的问题密切相关，你需要结合问题，对搜索结果进行甄别、筛选。",
+        "dst": "Nem todo o conteúdo nos resultados da pesquisa está intimamente relacionado com a pergunta do usuário. Você precisa combinar a pergunta para identificar e filtrar os resultados da pesquisa."
+    },
+    "6b966fd3eba4859f085c0083d7c7deb9": {
+        "src": "对于列举类的问题（如列举所有航班信息），尽量将答案控制在10个要点以内，并告诉用户可以查看搜索来源、获得完整信息。优先提供信息完整、最相关的列举项；如非必要，不要主动告诉用户搜索结果未提供的内容。",
+        "dst": "Para perguntas que listam categorias (por exemplo, listar todas as informações de voo), tente limitar as respostas a 10 pontos principais e diga aos usuários que podem ver as fontes de pesquisa para obter informações completas. Priorizar o fornecimento de informações completas e listas mais relevantes; Se não for necessário, não diga aos usuários o conteúdo que não foi fornecido nos resultados de pesquisa."
+    },
+    "12bd56226bdb7cb69414e173bdebc728": {
+        "src": "对于创作类的问题（如写论文），你需要解读并概括用户的题目要求，选择合适的格式，充分利用搜索结果并抽取重要信息，生成符合用户要求、极具思想深度、富有创造力与专业性的答案。你的创作篇幅需要尽可能延长，对于每一个要点的论述要推测用户的意图，给出尽可能多角度的回答要点，且务必信息量大、论述详尽。",
+        "dst": "Para questões de tipo criativo (como escrever um artigo), você precisa interpretar e resumir os requisitos de tópico do usuário, escolher o formato adequado, tirar o máximo proveito dos resultados da pesquisa e extrair informações importantes para gerar respostas que atendam às necessidades do usuário, que são profundamente pensadas, criativas e profissionais. Seu trabalho deve ser o mais extenso possível, especular a intenção do usuário para cada argumento, dar o maior número possível de pontos de resposta, e ser informativo e detalhado."
+    },
+    "079f9dbb1a9d3308e731f8b146bf322a": {
+        "src": "如果回答很长，请尽量结构化、分段落总结。如果需要分点作答，尽量控制在5个点以内，并合并相关的内容。",
+        "dst": "Se a resposta for longa, tente ser estruturada e resumida em parágrafos. Se precisar de respostas em pontos, tente controlar dentro de cinco pontos e combinar o conteúdo relevante."
+    },
+    "8b19c30a0ad3f42133b61fae178bd3c5": {
+        "src": "对于客观类的问答，如果问题的答案非常简短，可以适当补充一到两句相关信息，以丰富内容。",
+        "dst": "Para a categoria objetiva de perguntas e respostas, se as respostas são muito curtas, uma ou duas frases de informações relevantes podem ser adequadamente complementadas para enriquecer o conteúdo."
+    },
+    "1dc0481cca9559c2658bb335c0c6da36": {
+        "src": "你需要根据用户要求和回答内容选择合适、美观的回答格式，确保可读性强。",
+        "dst": "Você precisa escolher um formato de resposta adequado e esteticamente agradável com base nos requisitos do usuário e no conteúdo de resposta para garantir uma boa legibilidade."
+    },
+    "dfe86a3a0237b15117e443536d8a8493": {
+        "src": "你的回答应该综合多个相关网页来回答，不能重复引用一个网页。",
+        "dst": "Sua resposta deve ser baseada em várias páginas da web relevantes e não pode repetir uma única página da web."
+    },
+    "66358f764cc9866f726104ab602a9ee2": {
+        "src": "除非用户要求，否则你回答的语言需要和用户提问的语言保持一致。",
+        "dst": "A menos que o usuário solicite o contrário, o idioma que você precisa responder é o mesmo que o idioma em que o usuário faz perguntas."
+    },
+    "5cd96302a8f07a13108452579fa7b572": {
+        "src": "用户消息为",
+        "dst": "A mensagem do utilizador é"
+    },
+    "80a82fe18f8b89062c82fbbb469c0399": {
+        "src": "你是一个擅长搜索网络和回答用户查询的人工智能模型。",
+        "dst": "Você é um modelo de inteligência artificial que é bom em pesquisar na rede e responder às consultas dos usuários."
+    },
+    "e809bddbfdef253a7615ded187c2e622": {
+        "src": "根据提供的搜索结果生成信息丰富且与用户查询相关的回答。",
+        "dst": "Gerar respostas ricas em informações e relevantes para consultas do usuário com base nos resultados de pesquisa fornecidos."
+    },
+    "03e26e6e0cb5b4a5661b19da684f6a30": {
+        "src": "当前日期和时间为",
+        "dst": "A data e hora actuais são"
+    },
+    "2042f4d4f883da80cf56699e40821419": {
+        "src": "用户所在地区为",
+        "dst": "A região do usuário é"
+    },
+    "5eb031925ea481457d8ac92773b19972": {
+        "src": "根据用户的问题，和上一个对话的内容，理解用户意图，生成一个用于搜索引擎搜索的问题，这个问题的搜索结果将会用于帮助智能模型回答用户问题，回答内容中只有一个问题，且只包含问题内容，不包含其它信息。",
+        "dst": "Com base na pergunta do usuário e no conteúdo da conversa anterior, entender a intenção do usuário e gerar uma pergunta para pesquisa no motor de busca. Os resultados da pesquisa desta pergunta serão usados para auxiliar o modelo inteligente na resposta à pergunta do usuário. O conteúdo da resposta inclui apenas uma pergunta e não contém nenhuma outra informação."
+    },
+    "de61f8ec91ac74a5aae83e1219bff6bd": {
+        "src": "今天的时间是",
+        "dst": "Hoje é hora"
+    },
+    "73aba3208ac5d16784b86c6eddb98c28": {
+        "src": "上一个对话",
+        "dst": "Diálogo anterior"
+    },
+    "bccaaec817af6f08610f49a9acab6c33": {
+        "src": "后续问题",
+        "dst": "Questões de seguimento"
+    },
+    "f81fc3025acbb1e6ff1322c56a519537": {
+        "src": "用于搜索的问题",
+        "dst": "Perguntas para Pesquisa"
+    },
+    "67b19578d0752ceb5bfc7abb46587f82": {
+        "src": "星期日",
+        "dst": "Domingo"
+    },
+    "5ce438210f58d2e52ba8fccd3d99cb67": {
+        "src": "星期一",
+        "dst": "Segunda-feira"
+    },
+    "34e5216bc310f8c4db8fbfe772156237": {
+        "src": "星期二",
+        "dst": "Terça-feira"
+    },
+    "711d996d87638acb6b93552fca140942": {
+        "src": "星期三",
+        "dst": "Quarta-feira"
+    },
+    "3df6af796b60302d6184ee1e02e090ab": {
+        "src": "星期四",
+        "dst": "Quinta-feira"
+    },
+    "450ea3af464ff9f8a08600c0c1f7b82c": {
+        "src": "星期五",
+        "dst": "Sexta-feira"
+    },
+    "1ae72f6826c2717962d123e8088116c2": {
+        "src": "星期六",
+        "dst": "Sábado"
+    },
+    "f8fbeae19402928ea0909596e2bf896f": {
+        "src": "上午",
+        "dst": "manhã"
+    },
+    "e2eb289cc37550406f297815e5fd3271": {
+        "src": "下午",
+        "dst": "tarde"
+    },
+    "74f3c097faa774665bc3f4913ed37d5c": {
+        "src": "未知地区",
+        "dst": "Região desconhecida"
+    },
+    "2837c06945d298b0bb32dba0cbc3c539": {
+        "src": "问题: ",
+        "dst": "Perguntas:"
+    },
+    "2e47c9b5e95f48f41f4f4c7e99a51e3c": {
+        "src": "回答: ",
+        "dst": "resposta:"
+    },
+    "e985627a72cd7d10ee196e7ae7978bde": {
+        "src": "回答:",
+        "dst": "Resposta:"
+    },
+    "098f9e940d9c0517f2a86758de701f1b": {
+        "src": "搜索结果",
+        "dst": "Resultados da pesquisa"
+    },
+    "30f7dd4ecdfa89a22c47ed6a743a7037": {
+        "src": "连接",
+        "dst": "Conexão"
+    },
+    "32c65d8d7431e76029678ec7bb73a5ab": {
+        "src": "标题",
+        "dst": "Título"
+    },
+    "2d711b09bd0db0ad240cc83b30dd8014": {
+        "src": "内容",
+        "dst": "Conteúdo"
+    },
+    "e7158b6c60cab4b337fd171b0f4e1a90": {
+        "src": "知识库组件正常",
+        "dst": "Componente da base de conhecimento normal"
+    },
+    "13a109691debc3eb78e2f77f2b6485cb": {
+        "src": "请先安装bge-m3:latest",
+        "dst": "Instale primeiro o bge- m3 latest"
+    },
+    "299af36d68e3abcf35380a1983dd6819": {
+        "src": "知识库名称不能为空",
+        "dst": "O nome da base de conhecimento não pode estar vazio"
+    },
+    "0a91f11455228e88c663edde9f62f6d8": {
+        "src": "知识库名称不能为vector_db",
+        "dst": "O nome da base de conhecimento não pode ser vector_db"
+    },
+    "6c2acda40bbb0f9d3815b271c4990882": {
+        "src": "指定知识库名称已存在",
+        "dst": "O nome da base de conhecimento especificado já existe"
+    },
+    "e3572dd02769cfd7e46a1b9877c6498d": {
+        "src": "知识库创建成功",
+        "dst": "Criação bem sucedida da base de conhecimento"
+    },
+    "978b3c73e0a5163b71a7dd9fa371401b": {
+        "src": "知识库不存在",
+        "dst": "A base de conhecimento não existe."
+    },
+    "586930318474afa34ba772b84d0e3a47": {
+        "src": "知识库删除成功",
+        "dst": "A base de conhecimento foi eliminada com êxito"
+    },
+    "c30122116a4c66b7ecdfe50a1ac71b7f": {
+        "src": "知识库修改成功",
+        "dst": "Base de conhecimento modificada com sucesso"
+    },
+    "c0795f34a87fcd1e4b035da51b2869af": {
+        "src": "文件路径不能为空",
+        "dst": "O caminho do arquivo não pode estar vazio"
+    },
+    "fe9b59474a71661dd529d2279d980035": {
+        "src": "文件路径列表不能为空",
+        "dst": "A lista de caminhos de arquivos não pode estar vazia"
+    },
+    "d9523e347c0a2971241d3ac4120a2854": {
+        "src": "文件不存在",
+        "dst": "O ficheiro não existe"
+    },
+    "679c4b3144c33adc7a3ddc09c173d2c8": {
+        "src": "文件上传成功",
+        "dst": "Ficheiro carregado com sucesso"
+    },
+    "7fc78323135943edf1052b94fd10f990": {
+        "src": "文档名称不能为空",
+        "dst": "O nome do documento não pode estar vazio"
+    },
+    "7c3cfe22ac6f31530a9ef74d9678305d": {
+        "src": "文档不存在",
+        "dst": "O documento não existe"
+    },
+    "e1b4869d50b89963c92fed36d817d683": {
+        "src": "文档名称列表不能为空",
+        "dst": "A lista de nomes de documentos não pode estar vazia"
+    },
+    "9760f9928a22ce2702ee7db8f92ed470": {
+        "src": "文档删除成功",
+        "dst": "Apagação do documento com sucesso"
+    },
+    "e9233122d7e5a63de7d802ced002c641": {
+        "src": "新文档名称不能为空",
+        "dst": "O nome do novo documento não pode estar vazio"
+    },
+    "1ccc988fb083b9fc57772e4244bc1b3c": {
+        "src": "文档名称修改成功",
+        "dst": "O nome do documento foi modificado com sucesso"
+    },
+    "5fa802bef51f52b1f7bcf35ade3512cf": {
+        "src": "操作失败",
+        "dst": "Operação falhada"
+    },
+    "33130f5c465d732d68ebdfbb80f4284b": {
+        "src": "操作成功",
+        "dst": "Operação bem sucedida"
+    },
+    "af3374317f93035c7b05d96b2373d651": {
+        "src": "以下内容是基于用户发送的消息的知识库检索结果",
+        "dst": "O conteúdo a seguir é baseado nos resultados de recuperação da base de conhecimento de mensagens enviadas pelos usuários"
+    },
+    "42f7696278cc9fb46842ff689c4d7693": {
+        "src": "在我给你的检索结果中，每个结果都是[检索结果 X begin]...[检索结果 X end]格式的，X代表每段知识内容的的数字索引。另外检索结果中可能包含一些不相关的信息，你可以根据需要选择其中的内容。",
+        "dst": "Cada um dos resultados que eu lhe dei é [resultados de busca X começar]... No formato X end, X representa o índice numérico de cada conteúdo do conhecimento. Além disso, os resultados podem conter informações irrelevantes que você pode escolher de acordo com a necessidade."
+    },
+    "62a354056ef9ad11ce6178292e3f70b3": {
+        "src": "不要在回答内容中提及检索结果的具体来源，也不要提及检索结果的具体排名。",
+        "dst": "Não mencione a origem específica dos resultados ou a classificação específica dos resultados em suas respostas."
+    },
+    "42c790004f8809cee479461e64d56377": {
+        "src": "并非检索结果的所有内容都与用户的问题密切相关，你需要结合问题，对检索结果进行甄别、筛选。",
+        "dst": "Nem todo o conteúdo dos resultados de busca está intimamente relacionado com a questão do usuário, você precisa combinar a questão para selecionar e filtrar os resultados."
+    },
+    "6dbd064709d5d6ecb805d7d3920c087a": {
+        "src": "对于列举类的问题（如列举所有航班信息），尽量将答案控制在10个要点以内，并告诉用户可以查看检索来源、获得完整信息。优先提供信息完整、最相关的列举项；如非必要，不要主动告诉用户检索结果未提供的内容。",
+        "dst": "Para listar perguntas (como listar todas as informações de voo), tente manter a resposta dentro de 10 pontos-chave e informe o usuário de que ele pode visualizar a fonte de pesquisa e obter informações completas. Priorizar o fornecimento de informações listadas completas e mais relevantes; A menos que necessário, não informe proativamente os usuários de conteúdo que não foi fornecido nos resultados da pesquisa."
+    },
+    "039d151f74cb8e630ae47a9be3fc7e40": {
+        "src": "对于创作类的问题（如写论文），你需要解读并概括用户的题目要求，选择合适的格式，充分利用检索结果并抽取重要信息，生成符合用户要求、极具思想深度、富有创造力与专业性的答案。你的创作篇幅需要尽可能延长，对于每一个要点的论述要推测用户的意图，给出尽可能多角度的回答要点，且务必信息量大、论述详尽。",
+        "dst": "Para questões criativas (como escrever um artigo), você precisa interpretar e resumir os requisitos do tema do usuário, escolher o formato apropriado, tirar o máximo proveito dos resultados da pesquisa e extrair informações importantes para gerar respostas que atendam às necessidades do usuário, com profundidade, criatividade e profissionalismo. Seu trabalho deve ser o mais extenso possível, especular a intenção do usuário para cada argumento, dar o maior número possível de pontos de resposta, e ser informativo e detalhado."
+    },
+    "27dd62bde1d6558167ae77e97fcf728f": {
+        "src": "你是一个擅长检索网络和回答用户查询的人工智能模型。",
+        "dst": "Você é um modelo de inteligência artificial que é bom em recuperar redes e responder consultas de usuários."
+    },
+    "c125214e36f14b5fb4f33d6dccd8e2b8": {
+        "src": "根据提供的检索结果生成信息丰富且与用户查询相关的回答。",
+        "dst": "Gerar respostas ricas em informações e relevantes para consultas do usuário com base nos resultados de busca fornecidos."
+    },
+    "efc8221ad85396ad566a79bbe44ea1e4": {
+        "src": "以下内容是基于用户发送的消息的检索结果",
+        "dst": "Os resultados abaixo são baseados em mensagens enviadas pelo usuário"
+    },
+    "a152d2aa2ce916d951f267e8d720f44b": {
+        "src": "根据用户的问题，和上一个对话的内容，理解用户意图，生成一个用于检索引擎检索的问题，这个问题的检索结果将会用于帮助智能模型回答用户问题，回答内容中只有一个问题，且只包含问题内容，不包含其它信息。",
+        "dst": "De acordo com a pergunta do usuário e o conteúdo da conversa anterior, compreender a intenção do usuário e gerar uma pergunta para a busca do mecanismo de busca, os resultados dessa pergunta serão usados ​​para ajudar o modelo inteligente a responder à pergunta do usuário, respondendo apenas a uma pergunta no conteúdo e contém apenas o conteúdo da pergunta e não contém outras informações."
+    },
+    "ba8e98fd3e7bca856654d9e74884f57d": {
+        "src": "用于检索的问题",
+        "dst": "Perguntas para a recuperação"
+    },
+    "abb88af2e5bae65d45635080fafe23e4": {
+        "src": "检索结果",
+        "dst": "Resultados da pesquisa"
+    },
+    "26ca20b161c33362d88eb0ba0bc90751": {
+        "src": "来源",
+        "dst": "Fonte"
+    },
+    "40704569a8c280888588553b86ec7f9a": {
+        "src": "图片名称不能为空",
+        "dst": "O nome da imagem não pode estar vazio"
+    },
+    "da6d5ef2244a37d46d941dfc8562dd02": {
+        "src": "图片不存在",
+        "dst": "A imagem não existe"
+    },
+    "03411ebecd9b7381523249f0112d0e27": {
+        "src": "你的回答应该综合多个相关知识片段来回答，不能重复引用一个知识片段。",
+        "dst": "Sua resposta deve ser uma combinação de vários fragmentos de conhecimento relevantes para responder, e não citar repetidamente um fragmento de conhecimento."
+    },
+    "1b31dbed84a6ca393a8275fca4c66c59": {
+        "src": "你是一个擅长根据知识库检索结果回答用户查询的人工智能模型。",
+        "dst": "Você é um modelo de inteligência artificial que é bom em responder a consultas de usuários com base nos resultados da base de conhecimento."
+    },
+    "4c599487be1fd817d4e144c4502331db": {
+        "src": "根据提供的检索结果生成信息丰富且与用户查询相关的回答，如果知识库检索结果中有图片引用信息，可根据需要引用这些图片来强化内容结构。",
+        "dst": "Gerar respostas ricas em informações e relevantes para consultas do usuário com base nos resultados de pesquisa fornecidos, que podem ser referenciadas conforme necessário para reforçar a estrutura de conteúdo se houver referências a imagens nos resultados de pesquisa da base de conhecimento."
+    },
+    "6715ab8742075a868a3aaa8caef38b67": {
+        "src": "不要提及检索结果的具体排名。",
+        "dst": "Não mencione o ranking específico dos resultados da pesquisa."
+    },
+    "73fc1478be004898b85ee84eb9e258b2": {
+        "src": "并非检索结果的所有内容都与用户的问题密切相关，你需要结合用户的意图，对检索结果进行甄别、筛选。",
+        "dst": "Nem todo o conteúdo dos resultados de busca está intimamente relacionado com o problema do usuário, você precisa combinar as intenções do usuário para selecionar e filtrar os resultados de busca."
+    },
+    "57beb596805cbbaffe8c690e1329611b": {
+        "src": "对于列举类的问题（如列举所有航班信息），尽量将答案控制在10个要点以内，并告诉用户可以查看检索来源、获得完整信息。优先提供信息完整、最相关的列举项",
+        "dst": "Para perguntas que listam categorias (por exemplo, listar todas as informações de voo), tente limitar as respostas a 10 pontos principais e diga aos usuários que podem ver as fontes de busca para obter informações completas. Priorizar informações completas e listagens mais relevantes"
+    },
+    "dc518bc56c69606aea350037fe9e9254": {
+        "src": "如果回答很长，请尽量结构化、分段落总结。如果需要分点作答。",
+        "dst": "Se a resposta for longa, tente ser estruturada e resumida em parágrafos. Se precisar de respostas."
+    },
+    "e52bb25a146139d8f90a0d3ec62b9a2b": {
+        "src": "你的回答结构要包含是什么？为什么？怎么做？这三要素。",
+        "dst": "Qual é a sua estrutura de resposta? Porquê? Como? esses três elementos."
+    },
+    "19f4e893edbd98180b0b9960e883385a": {
+        "src": "文件读取或解析失败",
+        "dst": "Falha na leitura ou análise do ficheiro"
+    },
+    "3c24da7a412039b7591d2eeb8f7daaf4": {
+        "src": "文件写入失败",
+        "dst": "Falha na gravação do ficheiro"
+    },
+    "0d2dd91380f3426336ba59a096977fa8": {
+        "src": "获取供应商信息失败",
+        "dst": "Falha ao obter informações do fornecedor"
+    },
+    "b3ff9881f37c160158d9b3313576fcf7": {
+        "src": "模型供应商不存在",
+        "dst": "Fornecedor modelo não existe"
+    },
+    "306be5d47591abbbf1c348ce4d28c6e5": {
+        "src": "模型已存在",
+        "dst": "O modelo já existe"
+    },
+    "3fdaeadf0e8a3154ae62784f04138c28": {
+        "src": "添加成功",
+        "dst": "Adicionar com sucesso"
+    },
+    "88ef9e602ae78075dfc3ca33d67a1527": {
+        "src": "模型不存在",
+        "dst": "O modelo não existe"
+    },
+    "551badba57d659eddb826a0373cc5334": {
+        "src": "API配置正确",
+        "dst": "Configuração correta da API"
+    },
+    "23a0b70a2333f939785f0d2b3cbd761a": {
+        "src": "连接失败，请检查",
+        "dst": "Falha na conexão, verifique"
+    },
+    "a2735abf9e4a04fcb5610cfd3a525906": {
+        "src": "模型供应商已存在",
+        "dst": "Fornecedor modelo já existe"
+    },
+    "ae2b66f906c0cf9b1d72ab3c9e365f9e": {
+        "src": "请选安装或接入嵌入模型",
+        "dst": "Selecione Instalar ou Aceder ao Modelo Embedded"
+    },
+    "624a89332771dcc40fa21051d2695277": {
+        "src": "以下是用户上传的文档内容，每个文档内容都是[用户文档 X begin]...[用户文档 X end]格式的，你可以根据需要选择其中的内容。",
+        "dst": "A seguir estão os conteúdos do documento enviados pelo usuário, cada conteúdo do documento é [Documento do usuário X começar] No formato [Documento do Usuário X final], você pode escolher o conteúdo de acordo com suas necessidades."
+    },
+    "5a37bcc89177672fc8743f323497fa49": {
+        "src": "用户输入的内容",
+        "dst": "Conteúdo introduzido pelo utilizador"
+    },
+    "0e51fafaacc333cf882805ac55d25b05": {
+        "src": "用户文档",
+        "dst": "Documentação do Utilizador"
+    },
+    "6c96024718300bf395fb132f298e96cf": {
+        "src": "调用模型接口时出错:",
+        "dst": "Erro ao chamar a interface do modelo:"
+    },
+    "36fee61ba46375552deae7844d136d70": {
+        "src": "调用模型接口时出错",
+        "dst": "Erro ao chamar a interface do modelo"
+    },
+    "c32ea20471d4fc6589aa4cb3b7c6bdec": {
+        "src": "以下是用户上传的文档内容",
+        "dst": "O seguinte é o conteúdo do documento carregado pelo usuário"
+    },
+    "20def7942674282277c3714ed7ea6ce0": {
+        "src": "图片",
+        "dst": "imagem"
+    },
+    "29edf39066579d275e67123d77b2a5fa": {
+        "src": "OCR解析结果",
+        "dst": "Resultados da análise OCR"
+    },
+    "b0ebf0b5aa7c221c8721231efe12d7a0": {
+        "src": "读取智能体配置文件失败",
+        "dst": "Não foi possível ler o ficheiro de configuração do agente inteligente"
+    },
+    "db0f5df7e68e83d493350e50f40ed997": {
+        "src": "智能体不存在",
+        "dst": "O agente inteligente não existe"
+    },
+    "d655e84287c988ade7cfe68d4dada2b6": {
+        "src": "系统智能体不可修改",
+        "dst": "O agente inteligente do sistema não pode ser modificado"
+    },
+    "70c5195c90f0a603b9e9fed6a7663446": {
+        "src": "系统智能体不可删除",
+        "dst": "O agente inteligente do sistema não pode ser apagado"
+    },
+    "fb0601768be9cd93deb833a114ad7c78": {
+        "src": "选择目录",
+        "dst": "Seleccionar a Pasta"
+    },
+    "0febbf0bcd828a7539eab0a376d3b338": {
+        "src": "请选择一个目录",
+        "dst": "Seleccione por favor uma pasta"
+    },
+    "e31f5cce916c480900e1aeb8cb0a9486": {
+        "src": "选择成功",
+        "dst": "Seleccionado com sucesso"
+    },
+    "ecd727e29b12eae339b3ddd138b53527": {
+        "src": "未选择目录",
+        "dst": "Nenhuma pasta seleccionada"
+    },
+    "c6c4e4c1a00f4324728880ab8acf8151": {
+        "src": "指定模型存储路径不存在",
+        "dst": "O caminho de armazenamento do modelo especificado não existe"
+    },
+    "d2873005ad058ad88ece7ea095c46e06": {
+        "src": "指定接口地址连接失败",
+        "dst": "Não foi possível ligar ao endereço de interface especificado"
+    },
+    "c5655ccf5c7dbd773172a838837e40aa": {
+        "src": "指定嵌入模型不存在: {}",
+        "dst": "O modelo de incorporação especificado não existe: {}"
+    },
+    "76197630c54c7f976b48933e3bdafaa6": {
+        "src": "调用模型接口时出错了: {}",
+        "dst": "Ocorreu um erro ao chamar a interface do modelo: {}"
+    },
+    "728c67c32d5c103b679ee333f515a69a": {
+        "src": "写入成功",
+        "dst": "Gravar com sucesso"
+    },
+    "280b37d7a1f17c385ea6dde47dfc41ec": {
+        "src": "正在复制数据，请稍后再试",
+        "dst": "A copiar dados, tente novamente mais tarde"
+    },
+    "20bd376f1dcf30e141646f3f2f51bb72": {
+        "src": "请选择目录",
+        "dst": "Seleccione por favor uma pasta"
+    },
+    "31582ee87229b8fea578182a87ff83ab": {
+        "src": "指定的目录不存在",
+        "dst": "A pasta indicada não existe"
+    },
+    "3ffdaafdd221ff8b3dd0c679e1526dee": {
+        "src": "指定的目录不是空目录",
+        "dst": "A pasta indicada não é uma pasta vazia"
+    },
+    "3bf2ac36f549cdcc9acabf04b76bc6cd": {
+        "src": "配置文件不存在，请先调用获取数据保存路径接口",
+        "dst": "O ficheiro de configuração não existe. Ligue para a interface para obter primeiro a localização de gravação dos dados"
+    },
+    "199f51244f256a2dac58db7546e863d7": {
+        "src": "设置成功,正在复制数据，请稍后查看进度",
+        "dst": "Configuração bem sucedida, cópia de dados, por favor verifique o progresso mais tarde"
+    },
+    "063e9a054a0da4622b295ea7e63760a7": {
+        "src": "请输入搜索内容",
+        "dst": "Indique por favor o conteúdo da pesquisa"
+    },
+    "a2114d589a284cf6a4f1afae8a80b8ef": {
+        "src": "搜索成功",
+        "dst": "A pesquisa foi bem sucedida"
+    },
+    "bd92f05750f60e692526c39cbbe8a2f7": {
+        "src": "正在复制文件: {}",
+        "dst": "A copiar o ficheiro: {}"
+    },
+    "562e6c6af7c01dc09d13e9cab6ecb8e5": {
+        "src": "复制完成",
+        "dst": "cópia completa"
+    },
+    "a8aa1a26aa28929c04f1ee950ed648bb": {
+        "src": "当前正在执行向量数据优化操作，请等待几分钟后再试",
+        "dst": "Atualmente executando operação de otimização de dados vetoriais, aguarde alguns minutos e tente novamente"
+    },
+    "baf38fa62dda36de7703a251749bd2a5": {
+        "src": "知识库配置文件不存在",
+        "dst": "O ficheiro de configuração da base de conhecimento não existe"
+    },
+    "7b873974661b9d8c3e537306535dced7": {
+        "src": "正在删除旧数据",
+        "dst": "Apagar dados antigos"
+    },
+    "6ae3994d1af89e22a5addf977b2240b1": {
+        "src": "复制失败，已撤回操作: {}",
+        "dst": "A cópia falhou, a operação foi revogada: {}"
+    },
+    "3229e49a006b9905ddceea86dc7dd100": {
+        "src": "未找到该服务器",
+        "dst": "O servidor não foi encontrado"
+    },
+    "0969524a648d833a3ada09655fc415e3": {
+        "src": "卸载成功",
+        "dst": "A desinstalação foi bem sucedida"
+    },
+    "b0fac2cf519f031aafa78118193bca6e": {
+        "src": "该服务器已存在",
+        "dst": "O servidor já existe"
+    },
+    "37558e86cf19e61c5d7856b9473bf2e8": {
+        "src": "环境变量格式错误",
+        "dst": "Erro no formato da variável ambiente"
+    },
+    "933b0c94ca2fc7bcd3e8f9b7a45a6020": {
+        "src": "参数格式错误",
+        "dst": "Erro no formato do parâmetro"
+    },
+    "9d5bf2a10a520071f965d7e87b12676e": {
+        "src": "已安装",
+        "dst": "foi instalado"
+    },
+    "6f5b5ee24a3c001dc9b920b8d3cd89fa": {
+        "src": "安装失败",
+        "dst": "A instalação falhou"
+    },
+    "9d1114cd2c4f92b0332e4da02eb9e823": {
+        "src": "未找到MCP配置",
+        "dst": "Configuração do MCP não encontrada"
+    },
+    "b0d425edb75f36b2e101934f060f18ec": {
+        "src": "配置文件格式错误",
+        "dst": "Erro no formato do ficheiro de configuração"
+    },
+    "3b108349b93f7c8c4e2346f8d48c092a": {
+        "src": "保存成功",
+        "dst": "Gravado com sucesso"
+    },
+    "8e08265b9ad1b23e31c6f10b1b450a1a": {
+        "src": "获取分享配置失败",
+        "dst": "Não foi possível obter a configuração de partilha"
+    },
+    "3ed9891e18c456ad43d94f4787177e18": {
+        "src": "[parseDocument]解析文档失败",
+        "dst": "[parseDocument] Não foi possível analisar o documento"
+    },
+    "eac6385d9a5595b1a0a1910de0efaa74": {
+        "src": "[addDocument]插入数据失败",
+        "dst": "[addDocument] A inserção dos dados falhou"
+    },
+    "e6c3a129268f0c576bf2b1171b5e9c8a": {
+        "src": "[embed]嵌入文档失败",
+        "dst": "A incorporação do documento falhou"
+    },
+    "af2eb44eb9102da86521ce19e9bdc651": {
+        "src": "指定表不存在",
+        "dst": "A tabela indicada não existe"
+    },
+    "cea29669c04aa0bac395ae35b19e9d30": {
+        "src": "优化成功,释放空间: {}",
+        "dst": "Otimização bem sucedida, liberando espaço: {}"
+    },
+    "e7b52c69e07fc3ba8b10d48594a824ae": {
+        "src": "优化失败: {}",
+        "dst": "A otimização falhou: {}"
+    },
+    "52b85c9108c92c7844c7e2ce64395f99": {
+        "src": "同步成功",
+        "dst": "Sincronização bem sucedida"
+    },
+    "4f65712f09cfa8018771e114676c6791": {
+        "src": "模型连接失败:{}",
+        "dst": "Falha na ligação do modelo: {}"
+    },
+    "7f0ad4565cb005693ed7e372ca64ca62": {
+        "src": "出错了: {}",
+        "dst": "Ocorreu um erro: {}"
+    }
+}
