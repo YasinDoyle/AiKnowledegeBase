@@ -1,0 +1,50 @@
+@use '@/assets/base';
+
+.layout-sider-wrapper {
+  display: grid;
+  grid-template-rows: 50px 64px 22px 2fr 22px 1fr 140px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: var(--bt-pd-small);
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-left {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  .sider-wrapper {
+    box-sizing: border-box;
+    @include base.row-flex-between;
+    gap: var(--bt-mg-normal);
+    flex-direction: column;
+
+    .sider-top {
+      width: 100%;
+    }
+  }
+
+  .sider-bottom {
+    width: 100%;
+  }
+}
+
+.recent-header {
+  @include base.row-flex-between;
+  margin: var(--bt-mg-small) 0;
+  box-sizing: border-box;
+}
+
+.sider-divider {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.12);
+  margin: var(--bt-mg-small) auto;
+}

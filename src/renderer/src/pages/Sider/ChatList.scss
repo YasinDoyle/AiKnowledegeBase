@@ -1,0 +1,9 @@
+@use '@/assets/base';
+
+.recent-comunication {
+  width: 100%;
+
+  .recent-list {
+    @include base.recent-list-style;
+  }
+}

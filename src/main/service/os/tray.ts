@@ -26,7 +26,7 @@ class TrayService {
   constructor() {
     this.tray = null
     this.config = {
-      title: 'AingDesk',
+      title: 'AiKnowledgeBase',
       icon: '/public/images/tray.png',
     }
   }

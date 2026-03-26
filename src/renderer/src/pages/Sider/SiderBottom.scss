@@ -1,0 +1,5 @@
+@use '@/assets/base';
+
+.recent-list {
+  @include base.recent-list-style;
+}
