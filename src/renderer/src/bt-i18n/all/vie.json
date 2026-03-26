@@ -1,0 +1,1342 @@
+{
+    "让我们开启一段新的对话吧": {
+        "src": "让我们开启一段新的对话吧",
+        "dst": "Hãy bắt đầu một cuộc đối thoại mới."
+    },
+    "正在思考...": {
+        "src": "正在思考...",
+        "dst": "Đang suy nghĩ......"
+    },
+    "复制": {
+        "src": "复制",
+        "dst": "Sao chép"
+    },
+    "暂无信息": {
+        "src": "暂无信息",
+        "dst": "Không có thông tin."
+    },
+    "重新生成": {
+        "src": "重新生成",
+        "dst": "Tái tạo"
+    },
+    "请输入对话内容": {
+        "src": "请输入对话内容",
+        "dst": "Vui lòng nhập nội dung hội thoại"
+    },
+    "发送": {
+        "src": "发送",
+        "dst": "Gửi"
+    },
+    "停止生成": {
+        "src": "停止生成",
+        "dst": "Ngừng tạo"
+    },
+    "复制成功": {
+        "src": "复制成功",
+        "dst": "Sao chép thành công"
+    },
+    "请选择对应模型": {
+        "src": "请选择对应模型",
+        "dst": "Vui lòng chọn mô hình tương ứng"
+    },
+    "当前正在回答，请稍后": {
+        "src": "当前正在回答，请稍后",
+        "dst": "Trả lời ngay bây giờ, vui lòng để sau"
+    },
+    "点击[设置]安装模型": {
+        "src": "点击[设置]安装模型",
+        "dst": "Nhấn [Cài đặt] để cài đặt mô hình"
+    },
+    "模型大小:": {
+        "src": "模型大小:",
+        "dst": "Kích thước mô hình:"
+    },
+    "已下载:": {
+        "src": "已下载:",
+        "dst": "Tải về:"
+    },
+    "速度:": {
+        "src": "速度:",
+        "dst": "Tốc độ:"
+    },
+    "引用": {
+        "src": "引用",
+        "dst": "Trích dẫn"
+    },
+    "已复制": {
+        "src": "已复制",
+        "dst": "Đã sao chép"
+    },
+    "处理器:": {
+        "src": "处理器:",
+        "dst": "Bộ xử lý:"
+    },
+    "内存:": {
+        "src": "内存:",
+        "dst": "Bộ nhớ:"
+    },
+    "显卡:": {
+        "src": "显卡:",
+        "dst": "Đồ họa:"
+    },
+    "建议:": {
+        "src": "建议:",
+        "dst": "Đề nghị:"
+    },
+    "首次使用，请选择要安装的模型": {
+        "src": "首次使用，请选择要安装的模型",
+        "dst": "Lần đầu tiên sử dụng, hãy chọn mô hình bạn muốn cài đặt"
+    },
+    "如:": {
+        "src": "如:",
+        "dst": "Ví dụ:"
+    },
+    "搜索": {
+        "src": "搜索",
+        "dst": "Tìm kiếm"
+    },
+    "模型刪除中，请稍后": {
+        "src": "模型刪除中，请稍后",
+        "dst": "Loại bỏ mô hình, xin vui lòng sau"
+    },
+    "提示": {
+        "src": "提示",
+        "dst": "Mẹo"
+    },
+    "检测到您没有安装模型管理器，是否立即安装？": {
+        "src": "检测到您没有安装模型管理器，是否立即安装？",
+        "dst": "Phát hiện ra rằng bạn không cài đặt Trình quản lý mô hình, bạn có cài đặt nó ngay bây giờ không?"
+    },
+    "暂不安装": {
+        "src": "暂不安装",
+        "dst": "Tạm thời không cài đặt"
+    },
+    "立即安装": {
+        "src": "立即安装",
+        "dst": "Cài đặt ngay"
+    },
+    "正在安装模型管理器，请稍后": {
+        "src": "正在安装模型管理器，请稍后",
+        "dst": "Trình quản lý mô hình đang được cài đặt, vui lòng để sau"
+    },
+    "大小:": {
+        "src": "大小:",
+        "dst": "Kích thước:"
+    },
+    "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。": {
+        "src": "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。",
+        "dst": "Hãy thử chọn lại nút tải xuống để tối ưu hóa tốc độ tải xuống, PS: Tiến trình tải xuống hiện tại sẽ không bị mất và điểm ngắt sẽ được gia hạn tự động."
+    },
+    "所有": {
+        "src": "所有",
+        "dst": "Tất cả"
+    },
+    "已安装": {
+        "src": "已安装",
+        "dst": "Đã cài đặt"
+    },
+    "模型": {
+        "src": "模型",
+        "dst": "Mô hình"
+    },
+    "大小": {
+        "src": "大小",
+        "dst": "Kích thước"
+    },
+    "简介": {
+        "src": "简介",
+        "dst": "Giới thiệu"
+    },
+    "功能": {
+        "src": "功能",
+        "dst": "Chức năng"
+    },
+    "操作": {
+        "src": "操作",
+        "dst": "Hoạt động"
+    },
+    "刪除": {
+        "src": "刪除",
+        "dst": "Xoá"
+    },
+    "安装": {
+        "src": "安装",
+        "dst": "Cài đặt"
+    },
+    "浅色模式": {
+        "src": "浅色模式",
+        "dst": "Chế độ màu sáng"
+    },
+    "深色模式": {
+        "src": "深色模式",
+        "dst": "Chế độ tối"
+    },
+    "对话": {
+        "src": "对话",
+        "dst": "Đối thoại"
+    },
+    "对话内容": {
+        "src": "对话内容",
+        "dst": "Nội dung hội thoại"
+    },
+    "新对话": {
+        "src": "新对话",
+        "dst": "Đối thoại mới"
+    },
+    "模型管理": {
+        "src": "模型管理",
+        "dst": "Quản lý mô hình"
+    },
+    "设置": {
+        "src": "设置",
+        "dst": "Thiết lập"
+    },
+    "删除对话": {
+        "src": "删除对话",
+        "dst": "Xoá cuộc hội thoại"
+    },
+    "是否确认删除当前对话": {
+        "src": "是否确认删除当前对话",
+        "dst": "Xác nhận xóa cuộc hội thoại hiện tại"
+    },
+    "取消": {
+        "src": "取消",
+        "dst": "Hủy bỏ"
+    },
+    "删除": {
+        "src": "删除",
+        "dst": "Xoá"
+    },
+    "修改对话标题": {
+        "src": "修改对话标题",
+        "dst": "Thay đổi tiêu đề hội thoại"
+    },
+    "请输入新的对话标题": {
+        "src": "请输入新的对话标题",
+        "dst": "Vui lòng nhập tiêu đề hội thoại mới"
+    },
+    "确认": {
+        "src": "确认",
+        "dst": "Xác nhận"
+    },
+    "修改标题": {
+        "src": "修改标题",
+        "dst": "Thay đổi tiêu đề"
+    },
+    "已深度思考": {
+        "src": "已深度思考",
+        "dst": "Suy nghĩ sâu sắc"
+    },
+    "对话已停止": {
+        "src": "对话已停止",
+        "dst": "Name"
+    },
+    "对话删除成功": {
+        "src": "对话删除成功",
+        "dst": "Xóa hội thoại thành công"
+    },
+    "对话删除失败：": {
+        "src": "对话删除失败：",
+        "dst": "Gỡ bỏ hội thoại không thành công:"
+    },
+    "对话标题修改成功": {
+        "src": "对话标题修改成功",
+        "dst": "Thay đổi tiêu đề hội thoại thành công"
+    },
+    "对话标题修改失败:": {
+        "src": "对话标题修改失败:",
+        "dst": "Sửa đổi tiêu đề hội thoại không thành công:"
+    },
+    "安装成功": {
+        "src": "安装成功",
+        "dst": "Cài đặt thành công"
+    },
+    "正在连接，请稍候...": {
+        "src": "正在连接，请稍候...",
+        "dst": "Đang kết nối, vui lòng chờ..."
+    },
+    "等待下载:{0}，请稍候...": {
+        "src": "等待下载:{0}，请稍候...",
+        "dst": "Chờ tải xuống: {0}, vui lòng chờ..."
+    },
+    "正在下载:{0}，请稍候...": {
+        "src": "正在下载:{0}，请稍候...",
+        "dst": "Đang tải xuống: {0}, vui lòng chờ..."
+    },
+    "正在安装:{0}，请稍候...": {
+        "src": "正在安装:{0}，请稍候...",
+        "dst": "Đang cài đặt: {0}, vui lòng chờ..."
+    },
+    "安装失败": {
+        "src": "安装失败",
+        "dst": "Cài đặt thất bại"
+    },
+    "模型删除成功": {
+        "src": "模型删除成功",
+        "dst": "Xóa mô hình thành công"
+    },
+    "模型删除失败:{0}": {
+        "src": "模型删除失败:{0}",
+        "dst": "Lỗi xóa mô hình: {0}"
+    },
+    "模型异常，请重新生成": {
+        "src": "模型异常，请重新生成",
+        "dst": "Mô hình ngoại lệ, vui lòng tạo lại"
+    },
+    "模型管理器安装成功": {
+        "src": "模型管理器安装成功",
+        "dst": "Trình quản lý mô hình đã được cài đặt thành công"
+    },
+    "模型管理器安装失败": {
+        "src": "模型管理器安装失败",
+        "dst": "Trình quản lý mô hình không cài đặt được"
+    },
+    "请求出错，状态码:": {
+        "src": "请求出错，状态码:",
+        "dst": "Yêu cầu bị lỗi, mã trạng thái:"
+    },
+    "请求发生错误": {
+        "src": "请求发生错误",
+        "dst": "Đã xảy ra lỗi yêu cầu"
+    },
+    "可用": {
+        "src": "可用",
+        "dst": "Có sẵn"
+    },
+    "分享": {
+        "src": "分享",
+        "dst": "Chia sẻ"
+    },
+    "是否确认删除模型，该操作不可逆？": {
+        "src": "是否确认删除模型，该操作不可逆？",
+        "dst": "Xác nhận việc xóa mô hình, hành động không thể đảo ngược?"
+    },
+    "将AingDesk分享给好友一起使用": {
+        "src": "将AingDesk分享给好友一起使用",
+        "dst": "Chia sẻ AingDesk với bạn bè"
+    },
+    "请输入名称": {
+        "src": "请输入名称",
+        "dst": "Vui lòng nhập tên"
+    },
+    "修改分享": {
+        "src": "修改分享",
+        "dst": "Thay đổi chia sẻ"
+    },
+    "是否确认删除当前分享": {
+        "src": "是否确认删除当前分享",
+        "dst": "Xác nhận xóa chia sẻ hiện tại"
+    },
+    "名称": {
+        "src": "名称",
+        "dst": "Tên"
+    },
+    "访问地址": {
+        "src": "访问地址",
+        "dst": "Địa chỉ truy cập"
+    },
+    "修改": {
+        "src": "修改",
+        "dst": "Sửa đổi"
+    },
+    "正在下载": {
+        "src": "正在下载",
+        "dst": "Đang tải về"
+    },
+    "正在选择下载节点，请稍后": {
+        "src": "正在选择下载节点，请稍后",
+        "dst": "Chọn nút tải xuống, vui lòng để sau"
+    },
+    "正在下载模型管理器，请稍后": {
+        "src": "正在下载模型管理器，请稍后",
+        "dst": "Trình quản lý mô hình đang tải xuống, vui lòng để sau"
+    },
+    "正在安装模型管理器，可能要几分钟时间，请耐心等待": {
+        "src": "正在安装模型管理器，可能要几分钟时间，请耐心等待",
+        "dst": "Trình quản lý mô hình đang được cài đặt, có thể mất vài phút, hãy kiên nhẫn"
+    },
+    "创建分享成功": {
+        "src": "创建分享成功",
+        "dst": "Chia sẻ thành công"
+    },
+    "修改成功": {
+        "src": "修改成功",
+        "dst": "Sửa đổi thành công"
+    },
+    "正在执行联网搜索...": {
+        "src": "正在执行联网搜索...",
+        "dst": "Đang thực hiện tìm kiếm mạng......"
+    },
+    "已联网搜索{0}个网址": {
+        "src": "已联网搜索{0}个网址",
+        "dst": "Tìm kiếm trên mạng {0} địa chỉ web"
+    },
+    "不使用联网搜索": {
+        "src": "不使用联网搜索",
+        "dst": "Không sử dụng Internet Search"
+    },
+    "不联网": {
+        "src": "不联网",
+        "dst": "Không nối mạng"
+    },
+    "百度": {
+        "src": "百度",
+        "dst": "100 triệu"
+    },
+    "搜狗": {
+        "src": "搜狗",
+        "dst": "Săn chó"
+    },
+    "谷歌": {
+        "src": "谷歌",
+        "dst": "Trang chủ"
+    },
+    "DuckDuckGo": {
+        "src": "DuckDuckGo",
+        "dst": "DuckDuckGo"
+    },
+    "360搜索": {
+        "src": "360搜索",
+        "dst": "360 tìm kiếm"
+    },
+    "联网搜索": {
+        "src": "联网搜索",
+        "dst": "Mạng tìm kiếm"
+    },
+    "上传文件": {
+        "src": "上传文件",
+        "dst": "Tải lên tập tin"
+    },
+    "上传时间": {
+        "src": "上传时间",
+        "dst": "Thời gian tải lên"
+    },
+    "AI摘要": {
+        "src": "AI摘要",
+        "dst": "Tóm tắt AI"
+    },
+    "共参考{0}份资料": {
+        "src": "共参考{0}份资料",
+        "dst": "Tham khảo {0} thông tin"
+    },
+    "新建对话": {
+        "src": "新建对话",
+        "dst": "Hội thoại mới"
+    },
+    "清空对话": {
+        "src": "清空对话",
+        "dst": "Đối thoại trống"
+    },
+    "知识库": {
+        "src": "知识库",
+        "dst": "Cơ sở kiến thức"
+    },
+    "新建知识库": {
+        "src": "新建知识库",
+        "dst": "Cơ sở kiến thức mới"
+    },
+    "语言选择": {
+        "src": "语言选择",
+        "dst": "Lựa chọn ngôn ngữ"
+    },
+    "默认搜索引擎": {
+        "src": "默认搜索引擎",
+        "dst": "Công cụ tìm kiếm mặc định"
+    },
+    "加入AingDesk交流群": {
+        "src": "加入AingDesk交流群",
+        "dst": "Tham gia nhóm trao đổi AingDesk"
+    },
+    "当前版本": {
+        "src": "当前版本",
+        "dst": "Phiên bản hiện tại"
+    },
+    "上传文件夹": {
+        "src": "上传文件夹",
+        "dst": "Tải lên thư mục"
+    },
+    "点击上传": {
+        "src": "点击上传",
+        "dst": "Click vào Upload"
+    },
+    "文件支持类型": {
+        "src": "文件支持类型",
+        "dst": "Loại hỗ trợ tập tin"
+    },
+    "{0}的文件类型不支持": {
+        "src": "{0}的文件类型不支持",
+        "dst": "{0} Loại tập tin không được hỗ trợ"
+    },
+    "知识库创建成功": {
+        "src": "知识库创建成功",
+        "dst": "Kiến thức xây dựng thành công"
+    },
+    "知识库创建失败": {
+        "src": "知识库创建失败",
+        "dst": "Lỗi tạo cơ sở kiến thức"
+    },
+    "获取知识库列表失败，请重试": {
+        "src": "获取知识库列表失败，请重试",
+        "dst": "Nhận danh sách cơ sở kiến thức không thành công, hãy thử lại"
+    },
+    "是否确认删除知识库{0}及其下的所有文档？该操作不可逆": {
+        "src": "是否确认删除知识库{0}及其下的所有文档？该操作不可逆",
+        "dst": "Xác nhận xóa cơ sở kiến thức {0} và tất cả các tài liệu bên dưới nó? Hoạt động không thể đảo ngược"
+    },
+    "删除知识库成功": {
+        "src": "删除知识库成功",
+        "dst": "Xóa cơ sở kiến thức thành công"
+    },
+    "删除知识库失败，请重试": {
+        "src": "删除知识库失败，请重试",
+        "dst": "Xóa cơ sở kiến thức không thành công, hãy thử lại"
+    },
+    "修改知识库成功": {
+        "src": "修改知识库成功",
+        "dst": "Sửa đổi cơ sở kiến thức thành công"
+    },
+    "修改知识库失败，请重试": {
+        "src": "修改知识库失败，请重试",
+        "dst": "Sửa đổi cơ sở kiến thức không thành công, hãy thử lại"
+    },
+    "正在解析文档，这可能要几分钟时间...": {
+        "src": "正在解析文档，这可能要几分钟时间...",
+        "dst": "Đang phân tích tài liệu, có thể mất vài phút..."
+    },
+    "是否确认删除文档{0}？该操作不可逆": {
+        "src": "是否确认删除文档{0}？该操作不可逆",
+        "dst": "Xác nhận xóa tài liệu {0}? Hoạt động không thể đảo ngược"
+    },
+    "文档删除成功": {
+        "src": "文档删除成功",
+        "dst": "Xóa tài liệu thành công"
+    },
+    "正搜索...": {
+        "src": "正搜索...",
+        "dst": "Đang tìm kiếm......"
+    },
+    "{0}个文件": {
+        "src": "{0}个文件",
+        "dst": "{0} Tài liệu"
+    },
+    "正在搜索...": {
+        "src": "正在搜索...",
+        "dst": "Đang tìm kiếm..."
+    },
+    "请输入知识库名称": {
+        "src": "请输入知识库名称",
+        "dst": "Name"
+    },
+    "描述": {
+        "src": "描述",
+        "dst": "Mô tả"
+    },
+    "请输入知识库描述": {
+        "src": "请输入知识库描述",
+        "dst": "Vui lòng nhập mô tả cơ sở kiến thức"
+    },
+    "嵌入模型": {
+        "src": "嵌入模型",
+        "dst": "Mô hình nhúng"
+    },
+    "选择模型": {
+        "src": "选择模型",
+        "dst": "Chọn mô hình"
+    },
+    "选择知识库": {
+        "src": "选择知识库",
+        "dst": "Chọn cơ sở kiến thức"
+    },
+    "文档嵌入中，请稍后": {
+        "src": "文档嵌入中，请稍后",
+        "dst": "Tài liệu được nhúng, vui lòng để sau"
+    },
+    "已嵌入完成, 可正常调用": {
+        "src": "已嵌入完成, 可正常调用",
+        "dst": "Đã nhúng xong, có thể gọi bình thường"
+    },
+    "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Đang nhúng, thời gian chờ tùy thuộc vào số lượng tệp, có thể mất từ vài phút đến hàng chục phút"
+    },
+    "第三方模型API": {
+        "src": "第三方模型API",
+        "dst": "Mô hình API của bên thứ ba"
+    },
+    "本地模型": {
+        "src": "本地模型",
+        "dst": "Mô hình cục bộ"
+    },
+    "添加模型服务商": {
+        "src": "添加模型服务商",
+        "dst": "Thêm trình phục vụ mô hình"
+    },
+    "使用教程": {
+        "src": "使用教程",
+        "dst": "Hướng dẫn sử dụng"
+    },
+    "删除服务商": {
+        "src": "删除服务商",
+        "dst": "Xóa nhà cung cấp dịch vụ"
+    },
+    "API密钥": {
+        "src": "API密钥",
+        "dst": "Khóa API"
+    },
+    "请输入API密钥": {
+        "src": "请输入API密钥",
+        "dst": "Vui lòng nhập API Key"
+    },
+    "检查": {
+        "src": "检查",
+        "dst": "Kiểm tra"
+    },
+    "点次获取密钥": {
+        "src": "点次获取密钥",
+        "dst": "Nhấn để lấy chìa khóa"
+    },
+    "API地址": {
+        "src": "API地址",
+        "dst": "Địa chỉ API"
+    },
+    "请输入API地址": {
+        "src": "请输入API地址",
+        "dst": "Vui lòng nhập địa chỉ API"
+    },
+    "示例": {
+        "src": "示例",
+        "dst": "Ví dụ"
+    },
+    "保存API": {
+        "src": "保存API",
+        "dst": "Lưu API"
+    },
+    "默认从/models获取所有模型": {
+        "src": "默认从/models获取所有模型",
+        "dst": "Nhận tất cả các mô hình từ/models theo mặc định"
+    },
+    "开关所有": {
+        "src": "开关所有",
+        "dst": "Switch Tất cả"
+    },
+    "修改别名": {
+        "src": "修改别名",
+        "dst": "Thay đổi bí danh"
+    },
+    "当前服务商下属暂无模型可用": {
+        "src": "当前服务商下属暂无模型可用",
+        "dst": "Hiện chưa có mô hình nào dành cho các nhà cung cấp dịch vụ."
+    },
+    "添加模型": {
+        "src": "添加模型",
+        "dst": "Thêm mô hình"
+    },
+    "模型ID": {
+        "src": "模型ID",
+        "dst": "Mô hình ID"
+    },
+    "请输入模型ID": {
+        "src": "请输入模型ID",
+        "dst": "Vui lòng nhập ID mẫu"
+    },
+    "模型别名": {
+        "src": "模型别名",
+        "dst": "Bí danh mô hình"
+    },
+    "请输入模型别名": {
+        "src": "请输入模型别名",
+        "dst": "Vui lòng nhập bí danh mô hình"
+    },
+    "模型功能": {
+        "src": "模型功能",
+        "dst": "Chức năng mô hình"
+    },
+    "添加": {
+        "src": "添加",
+        "dst": "Thêm"
+    },
+    "供应商名称": {
+        "src": "供应商名称",
+        "dst": "Tên nhà cung cấp"
+    },
+    "接口地址": {
+        "src": "接口地址",
+        "dst": "Địa chỉ giao diện"
+    },
+    "需要兼容openAI格式的接口": {
+        "src": "需要兼容openAI格式的接口",
+        "dst": "Yêu cầu giao diện tương thích với định dạng openAI"
+    },
+    "密钥": {
+        "src": "密钥",
+        "dst": "Chìa khóa"
+    },
+    "请选择模型功能": {
+        "src": "请选择模型功能",
+        "dst": "Vui lòng chọn chức năng mô hình"
+    },
+    "请输入供应商名称": {
+        "src": "请输入供应商名称",
+        "dst": "Vui lòng nhập tên nhà cung cấp"
+    },
+    "模型添加成功": {
+        "src": "模型添加成功",
+        "dst": "Mô hình Thêm thành công"
+    },
+    "是否确定删除当前模型？该操作不可逆": {
+        "src": "是否确定删除当前模型？该操作不可逆",
+        "dst": "Bạn có chắc chắn về việc xóa mô hình hiện tại không? Hoạt động không thể đảo ngược"
+    },
+    "请填写完整配置信息": {
+        "src": "请填写完整配置信息",
+        "dst": "Vui lòng điền đầy đủ thông tin cấu hình"
+    },
+    "配置保存成功": {
+        "src": "配置保存成功",
+        "dst": "Cấu hình lưu thành công"
+    },
+    "缺少API密钥": {
+        "src": "缺少API密钥",
+        "dst": "Thiếu API Key"
+    },
+    "缺少API地址": {
+        "src": "缺少API地址",
+        "dst": "Thiếu địa chỉ API"
+    },
+    "模型启用成功": {
+        "src": "模型启用成功",
+        "dst": "Mô hình kích hoạt thành công"
+    },
+    "模型禁用成功": {
+        "src": "模型禁用成功",
+        "dst": "Mô hình vô hiệu hóa thành công"
+    },
+    "已启用全部模型": {
+        "src": "已启用全部模型",
+        "dst": "Kích hoạt tất cả các mẫu"
+    },
+    "已禁用全部模型": {
+        "src": "已禁用全部模型",
+        "dst": "Tất cả các mẫu đã bị vô hiệu hóa"
+    },
+    "添加成功": {
+        "src": "添加成功",
+        "dst": "Thêm thành công"
+    },
+    "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！": {
+        "src": "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！",
+        "dst": "Xoá nhà cung cấp dịch vụ hiện tại? Thao tác này sẽ đồng thời xóa bỏ tất cả mô hình cấp dưới, xin hãy cẩn thận thao tác!"
+    },
+    "删除成功": {
+        "src": "删除成功",
+        "dst": "Xóa thành công"
+    },
+    "一键把AI模型部署在你的电脑": {
+        "src": "一键把AI模型部署在你的电脑",
+        "dst": "Triển khai mô hình AI trên máy tính của bạn với một cú nhấp chuột"
+    },
+    "免费开源无限制": {
+        "src": "免费开源无限制",
+        "dst": "Nguồn mở miễn phí Không giới hạn"
+    },
+    "可在线分享他人使用": {
+        "src": "可在线分享他人使用",
+        "dst": "Chia sẻ trực tuyến cho người khác sử dụng"
+    },
+    "支持联网大幅度提升答案质量": {
+        "src": "支持联网大幅度提升答案质量",
+        "dst": "Hỗ trợ mạng lưới nâng cao chất lượng câu trả lời"
+    },
+    "使用第三方模型": {
+        "src": "使用第三方模型",
+        "dst": "Sử dụng mô hình bên thứ ba"
+    },
+    "使用本地模型": {
+        "src": "使用本地模型",
+        "dst": "Sử dụng Local Model"
+    },
+    "简单好用的AI助手": {
+        "src": "简单好用的AI助手",
+        "dst": "Trợ lý AI đơn giản và dễ sử dụng"
+    },
+    "支持联网搜索和知识库": {
+        "src": "支持联网搜索和知识库",
+        "dst": "Hỗ trợ tìm kiếm mạng và cơ sở kiến thức"
+    },
+    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型": {
+        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型",
+        "dst": "Mẹo: Nếu danh sách chia sẻ trống, dịch vụ kết nối chia sẻ sẽ tự động dừng lại, tại thời điểm đó mạng ngoài không thể truy cập vào bất kỳ mô hình nào thông qua AingDesk"
+    },
+    "上传附件": {
+        "src": "上传附件",
+        "dst": "Tải lên tệp đính kèm"
+    },
+    "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Mô hình [{0}] mà bạn đang sử dụng đã bị vô hiệu hóa hoặc xóa, hãy bật lại hoặc chuyển đổi mô hình"
+    },
+    "请安装或接入嵌入模型": {
+        "src": "请安装或接入嵌入模型",
+        "dst": "Vui lòng cài đặt hoặc truy cập vào mô hình nhúng"
+    },
+    "使用本地模型嵌入（推荐）": {
+        "src": "使用本地模型嵌入（推荐）",
+        "dst": "Nhúng với mô hình cục bộ (khuyến nghị)"
+    },
+    "请选择从Ollama安装-Embedding-安装bge-m3:latest": {
+        "src": "请选择从Ollama安装-Embedding-安装bge-m3:latest",
+        "dst": "Chọn Cài đặt từ Ollama -Embedding -Cài đặt bge-m3: latest"
+    },
+    "使用第三方API提供模型嵌入": {
+        "src": "使用第三方API提供模型嵌入",
+        "dst": "Cung cấp nhúng mô hình với API của bên thứ ba"
+    },
+    "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动": {
+        "src": "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动",
+        "dst": "Vui lòng chọn mô hình truy cập bên thứ ba để truy cập hỗ trợ API ba bên Embedding như dòng chảy dựa trên silicon"
+    },
+    "从Ollama安装": {
+        "src": "从Ollama安装",
+        "dst": "Cài đặt từ Ollama"
+    },
+    "接入第三方模型": {
+        "src": "接入第三方模型",
+        "dst": "Truy cập vào mô hình bên thứ ba"
+    },
+    "已启用模型该服务商": {
+        "src": "已启用模型该服务商",
+        "dst": "Name"
+    },
+    "已禁用模型该服务商": {
+        "src": "已禁用模型该服务商",
+        "dst": "Mô hình bị vô hiệu hóa Nhà cung cấp dịch vụ"
+    },
+    "无记忆": {
+        "src": "无记忆",
+        "dst": "Không có bộ nhớ"
+    },
+    " 能提升单次回复质量，但大模型将没有上下文记忆": {
+        "src": " 能提升单次回复质量，但大模型将没有上下文记忆",
+        "dst": "Có thể cải thiện chất lượng trả lời đơn, nhưng các mô hình lớn sẽ không có bộ nhớ theo ngữ cảnh"
+    },
+    "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式": {
+        "src": "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式",
+        "dst": "Hỗ trợ tải lên tập tin, hình ảnh (tối đa không quá 20MB), hỗ trợ các định dạng PDF, DOC, TXT, v.v."
+    },
+    "附件总大小不能超过20MB": {
+        "src": "附件总大小不能超过20MB",
+        "dst": "Tổng kích thước tệp đính kèm không được vượt quá 20MB"
+    },
+    "请选择知识库": {
+        "src": "请选择知识库",
+        "dst": "Vui lòng chọn cơ sở kiến thức"
+    },
+    "文档教程": {
+        "src": "文档教程",
+        "dst": "Tài liệu hướng dẫn"
+    },
+    "查看知识库教程": {
+        "src": "查看知识库教程",
+        "dst": "Xem hướng dẫn cơ sở kiến thức"
+    },
+    "智能体": {
+        "src": "智能体",
+        "dst": "Cơ thể thông minh"
+    },
+    "创建智能体": {
+        "src": "创建智能体",
+        "dst": "Tạo Smart Body"
+    },
+    "我的智能体": {
+        "src": "我的智能体",
+        "dst": "Cơ thể thông minh của tôi"
+    },
+    "预设模板": {
+        "src": "预设模板",
+        "dst": "Đặt sẵn mẫu"
+    },
+    "编辑": {
+        "src": "编辑",
+        "dst": "Chỉnh sửa"
+    },
+    "请输入智能体名称": {
+        "src": "请输入智能体名称",
+        "dst": "Vui lòng nhập tên đối tượng thông minh"
+    },
+    "人物设定": {
+        "src": "人物设定",
+        "dst": "Thiết lập nhân vật"
+    },
+    "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界": {
+        "src": "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界",
+        "dst": "Bạn là một AI pháp lý chuyên nghiệp được đào tạo trong cơ sở dữ liệu pháp lý của Trung Quốc, quen thuộc với các hệ thống pháp lý chính như Bộ luật Dân sự, Luật Hình sự, Luật Thương mại, v.v., hỗ trợ xem xét hợp đồng, giải thích các điều khoản pháp lý, tư vấn chiến lược kiện tụng, phân biệt nghiêm ngặt ranh giới giữa tư vấn pháp lý và dịch vụ luật sư"
+    },
+    "头像": {
+        "src": "头像",
+        "dst": "Đầu"
+    },
+    "请选择": {
+        "src": "请选择",
+        "dst": "Vui lòng chọn"
+    },
+    "保存": {
+        "src": "保存",
+        "dst": "Lưu"
+    },
+    "请为您的智能体设定提示词": {
+        "src": "请为您的智能体设定提示词",
+        "dst": "Vui lòng đặt lời nhắc cho cơ thể thông minh của bạn"
+    },
+    "请选择嵌入模型": {
+        "src": "请选择嵌入模型",
+        "dst": "Vui lòng chọn mô hình nhúng"
+    },
+    "第三方API配置": {
+        "src": "第三方API配置",
+        "dst": "Cấu hình API của bên thứ ba"
+    },
+    "智能体创建成功": {
+        "src": "智能体创建成功",
+        "dst": "Trí tuệ nhân tạo thành công"
+    },
+    "智能体修改成功": {
+        "src": "智能体修改成功",
+        "dst": "Thông minh thay đổi thành công"
+    },
+    "是否确认删除智能体[{0}]?删除后无法恢复": {
+        "src": "是否确认删除智能体[{0}]?删除后无法恢复",
+        "dst": "Xác nhận xóa đối tượng thông minh không? Không thể phục hồi sau khi xóa"
+    },
+    "智能体删除成功": {
+        "src": "智能体删除成功",
+        "dst": "Xóa cơ thể thông minh thành công"
+    },
+    "您当前使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Mô hình bạn đang sử dụng đã bị vô hiệu hóa hoặc xóa, hãy bật lại hoặc chuyển đổi mô hình"
+    },
+    "请选择或安装接入模型": {
+        "src": "请选择或安装接入模型",
+        "dst": "Vui lòng chọn hoặc cài đặt mô hình truy cập"
+    },
+    "当前对话使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "当前对话使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Mô hình được sử dụng trong cuộc hội thoại hiện tại đã bị vô hiệu hóa hoặc xóa, hãy bật lại hoặc chuyển đổi mô hình"
+    },
+    "模型{0}不存在，请添加本地模型或第三方模型api": {
+        "src": "模型{0}不存在，请添加本地模型或第三方模型api",
+        "dst": "Mô hình {0} không tồn tại, vui lòng thêm mô hình cục bộ hoặc mô hình bên thứ ba api"
+    },
+    "模型管理器": {
+        "src": "模型管理器",
+        "dst": "Quản lý mô hình"
+    },
+    "模型存储位置": {
+        "src": "模型存储位置",
+        "dst": "Vị trí lưu trữ mô hình"
+    },
+    "选择": {
+        "src": "选择",
+        "dst": "Chọn"
+    },
+    "请选择模型管理器": {
+        "src": "请选择模型管理器",
+        "dst": "Chọn Model Manager"
+    },
+    "请选择模型管理器安装路径": {
+        "src": "请选择模型管理器安装路径",
+        "dst": "Chọn đường dẫn cài đặt Model Manager"
+    },
+    "图形": {
+        "src": "图形",
+        "dst": "Đồ họa"
+    },
+    "mermaid解析失败,请检查语法": {
+        "src": "mermaid解析失败,请检查语法",
+        "dst": "Giải pháp mermaid thất bại, hãy kiểm tra cú pháp"
+    },
+    "Ollama接口地址": {
+        "src": "Ollama接口地址",
+        "dst": "Địa chỉ giao diện Ollama"
+    },
+    "新手指引": {
+        "src": "新手指引",
+        "dst": "Hướng dẫn Newbie"
+    },
+    "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
+        "src": "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
+        "dst": "Chào mừng bạn đến với AingDesk, một trợ lý AI đơn giản và dễ sử dụng, hỗ trợ cơ sở kiến thức, mô hình API, chia sẻ, tìm kiếm mạng, cơ thể thông minh, phần mềm này nguồn mở và miễn phí, cũng mong muốn bạn chia sẻ phần mềm cho người khác để hỗ trợ sự phát triển của chúng tôi."
+    },
+    "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
+        "src": "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
+        "dst": "AingDesk là một dự án AI mới, nó vẫn đang cố gắng phát triển nhanh chóng, nếu bạn gặp phải vấn đề gì trong quá trình sử dụng, hoặc bạn có nhu cầu chức năng gì đối với phần mềm, có thể tham gia nhóm wechat của chúng tôi để phản hồi."
+    },
+    "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。": {
+        "src": "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。",
+        "dst": "Và cuối cùng, bạn có thể cho chúng tôi một vài ngôi sao cho dự án mã nguồn mở, và sự khuyến khích của bạn là rất quan trọng đối với chúng tôi để tiếp tục lặp lại dự án mã nguồn mở, cảm ơn."
+    },
+    "去github点星星": {
+        "src": "去github点星星",
+        "dst": "Lên github và chọn ngôi sao"
+    },
+    "您可以在": {
+        "src": "您可以在",
+        "dst": "Bạn có thể in"
+    },
+    "中关闭新手指引": {
+        "src": "中关闭新手指引",
+        "dst": "Đóng hướng dẫn người mới"
+    },
+    "文档删除失败": {
+        "src": "文档删除失败",
+        "dst": "Lỗi xóa tài liệu"
+    },
+    "设置成功": {
+        "src": "设置成功",
+        "dst": "Thiết lập thành công"
+    },
+    "源码": {
+        "src": "源码",
+        "dst": "Mã nguồn"
+    },
+    "当前ollama地址不可用": {
+        "src": "当前ollama地址不可用",
+        "dst": "Địa chỉ Ollama hiện tại không khả dụng"
+    },
+    "分段标识符": {
+        "src": "分段标识符",
+        "dst": "Mã nhận dạng phân đoạn"
+    },
+    "分段最大长度": {
+        "src": "分段最大长度",
+        "dst": "Chiều dài phân đoạn tối đa"
+    },
+    "分段重叠长度": {
+        "src": "分段重叠长度",
+        "dst": "Chiều dài chồng chéo phân đoạn"
+    },
+    "分段标识符支持函正则表达式，如": {
+        "src": "分段标识符支持函正则表达式，如",
+        "dst": "Các định danh phân đoạn hỗ trợ các biểu thức chính quy thư như"
+    },
+    "正则表达式无需添加修饰符，默认会自动添加g修饰符": {
+        "src": "正则表达式无需添加修饰符，默认会自动添加g修饰符",
+        "dst": "Regular Expression Không cần thêm modifier, g modifier được thêm tự động theo mặc định"
+    },
+    "分段重叠长度建议为分段最大长度的10%到20%": {
+        "src": "分段重叠长度建议为分段最大长度的10%到20%",
+        "dst": "Chiều dài chồng chéo phân đoạn được đề xuất từ 10% đến 20% chiều dài tối đa của phân đoạn"
+    },
+    "选择文档进行预览": {
+        "src": "选择文档进行预览",
+        "dst": "Chọn tài liệu để xem thử"
+    },
+    "预览": {
+        "src": "预览",
+        "dst": "Xem thử"
+    },
+    "分段最大长度不能小于20": {
+        "src": "分段最大长度不能小于20",
+        "dst": "Chiều dài tối đa của phân đoạn không được nhỏ hơn 20"
+    },
+    "分段最大长度不能大于1000": {
+        "src": "分段最大长度不能大于1000",
+        "dst": "Chiều dài tối đa của phân đoạn không được lớn hơn 1000"
+    },
+    "请填写分段最大长度": {
+        "src": "请填写分段最大长度",
+        "dst": "Vui lòng điền vào chiều dài tối đa của đoạn"
+    },
+    "分段重叠长度不能小于0": {
+        "src": "分段重叠长度不能小于0",
+        "dst": "Độ dài chồng chéo phân đoạn không được nhỏ hơn 0"
+    },
+    "分段重叠长度不能大于分段最大长度": {
+        "src": "分段重叠长度不能大于分段最大长度",
+        "dst": "Chiều dài chồng chéo phân đoạn không được lớn hơn chiều dài tối đa phân đoạn"
+    },
+    "请填写分段重叠长度": {
+        "src": "请填写分段重叠长度",
+        "dst": "Vui lòng điền vào chiều dài chồng chéo đoạn"
+    },
+    "请填写分段标识符": {
+        "src": "请填写分段标识符",
+        "dst": "Vui lòng điền vào Segment Identifier"
+    },
+    "文档分片设置": {
+        "src": "文档分片设置",
+        "dst": "Thiết lập phân mảnh tài liệu"
+    },
+    "继续添加文件": {
+        "src": "继续添加文件",
+        "dst": "Tiếp tục thêm tập tin"
+    },
+    "请选择文件": {
+        "src": "请选择文件",
+        "dst": "Vui lòng chọn tập tin"
+    },
+    "最大召唤数量": {
+        "src": "最大召唤数量",
+        "dst": "Số cuộc gọi tối đa"
+    },
+    "召回精度": {
+        "src": "召回精度",
+        "dst": "Thu hồi chính xác"
+    },
+    "文档解析失败": {
+        "src": "文档解析失败",
+        "dst": "Lỗi phân giải tài liệu"
+    },
+    "文档解析成功,等待嵌入": {
+        "src": "文档解析成功,等待嵌入",
+        "dst": "Giải quyết tài liệu thành công, chờ nhúng"
+    },
+    "数据存储位置": {
+        "src": "数据存储位置",
+        "dst": "Địa điểm lưu trữ dữ liệu"
+    },
+    "更改": {
+        "src": "更改",
+        "dst": "Thay đổi"
+    },
+    "如何更好的使用知识库?": {
+        "src": "如何更好的使用知识库?",
+        "dst": "Làm thế nào để sử dụng cơ sở kiến thức tốt hơn?"
+    },
+    "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件": {
+        "src": "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件",
+        "dst": "Chuyển đổi thư mục sẽ di chuyển dữ liệu thư mục cũ sang thư mục mới, tùy thuộc vào kích thước dữ liệu có thể mất 5-10 phút, không đóng phần mềm trong quá trình di chuyển"
+    },
+    "选择新位置": {
+        "src": "选择新位置",
+        "dst": "Chọn vị trí mới"
+    },
+    "数据迁移失败，请重试": {
+        "src": "数据迁移失败，请重试",
+        "dst": "Di chuyển dữ liệu không thành công, hãy thử lại"
+    },
+    "数据迁移成功": {
+        "src": "数据迁移成功",
+        "dst": "Di chuyển dữ liệu thành công"
+    },
+    "请勿关闭软件,否则将导致软件异常": {
+        "src": "请勿关闭软件,否则将导致软件异常",
+        "dst": "Không đóng phần mềm, nếu không nó sẽ gây ra bất thường phần mềm"
+    },
+    "等待复制": {
+        "src": "等待复制",
+        "dst": "Chờ copy"
+    },
+    "总大小": {
+        "src": "总大小",
+        "dst": "Tổng kích thước"
+    },
+    "速度": {
+        "src": "速度",
+        "dst": "Tốc độ"
+    },
+    "准备迁移数据": {
+        "src": "准备迁移数据",
+        "dst": "Chuẩn bị di chuyển dữ liệu"
+    },
+    "迁移数据中": {
+        "src": "迁移数据中",
+        "dst": "Di chuyển dữ liệu"
+    },
+    "选择工具": {
+        "src": "选择工具",
+        "dst": "Công cụ chọn"
+    },
+    "工具": {
+        "src": "工具",
+        "dst": "Công cụ"
+    },
+    "模型选择": {
+        "src": "模型选择",
+        "dst": "Lựa chọn mô hình"
+    },
+    "搜索模型": {
+        "src": "搜索模型",
+        "dst": "Mô hình tìm kiếm"
+    },
+    "常用模型": {
+        "src": "常用模型",
+        "dst": "Mô hình phổ biến"
+    },
+    "不使用": {
+        "src": "不使用",
+        "dst": "Không sử dụng"
+    },
+    "新分享": {
+        "src": "新分享",
+        "dst": "Chia sẻ mới"
+    },
+    "最大召回数量": {
+        "src": "最大召回数量",
+        "dst": "Số lượng thu hồi tối đa"
+    },
+    "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条": {
+        "src": "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条",
+        "dst": "Số lượng thanh trả về tối đa khi truy xuất cơ sở kiến thức được đề xuất: 3 cho mô hình cục bộ và 5 cho mô hình trực tuyến"
+    },
+    "自动": {
+        "src": "自动",
+        "dst": "Tự động"
+    },
+    "自定义": {
+        "src": "自定义",
+        "dst": "Tùy chỉnh"
+    },
+    "请输入分隔符": {
+        "src": "请输入分隔符",
+        "dst": "Vui lòng nhập dấu tách"
+    },
+    "正在优化知识库,这可能需要几分钟到十几分钟......": {
+        "src": "正在优化知识库,这可能需要几分钟到十几分钟......",
+        "dst": "Cơ sở kiến thức đang được tối ưu hóa, có thể mất từ vài phút đến mười phút..."
+    },
+    "上传知识库文档": {
+        "src": "上传知识库文档",
+        "dst": "Tải lên tài liệu cơ sở kiến thức"
+    },
+    "请选择模型管理器的安装路径": {
+        "src": "请选择模型管理器的安装路径",
+        "dst": "Chọn đường dẫn cài đặt cho Model Manager"
+    },
+    "优化": {
+        "src": "优化",
+        "dst": "Tối ưu hóa"
+    },
+    "增强索引,并释放多余的空间占用": {
+        "src": "增强索引,并释放多余的空间占用",
+        "dst": "Tăng cường chỉ mục và giải phóng không gian dư thừa"
+    },
+    "反馈": {
+        "src": "反馈",
+        "dst": "Phản hồi"
+    },
+    "删除MCP服务器": {
+        "src": "删除MCP服务器",
+        "dst": "Gỡ bỏ MCP Server"
+    },
+    "是否可用": {
+        "src": "是否可用",
+        "dst": "Có sẵn hay không"
+    },
+    "请输入MCP服务器名称": {
+        "src": "请输入MCP服务器名称",
+        "dst": "Vui lòng nhập tên máy chủ MCP"
+    },
+    "请输入内容": {
+        "src": "请输入内容",
+        "dst": "Vui lòng nhập nội dung"
+    },
+    "类型": {
+        "src": "类型",
+        "dst": "Loại"
+    },
+    "服务器地址": {
+        "src": "服务器地址",
+        "dst": "Địa chỉ máy chủ"
+    },
+    "请输入服务器URL地址": {
+        "src": "请输入服务器URL地址",
+        "dst": "Vui lòng nhập địa chỉ URL máy chủ"
+    },
+    "程序类型": {
+        "src": "程序类型",
+        "dst": "Loại chương trình"
+    },
+    "当前未安装Nodejs环境，点击": {
+        "src": "当前未安装Nodejs环境，点击",
+        "dst": "Chưa cài đặt môi trường NodeJS"
+    },
+    "命令": {
+        "src": "命令",
+        "dst": "Lệnh"
+    },
+    "可执行命令": {
+        "src": "可执行命令",
+        "dst": "Lệnh thực thi được"
+    },
+    "参数": {
+        "src": "参数",
+        "dst": "Tham số"
+    },
+    "环境变量": {
+        "src": "环境变量",
+        "dst": "Biến môi trường"
+    },
+    "正在安装环境,这可能需要几分钟......": {
+        "src": "正在安装环境,这可能需要几分钟......",
+        "dst": "Môi trường đang được cài đặt, có thể mất vài phút..."
+    },
+    "请输入可执行命令": {
+        "src": "请输入可执行命令",
+        "dst": "Vui lòng nhập lệnh thực thi"
+    },
+    "编辑配置文件": {
+        "src": "编辑配置文件",
+        "dst": "Sửa hồ sơ"
+    },
+    "编辑MCP服务器配置的JSON。保存前请确保格式正确。": {
+        "src": "编辑MCP服务器配置的JSON。保存前请确保格式正确。",
+        "dst": "Chỉnh sửa JSON cho cấu hình máy chủ MCP. Hãy chắc chắn rằng nó được định dạng chính xác trước khi lưu."
+    },
+    "添加服务器": {
+        "src": "添加服务器",
+        "dst": "Thêm máy chủ"
+    },
+    "新配置": {
+        "src": "新配置",
+        "dst": "Cấu hình mới"
+    },
+    "环境安装成功": {
+        "src": "环境安装成功",
+        "dst": "Cài đặt môi trường thành công"
+    },
+    "环境安装失败": {
+        "src": "环境安装失败",
+        "dst": "Cài đặt môi trường thất bại"
+    },
+    "操作成功": {
+        "src": "操作成功",
+        "dst": "Hoạt động thành công"
+    },
+    "请先安装Node.js环境": {
+        "src": "请先安装Node.js环境",
+        "dst": "Cài đặt môi trường Node.js"
+    },
+    "是否删除当前MCP服务器？": {
+        "src": "是否删除当前MCP服务器？",
+        "dst": "Gỡ bỏ máy chủ MCP hiện tại?"
+    },
+    "常规设置": {
+        "src": "常规设置",
+        "dst": "Thiết lập chung"
+    },
+    "MCP服务器": {
+        "src": "MCP服务器",
+        "dst": "Máy chủ MCP"
+    },
+    "修改模型": {
+        "src": "修改模型",
+        "dst": "Sửa đổi mô hình"
+    },
+    "保存成功": {
+        "src": "保存成功",
+        "dst": "Lưu thành công"
+    },
+    "调用结果:": {
+        "src": "调用结果:",
+        "dst": "Kết quả cuộc gọi:"
+    },
+    "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Tài liệu được phân tích thành công, chờ nhúng, thời gian chờ tùy thuộc vào số lượng tệp, có thể mất từ vài phút đến mười phút"
+    },
+    "正在嵌入中,请稍后...": {
+        "src": "正在嵌入中,请稍后...",
+        "dst": "Đang nhúng, vui lòng để sau..."
+    }
+}

@@ -1,0 +1,1342 @@
+{
+    "让我们开启一段新的对话吧": {
+        "src": "让我们开启一段新的对话吧",
+        "dst": "Låt oss börja en ny konversation."
+    },
+    "正在思考...": {
+        "src": "正在思考...",
+        "dst": "Tänker..."
+    },
+    "复制": {
+        "src": "复制",
+        "dst": "Kopiera"
+    },
+    "暂无信息": {
+        "src": "暂无信息",
+        "dst": "Inga uppgifter"
+    },
+    "重新生成": {
+        "src": "重新生成",
+        "dst": "Regenerera"
+    },
+    "请输入对话内容": {
+        "src": "请输入对话内容",
+        "dst": "Ange konversationens innehåll"
+    },
+    "发送": {
+        "src": "发送",
+        "dst": "skicka ut"
+    },
+    "停止生成": {
+        "src": "停止生成",
+        "dst": "Sluta generera"
+    },
+    "复制成功": {
+        "src": "复制成功",
+        "dst": "Kopiering framgångsrik"
+    },
+    "请选择对应模型": {
+        "src": "请选择对应模型",
+        "dst": "Välj motsvarande modell"
+    },
+    "当前正在回答，请稍后": {
+        "src": "当前正在回答，请稍后",
+        "dst": "Svarar just nu, vänligen senare."
+    },
+    "点击[设置]安装模型": {
+        "src": "点击[设置]安装模型",
+        "dst": "Klicka på [Inställningar] för att installera modellen"
+    },
+    "模型大小:": {
+        "src": "模型大小:",
+        "dst": "Modellstorlek:"
+    },
+    "已下载:": {
+        "src": "已下载:",
+        "dst": "Ladda ner:"
+    },
+    "速度:": {
+        "src": "速度:",
+        "dst": "Hastighet:"
+    },
+    "引用": {
+        "src": "引用",
+        "dst": "citat"
+    },
+    "已复制": {
+        "src": "已复制",
+        "dst": "Kopierad"
+    },
+    "处理器:": {
+        "src": "处理器:",
+        "dst": "Processor:"
+    },
+    "内存:": {
+        "src": "内存:",
+        "dst": "Minne:"
+    },
+    "显卡:": {
+        "src": "显卡:",
+        "dst": "Grafikkort:"
+    },
+    "建议:": {
+        "src": "建议:",
+        "dst": "Förslag:"
+    },
+    "首次使用，请选择要安装的模型": {
+        "src": "首次使用，请选择要安装的模型",
+        "dst": "För första gången väljer du vilken modell du vill installera"
+    },
+    "如:": {
+        "src": "如:",
+        "dst": "Till exempel:"
+    },
+    "搜索": {
+        "src": "搜索",
+        "dst": "Sök"
+    },
+    "模型刪除中，请稍后": {
+        "src": "模型刪除中，请稍后",
+        "dst": "Modellen raderas, vänligen senare"
+    },
+    "提示": {
+        "src": "提示",
+        "dst": "Tips"
+    },
+    "检测到您没有安装模型管理器，是否立即安装？": {
+        "src": "检测到您没有安装模型管理器，是否立即安装？",
+        "dst": "Upptäckte att du inte har installerat Modellhanteraren, installerar du omedelbart?"
+    },
+    "暂不安装": {
+        "src": "暂不安装",
+        "dst": "Installera inte ännu"
+    },
+    "立即安装": {
+        "src": "立即安装",
+        "dst": "Installera nu"
+    },
+    "正在安装模型管理器，请稍后": {
+        "src": "正在安装模型管理器，请稍后",
+        "dst": "Installerar modellhanteraren, vänligen senare"
+    },
+    "大小:": {
+        "src": "大小:",
+        "dst": "storlek:"
+    },
+    "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。": {
+        "src": "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。",
+        "dst": "Försök att välja om nedladdningsnoden för att optimera nedladdningshastigheten, PS: Det kommer inte att förlora nuvarande nedladdningsförlopp och kommer automatiskt att återupptas från en brytpunkt."
+    },
+    "所有": {
+        "src": "所有",
+        "dst": "Alla"
+    },
+    "已安装": {
+        "src": "已安装",
+        "dst": "Installerad"
+    },
+    "模型": {
+        "src": "模型",
+        "dst": "Modell"
+    },
+    "大小": {
+        "src": "大小",
+        "dst": "storlek"
+    },
+    "简介": {
+        "src": "简介",
+        "dst": "kort inledning"
+    },
+    "功能": {
+        "src": "功能",
+        "dst": "Funktioner"
+    },
+    "操作": {
+        "src": "操作",
+        "dst": "drift"
+    },
+    "刪除": {
+        "src": "刪除",
+        "dst": "Ta bort"
+    },
+    "安装": {
+        "src": "安装",
+        "dst": "installera"
+    },
+    "浅色模式": {
+        "src": "浅色模式",
+        "dst": "Ljus läge"
+    },
+    "深色模式": {
+        "src": "深色模式",
+        "dst": "Mörkt läge"
+    },
+    "对话": {
+        "src": "对话",
+        "dst": "Dialoger"
+    },
+    "对话内容": {
+        "src": "对话内容",
+        "dst": "Dialoginnehåll"
+    },
+    "新对话": {
+        "src": "新对话",
+        "dst": "Ny dialogruta"
+    },
+    "模型管理": {
+        "src": "模型管理",
+        "dst": "Modellhantering"
+    },
+    "设置": {
+        "src": "设置",
+        "dst": "Inställningar"
+    },
+    "删除对话": {
+        "src": "删除对话",
+        "dst": "Ta bort en dialog"
+    },
+    "是否确认删除当前对话": {
+        "src": "是否确认删除当前对话",
+        "dst": "Om du vill bekräfta att du tar bort den aktuella dialogen"
+    },
+    "取消": {
+        "src": "取消",
+        "dst": "Avbryt"
+    },
+    "删除": {
+        "src": "删除",
+        "dst": "Ta bort"
+    },
+    "修改对话标题": {
+        "src": "修改对话标题",
+        "dst": "Ändra dialogrubriken"
+    },
+    "请输入新的对话标题": {
+        "src": "请输入新的对话标题",
+        "dst": "Ange ny dialogrubrik"
+    },
+    "确认": {
+        "src": "确认",
+        "dst": "Bekräfta"
+    },
+    "修改标题": {
+        "src": "修改标题",
+        "dst": "Ändra rubrik"
+    },
+    "已深度思考": {
+        "src": "已深度思考",
+        "dst": "Tänkte djupt"
+    },
+    "对话已停止": {
+        "src": "对话已停止",
+        "dst": "Dialogen har avslutats"
+    },
+    "对话删除成功": {
+        "src": "对话删除成功",
+        "dst": "Radering av dialog lyckades"
+    },
+    "对话删除失败：": {
+        "src": "对话删除失败：",
+        "dst": "Misslyckades ta bort dialogen:"
+    },
+    "对话标题修改成功": {
+        "src": "对话标题修改成功",
+        "dst": "Dialogrubriken ändrades framgångsrikt"
+    },
+    "对话标题修改失败:": {
+        "src": "对话标题修改失败:",
+        "dst": "Ändring av dialogrubriken misslyckades:"
+    },
+    "安装成功": {
+        "src": "安装成功",
+        "dst": "Installation lyckad"
+    },
+    "正在连接，请稍候...": {
+        "src": "正在连接，请稍候...",
+        "dst": "Ansluter, vänligen vänta..."
+    },
+    "等待下载:{0}，请稍候...": {
+        "src": "等待下载:{0}，请稍候...",
+        "dst": "Väntar på nedladdning: {0}, vänligen vänta"
+    },
+    "正在下载:{0}，请稍候...": {
+        "src": "正在下载:{0}，请稍候...",
+        "dst": "Hämtar: {0}, vänta..."
+    },
+    "正在安装:{0}，请稍候...": {
+        "src": "正在安装:{0}，请稍候...",
+        "dst": "Installerar: {0}, vänta..."
+    },
+    "安装失败": {
+        "src": "安装失败",
+        "dst": "Installation misslyckades"
+    },
+    "模型删除成功": {
+        "src": "模型删除成功",
+        "dst": "Modell raderad med lyckat resultat"
+    },
+    "模型删除失败:{0}": {
+        "src": "模型删除失败:{0}",
+        "dst": "Misslyckades ta bort modellen: {0}"
+    },
+    "模型异常，请重新生成": {
+        "src": "模型异常，请重新生成",
+        "dst": "Modellen är onormal, generera om"
+    },
+    "模型管理器安装成功": {
+        "src": "模型管理器安装成功",
+        "dst": "Modellhanteraren installerades framgångsrikt"
+    },
+    "模型管理器安装失败": {
+        "src": "模型管理器安装失败",
+        "dst": "Installationen av modellhanteraren misslyckades"
+    },
+    "请求出错，状态码:": {
+        "src": "请求出错，状态码:",
+        "dst": "Begäran om fel, statuskod:"
+    },
+    "请求发生错误": {
+        "src": "请求发生错误",
+        "dst": "Begäran inträffade"
+    },
+    "可用": {
+        "src": "可用",
+        "dst": "Tillgänglig"
+    },
+    "分享": {
+        "src": "分享",
+        "dst": "Dela"
+    },
+    "是否确认删除模型，该操作不可逆？": {
+        "src": "是否确认删除模型，该操作不可逆？",
+        "dst": "Är du säker på att ta bort modellen, är åtgärden irreversibel?"
+    },
+    "将AingDesk分享给好友一起使用": {
+        "src": "将AingDesk分享给好友一起使用",
+        "dst": "Dela AingDesk med vänner att använda tillsammans"
+    },
+    "修改分享": {
+        "src": "修改分享",
+        "dst": "Ändra andel"
+    },
+    "是否确认删除当前分享": {
+        "src": "是否确认删除当前分享",
+        "dst": "Om du vill bekräfta att du tar bort den aktuella delningen"
+    },
+    "名称": {
+        "src": "名称",
+        "dst": "Namn"
+    },
+    "修改": {
+        "src": "修改",
+        "dst": "Ändra"
+    },
+    "正在选择下载节点，请稍后": {
+        "src": "正在选择下载节点，请稍后",
+        "dst": "Väljer nedladdningsnod, vänligen senare"
+    },
+    "正在下载模型管理器，请稍后": {
+        "src": "正在下载模型管理器，请稍后",
+        "dst": "Ladda ner modellhanteraren, vänta"
+    },
+    "正在安装模型管理器，可能要几分钟时间，请耐心等待": {
+        "src": "正在安装模型管理器，可能要几分钟时间，请耐心等待",
+        "dst": "Installerar modellhanteraren, kan ta några minuter, vänta tålamod"
+    },
+    "创建分享成功": {
+        "src": "创建分享成功",
+        "dst": "Skapa en framgångsrik delning"
+    },
+    "修改成功": {
+        "src": "修改成功",
+        "dst": "Ändringen lyckades"
+    },
+    "正在执行联网搜索...": {
+        "src": "正在执行联网搜索...",
+        "dst": "Kör nätverkssökning"
+    },
+    "已联网搜索{0}个网址": {
+        "src": "已联网搜索{0}个网址",
+        "dst": "Sökt på {0} webbadresser"
+    },
+    "请输入名称": {
+        "src": "请输入名称",
+        "dst": "Ange ett namn"
+    },
+    "访问地址": {
+        "src": "访问地址",
+        "dst": "Besöksadress"
+    },
+    "正在下载": {
+        "src": "正在下载",
+        "dst": "Hämtar"
+    },
+    "不使用联网搜索": {
+        "src": "不使用联网搜索",
+        "dst": "Använd inte nätsökning"
+    },
+    "不联网": {
+        "src": "不联网",
+        "dst": "Inte ansluten till internet"
+    },
+    "百度": {
+        "src": "百度",
+        "dst": "Baidu"
+    },
+    "搜狗": {
+        "src": "搜狗",
+        "dst": "Sök hund"
+    },
+    "谷歌": {
+        "src": "谷歌",
+        "dst": "Googles"
+    },
+    "DuckDuckGo": {
+        "src": "DuckDuckGo",
+        "dst": "DuckDuckGo"
+    },
+    "360搜索": {
+        "src": "360搜索",
+        "dst": "360Sök"
+    },
+    "正搜索...": {
+        "src": "正搜索...",
+        "dst": "Söker"
+    },
+    "联网搜索": {
+        "src": "联网搜索",
+        "dst": "Sök på nätet"
+    },
+    "上传文件": {
+        "src": "上传文件",
+        "dst": "Ladda upp filer"
+    },
+    "上传时间": {
+        "src": "上传时间",
+        "dst": "Uppladdningstid"
+    },
+    "AI摘要": {
+        "src": "AI摘要",
+        "dst": "AI sammanfattning"
+    },
+    "共参考{0}份资料": {
+        "src": "共参考{0}份资料",
+        "dst": "Totalt {0} referenser"
+    },
+    "新建对话": {
+        "src": "新建对话",
+        "dst": "Skapa en ny konversation"
+    },
+    "清空对话": {
+        "src": "清空对话",
+        "dst": "Ta bort dialogen"
+    },
+    "知识库": {
+        "src": "知识库",
+        "dst": "Kunskapsbas"
+    },
+    "新建知识库": {
+        "src": "新建知识库",
+        "dst": "Ny kunskapsbas"
+    },
+    "语言选择": {
+        "src": "语言选择",
+        "dst": "Språkval"
+    },
+    "默认搜索引擎": {
+        "src": "默认搜索引擎",
+        "dst": "Standardsökmotor"
+    },
+    "加入AingDesk交流群": {
+        "src": "加入AingDesk交流群",
+        "dst": "Gå med i AingDesk"
+    },
+    "当前版本": {
+        "src": "当前版本",
+        "dst": "Aktuell version"
+    },
+    "上传文件夹": {
+        "src": "上传文件夹",
+        "dst": "Ladda upp katalog"
+    },
+    "点击上传": {
+        "src": "点击上传",
+        "dst": "Klicka för att ladda upp"
+    },
+    "文件支持类型": {
+        "src": "文件支持类型",
+        "dst": "Stöd för filtyper"
+    },
+    "{0}的文件类型不支持": {
+        "src": "{0}的文件类型不支持",
+        "dst": "Filtypen för {0} stöds inte"
+    },
+    "知识库创建成功": {
+        "src": "知识库创建成功",
+        "dst": "Kunskapsbas skapad framgångsrikt"
+    },
+    "知识库创建失败": {
+        "src": "知识库创建失败",
+        "dst": "Kunskapsbas misslyckades skapas"
+    },
+    "获取知识库列表失败，请重试": {
+        "src": "获取知识库列表失败，请重试",
+        "dst": "Misslyckades hämta kunskapsbaslistan, försök igen"
+    },
+    "是否确认删除知识库{0}及其下的所有文档？该操作不可逆": {
+        "src": "是否确认删除知识库{0}及其下的所有文档？该操作不可逆",
+        "dst": "Är du säker på att du tar bort kunskapsbas {0} och alla dokument under den? Operationen är irreversibel."
+    },
+    "删除知识库成功": {
+        "src": "删除知识库成功",
+        "dst": "Ta bort kunskapsbas framgångsrikt"
+    },
+    "删除知识库失败，请重试": {
+        "src": "删除知识库失败，请重试",
+        "dst": "Misslyckades ta bort kunskapsbasen, försök igen"
+    },
+    "修改知识库成功": {
+        "src": "修改知识库成功",
+        "dst": "Kunskapsbasen ändrades framgångsrikt"
+    },
+    "修改知识库失败，请重试": {
+        "src": "修改知识库失败，请重试",
+        "dst": "Misslyckades ändra kunskapsbasen, försök igen"
+    },
+    "正在解析文档，这可能要几分钟时间...": {
+        "src": "正在解析文档，这可能要几分钟时间...",
+        "dst": "Analysera dokument, detta kan ta några minuter"
+    },
+    "是否确认删除文档{0}？该操作不可逆": {
+        "src": "是否确认删除文档{0}？该操作不可逆",
+        "dst": "Är du säker på att ta bort dokument {0}? Operationen är oåterkallelig."
+    },
+    "文档删除成功": {
+        "src": "文档删除成功",
+        "dst": "Dokumentet raderaderaderades framgångsrikt"
+    },
+    "{0}个文件": {
+        "src": "{0}个文件",
+        "dst": "{0} filer"
+    },
+    "正在搜索...": {
+        "src": "正在搜索...",
+        "dst": "Söker..."
+    },
+    "请输入知识库名称": {
+        "src": "请输入知识库名称",
+        "dst": "Ange namnet på kunskapsbasen"
+    },
+    "描述": {
+        "src": "描述",
+        "dst": "beskriva"
+    },
+    "请输入知识库描述": {
+        "src": "请输入知识库描述",
+        "dst": "Ange en beskrivning av kunskapsbasen"
+    },
+    "嵌入模型": {
+        "src": "嵌入模型",
+        "dst": "Inbäddad modell"
+    },
+    "选择模型": {
+        "src": "选择模型",
+        "dst": "Välj modell"
+    },
+    "选择知识库": {
+        "src": "选择知识库",
+        "dst": "Välj kunskapsbas"
+    },
+    "文档嵌入中，请稍后": {
+        "src": "文档嵌入中，请稍后",
+        "dst": "Dokumentet är inbäddat, vänligen senare"
+    },
+    "已嵌入完成, 可正常调用": {
+        "src": "已嵌入完成, 可正常调用",
+        "dst": "Inbäddad färdig, kan kallas normalt"
+    },
+    "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Bäddar in, väntetiden beror på antalet filer som kan ta några minuter till ett dussin minuter"
+    },
+    "第三方模型API": {
+        "src": "第三方模型API",
+        "dst": "API för tredjepartsmodeller"
+    },
+    "本地模型": {
+        "src": "本地模型",
+        "dst": "Lokal modell"
+    },
+    "添加模型服务商": {
+        "src": "添加模型服务商",
+        "dst": "Lägg till modellleverantör"
+    },
+    "使用教程": {
+        "src": "使用教程",
+        "dst": "Använd handledning"
+    },
+    "删除服务商": {
+        "src": "删除服务商",
+        "dst": "Ta bort leverantör"
+    },
+    "API密钥": {
+        "src": "API密钥",
+        "dst": "API- nyckel"
+    },
+    "请输入API密钥": {
+        "src": "请输入API密钥",
+        "dst": "Ange API-nyckeln"
+    },
+    "检查": {
+        "src": "检查",
+        "dst": "Kontrollera"
+    },
+    "点次获取密钥": {
+        "src": "点次获取密钥",
+        "dst": "Hämta nyckeln"
+    },
+    "API地址": {
+        "src": "API地址",
+        "dst": "API-adress"
+    },
+    "请输入API地址": {
+        "src": "请输入API地址",
+        "dst": "Ange din API-adress"
+    },
+    "示例": {
+        "src": "示例",
+        "dst": "Exempel"
+    },
+    "保存API": {
+        "src": "保存API",
+        "dst": "Spara API"
+    },
+    "默认从/models获取所有模型": {
+        "src": "默认从/models获取所有模型",
+        "dst": "Som standard erhålls alla modeller från/modeller"
+    },
+    "开关所有": {
+        "src": "开关所有",
+        "dst": "Byt alla"
+    },
+    "修改别名": {
+        "src": "修改别名",
+        "dst": "Ändra alias"
+    },
+    "当前服务商下属暂无模型可用": {
+        "src": "当前服务商下属暂无模型可用",
+        "dst": "Ingen modell tillgänglig för nuvarande leverantör"
+    },
+    "添加模型": {
+        "src": "添加模型",
+        "dst": "Lägg till modell"
+    },
+    "模型ID": {
+        "src": "模型ID",
+        "dst": "Modell ID"
+    },
+    "请输入模型ID": {
+        "src": "请输入模型ID",
+        "dst": "Ange modell-ID"
+    },
+    "模型别名": {
+        "src": "模型别名",
+        "dst": "Modellens alias"
+    },
+    "请输入模型别名": {
+        "src": "请输入模型别名",
+        "dst": "Ange modellaalias"
+    },
+    "模型功能": {
+        "src": "模型功能",
+        "dst": "Modellfunktionalitet"
+    },
+    "添加": {
+        "src": "添加",
+        "dst": "Lägg till"
+    },
+    "供应商名称": {
+        "src": "供应商名称",
+        "dst": "Leverantörens namn"
+    },
+    "接口地址": {
+        "src": "接口地址",
+        "dst": "Gränssnittsadress"
+    },
+    "需要兼容openAI格式的接口": {
+        "src": "需要兼容openAI格式的接口",
+        "dst": "Ett gränssnitt som är kompatibelt med openAI-format krävs"
+    },
+    "密钥": {
+        "src": "密钥",
+        "dst": "Nyckeln"
+    },
+    "请选择模型功能": {
+        "src": "请选择模型功能",
+        "dst": "Välj en modellfunktion"
+    },
+    "请输入供应商名称": {
+        "src": "请输入供应商名称",
+        "dst": "Ange leverantörsnamn"
+    },
+    "模型添加成功": {
+        "src": "模型添加成功",
+        "dst": "Lägg till modell framgångsrikt"
+    },
+    "是否确定删除当前模型？该操作不可逆": {
+        "src": "是否确定删除当前模型？该操作不可逆",
+        "dst": "Är du säker på att ta bort den aktuella modellen? Operationen är irreversibel."
+    },
+    "请填写完整配置信息": {
+        "src": "请填写完整配置信息",
+        "dst": "Fyll i fullständig konfigurationsinformation"
+    },
+    "配置保存成功": {
+        "src": "配置保存成功",
+        "dst": "Inställningen sparades framgångsrikt"
+    },
+    "缺少API密钥": {
+        "src": "缺少API密钥",
+        "dst": "Saknas API-nyckel"
+    },
+    "缺少API地址": {
+        "src": "缺少API地址",
+        "dst": "Saknas API-adress"
+    },
+    "模型启用成功": {
+        "src": "模型启用成功",
+        "dst": "Modell aktiverad med lyckat resultat"
+    },
+    "模型禁用成功": {
+        "src": "模型禁用成功",
+        "dst": "Avbrytning av modellen lyckades"
+    },
+    "已启用全部模型": {
+        "src": "已启用全部模型",
+        "dst": "Alla modeller har aktiverats"
+    },
+    "已禁用全部模型": {
+        "src": "已禁用全部模型",
+        "dst": "Inaktiverad för alla modeller"
+    },
+    "添加成功": {
+        "src": "添加成功",
+        "dst": "Lägg till framgångsrikt"
+    },
+    "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！": {
+        "src": "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！",
+        "dst": "Ta bort nuvarande leverantör? Denna åtgärd tar bort alla modeller samtidigt, var försiktig!"
+    },
+    "删除成功": {
+        "src": "删除成功",
+        "dst": "Radera framgångsrikt"
+    },
+    "一键把AI模型部署在你的电脑": {
+        "src": "一键把AI模型部署在你的电脑",
+        "dst": "Implementera AI-modellen på din dator med ett klick"
+    },
+    "免费开源无限制": {
+        "src": "免费开源无限制",
+        "dst": "Gratis Open Source Obegränsad"
+    },
+    "可在线分享他人使用": {
+        "src": "可在线分享他人使用",
+        "dst": "Kan dela med andra online"
+    },
+    "支持联网大幅度提升答案质量": {
+        "src": "支持联网大幅度提升答案质量",
+        "dst": "Stöd för nätverksförbättring av svarskvaliteten"
+    },
+    "使用第三方模型": {
+        "src": "使用第三方模型",
+        "dst": "Användning av tredjepartsmodeller"
+    },
+    "使用本地模型": {
+        "src": "使用本地模型",
+        "dst": "Använd lokal modell"
+    },
+    "简单好用的AI助手": {
+        "src": "简单好用的AI助手",
+        "dst": "Enkel och användbar AI-assistent"
+    },
+    "支持联网搜索和知识库": {
+        "src": "支持联网搜索和知识库",
+        "dst": "Stöd för nätverkssökning och kunskapsbas"
+    },
+    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型": {
+        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型",
+        "dst": "Tips: Om delningslistan är tom stoppas delningsanslutningstjänsten automatiskt och det externa nätverket kan inte komma åt några modeller via AingDesk just nu"
+    },
+    "上传附件": {
+        "src": "上传附件",
+        "dst": "Ladda upp bilagor"
+    },
+    "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Modellen [{0}] du använder för närvarande har inaktiverats eller tagits bort. Aktivera eller byt modeller igen"
+    },
+    "请安装或接入嵌入模型": {
+        "src": "请安装或接入嵌入模型",
+        "dst": "Installera eller anslut den inbyggda modellen"
+    },
+    "使用本地模型嵌入（推荐）": {
+        "src": "使用本地模型嵌入（推荐）",
+        "dst": "Använd en lokal modell för inbäddning (rekommenderas)"
+    },
+    "请选择从Ollama安装-Embedding-安装bge-m3:latest": {
+        "src": "请选择从Ollama安装-Embedding-安装bge-m3:latest",
+        "dst": "Välj att installera från Ollama - Inbäddning - Installera bge-m3: latest"
+    },
+    "使用第三方API提供模型嵌入": {
+        "src": "使用第三方API提供模型嵌入",
+        "dst": "Använda API:er från tredje part för att tillhandahålla modellinbäddning"
+    },
+    "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动": {
+        "src": "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动",
+        "dst": "Välj att ansluta till tredjepartsmodeller som stöder Inbäddning av tredjeparts API:er, till exempel kiselbaserad mobilitet"
+    },
+    "从Ollama安装": {
+        "src": "从Ollama安装",
+        "dst": "Installation från Ollama"
+    },
+    "接入第三方模型": {
+        "src": "接入第三方模型",
+        "dst": "Integrera modeller från tredje part"
+    },
+    "已启用模型该服务商": {
+        "src": "已启用模型该服务商",
+        "dst": "Modellen har aktiverats för den här tjänsteleverantören"
+    },
+    "已禁用模型该服务商": {
+        "src": "已禁用模型该服务商",
+        "dst": "Modellen har inaktiverats för den här tjänsteleverantören"
+    },
+    "无记忆": {
+        "src": "无记忆",
+        "dst": "Minneslös"
+    },
+    " 能提升单次回复质量，但大模型将没有上下文记忆": {
+        "src": " 能提升单次回复质量，但大模型将没有上下文记忆",
+        "dst": "Förbättrar kvaliteten på ett enda svar, men stora modeller kommer inte att ha kontextminne"
+    },
+    "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式": {
+        "src": "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式",
+        "dst": "Stöder uppladdning av filer och bilder (upp till 20 MB), och stöder format som PDF, DOC, TXT, etc."
+    },
+    "附件总大小不能超过20MB": {
+        "src": "附件总大小不能超过20MB",
+        "dst": "Den totala storleken på bilagor får inte överstiga 20 MB"
+    },
+    "请选择知识库": {
+        "src": "请选择知识库",
+        "dst": "Välj en kunskapsbas"
+    },
+    "文档教程": {
+        "src": "文档教程",
+        "dst": "Dokumentation handledning"
+    },
+    "查看知识库教程": {
+        "src": "查看知识库教程",
+        "dst": "Visa kunskapsbashandledning"
+    },
+    "智能体": {
+        "src": "智能体",
+        "dst": "Intelligent kropp"
+    },
+    "创建智能体": {
+        "src": "创建智能体",
+        "dst": "Skapa en smart kropp"
+    },
+    "我的智能体": {
+        "src": "我的智能体",
+        "dst": "Min intelligenta agent"
+    },
+    "预设模板": {
+        "src": "预设模板",
+        "dst": "Förinställd mall"
+    },
+    "编辑": {
+        "src": "编辑",
+        "dst": "Redigera"
+    },
+    "请输入智能体名称": {
+        "src": "请输入智能体名称",
+        "dst": "Ange namnet på den smarta kroppen"
+    },
+    "人物设定": {
+        "src": "人物设定",
+        "dst": "Teckendesign"
+    },
+    "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界": {
+        "src": "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界",
+        "dst": "Du är en professionell juridisk AI utbildad i den kinesiska juridiska databasen, bekant med viktiga rättssystem som civillagen, straffrätt och handelsrätt. Du stöder kontraktsgranskning, tolkning av rättsliga bestämmelser, rättsstrategi rådgivning och strikt skilja gränsen mellan juridisk rådgivning och advokattjänster."
+    },
+    "头像": {
+        "src": "头像",
+        "dst": "profilbild"
+    },
+    "请选择": {
+        "src": "请选择",
+        "dst": "Välj"
+    },
+    "保存": {
+        "src": "保存",
+        "dst": "spara"
+    },
+    "请为您的智能体设定提示词": {
+        "src": "请为您的智能体设定提示词",
+        "dst": "Ange ett tips för din smarta kropp"
+    },
+    "请选择嵌入模型": {
+        "src": "请选择嵌入模型",
+        "dst": "Välj inbäddad modell"
+    },
+    "第三方API配置": {
+        "src": "第三方API配置",
+        "dst": "Tredjeparts API-konfiguration"
+    },
+    "智能体创建成功": {
+        "src": "智能体创建成功",
+        "dst": "Framgångsrikt skapad intelligent kropp"
+    },
+    "智能体修改成功": {
+        "src": "智能体修改成功",
+        "dst": "Intelligent agent ändrat framgångsrikt"
+    },
+    "是否确认删除智能体[{0}]?删除后无法恢复": {
+        "src": "是否确认删除智能体[{0}]?删除后无法恢复",
+        "dst": "Är du säker på att ta bort agent [{0}]? Kan inte återställas efter borttagning"
+    },
+    "智能体删除成功": {
+        "src": "智能体删除成功",
+        "dst": "Intelligent agent raderad"
+    },
+    "您当前使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Modellen du använder för närvarande har inaktiverats eller tagits bort. Aktivera eller byt modell igen"
+    },
+    "请选择或安装接入模型": {
+        "src": "请选择或安装接入模型",
+        "dst": "Välj eller installera en åtkomstmodell"
+    },
+    "当前对话使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "当前对话使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Modellen som används i den aktuella konversationen har inaktiverats eller tagits bort. Aktivera eller byt modell igen"
+    },
+    "模型{0}不存在，请添加本地模型或第三方模型api": {
+        "src": "模型{0}不存在，请添加本地模型或第三方模型api",
+        "dst": "Modell {0} finns inte, lägg till en lokal modell eller en tredjepartsmodell API"
+    },
+    "模型管理器": {
+        "src": "模型管理器",
+        "dst": "Modellhanterare"
+    },
+    "模型存储位置": {
+        "src": "模型存储位置",
+        "dst": "Modelllagringsplats"
+    },
+    "选择": {
+        "src": "选择",
+        "dst": "välj"
+    },
+    "请选择模型管理器": {
+        "src": "请选择模型管理器",
+        "dst": "Välj modellhanteraren"
+    },
+    "请选择模型管理器安装路径": {
+        "src": "请选择模型管理器安装路径",
+        "dst": "Välj installationssökvägen för modellhanteraren"
+    },
+    "图形": {
+        "src": "图形",
+        "dst": "grafisk"
+    },
+    "源码": {
+        "src": "源码",
+        "dst": "källkod"
+    },
+    "mermaid解析失败,请检查语法": {
+        "src": "mermaid解析失败,请检查语法",
+        "dst": "Sjöjungfrutolkning misslyckades, kontrollera syntaxen"
+    },
+    "Ollama接口地址": {
+        "src": "Ollama接口地址",
+        "dst": "Olamas gränssnittsadress"
+    },
+    "当前ollama地址不可用": {
+        "src": "当前ollama地址不可用",
+        "dst": "Den nuvarande ollamaadressen är inte tillgänglig"
+    },
+    "新手指引": {
+        "src": "新手指引",
+        "dst": "Nybörjarguide"
+    },
+    "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
+        "src": "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
+        "dst": "Välkommen till AingDesk, en enkel och lättanvänd AI-assistent som stöder kunskapsbas, modell API, delning, onlinesökning och intelligenta agenter. Denna programvara är öppen källkod och gratis, och vi ser fram emot att du delar programvaran med andra för att stödja vår utveckling."
+    },
+    "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
+        "src": "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
+        "dst": "AingDesk är ett nytt AI-projekt som fortfarande strävar efter snabb tillväxt.Om du stöter på några problem under användningen eller har några funktionella krav på programvaran kan du gå med i vår WeChat grupp för att ge oss feedback."
+    },
+    "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。": {
+        "src": "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。",
+        "dst": "Slutligen kan du ge oss en stjärna för vårt projekt med öppen källkod. Din uppmuntran är oerhört viktig för oss att fortsätta iterera projekt med öppen källkod. Tack."
+    },
+    "去github点星星": {
+        "src": "去github点星星",
+        "dst": "Gå till GitHub och klicka på stjärnorna"
+    },
+    "您可以在": {
+        "src": "您可以在",
+        "dst": "Du kan"
+    },
+    "中关闭新手指引": {
+        "src": "中关闭新手指引",
+        "dst": "Stäng nybörjarguiden i mitten"
+    },
+    "文档删除失败": {
+        "src": "文档删除失败",
+        "dst": "Misslyckades ta bort dokument"
+    },
+    "设置成功": {
+        "src": "设置成功",
+        "dst": "Inställning lyckad"
+    },
+    "分段标识符": {
+        "src": "分段标识符",
+        "dst": "Segmentidentifierare"
+    },
+    "分段最大长度": {
+        "src": "分段最大长度",
+        "dst": "Maximal segmentlängd"
+    },
+    "分段重叠长度": {
+        "src": "分段重叠长度",
+        "dst": "Segmentöverlappningslängd"
+    },
+    "分段标识符支持函正则表达式，如": {
+        "src": "分段标识符支持函正则表达式，如",
+        "dst": "Segmentidentifierare stöder reguljära uttryck, till exempel"
+    },
+    "正则表达式无需添加修饰符，默认会自动添加g修饰符": {
+        "src": "正则表达式无需添加修饰符，默认会自动添加g修饰符",
+        "dst": "Regelbundna uttryck kräver inte tillägg av modifierare och lägger automatiskt till modifieraren \"g\" som standard"
+    },
+    "分段重叠长度建议为分段最大长度的10%到20%": {
+        "src": "分段重叠长度建议为分段最大长度的10%到20%",
+        "dst": "Rekommenderad överlappningslängd för segment är 10% till 20% av den maximala segmentlängden"
+    },
+    "选择文档进行预览": {
+        "src": "选择文档进行预览",
+        "dst": "Välj dokument för förhandsgranskning"
+    },
+    "预览": {
+        "src": "预览",
+        "dst": "Förhandsgranska"
+    },
+    "分段最大长度不能小于20": {
+        "src": "分段最大长度不能小于20",
+        "dst": "Segmentets maximala längd får inte vara mindre än 20"
+    },
+    "分段最大长度不能大于1000": {
+        "src": "分段最大长度不能大于1000",
+        "dst": "Den maximala längden för ett segment får inte överstiga 1000"
+    },
+    "请填写分段最大长度": {
+        "src": "请填写分段最大长度",
+        "dst": "Fyll i segmentets maximala längd"
+    },
+    "分段重叠长度不能小于0": {
+        "src": "分段重叠长度不能小于0",
+        "dst": "Segmentens överlappande längd får inte vara mindre än 0"
+    },
+    "分段重叠长度不能大于分段最大长度": {
+        "src": "分段重叠长度不能大于分段最大长度",
+        "dst": "Segmentens överlappande längd får inte överstiga segmentens maximala längd"
+    },
+    "请填写分段重叠长度": {
+        "src": "请填写分段重叠长度",
+        "dst": "Fyll i segmentens överlappande längd"
+    },
+    "请填写分段标识符": {
+        "src": "请填写分段标识符",
+        "dst": "Fyll i segmentets identifierare"
+    },
+    "文档分片设置": {
+        "src": "文档分片设置",
+        "dst": "Inställningar för dokumentdelning"
+    },
+    "继续添加文件": {
+        "src": "继续添加文件",
+        "dst": "Fortsätt lägga till filer"
+    },
+    "请选择文件": {
+        "src": "请选择文件",
+        "dst": "Välj en fil"
+    },
+    "最大召唤数量": {
+        "src": "最大召唤数量",
+        "dst": "Maximal anropskvantitet"
+    },
+    "召回精度": {
+        "src": "召回精度",
+        "dst": "Återkallandenoggrannhet"
+    },
+    "文档解析失败": {
+        "src": "文档解析失败",
+        "dst": "Dokumenttolkning misslyckades"
+    },
+    "文档解析成功,等待嵌入": {
+        "src": "文档解析成功,等待嵌入",
+        "dst": "Dokumenttolkning lyckad, väntar på inbäddning"
+    },
+    "数据存储位置": {
+        "src": "数据存储位置",
+        "dst": "Plats för datalagring"
+    },
+    "更改": {
+        "src": "更改",
+        "dst": "förändring"
+    },
+    "如何更好的使用知识库?": {
+        "src": "如何更好的使用知识库?",
+        "dst": "Hur kan man bättre utnyttja kunskapsbasen?"
+    },
+    "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件": {
+        "src": "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件",
+        "dst": "Byta katalog migrerar data från den gamla katalogen till den nya katalogen, vilket kan ta 5- 10 minuter beroende på datans storlek. Stäng inte programvaran under migreringsprocessen"
+    },
+    "选择新位置": {
+        "src": "选择新位置",
+        "dst": "Välj en ny plats"
+    },
+    "数据迁移失败，请重试": {
+        "src": "数据迁移失败，请重试",
+        "dst": "Datamigrering misslyckades, försök igen"
+    },
+    "数据迁移成功": {
+        "src": "数据迁移成功",
+        "dst": "Datamigrering lyckad"
+    },
+    "请勿关闭软件,否则将导致软件异常": {
+        "src": "请勿关闭软件,否则将导致软件异常",
+        "dst": "Stäng inte programvaran, annars kan det orsaka störningar i programvaran"
+    },
+    "等待复制": {
+        "src": "等待复制",
+        "dst": "Väntar på replikering"
+    },
+    "总大小": {
+        "src": "总大小",
+        "dst": "total storlek"
+    },
+    "速度": {
+        "src": "速度",
+        "dst": "varvtal"
+    },
+    "准备迁移数据": {
+        "src": "准备迁移数据",
+        "dst": "Förbereda migrering av data"
+    },
+    "迁移数据中": {
+        "src": "迁移数据中",
+        "dst": "Vid migrering av data"
+    },
+    "选择工具": {
+        "src": "选择工具",
+        "dst": "Välj verktyg"
+    },
+    "工具": {
+        "src": "工具",
+        "dst": "verktyg"
+    },
+    "模型选择": {
+        "src": "模型选择",
+        "dst": "modellval"
+    },
+    "搜索模型": {
+        "src": "搜索模型",
+        "dst": "Sökmodell"
+    },
+    "常用模型": {
+        "src": "常用模型",
+        "dst": "Gemensamma modeller"
+    },
+    "不使用": {
+        "src": "不使用",
+        "dst": "Ej använd"
+    },
+    "新分享": {
+        "src": "新分享",
+        "dst": "Ny delning"
+    },
+    "最大召回数量": {
+        "src": "最大召回数量",
+        "dst": "Maximal återkallelsekvantitet"
+    },
+    "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条": {
+        "src": "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条",
+        "dst": "Det maximala antalet returer vid sökning i kunskapsbasen rekommenderas att vara 3 för lokala modeller och 5 för onlinemodeller"
+    },
+    "自动": {
+        "src": "自动",
+        "dst": "automatisk"
+    },
+    "自定义": {
+        "src": "自定义",
+        "dst": "anpassa"
+    },
+    "请输入分隔符": {
+        "src": "请输入分隔符",
+        "dst": "Ange en avgränsare"
+    },
+    "正在优化知识库,这可能需要几分钟到十几分钟......": {
+        "src": "正在优化知识库,这可能需要几分钟到十几分钟......",
+        "dst": "Vi optimerar kunskapsbasen, vilket kan ta några minuter till ett dussin minuter"
+    },
+    "上传知识库文档": {
+        "src": "上传知识库文档",
+        "dst": "Ladda upp kunskapsbasdokument"
+    },
+    "请选择模型管理器的安装路径": {
+        "src": "请选择模型管理器的安装路径",
+        "dst": "Välj installationssökvägen för modellhanteraren"
+    },
+    "优化": {
+        "src": "优化",
+        "dst": "optimera"
+    },
+    "增强索引,并释放多余的空间占用": {
+        "src": "增强索引,并释放多余的空间占用",
+        "dst": "Förbättra indexeringen och frigöra överskott av utrymme"
+    },
+    "反馈": {
+        "src": "反馈",
+        "dst": "återkoppling"
+    },
+    "删除MCP服务器": {
+        "src": "删除MCP服务器",
+        "dst": "Ta bort MCP- server"
+    },
+    "是否可用": {
+        "src": "是否可用",
+        "dst": "Är det tillgängligt"
+    },
+    "请输入MCP服务器名称": {
+        "src": "请输入MCP服务器名称",
+        "dst": "Ange MCP- servernamn"
+    },
+    "请输入内容": {
+        "src": "请输入内容",
+        "dst": "Ange innehållet"
+    },
+    "类型": {
+        "src": "类型",
+        "dst": "typ"
+    },
+    "服务器地址": {
+        "src": "服务器地址",
+        "dst": "serveradress"
+    },
+    "请输入服务器URL地址": {
+        "src": "请输入服务器URL地址",
+        "dst": "Ange serverns webbadress"
+    },
+    "程序类型": {
+        "src": "程序类型",
+        "dst": "Programtyp"
+    },
+    "当前未安装Nodejs环境，点击": {
+        "src": "当前未安装Nodejs环境，点击",
+        "dst": "Nodejs-miljön är för närvarande inte installerad, klicka på"
+    },
+    "命令": {
+        "src": "命令",
+        "dst": "kommando"
+    },
+    "可执行命令": {
+        "src": "可执行命令",
+        "dst": "Körbart kommando"
+    },
+    "参数": {
+        "src": "参数",
+        "dst": "parameter"
+    },
+    "环境变量": {
+        "src": "环境变量",
+        "dst": "miljövariabel"
+    },
+    "正在安装环境,这可能需要几分钟......": {
+        "src": "正在安装环境,这可能需要几分钟......",
+        "dst": "Installation av miljö, detta kan ta några minuter"
+    },
+    "请输入可执行命令": {
+        "src": "请输入可执行命令",
+        "dst": "Ange ett körbart kommando"
+    },
+    "编辑配置文件": {
+        "src": "编辑配置文件",
+        "dst": "Redigera profil"
+    },
+    "编辑MCP服务器配置的JSON。保存前请确保格式正确。": {
+        "src": "编辑MCP服务器配置的JSON。保存前请确保格式正确。",
+        "dst": "Redigera JSON för MCP- serverkonfiguration. Kontrollera att formatet är korrekt innan du sparar."
+    },
+    "添加服务器": {
+        "src": "添加服务器",
+        "dst": "Lägg till server"
+    },
+    "新配置": {
+        "src": "新配置",
+        "dst": "ny konfiguration"
+    },
+    "环境安装成功": {
+        "src": "环境安装成功",
+        "dst": "Miljöinstallation lyckad"
+    },
+    "环境安装失败": {
+        "src": "环境安装失败",
+        "dst": "Miljöinstallation misslyckades"
+    },
+    "操作成功": {
+        "src": "操作成功",
+        "dst": "Operation lyckad"
+    },
+    "请先安装Node.js环境": {
+        "src": "请先安装Node.js环境",
+        "dst": "Installera Node.js-miljön först"
+    },
+    "是否删除当前MCP服务器？": {
+        "src": "是否删除当前MCP服务器？",
+        "dst": "Vill du ta bort den aktuella MCP- servern?"
+    },
+    "常规设置": {
+        "src": "常规设置",
+        "dst": "Allmänna inställningar"
+    },
+    "MCP服务器": {
+        "src": "MCP服务器",
+        "dst": "MCP- server"
+    },
+    "修改模型": {
+        "src": "修改模型",
+        "dst": "Ändra modell"
+    },
+    "保存成功": {
+        "src": "保存成功",
+        "dst": "Spara framgångsrikt"
+    },
+    "调用结果:": {
+        "src": "调用结果:",
+        "dst": "Samtalsresultat:"
+    },
+    "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Dokumenttolkningen lyckas och väntar på inbäddning. Väntetiden beror på antalet filer, vilket kan ta flera minuter till tiotals minuter."
+    },
+    "正在嵌入中,请稍后...": {
+        "src": "正在嵌入中,请稍后...",
+        "dst": "Inbäddning pågår, vänta"
+    }
+}

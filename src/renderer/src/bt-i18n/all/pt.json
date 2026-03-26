@@ -1,0 +1,1342 @@
+{
+    "让我们开启一段新的对话吧": {
+        "src": "让我们开启一段新的对话吧",
+        "dst": "Vamos começar uma nova conversa."
+    },
+    "正在思考...": {
+        "src": "正在思考...",
+        "dst": "A pensar..."
+    },
+    "复制": {
+        "src": "复制",
+        "dst": "Copiar"
+    },
+    "暂无信息": {
+        "src": "暂无信息",
+        "dst": "Não há informação disponível de momento"
+    },
+    "重新生成": {
+        "src": "重新生成",
+        "dst": "Gerar novamente"
+    },
+    "请输入对话内容": {
+        "src": "请输入对话内容",
+        "dst": "Por favor, insira o conteúdo da conversa"
+    },
+    "发送": {
+        "src": "发送",
+        "dst": "Enviar"
+    },
+    "停止生成": {
+        "src": "停止生成",
+        "dst": "Parar a geração"
+    },
+    "复制成功": {
+        "src": "复制成功",
+        "dst": "Copiar com sucesso"
+    },
+    "请选择对应模型": {
+        "src": "请选择对应模型",
+        "dst": "Seleccione o modelo correspondente"
+    },
+    "当前正在回答，请稍后": {
+        "src": "当前正在回答，请稍后",
+        "dst": "Respondendo agora, por favor mais tarde."
+    },
+    "点击[设置]安装模型": {
+        "src": "点击[设置]安装模型",
+        "dst": "Clique em [Configurações] para instalar o modelo"
+    },
+    "模型大小:": {
+        "src": "模型大小:",
+        "dst": "Tamanho do modelo:"
+    },
+    "已下载:": {
+        "src": "已下载:",
+        "dst": "Baixado:"
+    },
+    "速度:": {
+        "src": "速度:",
+        "dst": "Velocidade:"
+    },
+    "引用": {
+        "src": "引用",
+        "dst": "Referência"
+    },
+    "已复制": {
+        "src": "已复制",
+        "dst": "Copiado"
+    },
+    "处理器:": {
+        "src": "处理器:",
+        "dst": "Processador:"
+    },
+    "内存:": {
+        "src": "内存:",
+        "dst": "Memória:"
+    },
+    "显卡:": {
+        "src": "显卡:",
+        "dst": "Placa gráfica:"
+    },
+    "建议:": {
+        "src": "建议:",
+        "dst": "Sugestão:"
+    },
+    "首次使用，请选择要安装的模型": {
+        "src": "首次使用，请选择要安装的模型",
+        "dst": "Para a primeira vez, selecione o modelo a instalar"
+    },
+    "如:": {
+        "src": "如:",
+        "dst": "Por exemplo:"
+    },
+    "搜索": {
+        "src": "搜索",
+        "dst": "Pesquisar"
+    },
+    "模型刪除中，请稍后": {
+        "src": "模型刪除中，请稍后",
+        "dst": "Eliminação do modelo, por favor, mais tarde"
+    },
+    "提示": {
+        "src": "提示",
+        "dst": "Dicas"
+    },
+    "检测到您没有安装模型管理器，是否立即安装？": {
+        "src": "检测到您没有安装模型管理器，是否立即安装？",
+        "dst": "Detectou que você não instalou o gerenciador de modelos, instalá-lo imediatamente?"
+    },
+    "暂不安装": {
+        "src": "暂不安装",
+        "dst": "Não instalar"
+    },
+    "立即安装": {
+        "src": "立即安装",
+        "dst": "Instalar agora"
+    },
+    "大小:": {
+        "src": "大小:",
+        "dst": "Tamanho:"
+    },
+    "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。": {
+        "src": "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。",
+        "dst": "Tente selecionar novamente o nó de download para otimizar a velocidade de download, PS: Ele não perderá o progresso atual do download e será retomado automaticamente a partir de um ponto de interrupção."
+    },
+    "所有": {
+        "src": "所有",
+        "dst": "Todos eles"
+    },
+    "已安装": {
+        "src": "已安装",
+        "dst": "Instalado"
+    },
+    "模型": {
+        "src": "模型",
+        "dst": "Modelo"
+    },
+    "大小": {
+        "src": "大小",
+        "dst": "Tamanho"
+    },
+    "简介": {
+        "src": "简介",
+        "dst": "Introdução"
+    },
+    "功能": {
+        "src": "功能",
+        "dst": "função"
+    },
+    "操作": {
+        "src": "操作",
+        "dst": "Operação"
+    },
+    "刪除": {
+        "src": "刪除",
+        "dst": "Apagar"
+    },
+    "安装": {
+        "src": "安装",
+        "dst": "Instalação"
+    },
+    "浅色模式": {
+        "src": "浅色模式",
+        "dst": "Modo de cores claras"
+    },
+    "深色模式": {
+        "src": "深色模式",
+        "dst": "Modo escuro"
+    },
+    "对话": {
+        "src": "对话",
+        "dst": "Diálogo"
+    },
+    "对话内容": {
+        "src": "对话内容",
+        "dst": "Conteúdo do diálogo"
+    },
+    "新对话": {
+        "src": "新对话",
+        "dst": "Novo Diálogo"
+    },
+    "模型管理": {
+        "src": "模型管理",
+        "dst": "Gestão de modelos"
+    },
+    "设置": {
+        "src": "设置",
+        "dst": "Configurações"
+    },
+    "删除对话": {
+        "src": "删除对话",
+        "dst": "Apagar a conversa"
+    },
+    "是否确认删除当前对话": {
+        "src": "是否确认删除当前对话",
+        "dst": "Confirmar a exclusão da conversa atual"
+    },
+    "取消": {
+        "src": "取消",
+        "dst": "Cancelar"
+    },
+    "删除": {
+        "src": "删除",
+        "dst": "Apagar"
+    },
+    "修改对话标题": {
+        "src": "修改对话标题",
+        "dst": "Modificar o título da conversa"
+    },
+    "请输入新的对话标题": {
+        "src": "请输入新的对话标题",
+        "dst": "Por favor, insira o novo título da conversa"
+    },
+    "确认": {
+        "src": "确认",
+        "dst": "confirmar"
+    },
+    "修改标题": {
+        "src": "修改标题",
+        "dst": "Alterar o Título"
+    },
+    "已深度思考": {
+        "src": "已深度思考",
+        "dst": "Pensou profundamente"
+    },
+    "对话已停止": {
+        "src": "对话已停止",
+        "dst": "A conversa foi interrompida"
+    },
+    "对话删除成功": {
+        "src": "对话删除成功",
+        "dst": "Remoção da conversa com sucesso"
+    },
+    "对话删除失败：": {
+        "src": "对话删除失败：",
+        "dst": "Falha na remoção da conversa:"
+    },
+    "对话标题修改成功": {
+        "src": "对话标题修改成功",
+        "dst": "Modificação bem sucedida do título da conversa"
+    },
+    "对话标题修改失败:": {
+        "src": "对话标题修改失败:",
+        "dst": "Falha na modificação do título da conversa:"
+    },
+    "安装成功": {
+        "src": "安装成功",
+        "dst": "Instalação bem sucedida"
+    },
+    "正在连接，请稍候...": {
+        "src": "正在连接，请稍候...",
+        "dst": "A conectar, por favor aguarde..."
+    },
+    "等待下载:{0}，请稍候...": {
+        "src": "等待下载:{0}，请稍候...",
+        "dst": "Aguardando o download: {0}, por favor aguarde..."
+    },
+    "正在下载:{0}，请稍候...": {
+        "src": "正在下载:{0}，请稍候...",
+        "dst": "A baixar: {0}, por favor aguarde..."
+    },
+    "正在安装:{0}，请稍候...": {
+        "src": "正在安装:{0}，请稍候...",
+        "dst": "Instalando: {0}, por favor aguarde..."
+    },
+    "安装失败": {
+        "src": "安装失败",
+        "dst": "A instalação falhou"
+    },
+    "模型删除成功": {
+        "src": "模型删除成功",
+        "dst": "Remoção do modelo com sucesso"
+    },
+    "模型删除失败:{0}": {
+        "src": "模型删除失败:{0}",
+        "dst": "Falha na remoção do modelo: {0}"
+    },
+    "模型异常，请重新生成": {
+        "src": "模型异常，请重新生成",
+        "dst": "Modelo anormal, por favor, recrie"
+    },
+    "模型管理器安装成功": {
+        "src": "模型管理器安装成功",
+        "dst": "Gestor de modelos instalado com sucesso"
+    },
+    "模型管理器安装失败": {
+        "src": "模型管理器安装失败",
+        "dst": "A instalação do Gestor de Modelos falhou"
+    },
+    "请求出错，状态码:": {
+        "src": "请求出错，状态码:",
+        "dst": "Erro na solicitação, código de estado:"
+    },
+    "请求发生错误": {
+        "src": "请求发生错误",
+        "dst": "Ocorreu um erro na solicitação"
+    },
+    "正在安装模型管理器，请稍后": {
+        "src": "正在安装模型管理器，请稍后",
+        "dst": "A instalar o gerenciador de modelos, por favor, mais tarde"
+    },
+    "可用": {
+        "src": "可用",
+        "dst": "disponível"
+    },
+    "分享": {
+        "src": "分享",
+        "dst": "Compartilhar"
+    },
+    "是否确认删除模型，该操作不可逆？": {
+        "src": "是否确认删除模型，该操作不可逆？",
+        "dst": "Você tem certeza de excluir o modelo? Esta operação é irreversível?"
+    },
+    "将AingDesk分享给好友一起使用": {
+        "src": "将AingDesk分享给好友一起使用",
+        "dst": "Compartilhe o AingDesk com amigos"
+    },
+    "请输入名称": {
+        "src": "请输入名称",
+        "dst": "Por favor, insira o nome"
+    },
+    "修改分享": {
+        "src": "修改分享",
+        "dst": "Modificar Compartilhamento"
+    },
+    "是否确认删除当前分享": {
+        "src": "是否确认删除当前分享",
+        "dst": "Confirmar a exclusão da partilha atual"
+    },
+    "名称": {
+        "src": "名称",
+        "dst": "Nome"
+    },
+    "访问地址": {
+        "src": "访问地址",
+        "dst": "Endereço de acesso"
+    },
+    "修改": {
+        "src": "修改",
+        "dst": "Modificação"
+    },
+    "正在下载": {
+        "src": "正在下载",
+        "dst": "A baixar"
+    },
+    "正在选择下载节点，请稍后": {
+        "src": "正在选择下载节点，请稍后",
+        "dst": "A seleccionar o nó de transferência, aguarde por favor"
+    },
+    "正在下载模型管理器，请稍后": {
+        "src": "正在下载模型管理器，请稍后",
+        "dst": "A transferir o Gestor de Modelos, aguarde por favor"
+    },
+    "正在安装模型管理器，可能要几分钟时间，请耐心等待": {
+        "src": "正在安装模型管理器，可能要几分钟时间，请耐心等待",
+        "dst": "Instalar o Model Manager, pode demorar alguns minutos, por favor, seja paciente"
+    },
+    "创建分享成功": {
+        "src": "创建分享成功",
+        "dst": "Partilha criada com sucesso"
+    },
+    "正在执行联网搜索...": {
+        "src": "正在执行联网搜索...",
+        "dst": "A executar a pesquisa na Internet..."
+    },
+    "已联网搜索{0}个网址": {
+        "src": "已联网搜索{0}个网址",
+        "dst": "Procurado por {0} URLs online"
+    },
+    "修改成功": {
+        "src": "修改成功",
+        "dst": "Modificação bem sucedida"
+    },
+    "不使用联网搜索": {
+        "src": "不使用联网搜索",
+        "dst": "Não usar pesquisa na Internet"
+    },
+    "不联网": {
+        "src": "不联网",
+        "dst": "Não conectado"
+    },
+    "百度": {
+        "src": "百度",
+        "dst": "Baidu"
+    },
+    "搜狗": {
+        "src": "搜狗",
+        "dst": "Procurar cães"
+    },
+    "谷歌": {
+        "src": "谷歌",
+        "dst": "Google"
+    },
+    "DuckDuckGo": {
+        "src": "DuckDuckGo",
+        "dst": "DuckDuckGo"
+    },
+    "360搜索": {
+        "src": "360搜索",
+        "dst": "Pesquisa 360"
+    },
+    "正搜索...": {
+        "src": "正搜索...",
+        "dst": "A procurar..."
+    },
+    "联网搜索": {
+        "src": "联网搜索",
+        "dst": "Pesquisa na Internet"
+    },
+    "上传文件": {
+        "src": "上传文件",
+        "dst": "Carregar ficheiros"
+    },
+    "上传时间": {
+        "src": "上传时间",
+        "dst": "enviado"
+    },
+    "AI摘要": {
+        "src": "AI摘要",
+        "dst": "Resumo da IA"
+    },
+    "共参考{0}份资料": {
+        "src": "共参考{0}份资料",
+        "dst": "Total de referências {0}"
+    },
+    "新建对话": {
+        "src": "新建对话",
+        "dst": "Nova conversa"
+    },
+    "清空对话": {
+        "src": "清空对话",
+        "dst": "Esvaziar o diálogo"
+    },
+    "知识库": {
+        "src": "知识库",
+        "dst": "base de conhecimento"
+    },
+    "新建知识库": {
+        "src": "新建知识库",
+        "dst": "Nova base de conhecimento"
+    },
+    "语言选择": {
+        "src": "语言选择",
+        "dst": "Escolha o idioma"
+    },
+    "默认搜索引擎": {
+        "src": "默认搜索引擎",
+        "dst": "Motor de busca padrão"
+    },
+    "加入AingDesk交流群": {
+        "src": "加入AingDesk交流群",
+        "dst": "Junte-se ao grupo AingDesk"
+    },
+    "当前版本": {
+        "src": "当前版本",
+        "dst": "versão actual"
+    },
+    "上传文件夹": {
+        "src": "上传文件夹",
+        "dst": "Enviar pasta"
+    },
+    "点击上传": {
+        "src": "点击上传",
+        "dst": "Clique para carregar"
+    },
+    "文件支持类型": {
+        "src": "文件支持类型",
+        "dst": "Tipos de suporte a ficheiros"
+    },
+    "{0}的文件类型不支持": {
+        "src": "{0}的文件类型不支持",
+        "dst": "Tipo de ficheiro não suportado para {0}"
+    },
+    "知识库创建成功": {
+        "src": "知识库创建成功",
+        "dst": "Criação bem sucedida da base de conhecimento"
+    },
+    "知识库创建失败": {
+        "src": "知识库创建失败",
+        "dst": "Falha na criação da base de conhecimento"
+    },
+    "获取知识库列表失败，请重试": {
+        "src": "获取知识库列表失败，请重试",
+        "dst": "Não foi possível obter a lista da base de conhecimento, tente novamente"
+    },
+    "是否确认删除知识库{0}及其下的所有文档？该操作不可逆": {
+        "src": "是否确认删除知识库{0}及其下的所有文档？该操作不可逆",
+        "dst": "Tem certeza de excluir a Base de Conhecimento {0} e todos os documentos abaixo dela? A operação é irreversível."
+    },
+    "删除知识库成功": {
+        "src": "删除知识库成功",
+        "dst": "Base de conhecimento eliminada com sucesso"
+    },
+    "删除知识库失败，请重试": {
+        "src": "删除知识库失败，请重试",
+        "dst": "Não foi possível excluir a base de conhecimento, tente novamente"
+    },
+    "修改知识库成功": {
+        "src": "修改知识库成功",
+        "dst": "Modificação da base de conhecimento com sucesso"
+    },
+    "修改知识库失败，请重试": {
+        "src": "修改知识库失败，请重试",
+        "dst": "Falha na modificação da base de conhecimento, tente novamente"
+    },
+    "正在解析文档，这可能要几分钟时间...": {
+        "src": "正在解析文档，这可能要几分钟时间...",
+        "dst": "A analisar o documento. Isto pode levar alguns minutos..."
+    },
+    "是否确认删除文档{0}？该操作不可逆": {
+        "src": "是否确认删除文档{0}？该操作不可逆",
+        "dst": "Tem certeza de excluir o documento {0}? A operação é irreversível."
+    },
+    "文档删除成功": {
+        "src": "文档删除成功",
+        "dst": "Apagação do documento com sucesso"
+    },
+    "{0}个文件": {
+        "src": "{0}个文件",
+        "dst": " {0} ficheiros"
+    },
+    "正在搜索...": {
+        "src": "正在搜索...",
+        "dst": "A procurar..."
+    },
+    "请输入知识库名称": {
+        "src": "请输入知识库名称",
+        "dst": "Indique por favor o nome da base de conhecimento"
+    },
+    "描述": {
+        "src": "描述",
+        "dst": "Descrição"
+    },
+    "请输入知识库描述": {
+        "src": "请输入知识库描述",
+        "dst": "Digite a descrição da base de conhecimento"
+    },
+    "嵌入模型": {
+        "src": "嵌入模型",
+        "dst": "Modelo incorporado"
+    },
+    "选择模型": {
+        "src": "选择模型",
+        "dst": "Escolha o modelo"
+    },
+    "选择知识库": {
+        "src": "选择知识库",
+        "dst": "Escolha a base de conhecimento"
+    },
+    "文档嵌入中，请稍后": {
+        "src": "文档嵌入中，请稍后",
+        "dst": "Incorporação do documento, aguarde por favor"
+    },
+    "已嵌入完成, 可正常调用": {
+        "src": "已嵌入完成, 可正常调用",
+        "dst": "Incorporado concluído, pode ser invocado normalmente"
+    },
+    "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Estando incorporado, o tempo de espera depende do número de arquivos, o que pode levar de alguns minutos a dezenas de minutos"
+    },
+    "第三方模型API": {
+        "src": "第三方模型API",
+        "dst": "API de modelos de terceiros"
+    },
+    "本地模型": {
+        "src": "本地模型",
+        "dst": "Modelo local"
+    },
+    "添加模型服务商": {
+        "src": "添加模型服务商",
+        "dst": "Adicionar um fornecedor modelo"
+    },
+    "使用教程": {
+        "src": "使用教程",
+        "dst": "Usar tutoriais"
+    },
+    "删除服务商": {
+        "src": "删除服务商",
+        "dst": "Remover fornecedor"
+    },
+    "API密钥": {
+        "src": "API密钥",
+        "dst": "Chave API"
+    },
+    "请输入API密钥": {
+        "src": "请输入API密钥",
+        "dst": "Digite a chave da API"
+    },
+    "检查": {
+        "src": "检查",
+        "dst": "inspecionar"
+    },
+    "点次获取密钥": {
+        "src": "点次获取密钥",
+        "dst": "Procurar chaves"
+    },
+    "API地址": {
+        "src": "API地址",
+        "dst": "Endereço da API"
+    },
+    "请输入API地址": {
+        "src": "请输入API地址",
+        "dst": "Digite o endereço da API"
+    },
+    "示例": {
+        "src": "示例",
+        "dst": "Exemplos"
+    },
+    "保存API": {
+        "src": "保存API",
+        "dst": "Gravar a API"
+    },
+    "默认从/models获取所有模型": {
+        "src": "默认从/models获取所有模型",
+        "dst": "Obter todos os modelos de /models por padrão"
+    },
+    "开关所有": {
+        "src": "开关所有",
+        "dst": "Interruptar tudo"
+    },
+    "修改别名": {
+        "src": "修改别名",
+        "dst": "Alterar o alias"
+    },
+    "当前服务商下属暂无模型可用": {
+        "src": "当前服务商下属暂无模型可用",
+        "dst": "Não há modelos disponíveis no fornecedor atual"
+    },
+    "添加模型": {
+        "src": "添加模型",
+        "dst": "Adicionar modelo"
+    },
+    "模型ID": {
+        "src": "模型ID",
+        "dst": "ID do modelo"
+    },
+    "请输入模型ID": {
+        "src": "请输入模型ID",
+        "dst": "Indique por favor o ID do modelo"
+    },
+    "模型别名": {
+        "src": "模型别名",
+        "dst": "Nome do modelo"
+    },
+    "请输入模型别名": {
+        "src": "请输入模型别名",
+        "dst": "Por favor, insira o alias do modelo"
+    },
+    "模型功能": {
+        "src": "模型功能",
+        "dst": "Funcionalidade do modelo"
+    },
+    "添加": {
+        "src": "添加",
+        "dst": "adicionar"
+    },
+    "供应商名称": {
+        "src": "供应商名称",
+        "dst": "Nome do fornecedor"
+    },
+    "接口地址": {
+        "src": "接口地址",
+        "dst": "Endereço da Interface"
+    },
+    "需要兼容openAI格式的接口": {
+        "src": "需要兼容openAI格式的接口",
+        "dst": "Requer uma interface compatível com o formato openAI"
+    },
+    "密钥": {
+        "src": "密钥",
+        "dst": "Chave"
+    },
+    "请选择模型功能": {
+        "src": "请选择模型功能",
+        "dst": "Seleccione por favor a função do modelo"
+    },
+    "请输入供应商名称": {
+        "src": "请输入供应商名称",
+        "dst": "Digite o nome do fornecedor"
+    },
+    "模型添加成功": {
+        "src": "模型添加成功",
+        "dst": "Adição do modelo com sucesso"
+    },
+    "是否确定删除当前模型？该操作不可逆": {
+        "src": "是否确定删除当前模型？该操作不可逆",
+        "dst": "Tem certeza de excluir o modelo atual? A operação é irreversível."
+    },
+    "请填写完整配置信息": {
+        "src": "请填写完整配置信息",
+        "dst": "Por favor preencha as informações de configuração completas"
+    },
+    "配置保存成功": {
+        "src": "配置保存成功",
+        "dst": "A configuração foi gravada com sucesso"
+    },
+    "缺少API密钥": {
+        "src": "缺少API密钥",
+        "dst": "Falta de chave API"
+    },
+    "缺少API地址": {
+        "src": "缺少API地址",
+        "dst": "Falta de endereço API"
+    },
+    "模型启用成功": {
+        "src": "模型启用成功",
+        "dst": "Ativação do modelo com sucesso"
+    },
+    "模型禁用成功": {
+        "src": "模型禁用成功",
+        "dst": "Desativação do modelo com sucesso"
+    },
+    "已启用全部模型": {
+        "src": "已启用全部模型",
+        "dst": "Todos os modelos foram activados"
+    },
+    "已禁用全部模型": {
+        "src": "已禁用全部模型",
+        "dst": "Todos os modelos foram desactivados"
+    },
+    "添加成功": {
+        "src": "添加成功",
+        "dst": "Adicionar com sucesso"
+    },
+    "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！": {
+        "src": "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！",
+        "dst": "Você deseja excluir o provedor de serviços atual? Esta operação irá excluir simultaneamente todos os modelos subordinados, por favor, proceda com cautela!"
+    },
+    "删除成功": {
+        "src": "删除成功",
+        "dst": "Apagar com sucesso"
+    },
+    "一键把AI模型部署在你的电脑": {
+        "src": "一键把AI模型部署在你的电脑",
+        "dst": "Implante um modelo de IA em seu computador com um clique"
+    },
+    "免费开源无限制": {
+        "src": "免费开源无限制",
+        "dst": "Free open source sem restrições"
+    },
+    "可在线分享他人使用": {
+        "src": "可在线分享他人使用",
+        "dst": "Pode ser compartilhado online para outras pessoas usarem"
+    },
+    "支持联网大幅度提升答案质量": {
+        "src": "支持联网大幅度提升答案质量",
+        "dst": "Suporte à rede para melhorar significativamente a qualidade das respostas"
+    },
+    "使用第三方模型": {
+        "src": "使用第三方模型",
+        "dst": "Utilização de modelos de terceiros"
+    },
+    "使用本地模型": {
+        "src": "使用本地模型",
+        "dst": "Usar um modelo local"
+    },
+    "简单好用的AI助手": {
+        "src": "简单好用的AI助手",
+        "dst": "Assistente de IA simples e útil"
+    },
+    "支持联网搜索和知识库": {
+        "src": "支持联网搜索和知识库",
+        "dst": "Suporte à pesquisa na Internet e à base de conhecimento"
+    },
+    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型": {
+        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型",
+        "dst": "Dica: se a lista de compartilhamento estiver vazia, o serviço de conexão compartilhada será interrompido automaticamente e nenhum modelo poderá ser acessado pela extranet através do AingDesk"
+    },
+    "上传附件": {
+        "src": "上传附件",
+        "dst": "Enviar anexos"
+    },
+    "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "O modelo [{0}] que está a usar foi desactivado ou apagado. Por favor, volte a activar ou mudar os modelos"
+    },
+    "请安装或接入嵌入模型": {
+        "src": "请安装或接入嵌入模型",
+        "dst": "Por favor, instale ou acesse o modelo incorporado"
+    },
+    "使用本地模型嵌入（推荐）": {
+        "src": "使用本地模型嵌入（推荐）",
+        "dst": "Usar a incorporação do modelo local (recomendado)"
+    },
+    "请选择从Ollama安装-Embedding-安装bge-m3:latest": {
+        "src": "请选择从Ollama安装-Embedding-安装bge-m3:latest",
+        "dst": "Por favor, escolha instalar a partir de Ollama - Incorporação - Instalação bge-m3: latest"
+    },
+    "使用第三方API提供模型嵌入": {
+        "src": "使用第三方API提供模型嵌入",
+        "dst": "Usando APIs de terceiros para fornecer incorporação de modelos"
+    },
+    "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动": {
+        "src": "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动",
+        "dst": "Escolha conectar-se a modelos de terceiros que suportem a incorporação de APIs de terceiros, como mobilidade baseada em silício"
+    },
+    "从Ollama安装": {
+        "src": "从Ollama安装",
+        "dst": "Instalação de Ollama"
+    },
+    "接入第三方模型": {
+        "src": "接入第三方模型",
+        "dst": "Integrar modelos de terceiros"
+    },
+    "已启用模型该服务商": {
+        "src": "已启用模型该服务商",
+        "dst": "O modelo foi ativado para este provedor de serviços"
+    },
+    "已禁用模型该服务商": {
+        "src": "已禁用模型该服务商",
+        "dst": "O modelo foi desativado para este provedor de serviços"
+    },
+    "无记忆": {
+        "src": "无记忆",
+        "dst": "Sem memória"
+    },
+    " 能提升单次回复质量，但大模型将没有上下文记忆": {
+        "src": " 能提升单次回复质量，但大模型将没有上下文记忆",
+        "dst": "Pode melhorar a qualidade de uma única resposta, mas o modelo grande não terá memória contextual"
+    },
+    "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式": {
+        "src": "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式",
+        "dst": "Suporta o upload de arquivos, imagens (até 20MB), suporte a formatos PDF, DOC, TXT e outros"
+    },
+    "附件总大小不能超过20MB": {
+        "src": "附件总大小不能超过20MB",
+        "dst": "O tamanho total dos anexos não pode exceder 20MB"
+    },
+    "请选择知识库": {
+        "src": "请选择知识库",
+        "dst": "Seleccione por favor uma base de conhecimento"
+    },
+    "文档教程": {
+        "src": "文档教程",
+        "dst": "Tutorial de Documento"
+    },
+    "查看知识库教程": {
+        "src": "查看知识库教程",
+        "dst": "Ver o Tutorial da Base de Conhecimento"
+    },
+    "智能体": {
+        "src": "智能体",
+        "dst": "Agente inteligente"
+    },
+    "创建智能体": {
+        "src": "创建智能体",
+        "dst": "Criar um agente inteligente"
+    },
+    "我的智能体": {
+        "src": "我的智能体",
+        "dst": "O meu corpo inteligente."
+    },
+    "预设模板": {
+        "src": "预设模板",
+        "dst": "Modelo predefinido"
+    },
+    "编辑": {
+        "src": "编辑",
+        "dst": "editar"
+    },
+    "请输入智能体名称": {
+        "src": "请输入智能体名称",
+        "dst": "Introduza por favor o nome do agente inteligente"
+    },
+    "人物设定": {
+        "src": "人物设定",
+        "dst": "desenho de caracteres"
+    },
+    "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界": {
+        "src": "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界",
+        "dst": "Você é uma IA jurídica profissional treinada na base de dados jurídica chinesa, familiarizada com os principais sistemas jurídicos, como o Código Civil, Direito Penal e Direito Comercial."
+    },
+    "头像": {
+        "src": "头像",
+        "dst": "imagem de perfil"
+    },
+    "请选择": {
+        "src": "请选择",
+        "dst": "Por favor selecione"
+    },
+    "保存": {
+        "src": "保存",
+        "dst": "Salvar"
+    },
+    "请为您的智能体设定提示词": {
+        "src": "请为您的智能体设定提示词",
+        "dst": "Por favor, defina palavras rápidas para o seu agente"
+    },
+    "请选择嵌入模型": {
+        "src": "请选择嵌入模型",
+        "dst": "Seleccione por favor o modelo incorporado"
+    },
+    "第三方API配置": {
+        "src": "第三方API配置",
+        "dst": "Configuração da API de terceiros"
+    },
+    "智能体创建成功": {
+        "src": "智能体创建成功",
+        "dst": "Agente inteligente criado com sucesso"
+    },
+    "智能体修改成功": {
+        "src": "智能体修改成功",
+        "dst": "Agente inteligente modificado com sucesso"
+    },
+    "是否确认删除智能体[{0}]?删除后无法恢复": {
+        "src": "是否确认删除智能体[{0}]?删除后无法恢复",
+        "dst": "Tem a certeza de apagar o agente [{0}]? Não pode ser restaurado após a eliminação"
+    },
+    "智能体删除成功": {
+        "src": "智能体删除成功",
+        "dst": "Agente inteligente eliminado com sucesso"
+    },
+    "您当前使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "O modelo que está a usar foi desactivado ou apagado. Por favor volte a activar ou mudar o modelo"
+    },
+    "请选择或安装接入模型": {
+        "src": "请选择或安装接入模型",
+        "dst": "Seleccione ou instale o modelo de acesso"
+    },
+    "当前对话使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "当前对话使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "O modelo utilizado na conversa actual foi desactivado ou apagado. Por favor volte a activar ou mudar o modelo"
+    },
+    "模型{0}不存在，请添加本地模型或第三方模型api": {
+        "src": "模型{0}不存在，请添加本地模型或第三方模型api",
+        "dst": "Modelo {0} não existe, por favor, adicione um modelo local ou API de modelo de terceiros"
+    },
+    "模型管理器": {
+        "src": "模型管理器",
+        "dst": "Gestor de modelos"
+    },
+    "模型存储位置": {
+        "src": "模型存储位置",
+        "dst": "Local de armazenamento do modelo"
+    },
+    "选择": {
+        "src": "选择",
+        "dst": "select"
+    },
+    "请选择模型管理器": {
+        "src": "请选择模型管理器",
+        "dst": "Seleccione por favor o Gestor de Modelos"
+    },
+    "请选择模型管理器安装路径": {
+        "src": "请选择模型管理器安装路径",
+        "dst": "Selecione o caminho da instalação do gerenciador de modelos"
+    },
+    "图形": {
+        "src": "图形",
+        "dst": "gráfico"
+    },
+    "源码": {
+        "src": "源码",
+        "dst": "código fonte"
+    },
+    "mermaid解析失败,请检查语法": {
+        "src": "mermaid解析失败,请检查语法",
+        "dst": "A análise da sereia falhou, verifique por favor a sintaxe"
+    },
+    "Ollama接口地址": {
+        "src": "Ollama接口地址",
+        "dst": "Endereço da interface do Olama"
+    },
+    "当前ollama地址不可用": {
+        "src": "当前ollama地址不可用",
+        "dst": "O endereço atual do ollama não está disponível"
+    },
+    "新手指引": {
+        "src": "新手指引",
+        "dst": "Guia para Iniciantes"
+    },
+    "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
+        "src": "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
+        "dst": "Bem-vindo ao AingDesk, um assistente de IA simples e fácil de usar que suporta base de conhecimento, API modelo, compartilhamento, pesquisa on-line e agentes inteligentes. Este software é de código aberto e gratuito, e estamos ansiosos para que você compartilhe o software com outras pessoas para apoiar nosso desenvolvimento."
+    },
+    "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
+        "src": "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
+        "dst": "AingDesk é um novo projeto de IA que ainda está se esforçando para o crescimento rápido. Se você encontrar algum problema durante o uso ou tiver quaisquer requisitos funcionais para o software, você pode se juntar ao nosso grupo WeChat para nos dar feedback."
+    },
+    "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。": {
+        "src": "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。",
+        "dst": "Finalmente, você pode nos dar uma estrela para o nosso projeto open source. Seu incentivo é extremamente importante para que continuemos iterando projetos open source. Obrigado."
+    },
+    "去github点星星": {
+        "src": "去github点星星",
+        "dst": "Vá para o GitHub e clique nas estrelas"
+    },
+    "您可以在": {
+        "src": "您可以在",
+        "dst": "Você pode"
+    },
+    "中关闭新手指引": {
+        "src": "中关闭新手指引",
+        "dst": "Feche o guia para iniciantes no meio"
+    },
+    "文档删除失败": {
+        "src": "文档删除失败",
+        "dst": "A eliminação do documento foi mal- sucedida"
+    },
+    "设置成功": {
+        "src": "设置成功",
+        "dst": "Configuração bem sucedida"
+    },
+    "分段标识符": {
+        "src": "分段标识符",
+        "dst": "Identificador do segmento"
+    },
+    "分段最大长度": {
+        "src": "分段最大长度",
+        "dst": "Comprimento máximo do segmento"
+    },
+    "分段重叠长度": {
+        "src": "分段重叠长度",
+        "dst": "Comprimento da sobreposição do segmento"
+    },
+    "分段标识符支持函正则表达式，如": {
+        "src": "分段标识符支持函正则表达式，如",
+        "dst": "Identificadores de segmento suportam expressões regulares, como"
+    },
+    "正则表达式无需添加修饰符，默认会自动添加g修饰符": {
+        "src": "正则表达式无需添加修饰符，默认会自动添加g修饰符",
+        "dst": "Expressões regulares não exigem a adição de modificadores e adicionarão automaticamente o modificador 'g' por padrão"
+    },
+    "分段重叠长度建议为分段最大长度的10%到20%": {
+        "src": "分段重叠长度建议为分段最大长度的10%到20%",
+        "dst": "O comprimento de sobreposição recomendado para segmentos é de 10% a 20% do comprimento máximo do segmento"
+    },
+    "选择文档进行预览": {
+        "src": "选择文档进行预览",
+        "dst": "Seleccionar o documento para antevisão"
+    },
+    "预览": {
+        "src": "预览",
+        "dst": "Antevisão"
+    },
+    "分段最大长度不能小于20": {
+        "src": "分段最大长度不能小于20",
+        "dst": "O comprimento máximo do segmento não pode ser inferior a 20"
+    },
+    "分段最大长度不能大于1000": {
+        "src": "分段最大长度不能大于1000",
+        "dst": "O comprimento máximo de um segmento não pode exceder 1000"
+    },
+    "请填写分段最大长度": {
+        "src": "请填写分段最大长度",
+        "dst": "Por favor, preencha o comprimento máximo do segmento"
+    },
+    "分段重叠长度不能小于0": {
+        "src": "分段重叠长度不能小于0",
+        "dst": "O comprimento sobreposto dos segmentos não pode ser inferior a 0"
+    },
+    "分段重叠长度不能大于分段最大长度": {
+        "src": "分段重叠长度不能大于分段最大长度",
+        "dst": "O comprimento sobreposto dos segmentos não pode exceder o comprimento máximo dos segmentos"
+    },
+    "请填写分段重叠长度": {
+        "src": "请填写分段重叠长度",
+        "dst": "Preencha o comprimento sobreposto dos segmentos"
+    },
+    "请填写分段标识符": {
+        "src": "请填写分段标识符",
+        "dst": "Preencha o identificador do segmento"
+    },
+    "文档分片设置": {
+        "src": "文档分片设置",
+        "dst": "Configuração da Partilha de Documentos"
+    },
+    "继续添加文件": {
+        "src": "继续添加文件",
+        "dst": "Continuar a adicionar ficheiros"
+    },
+    "请选择文件": {
+        "src": "请选择文件",
+        "dst": "Seleccione por favor um ficheiro"
+    },
+    "最大召唤数量": {
+        "src": "最大召唤数量",
+        "dst": "Quantidade Máxima de Invocação"
+    },
+    "召回精度": {
+        "src": "召回精度",
+        "dst": "Precisão da recall"
+    },
+    "文档解析失败": {
+        "src": "文档解析失败",
+        "dst": "A análise do documento falhou"
+    },
+    "文档解析成功,等待嵌入": {
+        "src": "文档解析成功,等待嵌入",
+        "dst": "A análise do documento foi bem sucedida, à espera da incorporação"
+    },
+    "数据存储位置": {
+        "src": "数据存储位置",
+        "dst": "Localização do Armazenamento de Dados"
+    },
+    "更改": {
+        "src": "更改",
+        "dst": "alteração"
+    },
+    "如何更好的使用知识库?": {
+        "src": "如何更好的使用知识库?",
+        "dst": "Como utilizar melhor a base de conhecimento?"
+    },
+    "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件": {
+        "src": "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件",
+        "dst": "Mudar de directórios irá migrar os dados da pasta antiga para a pasta nova, o que pode demorar 5 a 10 minutos dependendo do tamanho dos dados. Por favor, não feche o software durante o processo de migração"
+    },
+    "选择新位置": {
+        "src": "选择新位置",
+        "dst": "Escolha uma nova localização"
+    },
+    "数据迁移失败，请重试": {
+        "src": "数据迁移失败，请重试",
+        "dst": "A migração de dados falhou, tente novamente"
+    },
+    "数据迁移成功": {
+        "src": "数据迁移成功",
+        "dst": "Migração de dados bem sucedida"
+    },
+    "请勿关闭软件,否则将导致软件异常": {
+        "src": "请勿关闭软件,否则将导致软件异常",
+        "dst": "Não feche o software, caso contrário pode causar anormalidades no software"
+    },
+    "等待复制": {
+        "src": "等待复制",
+        "dst": "À espera da replicação"
+    },
+    "总大小": {
+        "src": "总大小",
+        "dst": "Tamanho total"
+    },
+    "速度": {
+        "src": "速度",
+        "dst": "velocidade"
+    },
+    "准备迁移数据": {
+        "src": "准备迁移数据",
+        "dst": "Preparar para migrar dados"
+    },
+    "迁移数据中": {
+        "src": "迁移数据中",
+        "dst": "Na migração de dados"
+    },
+    "选择工具": {
+        "src": "选择工具",
+        "dst": "Seleccionar ferramentas"
+    },
+    "工具": {
+        "src": "工具",
+        "dst": "ferramenta"
+    },
+    "模型选择": {
+        "src": "模型选择",
+        "dst": "selecção de modelos"
+    },
+    "搜索模型": {
+        "src": "搜索模型",
+        "dst": "Modelo de Pesquisa"
+    },
+    "常用模型": {
+        "src": "常用模型",
+        "dst": "Modelos comuns"
+    },
+    "不使用": {
+        "src": "不使用",
+        "dst": "Não utilizado"
+    },
+    "新分享": {
+        "src": "新分享",
+        "dst": "Nova partilha"
+    },
+    "最大召回数量": {
+        "src": "最大召回数量",
+        "dst": "Quantidade máxima de recolha"
+    },
+    "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条": {
+        "src": "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条",
+        "dst": "O número máximo de retornos ao pesquisar a base de conhecimento é recomendado para ser 3 para modelos locais e 5 para modelos online"
+    },
+    "自动": {
+        "src": "自动",
+        "dst": "automático"
+    },
+    "自定义": {
+        "src": "自定义",
+        "dst": "personalizar"
+    },
+    "请输入分隔符": {
+        "src": "请输入分隔符",
+        "dst": "Indique por favor um delimitador"
+    },
+    "正在优化知识库,这可能需要几分钟到十几分钟......": {
+        "src": "正在优化知识库,这可能需要几分钟到十几分钟......",
+        "dst": "Estamos otimizando a base de conhecimento, o que pode levar alguns minutos a uma dúzia de minutos"
+    },
+    "上传知识库文档": {
+        "src": "上传知识库文档",
+        "dst": "Carregar o documento da base de conhecimentos"
+    },
+    "请选择模型管理器的安装路径": {
+        "src": "请选择模型管理器的安装路径",
+        "dst": "Seleccione por favor o caminho de instalação para o Gestor de Modelos"
+    },
+    "优化": {
+        "src": "优化",
+        "dst": "otimizar"
+    },
+    "增强索引,并释放多余的空间占用": {
+        "src": "增强索引,并释放多余的空间占用",
+        "dst": "Melhore a indexação e libere o excesso de ocupação de espaço"
+    },
+    "反馈": {
+        "src": "反馈",
+        "dst": "feedback"
+    },
+    "删除MCP服务器": {
+        "src": "删除MCP服务器",
+        "dst": "Apagar o servidor MCP"
+    },
+    "是否可用": {
+        "src": "是否可用",
+        "dst": "Está disponível"
+    },
+    "请输入MCP服务器名称": {
+        "src": "请输入MCP服务器名称",
+        "dst": "Indique por favor o nome do servidor MCP"
+    },
+    "请输入内容": {
+        "src": "请输入内容",
+        "dst": "Indique por favor o conteúdo"
+    },
+    "类型": {
+        "src": "类型",
+        "dst": "tipo"
+    },
+    "服务器地址": {
+        "src": "服务器地址",
+        "dst": "Endereço do servidor"
+    },
+    "请输入服务器URL地址": {
+        "src": "请输入服务器URL地址",
+        "dst": "Indique por favor o endereço URL do servidor"
+    },
+    "程序类型": {
+        "src": "程序类型",
+        "dst": "Tipo de Aplicação"
+    },
+    "当前未安装Nodejs环境，点击": {
+        "src": "当前未安装Nodejs环境，点击",
+        "dst": "O ambiente Nodejs não está instalado no momento, clique"
+    },
+    "命令": {
+        "src": "命令",
+        "dst": "comando"
+    },
+    "可执行命令": {
+        "src": "可执行命令",
+        "dst": "Comando executável"
+    },
+    "参数": {
+        "src": "参数",
+        "dst": "parâmetro"
+    },
+    "环境变量": {
+        "src": "环境变量",
+        "dst": "variável ambiente"
+    },
+    "正在安装环境,这可能需要几分钟......": {
+        "src": "正在安装环境,这可能需要几分钟......",
+        "dst": "Instalando o ambiente, isso pode levar alguns minutos"
+    },
+    "请输入可执行命令": {
+        "src": "请输入可执行命令",
+        "dst": "Indique por favor um comando executável"
+    },
+    "编辑配置文件": {
+        "src": "编辑配置文件",
+        "dst": "Editar o Perfil"
+    },
+    "编辑MCP服务器配置的JSON。保存前请确保格式正确。": {
+        "src": "编辑MCP服务器配置的JSON。保存前请确保格式正确。",
+        "dst": "Edite a configuração JSON para servidor MCP. Certifique-se de que o formato está correto antes de salvar."
+    },
+    "添加服务器": {
+        "src": "添加服务器",
+        "dst": "Adicionar servidor"
+    },
+    "新配置": {
+        "src": "新配置",
+        "dst": "nova configuração"
+    },
+    "环境安装成功": {
+        "src": "环境安装成功",
+        "dst": "Instalação ambiental bem sucedida"
+    },
+    "环境安装失败": {
+        "src": "环境安装失败",
+        "dst": "A instalação do ambiente falhou"
+    },
+    "操作成功": {
+        "src": "操作成功",
+        "dst": "Operação bem sucedida"
+    },
+    "请先安装Node.js环境": {
+        "src": "请先安装Node.js环境",
+        "dst": "Instale primeiro o ambiente Node.js"
+    },
+    "是否删除当前MCP服务器？": {
+        "src": "是否删除当前MCP服务器？",
+        "dst": "Deseja apagar o servidor MCP actual?"
+    },
+    "常规设置": {
+        "src": "常规设置",
+        "dst": "Configuração geral"
+    },
+    "MCP服务器": {
+        "src": "MCP服务器",
+        "dst": "Servidor MCP"
+    },
+    "修改模型": {
+        "src": "修改模型",
+        "dst": "Modificar o modelo"
+    },
+    "保存成功": {
+        "src": "保存成功",
+        "dst": "Gravado com sucesso"
+    },
+    "调用结果:": {
+        "src": "调用结果:",
+        "dst": "Resultado da chamada:"
+    },
+    "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "O tempo de espera depende do número de ficheiros, o que pode demorar de vários minutos a dezenas de minutos."
+    },
+    "正在嵌入中,请稍后...": {
+        "src": "正在嵌入中,请稍后...",
+        "dst": "Incorporação em curso, por favor aguarde"
+    }
+}

@@ -1,0 +1,1342 @@
+{
+    "让我们开启一段新的对话吧": {
+        "src": "让我们开启一段新的对话吧",
+        "dst": "Alustame uue vestluse."
+    },
+    "正在思考...": {
+        "src": "正在思考...",
+        "dst": "Mõtlen..."
+    },
+    "复制": {
+        "src": "复制",
+        "dst": "Kopeerimine"
+    },
+    "暂无信息": {
+        "src": "暂无信息",
+        "dst": "Teavet puudub"
+    },
+    "重新生成": {
+        "src": "重新生成",
+        "dst": "Uuesti looda"
+    },
+    "请输入对话内容": {
+        "src": "请输入对话内容",
+        "dst": "Palun sisesta vestluse sisu"
+    },
+    "发送": {
+        "src": "发送",
+        "dst": "Saada"
+    },
+    "停止生成": {
+        "src": "停止生成",
+        "dst": "Loomise lõpetamine"
+    },
+    "复制成功": {
+        "src": "复制成功",
+        "dst": "Edukalt kopeeritud"
+    },
+    "请选择对应模型": {
+        "src": "请选择对应模型",
+        "dst": "Palun valige vastav mudel"
+    },
+    "当前正在回答，请稍后": {
+        "src": "当前正在回答，请稍后",
+        "dst": "Vastab praegu, palun hiljem."
+    },
+    "点击[设置]安装模型": {
+        "src": "点击[设置]安装模型",
+        "dst": "Klõpsake [Settings] mudeli installimiseks"
+    },
+    "模型大小:": {
+        "src": "模型大小:",
+        "dst": "Mudeli suurus:"
+    },
+    "已下载:": {
+        "src": "已下载:",
+        "dst": "Allalaaditud:"
+    },
+    "速度:": {
+        "src": "速度:",
+        "dst": "Kiirus:"
+    },
+    "引用": {
+        "src": "引用",
+        "dst": "Viide"
+    },
+    "已复制": {
+        "src": "已复制",
+        "dst": "Kopeeritud"
+    },
+    "处理器:": {
+        "src": "处理器:",
+        "dst": "Protsessor:"
+    },
+    "内存:": {
+        "src": "内存:",
+        "dst": "Mälu:"
+    },
+    "显卡:": {
+        "src": "显卡:",
+        "dst": "Graafikakaart:"
+    },
+    "建议:": {
+        "src": "建议:",
+        "dst": "Soovitused:"
+    },
+    "首次使用，请选择要安装的模型": {
+        "src": "首次使用，请选择要安装的模型",
+        "dst": "Esimene kord, valige mudel installida"
+    },
+    "如:": {
+        "src": "如:",
+        "dst": "Näiteks:"
+    },
+    "搜索": {
+        "src": "搜索",
+        "dst": "Otsi"
+    },
+    "模型刪除中，请稍后": {
+        "src": "模型刪除中，请稍后",
+        "dst": "Mudelid kustutatakse, palun hiljem"
+    },
+    "提示": {
+        "src": "提示",
+        "dst": "Näpunäited"
+    },
+    "检测到您没有安装模型管理器，是否立即安装？": {
+        "src": "检测到您没有安装模型管理器，是否立即安装？",
+        "dst": "Avastas, et teil ei ole mudelihaldurit installitud, kas installida kohe?"
+    },
+    "暂不安装": {
+        "src": "暂不安装",
+        "dst": "Ajutiselt paigaldamata"
+    },
+    "立即安装": {
+        "src": "立即安装",
+        "dst": "Installeeri kohe"
+    },
+    "正在安装模型管理器，请稍后": {
+        "src": "正在安装模型管理器，请稍后",
+        "dst": "Mudelihalduri paigaldamine, palun hiljem"
+    },
+    "大小:": {
+        "src": "大小:",
+        "dst": "Suurus:"
+    },
+    "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。": {
+        "src": "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。",
+        "dst": "Proovige uuesti valida allalaadimissõlme, et optimeerida allalaadimise kiirust, PS: Praegune allalaadimise edusamm ei kaota ja katkestuspunkt jätkatakse automaatselt."
+    },
+    "所有": {
+        "src": "所有",
+        "dst": "Kõik"
+    },
+    "已安装": {
+        "src": "已安装",
+        "dst": "juba paigaldatud"
+    },
+    "模型": {
+        "src": "模型",
+        "dst": "mudel"
+    },
+    "大小": {
+        "src": "大小",
+        "dst": "Suurus"
+    },
+    "简介": {
+        "src": "简介",
+        "dst": "Sissejuhatus"
+    },
+    "功能": {
+        "src": "功能",
+        "dst": "Funktsioonid"
+    },
+    "操作": {
+        "src": "操作",
+        "dst": "operatsioon"
+    },
+    "刪除": {
+        "src": "刪除",
+        "dst": "Kustuta"
+    },
+    "安装": {
+        "src": "安装",
+        "dst": "Installeerimine"
+    },
+    "浅色模式": {
+        "src": "浅色模式",
+        "dst": "Helge värvi režiim"
+    },
+    "深色模式": {
+        "src": "深色模式",
+        "dst": "Tume režiim"
+    },
+    "对话": {
+        "src": "对话",
+        "dst": "Dialoog"
+    },
+    "对话内容": {
+        "src": "对话内容",
+        "dst": "Dialoogi sisu"
+    },
+    "新对话": {
+        "src": "新对话",
+        "dst": "Uus dialoog"
+    },
+    "模型管理": {
+        "src": "模型管理",
+        "dst": "Mudelijuhtimine"
+    },
+    "设置": {
+        "src": "设置",
+        "dst": "Seadmed"
+    },
+    "删除对话": {
+        "src": "删除对话",
+        "dst": "Eemalda vestlus"
+    },
+    "是否确认删除当前对话": {
+        "src": "是否确认删除当前对话",
+        "dst": "Kas kinnitada aktiivse vestluse kustutamist"
+    },
+    "取消": {
+        "src": "取消",
+        "dst": "Tühista"
+    },
+    "删除": {
+        "src": "删除",
+        "dst": "Eemalda"
+    },
+    "修改对话标题": {
+        "src": "修改对话标题",
+        "dst": "Dialoogi pealkirja muutmine"
+    },
+    "请输入新的对话标题": {
+        "src": "请输入新的对话标题",
+        "dst": "Palun sisesta uus dialoogi pealkiri"
+    },
+    "确认": {
+        "src": "确认",
+        "dst": "Kinnitamine"
+    },
+    "修改标题": {
+        "src": "修改标题",
+        "dst": "Pealkirja muutmine"
+    },
+    "已深度思考": {
+        "src": "已深度思考",
+        "dst": "Sügavalt mõeldud"
+    },
+    "对话已停止": {
+        "src": "对话已停止",
+        "dst": "Dialoog lõpetati"
+    },
+    "对话删除成功": {
+        "src": "对话删除成功",
+        "dst": "Dialoogi kustutamine õnnestus"
+    },
+    "对话删除失败：": {
+        "src": "对话删除失败：",
+        "dst": "Dialoogi kustutamine nurjus:"
+    },
+    "对话标题修改成功": {
+        "src": "对话标题修改成功",
+        "dst": "Dialoogi pealkirja muutmine õnnestus"
+    },
+    "对话标题修改失败:": {
+        "src": "对话标题修改失败:",
+        "dst": "Dialoogi pealkirja muutmine nurjus:"
+    },
+    "安装成功": {
+        "src": "安装成功",
+        "dst": "Installeerimine õnnestus"
+    },
+    "正在连接，请稍候...": {
+        "src": "正在连接，请稍候...",
+        "dst": "Ühendamine, palun oodake..."
+    },
+    "等待下载:{0}，请稍候...": {
+        "src": "等待下载:{0}，请稍候...",
+        "dst": "Allalaadimist oodatakse: {0}, palun oodake"
+    },
+    "正在下载:{0}，请稍候...": {
+        "src": "正在下载:{0}，请稍候...",
+        "dst": "Allalaadimine: {0}, palun oodake"
+    },
+    "正在安装:{0}，请稍候...": {
+        "src": "正在安装:{0}，请稍候...",
+        "dst": "Paigaldamine: {0}, palun oodake..."
+    },
+    "安装失败": {
+        "src": "安装失败",
+        "dst": "Paigaldamine nurjus"
+    },
+    "模型删除成功": {
+        "src": "模型删除成功",
+        "dst": "Mudel kustutati edukalt"
+    },
+    "模型删除失败:{0}": {
+        "src": "模型删除失败:{0}",
+        "dst": "Mudeli kustutamine nurjus: {0}"
+    },
+    "模型异常，请重新生成": {
+        "src": "模型异常，请重新生成",
+        "dst": "Mudel ebatavaline, palun uuesti genereerida"
+    },
+    "模型管理器安装成功": {
+        "src": "模型管理器安装成功",
+        "dst": "Mudelihalduri installimine õnnestus"
+    },
+    "模型管理器安装失败": {
+        "src": "模型管理器安装失败",
+        "dst": "Mudelihalduri paigaldamine nurjus"
+    },
+    "请求出错，状态码:": {
+        "src": "请求出错，状态码:",
+        "dst": "Tekkis viga, olekukood:"
+    },
+    "请求发生错误": {
+        "src": "请求发生错误",
+        "dst": "Tekkis küsimuses viga"
+    },
+    "可用": {
+        "src": "可用",
+        "dst": "saadaval"
+    },
+    "分享": {
+        "src": "分享",
+        "dst": "osa"
+    },
+    "是否确认删除模型，该操作不可逆？": {
+        "src": "是否确认删除模型，该操作不可逆？",
+        "dst": "Kas olete kindel, et mudeli kustutamine on pöördumatu?"
+    },
+    "将AingDesk分享给好友一起使用": {
+        "src": "将AingDesk分享给好友一起使用",
+        "dst": "AingDeski jagamine sõpradega"
+    },
+    "请输入名称": {
+        "src": "请输入名称",
+        "dst": "Palun sisesta nimi"
+    },
+    "修改分享": {
+        "src": "修改分享",
+        "dst": "Muuda jagu"
+    },
+    "是否确认删除当前分享": {
+        "src": "是否确认删除当前分享",
+        "dst": "Kas kinnitada aktiivse jagamise kustutamist"
+    },
+    "名称": {
+        "src": "名称",
+        "dst": "nimi"
+    },
+    "修改": {
+        "src": "修改",
+        "dst": "Muuda"
+    },
+    "正在下载": {
+        "src": "正在下载",
+        "dst": "Laadimine"
+    },
+    "正在选择下载节点，请稍后": {
+        "src": "正在选择下载节点，请稍后",
+        "dst": "Laadimissõlme valimine, palun hiljem"
+    },
+    "正在下载模型管理器，请稍后": {
+        "src": "正在下载模型管理器，请稍后",
+        "dst": "Mudelihalduri allalaadimine, palun hiljem"
+    },
+    "正在安装模型管理器，可能要几分钟时间，请耐心等待": {
+        "src": "正在安装模型管理器，可能要几分钟时间，请耐心等待",
+        "dst": "Mudelihalduri paigaldamine võib võtta paar minutit, palun oota kannatlikult"
+    },
+    "创建分享成功": {
+        "src": "创建分享成功",
+        "dst": "Edukalt loodud jagamine"
+    },
+    "修改成功": {
+        "src": "修改成功",
+        "dst": "Muudatused õnnestusid"
+    },
+    "正在执行联网搜索...": {
+        "src": "正在执行联网搜索...",
+        "dst": "Interneti otsingu käivitamine..."
+    },
+    "已联网搜索{0}个网址": {
+        "src": "已联网搜索{0}个网址",
+        "dst": "Ühendatud URL-id {0}"
+    },
+    "访问地址": {
+        "src": "访问地址",
+        "dst": "Juurdepääsu aadress"
+    },
+    "不使用联网搜索": {
+        "src": "不使用联网搜索",
+        "dst": "Ära kasuta interneti otsingut"
+    },
+    "不联网": {
+        "src": "不联网",
+        "dst": "Ühendamata"
+    },
+    "百度": {
+        "src": "百度",
+        "dst": "Baidu"
+    },
+    "搜狗": {
+        "src": "搜狗",
+        "dst": "Koera otsimine"
+    },
+    "谷歌": {
+        "src": "谷歌",
+        "dst": "Google'i"
+    },
+    "DuckDuckGo": {
+        "src": "DuckDuckGo",
+        "dst": "DuckDuckGo"
+    },
+    "360搜索": {
+        "src": "360搜索",
+        "dst": "360 otsingut"
+    },
+    "正搜索...": {
+        "src": "正搜索...",
+        "dst": "Otsing"
+    },
+    "联网搜索": {
+        "src": "联网搜索",
+        "dst": "Veebiotsing"
+    },
+    "上传文件": {
+        "src": "上传文件",
+        "dst": "Faili üleslaadimine"
+    },
+    "上传时间": {
+        "src": "上传时间",
+        "dst": "Laadimise aeg"
+    },
+    "AI摘要": {
+        "src": "AI摘要",
+        "dst": "AI kokkuvõte"
+    },
+    "共参考{0}份资料": {
+        "src": "共参考{0}份资料",
+        "dst": "Võrdlusmaterjalid kokku"
+    },
+    "新建对话": {
+        "src": "新建对话",
+        "dst": "Uue vestluse loomine"
+    },
+    "清空对话": {
+        "src": "清空对话",
+        "dst": "Dialoogi tühjendamine"
+    },
+    "知识库": {
+        "src": "知识库",
+        "dst": "teadmistebaas"
+    },
+    "新建知识库": {
+        "src": "新建知识库",
+        "dst": "Uue teadmistebaasi loomine"
+    },
+    "语言选择": {
+        "src": "语言选择",
+        "dst": "keele valik"
+    },
+    "默认搜索引擎": {
+        "src": "默认搜索引擎",
+        "dst": "Vaikimisi otsingumootor"
+    },
+    "加入AingDesk交流群": {
+        "src": "加入AingDesk交流群",
+        "dst": "Liitu AingDeski suhtlusrühmaga"
+    },
+    "当前版本": {
+        "src": "当前版本",
+        "dst": "Praegune versioon"
+    },
+    "上传文件夹": {
+        "src": "上传文件夹",
+        "dst": "Kausta üleslaadimine"
+    },
+    "点击上传": {
+        "src": "点击上传",
+        "dst": "Kliki üleslaadimiseks"
+    },
+    "文件支持类型": {
+        "src": "文件支持类型",
+        "dst": "Faili toetuse tüüp"
+    },
+    "{0}的文件类型不支持": {
+        "src": "{0}的文件类型不支持",
+        "dst": "Failitüübi {0} ei toetata"
+    },
+    "知识库创建成功": {
+        "src": "知识库创建成功",
+        "dst": "Teadmisbaasi edukas loomine"
+    },
+    "知识库创建失败": {
+        "src": "知识库创建失败",
+        "dst": "Teadmistebaasi loomine nurjus"
+    },
+    "获取知识库列表失败，请重试": {
+        "src": "获取知识库列表失败，请重试",
+        "dst": "Teadmisbaasi nimekirja hankimine nurjus, palun proovi uuesti"
+    },
+    "是否确认删除知识库{0}及其下的所有文档？该操作不可逆": {
+        "src": "是否确认删除知识库{0}及其下的所有文档？该操作不可逆",
+        "dst": "Kas kustutad kindlasti teadmistebaasi {0} ja kõik selle all olevad dokumendid? See operatsioon on pöördumatu."
+    },
+    "删除知识库成功": {
+        "src": "删除知识库成功",
+        "dst": "Teadmisbaasi eemaldamine õnnestus"
+    },
+    "删除知识库失败，请重试": {
+        "src": "删除知识库失败，请重试",
+        "dst": "Teadmisbaasi kustutamine nurjus, palun proovi uuesti"
+    },
+    "修改知识库成功": {
+        "src": "修改知识库成功",
+        "dst": "Teadmisbaasi muutmine õnnestus"
+    },
+    "修改知识库失败，请重试": {
+        "src": "修改知识库失败，请重试",
+        "dst": "Teadmisbaasi muutmine nurjus, palun proovi uuesti"
+    },
+    "正在解析文档，这可能要几分钟时间...": {
+        "src": "正在解析文档，这可能要几分钟时间...",
+        "dst": "Dokumendi analüüsimine võib võtta paar minutit"
+    },
+    "是否确认删除文档{0}？该操作不可逆": {
+        "src": "是否确认删除文档{0}？该操作不可逆",
+        "dst": "Kas kustutad dokumendi {0}? See operatsioon on pöördumatu."
+    },
+    "文档删除成功": {
+        "src": "文档删除成功",
+        "dst": "Dokument kustutati edukalt"
+    },
+    "{0}个文件": {
+        "src": "{0}个文件",
+        "dst": "{0} failid"
+    },
+    "正在搜索...": {
+        "src": "正在搜索...",
+        "dst": "Otsimine..."
+    },
+    "请输入知识库名称": {
+        "src": "请输入知识库名称",
+        "dst": "Palun sisesta teadmistebaasi nimi"
+    },
+    "描述": {
+        "src": "描述",
+        "dst": "Kirjeldus"
+    },
+    "请输入知识库描述": {
+        "src": "请输入知识库描述",
+        "dst": "Palun sisestage teadmistebaasi kirjeldus"
+    },
+    "嵌入模型": {
+        "src": "嵌入模型",
+        "dst": "Manustatud mudel"
+    },
+    "选择模型": {
+        "src": "选择模型",
+        "dst": "Vali mudel"
+    },
+    "选择知识库": {
+        "src": "选择知识库",
+        "dst": "Vali teadmistebaas"
+    },
+    "文档嵌入中，请稍后": {
+        "src": "文档嵌入中，请稍后",
+        "dst": "Dokument on sisseehitatud, palun hiljem"
+    },
+    "已嵌入完成, 可正常调用": {
+        "src": "已嵌入完成, 可正常调用",
+        "dst": "Manustatud valmis, normaalselt kutsutav"
+    },
+    "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Põimimisel sõltub ooteaeg failide arvust, mis võib võtta mitu minutit kuni kümneid minuteid"
+    },
+    "第三方模型API": {
+        "src": "第三方模型API",
+        "dst": "Kolmanda osapoole mudeli API"
+    },
+    "本地模型": {
+        "src": "本地模型",
+        "dst": "Kohalik mudel"
+    },
+    "添加模型服务商": {
+        "src": "添加模型服务商",
+        "dst": "Mudeliteenusepakkuja lisamine"
+    },
+    "使用教程": {
+        "src": "使用教程",
+        "dst": "Kasutage õpetusi"
+    },
+    "删除服务商": {
+        "src": "删除服务商",
+        "dst": "Kustuta teenusepakkuja"
+    },
+    "API密钥": {
+        "src": "API密钥",
+        "dst": "API võti"
+    },
+    "请输入API密钥": {
+        "src": "请输入API密钥",
+        "dst": "Palun sisestage API võti"
+    },
+    "检查": {
+        "src": "检查",
+        "dst": "Kontrollida"
+    },
+    "点次获取密钥": {
+        "src": "点次获取密钥",
+        "dst": "Võtme hankimine"
+    },
+    "API地址": {
+        "src": "API地址",
+        "dst": "API aadress"
+    },
+    "请输入API地址": {
+        "src": "请输入API地址",
+        "dst": "Palun sisestage API aadress."
+    },
+    "示例": {
+        "src": "示例",
+        "dst": "Näited"
+    },
+    "保存API": {
+        "src": "保存API",
+        "dst": "API salvestamine"
+    },
+    "默认从/models获取所有模型": {
+        "src": "默认从/models获取所有模型",
+        "dst": "Kõik mudelid vaikimisi /models"
+    },
+    "开关所有": {
+        "src": "开关所有",
+        "dst": "Lülitage kõik"
+    },
+    "修改别名": {
+        "src": "修改别名",
+        "dst": "Muuda aliasi"
+    },
+    "当前服务商下属暂无模型可用": {
+        "src": "当前服务商下属暂无模型可用",
+        "dst": "Praegu ei ole teenusepakkujale saadaval mudelit."
+    },
+    "添加模型": {
+        "src": "添加模型",
+        "dst": "Lisa mudel"
+    },
+    "模型ID": {
+        "src": "模型ID",
+        "dst": "Mudeli ID"
+    },
+    "请输入模型ID": {
+        "src": "请输入模型ID",
+        "dst": "Sisestage mudeli ID"
+    },
+    "模型别名": {
+        "src": "模型别名",
+        "dst": "Mudeli alias"
+    },
+    "请输入模型别名": {
+        "src": "请输入模型别名",
+        "dst": "Palun sisesta mudeli alias"
+    },
+    "模型功能": {
+        "src": "模型功能",
+        "dst": "Mudeli funktsioonid"
+    },
+    "添加": {
+        "src": "添加",
+        "dst": "lisada"
+    },
+    "供应商名称": {
+        "src": "供应商名称",
+        "dst": "Tarnija nimi"
+    },
+    "接口地址": {
+        "src": "接口地址",
+        "dst": "Liidese aadress"
+    },
+    "需要兼容openAI格式的接口": {
+        "src": "需要兼容openAI格式的接口",
+        "dst": "OpenAI-vorminguga ühilduv liides"
+    },
+    "密钥": {
+        "src": "密钥",
+        "dst": "Võtmed"
+    },
+    "请选择模型功能": {
+        "src": "请选择模型功能",
+        "dst": "Palun valige mudeli funktsioon"
+    },
+    "请输入供应商名称": {
+        "src": "请输入供应商名称",
+        "dst": "Palun sisesta tarnija nimi"
+    },
+    "模型添加成功": {
+        "src": "模型添加成功",
+        "dst": "Mudeli lisamine õnnestus"
+    },
+    "是否确定删除当前模型？该操作不可逆": {
+        "src": "是否确定删除当前模型？该操作不可逆",
+        "dst": "Kas kustutad kindlasti aktiivse mudeli? See operatsioon on pöördumatu."
+    },
+    "请填写完整配置信息": {
+        "src": "请填写完整配置信息",
+        "dst": "Palun täida täielik seadistusteave"
+    },
+    "配置保存成功": {
+        "src": "配置保存成功",
+        "dst": "Seadistused salvestati edukalt"
+    },
+    "缺少API密钥": {
+        "src": "缺少API密钥",
+        "dst": "Puudub API võti"
+    },
+    "缺少API地址": {
+        "src": "缺少API地址",
+        "dst": "API aadress puudub"
+    },
+    "模型启用成功": {
+        "src": "模型启用成功",
+        "dst": "Mudeli lubamine õnnestus"
+    },
+    "模型禁用成功": {
+        "src": "模型禁用成功",
+        "dst": "Mudeli keelamine õnnestus"
+    },
+    "已启用全部模型": {
+        "src": "已启用全部模型",
+        "dst": "Kõik mudelid lubatud"
+    },
+    "已禁用全部模型": {
+        "src": "已禁用全部模型",
+        "dst": "Kõik mudelid on keelatud"
+    },
+    "添加成功": {
+        "src": "添加成功",
+        "dst": "Lisamine õnnestus"
+    },
+    "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！": {
+        "src": "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！",
+        "dst": "Kas kustutada praegune teenusepakkuja? See eemaldab kõik mudelid samal ajal, palun ole ettevaatlik!"
+    },
+    "删除成功": {
+        "src": "删除成功",
+        "dst": "Eemaldamine õnnestus"
+    },
+    "一键把AI模型部署在你的电脑": {
+        "src": "一键把AI模型部署在你的电脑",
+        "dst": "Kasutage AI mudel oma arvutisse ühe klõpsuga"
+    },
+    "免费开源无限制": {
+        "src": "免费开源无限制",
+        "dst": "Tasuta avatud lähtekoodiga piiramatu"
+    },
+    "可在线分享他人使用": {
+        "src": "可在线分享他人使用",
+        "dst": "Võib jagada internetis teiste jaoks"
+    },
+    "支持联网大幅度提升答案质量": {
+        "src": "支持联网大幅度提升答案质量",
+        "dst": "Võrgustiku toetamine suurendab vastuste kvaliteeti"
+    },
+    "使用第三方模型": {
+        "src": "使用第三方模型",
+        "dst": "Kolmandate osapoolte mudelite kasutamine"
+    },
+    "使用本地模型": {
+        "src": "使用本地模型",
+        "dst": "Kohaliku mudeli kasutamine"
+    },
+    "简单好用的AI助手": {
+        "src": "简单好用的AI助手",
+        "dst": "Lihtne ja kasulik AI-assistent"
+    },
+    "支持联网搜索和知识库": {
+        "src": "支持联网搜索和知识库",
+        "dst": "Veebipõhise otsingu ja teadmistebaasi toetamine"
+    },
+    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型": {
+        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型",
+        "dst": "Näpunäide: kui jagamise nimekiri on tühi, peatub jagamise ühenduse teenus automaatselt ja AingDeski kaudu ei ole ühtegi mudelit võrguväliselt kättesaadav"
+    },
+    "上传附件": {
+        "src": "上传附件",
+        "dst": "Kaasatud failide üleslaadimine"
+    },
+    "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Praegu kasutatav [{0}] mudel on keelatud või kustutatud. Palun luba uuesti või vaheta mudeleid"
+    },
+    "请安装或接入嵌入模型": {
+        "src": "请安装或接入嵌入模型",
+        "dst": "Palun installige või ühendage sisseehitatud mudel"
+    },
+    "使用本地模型嵌入（推荐）": {
+        "src": "使用本地模型嵌入（推荐）",
+        "dst": "Kohaliku mudeli manustamise kasutamine (soovitatav)"
+    },
+    "请选择从Ollama安装-Embedding-安装bge-m3:latest": {
+        "src": "请选择从Ollama安装-Embedding-安装bge-m3:latest",
+        "dst": "Palun vali paigaldada Ollama - Embedding - Installing bge-m3: latest"
+    },
+    "使用第三方API提供模型嵌入": {
+        "src": "使用第三方API提供模型嵌入",
+        "dst": "Kolmanda osapoole API-de kasutamine mudeli manustamiseks"
+    },
+    "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动": {
+        "src": "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动",
+        "dst": "Palun valige ühendus kolmandate osapoolte mudelitega, mis toetavad kolmandate osapoolte API-de manustamist, näiteks ränipõhist mobiilsust"
+    },
+    "从Ollama安装": {
+        "src": "从Ollama安装",
+        "dst": "Paigaldus Ollamast"
+    },
+    "接入第三方模型": {
+        "src": "接入第三方模型",
+        "dst": "Juurdepääs kolmandate osapoolte mudelitele"
+    },
+    "已启用模型该服务商": {
+        "src": "已启用模型该服务商",
+        "dst": "Mudel on selle teenusepakkuja jaoks lubatud"
+    },
+    "已禁用模型该服务商": {
+        "src": "已禁用模型该服务商",
+        "dst": "Mudel on selle teenusepakkuja jaoks keelatud"
+    },
+    "无记忆": {
+        "src": "无记忆",
+        "dst": "Mälestuseta"
+    },
+    " 能提升单次回复质量，但大模型将没有上下文记忆": {
+        "src": " 能提升单次回复质量，但大模型将没有上下文记忆",
+        "dst": "Parandab ühekordse vastuse kvaliteeti, kuid suurel mudelil ei ole kontekstimälu"
+    },
+    "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式": {
+        "src": "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式",
+        "dst": "Toetab failide ja piltide üleslaadimist (kuni 20 MB) ja toetab vorminguid nagu PDF, DOC, TXT jne"
+    },
+    "附件总大小不能超过20MB": {
+        "src": "附件总大小不能超过20MB",
+        "dst": "Manuste kogusuurus ei tohi ületada 20 MB"
+    },
+    "请选择知识库": {
+        "src": "请选择知识库",
+        "dst": "Palun vali teadmistebaas"
+    },
+    "文档教程": {
+        "src": "文档教程",
+        "dst": "Dokumentide õpetused"
+    },
+    "查看知识库教程": {
+        "src": "查看知识库教程",
+        "dst": "Vaade teabebaasi õpetus"
+    },
+    "智能体": {
+        "src": "智能体",
+        "dst": "Intelligentne agent"
+    },
+    "创建智能体": {
+        "src": "创建智能体",
+        "dst": "Loo intelligentne agent"
+    },
+    "我的智能体": {
+        "src": "我的智能体",
+        "dst": "Minu arukas keha."
+    },
+    "预设模板": {
+        "src": "预设模板",
+        "dst": "Eelseadistatud mall"
+    },
+    "编辑": {
+        "src": "编辑",
+        "dst": "redigeeri"
+    },
+    "请输入智能体名称": {
+        "src": "请输入智能体名称",
+        "dst": "Palun sisesta intelligentse agendi nimi"
+    },
+    "人物设定": {
+        "src": "人物设定",
+        "dst": "märgikujundus"
+    },
+    "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界": {
+        "src": "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界",
+        "dst": "Olete professionaalne juriidiline AI, kes on koolitatud Hiina õigusbaasis, kes on tuttav peamiste õigussüsteemidega, nagu tsiviilseadustik, kriminaalõigus ja äriõigus.Te toetate lepingute läbivaatamist, õigusnormide tõlgendamist, kohtuvaidluste strateegia nõustamist ning eristate rangelt piiri õigusnõustamise ja advokaaditeenuste vahel."
+    },
+    "头像": {
+        "src": "头像",
+        "dst": "profiilipilt"
+    },
+    "请选择": {
+        "src": "请选择",
+        "dst": "Palun valige"
+    },
+    "保存": {
+        "src": "保存",
+        "dst": "salvesta"
+    },
+    "请为您的智能体设定提示词": {
+        "src": "请为您的智能体设定提示词",
+        "dst": "Palun määra oma agendile kiired sõnad"
+    },
+    "请选择嵌入模型": {
+        "src": "请选择嵌入模型",
+        "dst": "Palun valige sisseehitatud mudel"
+    },
+    "第三方API配置": {
+        "src": "第三方API配置",
+        "dst": "Kolmanda osapoole API seadistamine"
+    },
+    "智能体创建成功": {
+        "src": "智能体创建成功",
+        "dst": "Intelligentse keha edukas loomine"
+    },
+    "智能体修改成功": {
+        "src": "智能体修改成功",
+        "dst": "Intelligentne agent on edukalt muudetud"
+    },
+    "是否确认删除智能体[{0}]?删除后无法恢复": {
+        "src": "是否确认删除智能体[{0}]?删除后无法恢复",
+        "dst": "Kas tõesti kustutada arukas[{0}]? Pärast kustutamist ei saa taastada"
+    },
+    "智能体删除成功": {
+        "src": "智能体删除成功",
+        "dst": "Intelligentne agent kustutati edukalt"
+    },
+    "您当前使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Praegu kasutatav mudel on keelatud või kustutatud. Palun luba või vaheta mudel uuesti"
+    },
+    "请选择或安装接入模型": {
+        "src": "请选择或安装接入模型",
+        "dst": "Palun vali või paigalda juurdepääsu mudel"
+    },
+    "当前对话使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "当前对话使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Käesolevas vestluses kasutatav mudel on keelatud või kustutatud. Palun luba või vaheta mudel uuesti"
+    },
+    "模型{0}不存在，请添加本地模型或第三方模型api": {
+        "src": "模型{0}不存在，请添加本地模型或第三方模型api",
+        "dst": "Mudelit {0} ei ole olemas, lisage kohalik mudel või kolmanda osapoole mudel API"
+    },
+    "模型管理器": {
+        "src": "模型管理器",
+        "dst": "Mudelihaldur"
+    },
+    "模型存储位置": {
+        "src": "模型存储位置",
+        "dst": "Mudeli salvestuskoht"
+    },
+    "选择": {
+        "src": "选择",
+        "dst": "vali"
+    },
+    "请选择模型管理器": {
+        "src": "请选择模型管理器",
+        "dst": "Palun vali mudelihaldur"
+    },
+    "请选择模型管理器安装路径": {
+        "src": "请选择模型管理器安装路径",
+        "dst": "Vali mudelihalduri paigaldamise tee"
+    },
+    "图形": {
+        "src": "图形",
+        "dst": "graafiline"
+    },
+    "mermaid解析失败,请检查语法": {
+        "src": "mermaid解析失败,请检查语法",
+        "dst": "Mereneitsi parsimine nurjus, palun kontrolli süntaksit"
+    },
+    "Ollama接口地址": {
+        "src": "Ollama接口地址",
+        "dst": "Olama liidese aadress"
+    },
+    "当前ollama地址不可用": {
+        "src": "当前ollama地址不可用",
+        "dst": "Aktiivne ollama aadress pole saadaval"
+    },
+    "新手指引": {
+        "src": "新手指引",
+        "dst": "Algaja juhend"
+    },
+    "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
+        "src": "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
+        "dst": "Tere tulemast AingDeski, lihtsa ja lihtsalt kasutatava AI assistendi, mis toetab teadmistebaasi, mudeli API, jagamist, online-otsingut ja intelligentseid agente. See tarkvara on avatud lähtekoodiga ja tasuta. Me ootame, et jagate tarkvara teistega, et toetada meie arendust."
+    },
+    "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
+        "src": "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
+        "dst": "AingDesk on uus AI projekt, mis püüab endiselt kiiresti kasvada. Kui teil tekib kasutamise ajal probleeme või teil on tarkvara funktsionaalseid nõudeid, võite liituda meie WeChat grupiga, et anda meile tagasisidet."
+    },
+    "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。": {
+        "src": "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。",
+        "dst": "Lõpuks võite anda meile tähe meie avatud lähtekoodiga projektile. Teie julgustamine on meie jaoks äärmiselt oluline, et jätkame avatud lähtekoodiga projektide itereerimist."
+    },
+    "去github点星星": {
+        "src": "去github点星星",
+        "dst": "Mine GitHub ja klõpsa tähtedel"
+    },
+    "您可以在": {
+        "src": "您可以在",
+        "dst": "Sa saad"
+    },
+    "中关闭新手指引": {
+        "src": "中关闭新手指引",
+        "dst": "Sulge algaja juhend keskel"
+    },
+    "文档删除失败": {
+        "src": "文档删除失败",
+        "dst": "Dokumendi kustutamine nurjus"
+    },
+    "设置成功": {
+        "src": "设置成功",
+        "dst": "Seadistamine edukas"
+    },
+    "源码": {
+        "src": "源码",
+        "dst": "lähtekood"
+    },
+    "分段标识符": {
+        "src": "分段标识符",
+        "dst": "Segmendi identifikaator"
+    },
+    "分段最大长度": {
+        "src": "分段最大长度",
+        "dst": "Segmendi maksimaalne pikkus"
+    },
+    "分段重叠长度": {
+        "src": "分段重叠长度",
+        "dst": "Segmendi kattumise pikkus"
+    },
+    "分段标识符支持函正则表达式，如": {
+        "src": "分段标识符支持函正则表达式，如",
+        "dst": "Segmendi identifikaatorid toetavad regulaaravaldiseid, näiteks"
+    },
+    "正则表达式无需添加修饰符，默认会自动添加g修饰符": {
+        "src": "正则表达式无需添加修饰符，默认会自动添加g修饰符",
+        "dst": "Regulaaravaldised ei nõua modifikaatorite lisamist ja lisavad vaikimisi automaatselt modifikaatori g"
+    },
+    "分段重叠长度建议为分段最大长度的10%到20%": {
+        "src": "分段重叠长度建议为分段最大长度的10%到20%",
+        "dst": "Segmentide soovitatav kattumispikkus on 10–20% segmendi maksimaalsest pikkusest"
+    },
+    "选择文档进行预览": {
+        "src": "选择文档进行预览",
+        "dst": "Vali eelvaatluseks dokument"
+    },
+    "预览": {
+        "src": "预览",
+        "dst": "Eelvaatlus"
+    },
+    "分段最大长度不能小于20": {
+        "src": "分段最大长度不能小于20",
+        "dst": "Segmendi maksimaalne pikkus ei tohi olla väiksem kui 20"
+    },
+    "分段最大长度不能大于1000": {
+        "src": "分段最大长度不能大于1000",
+        "dst": "Segmendi maksimaalne pikkus ei tohi ületada 1000"
+    },
+    "请填写分段最大长度": {
+        "src": "请填写分段最大长度",
+        "dst": "Palun täitke segmendi maksimaalne pikkus"
+    },
+    "分段重叠长度不能小于0": {
+        "src": "分段重叠长度不能小于0",
+        "dst": "Segmentide kattuv pikkus ei tohi olla väiksem kui 0"
+    },
+    "分段重叠长度不能大于分段最大长度": {
+        "src": "分段重叠长度不能大于分段最大长度",
+        "dst": "Segmentide kattuv pikkus ei tohi ületada segmentide maksimaalset pikkust"
+    },
+    "请填写分段重叠长度": {
+        "src": "请填写分段重叠长度",
+        "dst": "Palun täida segmentide kattuv pikkus"
+    },
+    "请填写分段标识符": {
+        "src": "请填写分段标识符",
+        "dst": "Palun täida segmendi tunnus"
+    },
+    "文档分片设置": {
+        "src": "文档分片设置",
+        "dst": "Dokumentide jagamise seadistused"
+    },
+    "继续添加文件": {
+        "src": "继续添加文件",
+        "dst": "Jätka failide lisamist"
+    },
+    "请选择文件": {
+        "src": "请选择文件",
+        "dst": "Palun vali fail"
+    },
+    "最大召唤数量": {
+        "src": "最大召唤数量",
+        "dst": "Summeerimise maksimumkogus"
+    },
+    "召回精度": {
+        "src": "召回精度",
+        "dst": "Tagasivõtmise täpsus"
+    },
+    "文档解析失败": {
+        "src": "文档解析失败",
+        "dst": "Dokumentide parsimine nurjus"
+    },
+    "文档解析成功,等待嵌入": {
+        "src": "文档解析成功,等待嵌入",
+        "dst": "Dokumentide parsimine edukas, manustamist ootab"
+    },
+    "数据存储位置": {
+        "src": "数据存储位置",
+        "dst": "Andmete salvestamise asukoht"
+    },
+    "更改": {
+        "src": "更改",
+        "dst": "muutus"
+    },
+    "如何更好的使用知识库?": {
+        "src": "如何更好的使用知识库?",
+        "dst": "Kuidas teadmistebaasi paremini ära kasutada?"
+    },
+    "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件": {
+        "src": "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件",
+        "dst": "Kataloogide vahetamine migreerib andmed vanast kataloogist uude kataloogi, mis võib võtta 5- 10 minutit sõltuvalt andmete suurusest. Palun ära sulge tarkvara migreerimise ajal"
+    },
+    "选择新位置": {
+        "src": "选择新位置",
+        "dst": "Vali uus asukoht"
+    },
+    "数据迁移失败，请重试": {
+        "src": "数据迁移失败，请重试",
+        "dst": "Andmete migreerimine nurjus, palun proovi uuesti"
+    },
+    "数据迁移成功": {
+        "src": "数据迁移成功",
+        "dst": "Andmete migratsioon edukas"
+    },
+    "请勿关闭软件,否则将导致软件异常": {
+        "src": "请勿关闭软件,否则将导致软件异常",
+        "dst": "Ärge sulgege tarkvara, vastasel juhul võib see põhjustada tarkvara kõrvalekaldeid"
+    },
+    "等待复制": {
+        "src": "等待复制",
+        "dst": "Paljundamise ootamine"
+    },
+    "总大小": {
+        "src": "总大小",
+        "dst": "kogusuurus"
+    },
+    "速度": {
+        "src": "速度",
+        "dst": "kiirus"
+    },
+    "准备迁移数据": {
+        "src": "准备迁移数据",
+        "dst": "Ettevalmistus andmete migreerimiseks"
+    },
+    "迁移数据中": {
+        "src": "迁移数据中",
+        "dst": "Andmete migreerimisel"
+    },
+    "选择工具": {
+        "src": "选择工具",
+        "dst": "Tööriistade valimine"
+    },
+    "工具": {
+        "src": "工具",
+        "dst": "tööriist"
+    },
+    "模型选择": {
+        "src": "模型选择",
+        "dst": "mudeli valik"
+    },
+    "搜索模型": {
+        "src": "搜索模型",
+        "dst": "Otsingu mudel"
+    },
+    "常用模型": {
+        "src": "常用模型",
+        "dst": "Ühised mudelid"
+    },
+    "不使用": {
+        "src": "不使用",
+        "dst": "Ei kasutata"
+    },
+    "新分享": {
+        "src": "新分享",
+        "dst": "Uus jagamine"
+    },
+    "最大召回数量": {
+        "src": "最大召回数量",
+        "dst": "Maksimaalne tagasivõtmise kogus"
+    },
+    "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条": {
+        "src": "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条",
+        "dst": "Maksimaalne tulude arv teadmistebaasi otsimisel on soovitatav olla 3 kohalike mudelite ja 5 online mudelite puhul"
+    },
+    "自动": {
+        "src": "自动",
+        "dst": "automaatne"
+    },
+    "自定义": {
+        "src": "自定义",
+        "dst": "kohandada"
+    },
+    "请输入分隔符": {
+        "src": "请输入分隔符",
+        "dst": "Palun sisesta eraldaja"
+    },
+    "正在优化知识库,这可能需要几分钟到十几分钟......": {
+        "src": "正在优化知识库,这可能需要几分钟到十几分钟......",
+        "dst": "Optimeerime teadmistebaasi, mis võib võtta paar minutit kuni tosinat minutit."
+    },
+    "上传知识库文档": {
+        "src": "上传知识库文档",
+        "dst": "Teadmistebaasi dokumendi üleslaadimine"
+    },
+    "请选择模型管理器的安装路径": {
+        "src": "请选择模型管理器的安装路径",
+        "dst": "Palun vali mudelihalduri paigaldustee"
+    },
+    "优化": {
+        "src": "优化",
+        "dst": "optimeerida"
+    },
+    "增强索引,并释放多余的空间占用": {
+        "src": "增强索引,并释放多余的空间占用",
+        "dst": "Parandada indekseerimist ja vabastada liigne ruumi hõivamine"
+    },
+    "反馈": {
+        "src": "反馈",
+        "dst": "tagasiside"
+    },
+    "删除MCP服务器": {
+        "src": "删除MCP服务器",
+        "dst": "Kustuta MCP server"
+    },
+    "是否可用": {
+        "src": "是否可用",
+        "dst": "Kas see on kättesaadav?"
+    },
+    "请输入MCP服务器名称": {
+        "src": "请输入MCP服务器名称",
+        "dst": "Palun sisesta MCP serveri nimi"
+    },
+    "请输入内容": {
+        "src": "请输入内容",
+        "dst": "Palun sisesta sisu"
+    },
+    "类型": {
+        "src": "类型",
+        "dst": "tüüp"
+    },
+    "服务器地址": {
+        "src": "服务器地址",
+        "dst": "serveri aadress"
+    },
+    "请输入服务器URL地址": {
+        "src": "请输入服务器URL地址",
+        "dst": "Palun sisesta serveri URL aadress"
+    },
+    "程序类型": {
+        "src": "程序类型",
+        "dst": "Rakenduse tüüp"
+    },
+    "当前未安装Nodejs环境，点击": {
+        "src": "当前未安装Nodejs环境，点击",
+        "dst": "Nodejs keskkonda pole praegu paigaldatud, klõpsa"
+    },
+    "命令": {
+        "src": "命令",
+        "dst": "käsk"
+    },
+    "可执行命令": {
+        "src": "可执行命令",
+        "dst": "Käivitatav käsk"
+    },
+    "参数": {
+        "src": "参数",
+        "dst": "parameeter"
+    },
+    "环境变量": {
+        "src": "环境变量",
+        "dst": "keskkonnamuutuja"
+    },
+    "正在安装环境,这可能需要几分钟......": {
+        "src": "正在安装环境,这可能需要几分钟......",
+        "dst": "Keskkonna paigaldamine, see võib võtta paar minutit"
+    },
+    "请输入可执行命令": {
+        "src": "请输入可执行命令",
+        "dst": "Palun sisesta käivitatav käsk"
+    },
+    "编辑配置文件": {
+        "src": "编辑配置文件",
+        "dst": "Muuda profiili"
+    },
+    "编辑MCP服务器配置的JSON。保存前请确保格式正确。": {
+        "src": "编辑MCP服务器配置的JSON。保存前请确保格式正确。",
+        "dst": "Muuda MCP serveri seadistamise JSON- i. Enne salvestamist veenduge, et vorming on õige."
+    },
+    "添加服务器": {
+        "src": "添加服务器",
+        "dst": "Lisa server"
+    },
+    "新配置": {
+        "src": "新配置",
+        "dst": "uus seadistus"
+    },
+    "环境安装成功": {
+        "src": "环境安装成功",
+        "dst": "Keskkonnapaigaldus edukas"
+    },
+    "环境安装失败": {
+        "src": "环境安装失败",
+        "dst": "Keskkonna paigaldamine nurjus"
+    },
+    "操作成功": {
+        "src": "操作成功",
+        "dst": "Operatsioon edukas"
+    },
+    "请先安装Node.js环境": {
+        "src": "请先安装Node.js环境",
+        "dst": "Palun paigalda esmalt Node.js keskkond"
+    },
+    "是否删除当前MCP服务器？": {
+        "src": "是否删除当前MCP服务器？",
+        "dst": "Kas kustutada aktiivne MCP server?"
+    },
+    "常规设置": {
+        "src": "常规设置",
+        "dst": "Üldised seadistused"
+    },
+    "MCP服务器": {
+        "src": "MCP服务器",
+        "dst": "MCP server"
+    },
+    "修改模型": {
+        "src": "修改模型",
+        "dst": "Mudeli muutmine"
+    },
+    "保存成功": {
+        "src": "保存成功",
+        "dst": "Salvestamine edukalt"
+    },
+    "调用结果:": {
+        "src": "调用结果:",
+        "dst": "Kõne tulemus:"
+    },
+    "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Dokumendi parsimine on edukas, ootab manustamist. Ootamisaeg sõltub failide arvust, mis võib võtta mitu minutit kuni kümneid minuteid."
+    },
+    "正在嵌入中,请稍后...": {
+        "src": "正在嵌入中,请稍后...",
+        "dst": "Põimimine on käimas, palun oodake"
+    }
+}

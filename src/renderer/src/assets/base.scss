@@ -1,0 +1,219 @@
+:root {
+  // 背景
+  --bt-bg: #f7f7f7;
+  // 主题色
+  --bt-theme-color: rgb(29, 149, 52);
+  --bt-theme-warning: #e6a23c;
+  --bt-theme-danger: #f56c6c;
+  --bt-theme-info: #2080f0;
+  // 主题悬浮色
+  --bt-theme-color-hover: rgba(29, 149, 52, 0.3);
+  // 边距
+  --bt-mg-normal: 20px;
+  --bt-mg-small: 10px;
+  --bt-mg-large: 30px;
+
+  --bt-pd-normal: 20px;
+  --bt-pd-small: 10px;
+  --bt-pd-large: 30px;
+  // 边框
+  --bt-border-normal: 1px;
+  // 文字
+  --bt-text-color: #333;
+  // 文字尺寸
+  --bt-fz: 14px;
+  // 主要文字颜色
+  --bt-text-color-primary: #000;
+  // 次要标题文字颜色
+  --bt-tit-color-secondary: #73767a;
+  // 提示文字颜色
+  --bt-notice-text-color: #545454;
+  // 列表项悬浮颜色
+  --bt-list-item-hover: rgba(22, 163, 74, 0.1);
+  // 面板颜色
+  --bt-panel: #fff;
+
+  /********** 颜色列表 **********/
+  --gray-1: #fafafa;
+  --gray-2: #f5f5f5;
+  --gray-3: #f0f0f0;
+  --gray-4: #d9d9d9;
+  --gray-5: #bfbfbf;
+  --gray-6: #8c8c8c;
+  --gray-7: #595959;
+  --gray-8: #434343;
+  --gray-9: #262626;
+}
+
+html,
+body,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/**
+ * 文本颜色 SCSS 变量
+ */
+$secondary-text-color: var(--bt-text-color-primary);
+$sub-tit-color: var(--bt-tit-color-secondary);
+$common-icon-color: $sub-tit-color;
+$notice-text: var(--bt-notice-text-color);
+
+$gray-1: #fafafa;
+$gray-2: #f5f5f5;
+$gray-3: #f0f0f0;
+$gray-4: #d9d9d9;
+$gray-5: #bfbfbf;
+$gray-6: #8c8c8c;
+$gray-7: #595959;
+$gray-8: #434343;
+$gray-9: #262626;
+
+$list-item-hover: var(--bt-list-item-hover);
+
+@mixin single-line-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin common-list-item {
+  height: 28px;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+@mixin row-flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+@mixin column-flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@mixin shadow {
+  box-shadow:
+    0 1px 2px -2px rgba(0, 0, 0, 0.08),
+    0 3px 6px 0 rgba(0, 0, 0, 0.06),
+    0 5px 12px 4px rgba(0, 0, 0, 0.04);
+}
+
+.modal-footer-btns {
+  @include row-flex-between;
+  justify-content: flex-end;
+}
+
+@mixin file-item {
+  box-sizing: border-box;
+  padding: 10px;
+  @include row-flex-between;
+  justify-content: flex-start;
+  gap: 5px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+
+  span.show-tit {
+    @include single-line-ellipsis;
+  }
+
+  .del-file {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+  }
+}
+
+@mixin tools {
+  height: 40px;
+  visibility: hidden;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+
+  .tool-item {
+    cursor: pointer;
+    display: flex;
+    padding: 4px;
+    transition: 0.2s;
+    border-radius: 4px;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+}
+
+@mixin tools-visible {
+  &:hover {
+    .tools {
+      visibility: visible;
+    }
+  }
+}
+
+@mixin comu-tit {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin comu-list-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $list-item-hover;
+  }
+}
+
+@mixin recent-list-style {
+  box-sizing: border-box;
+  margin-top: var(--bt-mg-small);
+
+  li {
+    @include row-flex-between;
+    @include common-list-item;
+
+    &:hover:not(.add-knowledge) {
+      background-color: $list-item-hover;
+    }
+
+    &.active {
+      background-color: $list-item-hover;
+    }
+
+    .comu-title {
+      @include comu-tit;
+    }
+  }
+
+  .pd-10 {
+    padding: 0 0 0 var(--bt-pd-small);
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@mixin action-wrapper {
+  @include row-flex-between;
+  justify-content: flex-end;
+}

@@ -1,0 +1,1342 @@
+{
+    "让我们开启一段新的对话吧": {
+        "src": "让我们开启一段新的对话吧",
+        "dst": "Kezdjünk egy új beszélgetést."
+    },
+    "正在思考...": {
+        "src": "正在思考...",
+        "dst": "Gondolkodom..."
+    },
+    "复制": {
+        "src": "复制",
+        "dst": "másolat"
+    },
+    "暂无信息": {
+        "src": "暂无信息",
+        "dst": "Jelenleg nem áll rendelkezésre információ"
+    },
+    "重新生成": {
+        "src": "重新生成",
+        "dst": "Újra létrehozás"
+    },
+    "请输入对话内容": {
+        "src": "请输入对话内容",
+        "dst": "Kérjük, adja meg a beszélgetés tartalmát"
+    },
+    "发送": {
+        "src": "发送",
+        "dst": "küldje ki"
+    },
+    "停止生成": {
+        "src": "停止生成",
+        "dst": "A létrehozás leállítása"
+    },
+    "复制成功": {
+        "src": "复制成功",
+        "dst": "Másolás sikeres"
+    },
+    "请选择对应模型": {
+        "src": "请选择对应模型",
+        "dst": "Válassza ki a megfelelő modellt"
+    },
+    "当前正在回答，请稍后": {
+        "src": "当前正在回答，请稍后",
+        "dst": "Jelenleg válaszol, kérem később."
+    },
+    "点击[设置]安装模型": {
+        "src": "点击[设置]安装模型",
+        "dst": "Kattintson a [Beállítások] gombra a modell telepítésére"
+    },
+    "模型大小:": {
+        "src": "模型大小:",
+        "dst": "Modellméret:"
+    },
+    "已下载:": {
+        "src": "已下载:",
+        "dst": "Letöltve:"
+    },
+    "速度:": {
+        "src": "速度:",
+        "dst": "Sebesség:"
+    },
+    "引用": {
+        "src": "引用",
+        "dst": "hivatkozások"
+    },
+    "已复制": {
+        "src": "已复制",
+        "dst": "Másolva"
+    },
+    "处理器:": {
+        "src": "处理器:",
+        "dst": "Processzor:"
+    },
+    "内存:": {
+        "src": "内存:",
+        "dst": "Memória:"
+    },
+    "显卡:": {
+        "src": "显卡:",
+        "dst": "Grafikus kártya:"
+    },
+    "建议:": {
+        "src": "建议:",
+        "dst": "Ajánlások:"
+    },
+    "首次使用，请选择要安装的模型": {
+        "src": "首次使用，请选择要安装的模型",
+        "dst": "Első alkalommal válassza ki a telepíteni kívánt modellt"
+    },
+    "如:": {
+        "src": "如:",
+        "dst": "Például:"
+    },
+    "搜索": {
+        "src": "搜索",
+        "dst": "Keresés"
+    },
+    "模型刪除中，请稍后": {
+        "src": "模型刪除中，请稍后",
+        "dst": "A modell törlése folyamatban van, kérem várjon"
+    },
+    "提示": {
+        "src": "提示",
+        "dst": "Tippek"
+    },
+    "检测到您没有安装模型管理器，是否立即安装？": {
+        "src": "检测到您没有安装模型管理器，是否立即安装？",
+        "dst": "Azt észlelte, hogy nincs telepítve a modellkezelő, azonnal telepíti?"
+    },
+    "暂不安装": {
+        "src": "暂不安装",
+        "dst": "Ideiglenesen nem telepítve"
+    },
+    "立即安装": {
+        "src": "立即安装",
+        "dst": "Telepítse most"
+    },
+    "正在安装模型管理器，请稍后": {
+        "src": "正在安装模型管理器，请稍后",
+        "dst": "A modellkezelő telepítése folyamatban, kérjük később"
+    },
+    "大小:": {
+        "src": "大小:",
+        "dst": "Méret:"
+    },
+    "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。": {
+        "src": "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。",
+        "dst": "Próbálja ki újra kiválasztani a letöltési csomópontot a letöltési sebesség optimalizálása érdekében, PS: Nem veszít el az aktuális letöltési folyamat, és automatikusan megújítja a szakítási pontot."
+    },
+    "所有": {
+        "src": "所有",
+        "dst": "Mindegyikük."
+    },
+    "已安装": {
+        "src": "已安装",
+        "dst": "Telepített"
+    },
+    "模型": {
+        "src": "模型",
+        "dst": "modell"
+    },
+    "大小": {
+        "src": "大小",
+        "dst": "Méret"
+    },
+    "简介": {
+        "src": "简介",
+        "dst": "Bevezetés"
+    },
+    "功能": {
+        "src": "功能",
+        "dst": "függvény"
+    },
+    "操作": {
+        "src": "操作",
+        "dst": "Műveletek"
+    },
+    "刪除": {
+        "src": "刪除",
+        "dst": "Törlés"
+    },
+    "安装": {
+        "src": "安装",
+        "dst": "telepítés"
+    },
+    "浅色模式": {
+        "src": "浅色模式",
+        "dst": "Fényszínmód"
+    },
+    "深色模式": {
+        "src": "深色模式",
+        "dst": "Sötét mód"
+    },
+    "对话": {
+        "src": "对话",
+        "dst": "párbeszéd"
+    },
+    "对话内容": {
+        "src": "对话内容",
+        "dst": "A párbeszéd tartalma"
+    },
+    "新对话": {
+        "src": "新对话",
+        "dst": "Új párbeszéd"
+    },
+    "模型管理": {
+        "src": "模型管理",
+        "dst": "Modellmenedzsment"
+    },
+    "设置": {
+        "src": "设置",
+        "dst": "felállítás"
+    },
+    "删除对话": {
+        "src": "删除对话",
+        "dst": "Beszélgetés törlése"
+    },
+    "是否确认删除当前对话": {
+        "src": "是否确认删除当前对话",
+        "dst": "Biztos, hogy törli az aktuális beszélgetést"
+    },
+    "取消": {
+        "src": "取消",
+        "dst": "törlés"
+    },
+    "删除": {
+        "src": "删除",
+        "dst": "Törlés"
+    },
+    "修改对话标题": {
+        "src": "修改对话标题",
+        "dst": "A párbeszédpanel címe módosítása"
+    },
+    "请输入新的对话标题": {
+        "src": "请输入新的对话标题",
+        "dst": "Adja meg az új párbeszéd címét"
+    },
+    "确认": {
+        "src": "确认",
+        "dst": "megerősítés"
+    },
+    "修改标题": {
+        "src": "修改标题",
+        "dst": "Cím módosítása"
+    },
+    "已深度思考": {
+        "src": "已深度思考",
+        "dst": "Mélyen gondolkodott"
+    },
+    "对话已停止": {
+        "src": "对话已停止",
+        "dst": "A beszélgetés leállt."
+    },
+    "对话删除成功": {
+        "src": "对话删除成功",
+        "dst": "A beszélgetés sikeres törlése"
+    },
+    "对话删除失败：": {
+        "src": "对话删除失败：",
+        "dst": "A beszélgetés törlése nem sikerült:"
+    },
+    "对话标题修改成功": {
+        "src": "对话标题修改成功",
+        "dst": "A párbeszéd címének sikeres módosítása"
+    },
+    "对话标题修改失败:": {
+        "src": "对话标题修改失败:",
+        "dst": "A beszélgetés címének módosítása nem sikerült:"
+    },
+    "安装成功": {
+        "src": "安装成功",
+        "dst": "Telepítés sikeres"
+    },
+    "正在连接，请稍候...": {
+        "src": "正在连接，请稍候...",
+        "dst": "Csatlakozás folyamatban, várjon..."
+    },
+    "等待下载:{0}，请稍候...": {
+        "src": "等待下载:{0}，请稍候...",
+        "dst": "Várjon a letöltésre: {0}, várjon..."
+    },
+    "正在下载:{0}，请稍候...": {
+        "src": "正在下载:{0}，请稍候...",
+        "dst": "Letöltés: {0}, várjon..."
+    },
+    "正在安装:{0}，请稍候...": {
+        "src": "正在安装:{0}，请稍候...",
+        "dst": "Telepítés: {0}, várjon..."
+    },
+    "安装失败": {
+        "src": "安装失败",
+        "dst": "Telepítés nem sikerült"
+    },
+    "模型删除成功": {
+        "src": "模型删除成功",
+        "dst": "A modell sikeres törlése"
+    },
+    "模型删除失败:{0}": {
+        "src": "模型删除失败:{0}",
+        "dst": "Nem sikerült eltávolítani a modellt: {0}"
+    },
+    "模型异常，请重新生成": {
+        "src": "模型异常，请重新生成",
+        "dst": "Minta kivételével, kérjük regenerálja"
+    },
+    "模型管理器安装成功": {
+        "src": "模型管理器安装成功",
+        "dst": "A modellkezelő sikeres telepítése"
+    },
+    "模型管理器安装失败": {
+        "src": "模型管理器安装失败",
+        "dst": "A modellkezelő telepítése nem sikerült"
+    },
+    "请求出错，状态码:": {
+        "src": "请求出错，状态码:",
+        "dst": "Hiba történt, állapotkód:"
+    },
+    "请求发生错误": {
+        "src": "请求发生错误",
+        "dst": "Hiba történt a kérésben"
+    },
+    "可用": {
+        "src": "可用",
+        "dst": "Elérhető"
+    },
+    "分享": {
+        "src": "分享",
+        "dst": "részesedés"
+    },
+    "是否确认删除模型，该操作不可逆？": {
+        "src": "是否确认删除模型，该操作不可逆？",
+        "dst": "Biztos, hogy törli a modellt? Ez a művelet visszafordíthatatlan?"
+    },
+    "将AingDesk分享给好友一起使用": {
+        "src": "将AingDesk分享给好友一起使用",
+        "dst": "Az AingDesk megosztása barátaival"
+    },
+    "请输入名称": {
+        "src": "请输入名称",
+        "dst": "Kérjük, adja meg a nevét"
+    },
+    "修改分享": {
+        "src": "修改分享",
+        "dst": "Megosztás módosítása"
+    },
+    "是否确认删除当前分享": {
+        "src": "是否确认删除当前分享",
+        "dst": "Az aktuális megosztás törlésének megerősítése"
+    },
+    "名称": {
+        "src": "名称",
+        "dst": "név"
+    },
+    "访问地址": {
+        "src": "访问地址",
+        "dst": "Látogasson el címre"
+    },
+    "修改": {
+        "src": "修改",
+        "dst": "Módosítás"
+    },
+    "正在下载": {
+        "src": "正在下载",
+        "dst": "Letöltés"
+    },
+    "正在选择下载节点，请稍后": {
+        "src": "正在选择下载节点，请稍后",
+        "dst": "Letöltési csomópont kiválasztása, várjon"
+    },
+    "正在下载模型管理器，请稍后": {
+        "src": "正在下载模型管理器，请稍后",
+        "dst": "A modellkezelő letöltése, kérjük később"
+    },
+    "正在安装模型管理器，可能要几分钟时间，请耐心等待": {
+        "src": "正在安装模型管理器，可能要几分钟时间，请耐心等待",
+        "dst": "A Model Manager telepítése néhány percig tarthat, kérjük, legyen türelmes"
+    },
+    "创建分享成功": {
+        "src": "创建分享成功",
+        "dst": "Sikeres megosztás létrehozása"
+    },
+    "修改成功": {
+        "src": "修改成功",
+        "dst": "A módosítás sikeres"
+    },
+    "正在执行联网搜索...": {
+        "src": "正在执行联网搜索...",
+        "dst": "Hálózati keresés végrehajtása"
+    },
+    "已联网搜索{0}个网址": {
+        "src": "已联网搜索{0}个网址",
+        "dst": "Interneten keresett {0} URL"
+    },
+    "不使用联网搜索": {
+        "src": "不使用联网搜索",
+        "dst": "Ne használjon internetes keresést"
+    },
+    "不联网": {
+        "src": "不联网",
+        "dst": "Nincs internetkapcsolat"
+    },
+    "百度": {
+        "src": "百度",
+        "dst": "Baidu"
+    },
+    "搜狗": {
+        "src": "搜狗",
+        "dst": "Kutya keresés"
+    },
+    "谷歌": {
+        "src": "谷歌",
+        "dst": "a Google"
+    },
+    "DuckDuckGo": {
+        "src": "DuckDuckGo",
+        "dst": "DuckDuckGo"
+    },
+    "360搜索": {
+        "src": "360搜索",
+        "dst": "360 Keresés"
+    },
+    "正搜索...": {
+        "src": "正搜索...",
+        "dst": "Keresés..."
+    },
+    "联网搜索": {
+        "src": "联网搜索",
+        "dst": "Internetes keresés"
+    },
+    "上传文件": {
+        "src": "上传文件",
+        "dst": "Fájl feltöltése"
+    },
+    "上传时间": {
+        "src": "上传时间",
+        "dst": "Feltöltési idő"
+    },
+    "AI摘要": {
+        "src": "AI摘要",
+        "dst": "AI összefoglaló"
+    },
+    "共参考{0}份资料": {
+        "src": "共参考{0}份资料",
+        "dst": "Összesen {0} hivatkozás"
+    },
+    "新建对话": {
+        "src": "新建对话",
+        "dst": "Új párbeszéd"
+    },
+    "清空对话": {
+        "src": "清空对话",
+        "dst": "A beszélgetés törlése"
+    },
+    "知识库": {
+        "src": "知识库",
+        "dst": "Tudásbázis"
+    },
+    "新建知识库": {
+        "src": "新建知识库",
+        "dst": "Új tudásbázis létrehozása"
+    },
+    "语言选择": {
+        "src": "语言选择",
+        "dst": "Nyelvválasztás"
+    },
+    "默认搜索引擎": {
+        "src": "默认搜索引擎",
+        "dst": "Alapértelmezett keresőmotor"
+    },
+    "加入AingDesk交流群": {
+        "src": "加入AingDesk交流群",
+        "dst": "Csatlakozzon az AingDesk kommunikációs csoportjához"
+    },
+    "当前版本": {
+        "src": "当前版本",
+        "dst": "aktuális verzió"
+    },
+    "上传文件夹": {
+        "src": "上传文件夹",
+        "dst": "Mappa feltöltése"
+    },
+    "点击上传": {
+        "src": "点击上传",
+        "dst": "Kattintson a Feltöltésre"
+    },
+    "文件支持类型": {
+        "src": "文件支持类型",
+        "dst": "Fájltámogatási típusok"
+    },
+    "{0}的文件类型不支持": {
+        "src": "{0}的文件类型不支持",
+        "dst": "Nem támogatott fájltípus {0}"
+    },
+    "知识库创建成功": {
+        "src": "知识库创建成功",
+        "dst": "Tudásbázis sikeres létrehozása"
+    },
+    "知识库创建失败": {
+        "src": "知识库创建失败",
+        "dst": "Tudásbázis létrehozása nem sikerült"
+    },
+    "获取知识库列表失败，请重试": {
+        "src": "获取知识库列表失败，请重试",
+        "dst": "Nem sikerült megszerezni a tudásbázis listáját, próbálja meg újra"
+    },
+    "是否确认删除知识库{0}及其下的所有文档？该操作不可逆": {
+        "src": "是否确认删除知识库{0}及其下的所有文档？该操作不可逆",
+        "dst": "Biztosan törli a tudásbázist {0} és az alábbi összes dokumentumot? A művelet visszafordíthatatlan."
+    },
+    "删除知识库成功": {
+        "src": "删除知识库成功",
+        "dst": "Tudásbázis sikeres törlése"
+    },
+    "删除知识库失败，请重试": {
+        "src": "删除知识库失败，请重试",
+        "dst": "A tudásbázis törlése nem sikerült, próbálja meg újra"
+    },
+    "修改知识库成功": {
+        "src": "修改知识库成功",
+        "dst": "A tudásbázis módosítása sikeres"
+    },
+    "修改知识库失败，请重试": {
+        "src": "修改知识库失败，请重试",
+        "dst": "A tudásbázis módosítása nem sikerült, próbálja meg újra"
+    },
+    "正在解析文档，这可能要几分钟时间...": {
+        "src": "正在解析文档，这可能要几分钟时间...",
+        "dst": "A dokumentum feldolgozása folyamatban van. Ez néhány percig tarthat..."
+    },
+    "是否确认删除文档{0}？该操作不可逆": {
+        "src": "是否确认删除文档{0}？该操作不可逆",
+        "dst": "Biztos, hogy törli a {0} dokumentumot? Ez a művelet visszafordíthatatlan."
+    },
+    "文档删除成功": {
+        "src": "文档删除成功",
+        "dst": "A dokumentum sikeres törlése"
+    },
+    "{0}个文件": {
+        "src": "{0}个文件",
+        "dst": "{0} fájlok"
+    },
+    "正在搜索...": {
+        "src": "正在搜索...",
+        "dst": "Keresés..."
+    },
+    "描述": {
+        "src": "描述",
+        "dst": "Leírás"
+    },
+    "请输入知识库描述": {
+        "src": "请输入知识库描述",
+        "dst": "Kérjük, adja meg a tudásbázis leírását"
+    },
+    "嵌入模型": {
+        "src": "嵌入模型",
+        "dst": "Beágyazott modell"
+    },
+    "选择模型": {
+        "src": "选择模型",
+        "dst": "Modell kiválasztása"
+    },
+    "选择知识库": {
+        "src": "选择知识库",
+        "dst": "Tudásbázis kiválasztása"
+    },
+    "文档嵌入中，请稍后": {
+        "src": "文档嵌入中，请稍后",
+        "dst": "A dokumentum beágyazása, kérjük, később"
+    },
+    "已嵌入完成, 可正常调用": {
+        "src": "已嵌入完成, 可正常调用",
+        "dst": "Beágyazott befejezve, normálisan hívható"
+    },
+    "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Beágyazás, várakozási idő a fájlok számától függően, ez néhány perctől tíz percig tarthat"
+    },
+    "第三方模型API": {
+        "src": "第三方模型API",
+        "dst": "Harmadik fél modell API"
+    },
+    "本地模型": {
+        "src": "本地模型",
+        "dst": "Helyi modell"
+    },
+    "添加模型服务商": {
+        "src": "添加模型服务商",
+        "dst": "Modellszolgáltató hozzáadása"
+    },
+    "使用教程": {
+        "src": "使用教程",
+        "dst": "Tutorial használata"
+    },
+    "删除服务商": {
+        "src": "删除服务商",
+        "dst": "Szolgáltató törlése"
+    },
+    "API密钥": {
+        "src": "API密钥",
+        "dst": "API kulcs"
+    },
+    "请输入API密钥": {
+        "src": "请输入API密钥",
+        "dst": "Kérjük, adja meg az API kulcsot"
+    },
+    "检查": {
+        "src": "检查",
+        "dst": "ellenőrzés"
+    },
+    "点次获取密钥": {
+        "src": "点次获取密钥",
+        "dst": "A kulcs megszerzése"
+    },
+    "API地址": {
+        "src": "API地址",
+        "dst": "API cím"
+    },
+    "请输入API地址": {
+        "src": "请输入API地址",
+        "dst": "Kérjük, adja meg az API címét."
+    },
+    "示例": {
+        "src": "示例",
+        "dst": "Példák"
+    },
+    "保存API": {
+        "src": "保存API",
+        "dst": "API mentése"
+    },
+    "默认从/models获取所有模型": {
+        "src": "默认从/models获取所有模型",
+        "dst": "Minden modell alapértelmezett beszerzése /models"
+    },
+    "开关所有": {
+        "src": "开关所有",
+        "dst": "Kapcsolás minden"
+    },
+    "修改别名": {
+        "src": "修改别名",
+        "dst": "Álnév módosítása"
+    },
+    "当前服务商下属暂无模型可用": {
+        "src": "当前服务商下属暂无模型可用",
+        "dst": "Jelenleg nincs modell elérhető a szolgáltatónak"
+    },
+    "添加模型": {
+        "src": "添加模型",
+        "dst": "Modell hozzáadása"
+    },
+    "模型ID": {
+        "src": "模型ID",
+        "dst": "Modell ID"
+    },
+    "请输入模型ID": {
+        "src": "请输入模型ID",
+        "dst": "Kérjük, adja meg a modell azonosítóját"
+    },
+    "模型别名": {
+        "src": "模型别名",
+        "dst": "Modell alias"
+    },
+    "请输入模型别名": {
+        "src": "请输入模型别名",
+        "dst": "Adja meg a modell álnevét"
+    },
+    "模型功能": {
+        "src": "模型功能",
+        "dst": "Modellfunkciók"
+    },
+    "添加": {
+        "src": "添加",
+        "dst": "Hozzáadás"
+    },
+    "供应商名称": {
+        "src": "供应商名称",
+        "dst": "Szállító neve"
+    },
+    "接口地址": {
+        "src": "接口地址",
+        "dst": "Interfész címe"
+    },
+    "需要兼容openAI格式的接口": {
+        "src": "需要兼容openAI格式的接口",
+        "dst": "OpenAI-kompatibilis interfész szükséges"
+    },
+    "密钥": {
+        "src": "密钥",
+        "dst": "titkos kulcs"
+    },
+    "请选择模型功能": {
+        "src": "请选择模型功能",
+        "dst": "Válassza ki a modellfunkciót"
+    },
+    "请输入供应商名称": {
+        "src": "请输入供应商名称",
+        "dst": "Kérjük, adja meg a beszállító nevét"
+    },
+    "模型添加成功": {
+        "src": "模型添加成功",
+        "dst": "Modell hozzáadása sikeres"
+    },
+    "是否确定删除当前模型？该操作不可逆": {
+        "src": "是否确定删除当前模型？该操作不可逆",
+        "dst": "Biztosan törli az aktuális modellt? A művelet visszafordíthatatlan."
+    },
+    "请填写完整配置信息": {
+        "src": "请填写完整配置信息",
+        "dst": "Kérjük, töltse ki a teljes adatait"
+    },
+    "配置保存成功": {
+        "src": "配置保存成功",
+        "dst": "A beállítás sikeres mentése"
+    },
+    "缺少API密钥": {
+        "src": "缺少API密钥",
+        "dst": "Hiányzik az API kulcs"
+    },
+    "缺少API地址": {
+        "src": "缺少API地址",
+        "dst": "Hiányzik az API cím"
+    },
+    "模型启用成功": {
+        "src": "模型启用成功",
+        "dst": "A modell sikeres engedélyezése"
+    },
+    "模型禁用成功": {
+        "src": "模型禁用成功",
+        "dst": "A modell sikeres letiltása"
+    },
+    "已启用全部模型": {
+        "src": "已启用全部模型",
+        "dst": "Minden modell engedélyezve van"
+    },
+    "已禁用全部模型": {
+        "src": "已禁用全部模型",
+        "dst": "Minden modell letiltva"
+    },
+    "添加成功": {
+        "src": "添加成功",
+        "dst": "Sikeres hozzáadás"
+    },
+    "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！": {
+        "src": "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！",
+        "dst": "Törölni szeretné az aktuális szolgáltatót? Ez a művelet egyidejűleg törli az összes alárendelt modellt, kérjük, folytassa óvatosan!"
+    },
+    "删除成功": {
+        "src": "删除成功",
+        "dst": "Törlés sikeres"
+    },
+    "一键把AI模型部署在你的电脑": {
+        "src": "一键把AI模型部署在你的电脑",
+        "dst": "Egy kattintással telepítse az AI modellt a számítógépére"
+    },
+    "免费开源无限制": {
+        "src": "免费开源无限制",
+        "dst": "Ingyenes nyílt forráskódú korlátlan"
+    },
+    "可在线分享他人使用": {
+        "src": "可在线分享他人使用",
+        "dst": "Online megosztás másokkal"
+    },
+    "支持联网大幅度提升答案质量": {
+        "src": "支持联网大幅度提升答案质量",
+        "dst": "A hálózatépítés támogatása a válaszok minőségének jelentős javítása érdekében"
+    },
+    "使用第三方模型": {
+        "src": "使用第三方模型",
+        "dst": "Harmadik féltől származó modellek használata"
+    },
+    "使用本地模型": {
+        "src": "使用本地模型",
+        "dst": "Helyi modell használata"
+    },
+    "请输入知识库名称": {
+        "src": "请输入知识库名称",
+        "dst": "Kérjük, adja meg a tudásbázis nevét"
+    },
+    "简单好用的AI助手": {
+        "src": "简单好用的AI助手",
+        "dst": "Egyszerű és hasznos AI asszisztens"
+    },
+    "支持联网搜索和知识库": {
+        "src": "支持联网搜索和知识库",
+        "dst": "Támogatja az internetes keresést és a tudásbázist"
+    },
+    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型": {
+        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型",
+        "dst": "Tipp: Ha a megosztási lista üres, a megosztási csatlakozási szolgáltatás automatikusan leáll, és az extranet nem tud hozzáférni semmilyen modellhez az AingDesken keresztül"
+    },
+    "上传附件": {
+        "src": "上传附件",
+        "dst": "Mellékletek feltöltése"
+    },
+    "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Az Ön által jelenleg használt [{0}] modell letiltott vagy törölt, kérjük, engedélyezze újra vagy váltsa a modellt"
+    },
+    "请安装或接入嵌入模型": {
+        "src": "请安装或接入嵌入模型",
+        "dst": "Kérjük, telepítse vagy csatlakoztassa a beágyazott modellt"
+    },
+    "使用本地模型嵌入（推荐）": {
+        "src": "使用本地模型嵌入（推荐）",
+        "dst": "Helyi modell beágyazása (ajánlott)"
+    },
+    "请选择从Ollama安装-Embedding-安装bge-m3:latest": {
+        "src": "请选择从Ollama安装-Embedding-安装bge-m3:latest",
+        "dst": "Kérjük, válassza ki, hogy telepítse Ollama - Beágyazás - Telepítés bge-m3: latest"
+    },
+    "使用第三方API提供模型嵌入": {
+        "src": "使用第三方API提供模型嵌入",
+        "dst": "Harmadik féltől származó API-k használata modellbeágyazás biztosításához"
+    },
+    "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动": {
+        "src": "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动",
+        "dst": "Kérjük, válasszon olyan harmadik féltől származó modellekhez, amelyek támogatják a harmadik féltől származó API-k beágyazását, például a szilícium alapú mobilitást"
+    },
+    "从Ollama安装": {
+        "src": "从Ollama安装",
+        "dst": "Ollamából származó létesítmény"
+    },
+    "接入第三方模型": {
+        "src": "接入第三方模型",
+        "dst": "Harmadik fél modelljeihez való hozzáférés"
+    },
+    "已启用模型该服务商": {
+        "src": "已启用模型该服务商",
+        "dst": "Engedélyezve modell a szolgáltató"
+    },
+    "已禁用模型该服务商": {
+        "src": "已禁用模型该服务商",
+        "dst": "A modell le lett tiltva e szolgáltató számára"
+    },
+    "无记忆": {
+        "src": "无记忆",
+        "dst": "Emlékmentes"
+    },
+    " 能提升单次回复质量，但大模型将没有上下文记忆": {
+        "src": " 能提升单次回复质量，但大模型将没有上下文记忆",
+        "dst": "Javíthatja az egyetlen válasz minőségét, de a nagy modell nem rendelkezik kontextuális memóriával"
+    },
+    "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式": {
+        "src": "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式",
+        "dst": "Támogatja a fájlok és képek feltöltését (legfeljebb 20 MB), és támogatja a formátumokat, mint például PDF, DOC, TXT stb."
+    },
+    "附件总大小不能超过20MB": {
+        "src": "附件总大小不能超过20MB",
+        "dst": "A mellékletek teljes mérete nem haladhatja meg a 20MB-ot"
+    },
+    "请选择知识库": {
+        "src": "请选择知识库",
+        "dst": "Válasszon tudásbázist"
+    },
+    "文档教程": {
+        "src": "文档教程",
+        "dst": "Dokumentumbemutató"
+    },
+    "查看知识库教程": {
+        "src": "查看知识库教程",
+        "dst": "Tudásbázis oktatóanyag megtekintése"
+    },
+    "智能体": {
+        "src": "智能体",
+        "dst": "Intelligens ügynök"
+    },
+    "创建智能体": {
+        "src": "创建智能体",
+        "dst": "Intelligens testek létrehozása"
+    },
+    "我的智能体": {
+        "src": "我的智能体",
+        "dst": "Az intelligens ügynököm."
+    },
+    "预设模板": {
+        "src": "预设模板",
+        "dst": "Előre beállított sablon"
+    },
+    "编辑": {
+        "src": "编辑",
+        "dst": "Szerkesztés"
+    },
+    "请输入智能体名称": {
+        "src": "请输入智能体名称",
+        "dst": "Adja meg az intelligens ügynök nevét"
+    },
+    "人物设定": {
+        "src": "人物设定",
+        "dst": "karaktertervezés"
+    },
+    "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界": {
+        "src": "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界",
+        "dst": "Ön egy professzionális jogi mesterséges intelligencia, aki a kínai jogi adatbázisban képzett, ismeri a főbb jogrendszereket, mint a Polgári Törvénykönyv, a Büntetőjog és a Kereskedelmi Jog. Támogatja a szerződések felülvizsgálatát, a jogi rendelkezések értelmezését, a peres stratégiai tanácsadást, és szigorúan megkülönbözteti a jogi tanácsadás és az ügyvédi szolgáltatások közötti határokat."
+    },
+    "头像": {
+        "src": "头像",
+        "dst": "profilkép"
+    },
+    "请选择": {
+        "src": "请选择",
+        "dst": "Válassza ki"
+    },
+    "保存": {
+        "src": "保存",
+        "dst": "mentés"
+    },
+    "请为您的智能体设定提示词": {
+        "src": "请为您的智能体设定提示词",
+        "dst": "Kérjük, állítsa be a jelzőt az intelligens testének"
+    },
+    "请选择嵌入模型": {
+        "src": "请选择嵌入模型",
+        "dst": "Válassza ki a beágyazott modellt"
+    },
+    "第三方API配置": {
+        "src": "第三方API配置",
+        "dst": "Harmadik fél API konfigurációja"
+    },
+    "智能体创建成功": {
+        "src": "智能体创建成功",
+        "dst": "Sikeresen létrehozott intelligens ügynök"
+    },
+    "智能体修改成功": {
+        "src": "智能体修改成功",
+        "dst": "Az intelligens módosítás sikeres"
+    },
+    "是否确认删除智能体[{0}]?删除后无法恢复": {
+        "src": "是否确认删除智能体[{0}]?删除后无法恢复",
+        "dst": "Biztos, hogy törli az ügynököt [{0}]? A törlés után nem állítható vissza"
+    },
+    "智能体删除成功": {
+        "src": "智能体删除成功",
+        "dst": "Intelligens törlés sikeres"
+    },
+    "您当前使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Az Ön által használt modell le lett tiltva vagy törölve. Kérjük, engedélyezze vagy váltsa újra a modellt"
+    },
+    "请选择或安装接入模型": {
+        "src": "请选择或安装接入模型",
+        "dst": "Válassza ki vagy telepítse a hozzáférési modellt"
+    },
+    "当前对话使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "当前对话使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Az aktuális beszélgetésben használt modell letiltott vagy törölt, kérjük, engedélyezze újra vagy váltsa a modellt"
+    },
+    "模型{0}不存在，请添加本地模型或第三方模型api": {
+        "src": "模型{0}不存在，请添加本地模型或第三方模型api",
+        "dst": "A {0} modell nem létezik, kérjük adjon hozzá helyi modellt vagy harmadik féltől származó modell API-t"
+    },
+    "模型管理器": {
+        "src": "模型管理器",
+        "dst": "Modellkezelő"
+    },
+    "模型存储位置": {
+        "src": "模型存储位置",
+        "dst": "A modell tárolási helyszíne"
+    },
+    "选择": {
+        "src": "选择",
+        "dst": "kiválasztás"
+    },
+    "请选择模型管理器": {
+        "src": "请选择模型管理器",
+        "dst": "Válassza ki a modellkezelőt"
+    },
+    "请选择模型管理器安装路径": {
+        "src": "请选择模型管理器安装路径",
+        "dst": "Válassza ki a modellkezelő telepítési útját"
+    },
+    "图形": {
+        "src": "图形",
+        "dst": "grafika"
+    },
+    "源码": {
+        "src": "源码",
+        "dst": "forráskód"
+    },
+    "mermaid解析失败,请检查语法": {
+        "src": "mermaid解析失败,请检查语法",
+        "dst": "A hableány elemzése nem sikerült, kérjük ellenőrizze a szintaxist"
+    },
+    "Ollama接口地址": {
+        "src": "Ollama接口地址",
+        "dst": "Olama interfész címe"
+    },
+    "当前ollama地址不可用": {
+        "src": "当前ollama地址不可用",
+        "dst": "Az aktuális ollama cím nem érhető el"
+    },
+    "新手指引": {
+        "src": "新手指引",
+        "dst": "Kezdői útmutató"
+    },
+    "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
+        "src": "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
+        "dst": "Üdvözöljük az AingDesk egy egyszerű és könnyen használható AI asszisztens, amely támogatja a tudásbázist, a modell API-t, a megosztást, az online keresést és az intelligens ügynököket."
+    },
+    "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
+        "src": "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
+        "dst": "Az AingDesk egy új mesterséges intelligencia projekt, amely még mindig a gyors növekedésre törekszik. Ha bármilyen probléma merül fel a használat során, vagy bármilyen funkcionális követelmény van a szoftverrel kapcsolatban, csatlakozhat WeChat csoportunkhoz, hogy visszajelzést adjon nekünk."
+    },
+    "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。": {
+        "src": "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。",
+        "dst": "Végül adhat nekünk egy sztárt nyílt forráskódú projektünkhöz. Az Ön bátorítása rendkívül fontos számunkra, hogy folytassuk a nyílt forráskódú projekteket. Köszönjük."
+    },
+    "去github点星星": {
+        "src": "去github点星星",
+        "dst": "Menj a GitHub oldalra és kattints a csillagokra"
+    },
+    "您可以在": {
+        "src": "您可以在",
+        "dst": "Megteheted."
+    },
+    "中关闭新手指引": {
+        "src": "中关闭新手指引",
+        "dst": "Zárd be a kezdő útmutatót középen"
+    },
+    "文档删除失败": {
+        "src": "文档删除失败",
+        "dst": "A dokumentum törlése nem sikerült"
+    },
+    "设置成功": {
+        "src": "设置成功",
+        "dst": "Sikeres beállítás"
+    },
+    "分段标识符": {
+        "src": "分段标识符",
+        "dst": "Szegmens azonosító"
+    },
+    "分段最大长度": {
+        "src": "分段最大长度",
+        "dst": "Maximális szegmenshossz"
+    },
+    "分段重叠长度": {
+        "src": "分段重叠长度",
+        "dst": "Szegmens átfedési hossza"
+    },
+    "分段标识符支持函正则表达式，如": {
+        "src": "分段标识符支持函正则表达式，如",
+        "dst": "A szegmens azonosítói támogatják a reguláris kifejezéseket, például"
+    },
+    "正则表达式无需添加修饰符，默认会自动添加g修饰符": {
+        "src": "正则表达式无需添加修饰符，默认会自动添加g修饰符",
+        "dst": "A reguláris kifejezések nem igényelnek módosítókat, és alapértelmezés szerint automatikusan hozzáadják a \"g\" módosítót"
+    },
+    "分段重叠长度建议为分段最大长度的10%到20%": {
+        "src": "分段重叠长度建议为分段最大长度的10%到20%",
+        "dst": "A szegmensek ajánlott átfedési hossza a maximális szegmenshossz 10–20%-a"
+    },
+    "选择文档进行预览": {
+        "src": "选择文档进行预览",
+        "dst": "Az előnézeti dokumentum kiválasztása"
+    },
+    "预览": {
+        "src": "预览",
+        "dst": "Előnézet"
+    },
+    "分段最大长度不能小于20": {
+        "src": "分段最大长度不能小于20",
+        "dst": "A szegmens maximális hossza nem lehet kevesebb, mint 20"
+    },
+    "分段最大长度不能大于1000": {
+        "src": "分段最大长度不能大于1000",
+        "dst": "Egy szegmens maximális hossza nem haladhatja meg az 1000-et"
+    },
+    "请填写分段最大长度": {
+        "src": "请填写分段最大长度",
+        "dst": "Kérjük, töltse ki a szegmens maximális hosszát"
+    },
+    "分段重叠长度不能小于0": {
+        "src": "分段重叠长度不能小于0",
+        "dst": "A szegmensek átfedő hossza nem lehet kisebb, mint 0"
+    },
+    "分段重叠长度不能大于分段最大长度": {
+        "src": "分段重叠长度不能大于分段最大长度",
+        "dst": "A szegmensek átfedő hossza nem haladhatja meg a szegmensek maximális hosszát"
+    },
+    "请填写分段重叠长度": {
+        "src": "请填写分段重叠长度",
+        "dst": "Kérjük, töltse ki a szegmensek átfedő hosszát"
+    },
+    "请填写分段标识符": {
+        "src": "请填写分段标识符",
+        "dst": "Kérjük, töltse ki a szegmens azonosítóját"
+    },
+    "文档分片设置": {
+        "src": "文档分片设置",
+        "dst": "Dokumentummegosztás beállításai"
+    },
+    "继续添加文件": {
+        "src": "继续添加文件",
+        "dst": "Fájlok hozzáadása folytatása"
+    },
+    "请选择文件": {
+        "src": "请选择文件",
+        "dst": "Válasszon ki egy fájlt"
+    },
+    "最大召唤数量": {
+        "src": "最大召唤数量",
+        "dst": "Maximális idézési mennyiség"
+    },
+    "召回精度": {
+        "src": "召回精度",
+        "dst": "Visszahívási pontosság"
+    },
+    "文档解析失败": {
+        "src": "文档解析失败",
+        "dst": "A dokumentum elemzése nem sikerült"
+    },
+    "文档解析成功,等待嵌入": {
+        "src": "文档解析成功,等待嵌入",
+        "dst": "A dokumentum elemzése sikeres, beágyazásra várva"
+    },
+    "数据存储位置": {
+        "src": "数据存储位置",
+        "dst": "Adattárolás helye"
+    },
+    "更改": {
+        "src": "更改",
+        "dst": "változás"
+    },
+    "如何更好的使用知识库?": {
+        "src": "如何更好的使用知识库?",
+        "dst": "Hogyan lehet jobban kihasználni a tudásbázist?"
+    },
+    "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件": {
+        "src": "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件",
+        "dst": "A könyvtárváltás az adatokat a régi könyvtárból az új könyvtárba helyezi át, ami az adatok méretétől függően 5-10 percet vesz igénybe. Kérjük, ne zárja be a szoftvert az áttelepítés során"
+    },
+    "选择新位置": {
+        "src": "选择新位置",
+        "dst": "Új hely kiválasztása"
+    },
+    "数据迁移失败，请重试": {
+        "src": "数据迁移失败，请重试",
+        "dst": "Az adatáttelepítés sikertelen, próbálkozzon újra"
+    },
+    "数据迁移成功": {
+        "src": "数据迁移成功",
+        "dst": "Az adatáttelepítés sikeres"
+    },
+    "请勿关闭软件,否则将导致软件异常": {
+        "src": "请勿关闭软件,否则将导致软件异常",
+        "dst": "Ne zárja be a szoftvert, különben szoftver rendellenességeket okozhat"
+    },
+    "等待复制": {
+        "src": "等待复制",
+        "dst": "A replikációra várva"
+    },
+    "总大小": {
+        "src": "总大小",
+        "dst": "teljes méret"
+    },
+    "速度": {
+        "src": "速度",
+        "dst": "fordulatszám"
+    },
+    "准备迁移数据": {
+        "src": "准备迁移数据",
+        "dst": "Az adatok áttelepítésének előkészítése"
+    },
+    "迁移数据中": {
+        "src": "迁移数据中",
+        "dst": "Adatok áttelepítése"
+    },
+    "选择工具": {
+        "src": "选择工具",
+        "dst": "Eszközök kiválasztása"
+    },
+    "工具": {
+        "src": "工具",
+        "dst": "eszköz"
+    },
+    "模型选择": {
+        "src": "模型选择",
+        "dst": "modellkiválasztás"
+    },
+    "搜索模型": {
+        "src": "搜索模型",
+        "dst": "Keresési modell"
+    },
+    "常用模型": {
+        "src": "常用模型",
+        "dst": "Közös modellek"
+    },
+    "不使用": {
+        "src": "不使用",
+        "dst": "Nem használt"
+    },
+    "新分享": {
+        "src": "新分享",
+        "dst": "Új megosztás"
+    },
+    "最大召回数量": {
+        "src": "最大召回数量",
+        "dst": "Maximális visszahívási mennyiség"
+    },
+    "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条": {
+        "src": "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条",
+        "dst": "A tudásbázis keresésekor a visszatérések maximális száma 3 helyi modellek esetében és 5 online modellek esetében ajánlott"
+    },
+    "自动": {
+        "src": "自动",
+        "dst": "automatikus"
+    },
+    "自定义": {
+        "src": "自定义",
+        "dst": "testreszabás"
+    },
+    "请输入分隔符": {
+        "src": "请输入分隔符",
+        "dst": "Adjon meg egy határolót"
+    },
+    "正在优化知识库,这可能需要几分钟到十几分钟......": {
+        "src": "正在优化知识库,这可能需要几分钟到十几分钟......",
+        "dst": "Optimalizáljuk a tudásbázist, ami néhány percet vagy tucat percet vesz igénybe."
+    },
+    "上传知识库文档": {
+        "src": "上传知识库文档",
+        "dst": "Tudásbázis dokumentum feltöltése"
+    },
+    "请选择模型管理器的安装路径": {
+        "src": "请选择模型管理器的安装路径",
+        "dst": "Válassza ki a modellkezelő telepítési útját"
+    },
+    "优化": {
+        "src": "优化",
+        "dst": "optimalizálás"
+    },
+    "增强索引,并释放多余的空间占用": {
+        "src": "增强索引,并释放多余的空间占用",
+        "dst": "Javítsa az indexelést és szabadítsa fel a felesleges helyfoglaltságot"
+    },
+    "反馈": {
+        "src": "反馈",
+        "dst": "visszajelzés"
+    },
+    "删除MCP服务器": {
+        "src": "删除MCP服务器",
+        "dst": "MCP- kiszolgáló törlése"
+    },
+    "是否可用": {
+        "src": "是否可用",
+        "dst": "Elérhető-e?"
+    },
+    "请输入MCP服务器名称": {
+        "src": "请输入MCP服务器名称",
+        "dst": "Adja meg az MCP kiszolgáló nevét"
+    },
+    "请输入内容": {
+        "src": "请输入内容",
+        "dst": "Kérjük, adja meg a tartalmat"
+    },
+    "类型": {
+        "src": "类型",
+        "dst": "típus"
+    },
+    "服务器地址": {
+        "src": "服务器地址",
+        "dst": "kiszolgáló címe"
+    },
+    "请输入服务器URL地址": {
+        "src": "请输入服务器URL地址",
+        "dst": "Adja meg a kiszolgáló URL címét"
+    },
+    "程序类型": {
+        "src": "程序类型",
+        "dst": "Alkalmazás típusa"
+    },
+    "当前未安装Nodejs环境，点击": {
+        "src": "当前未安装Nodejs环境，点击",
+        "dst": "A Nodejs környezet jelenleg nincs telepítve, kattintson ide"
+    },
+    "命令": {
+        "src": "命令",
+        "dst": "parancs"
+    },
+    "可执行命令": {
+        "src": "可执行命令",
+        "dst": "Futtatható parancs"
+    },
+    "参数": {
+        "src": "参数",
+        "dst": "paraméter"
+    },
+    "环境变量": {
+        "src": "环境变量",
+        "dst": "környezeti változó"
+    },
+    "正在安装环境,这可能需要几分钟......": {
+        "src": "正在安装环境,这可能需要几分钟......",
+        "dst": "Környezet telepítése, ez néhány percig tarthat"
+    },
+    "请输入可执行命令": {
+        "src": "请输入可执行命令",
+        "dst": "Adjon meg egy végrehajtható parancsot"
+    },
+    "编辑配置文件": {
+        "src": "编辑配置文件",
+        "dst": "Profil szerkesztése"
+    },
+    "编辑MCP服务器配置的JSON。保存前请确保格式正确。": {
+        "src": "编辑MCP服务器配置的JSON。保存前请确保格式正确。",
+        "dst": "Módosítsa az MCP kiszolgáló JSON konfigurációját. Mentés előtt győződjön meg arról, hogy a formátum helyes."
+    },
+    "添加服务器": {
+        "src": "添加服务器",
+        "dst": "Kiszolgáló hozzáadása"
+    },
+    "新配置": {
+        "src": "新配置",
+        "dst": "új konfiguráció"
+    },
+    "环境安装成功": {
+        "src": "环境安装成功",
+        "dst": "Környezetvédelmi telepítés sikeres"
+    },
+    "环境安装失败": {
+        "src": "环境安装失败",
+        "dst": "A környezet telepítése nem sikerült"
+    },
+    "操作成功": {
+        "src": "操作成功",
+        "dst": "A művelet sikeres"
+    },
+    "请先安装Node.js环境": {
+        "src": "请先安装Node.js环境",
+        "dst": "Először telepítse a Node.js környezetet"
+    },
+    "是否删除当前MCP服务器？": {
+        "src": "是否删除当前MCP服务器？",
+        "dst": "Törölni szeretné az aktuális MCP kiszolgálót?"
+    },
+    "常规设置": {
+        "src": "常规设置",
+        "dst": "Általános beállítások"
+    },
+    "MCP服务器": {
+        "src": "MCP服务器",
+        "dst": "MCP- kiszolgáló"
+    },
+    "修改模型": {
+        "src": "修改模型",
+        "dst": "A modell módosítása"
+    },
+    "保存成功": {
+        "src": "保存成功",
+        "dst": "Sikeresen mentve"
+    },
+    "调用结果:": {
+        "src": "调用结果:",
+        "dst": "Hívás eredménye:"
+    },
+    "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "A dokumentum elemzése sikeres, a beágyazásra várva. A várakozási idő a fájlok számától függ, ami több percet és tíz percet is igénybe vehet."
+    },
+    "正在嵌入中,请稍后...": {
+        "src": "正在嵌入中,请稍后...",
+        "dst": "Beágyazás folyamatban van, kérem várjon"
+    }
+}

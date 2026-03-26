@@ -1,6 +1,6 @@
 import "electron";
 import "node:url";
-import { M, R, V } from "./index-BSonbQ-Q.js";
+import { M, R, V } from "./index-B_SrOaLK.js";
 import "node:path";
 export {
   M as MAIN_DIST,

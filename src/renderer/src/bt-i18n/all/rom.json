@@ -1,0 +1,1342 @@
+{
+    "让我们开启一段新的对话吧": {
+        "src": "让我们开启一段新的对话吧",
+        "dst": "Hai să începem o nouă conversaţie."
+    },
+    "正在思考...": {
+        "src": "正在思考...",
+        "dst": "Mă gândesc..."
+    },
+    "复制": {
+        "src": "复制",
+        "dst": "copiază"
+    },
+    "暂无信息": {
+        "src": "暂无信息",
+        "dst": "Nu există informații disponibile în acest moment"
+    },
+    "重新生成": {
+        "src": "重新生成",
+        "dst": "Regenerare"
+    },
+    "请输入对话内容": {
+        "src": "请输入对话内容",
+        "dst": "Introduceți conținutul dialogului"
+    },
+    "发送": {
+        "src": "发送",
+        "dst": "Trimite"
+    },
+    "停止生成": {
+        "src": "停止生成",
+        "dst": "Opreşte generarea"
+    },
+    "复制成功": {
+        "src": "复制成功",
+        "dst": "Copiat cu succes"
+    },
+    "请选择对应模型": {
+        "src": "请选择对应模型",
+        "dst": "Selectați modelul corespunzător"
+    },
+    "当前正在回答，请稍后": {
+        "src": "当前正在回答，请稍后",
+        "dst": "Răspunde acum, te rog mai târziu."
+    },
+    "点击[设置]安装模型": {
+        "src": "点击[设置]安装模型",
+        "dst": "Faceți clic pe [Setări] pentru a instala modelul"
+    },
+    "模型大小:": {
+        "src": "模型大小:",
+        "dst": "Dimensiunea modelului:"
+    },
+    "已下载:": {
+        "src": "已下载:",
+        "dst": "Descărcate:"
+    },
+    "速度:": {
+        "src": "速度:",
+        "dst": "Viteza:"
+    },
+    "引用": {
+        "src": "引用",
+        "dst": "citat"
+    },
+    "已复制": {
+        "src": "已复制",
+        "dst": "Copiat"
+    },
+    "处理器:": {
+        "src": "处理器:",
+        "dst": "Procesor:"
+    },
+    "内存:": {
+        "src": "内存:",
+        "dst": "Memorie:"
+    },
+    "显卡:": {
+        "src": "显卡:",
+        "dst": "Placă grafică:"
+    },
+    "建议:": {
+        "src": "建议:",
+        "dst": "Recomandări:"
+    },
+    "首次使用，请选择要安装的模型": {
+        "src": "首次使用，请选择要安装的模型",
+        "dst": "Pentru prima dată, selectați modelul pe care doriți să îl instalați"
+    },
+    "如:": {
+        "src": "如:",
+        "dst": "De exemplu:"
+    },
+    "搜索": {
+        "src": "搜索",
+        "dst": "Căutare"
+    },
+    "模型刪除中，请稍后": {
+        "src": "模型刪除中，请稍后",
+        "dst": "Modelul este șters, vă rugăm mai târziu"
+    },
+    "提示": {
+        "src": "提示",
+        "dst": "Sfaturi"
+    },
+    "检测到您没有安装模型管理器，是否立即安装？": {
+        "src": "检测到您没有安装模型管理器，是否立即安装？",
+        "dst": "S-a detectat că nu aveți instalat Managerul de modele, instalați-l imediat?"
+    },
+    "暂不安装": {
+        "src": "暂不安装",
+        "dst": "Nu instalați"
+    },
+    "立即安装": {
+        "src": "立即安装",
+        "dst": "Instalați acum"
+    },
+    "正在安装模型管理器，请稍后": {
+        "src": "正在安装模型管理器，请稍后",
+        "dst": "Instalarea managerului de modele, așteptați"
+    },
+    "大小:": {
+        "src": "大小:",
+        "dst": "Mărime:"
+    },
+    "所有": {
+        "src": "所有",
+        "dst": "Toate"
+    },
+    "已安装": {
+        "src": "已安装",
+        "dst": "Instalat"
+    },
+    "模型": {
+        "src": "模型",
+        "dst": "Modelul"
+    },
+    "大小": {
+        "src": "大小",
+        "dst": "Mărime"
+    },
+    "简介": {
+        "src": "简介",
+        "dst": "Introducere"
+    },
+    "功能": {
+        "src": "功能",
+        "dst": "funcție"
+    },
+    "操作": {
+        "src": "操作",
+        "dst": "Operaţii"
+    },
+    "刪除": {
+        "src": "刪除",
+        "dst": "Șterge"
+    },
+    "安装": {
+        "src": "安装",
+        "dst": "Instalare"
+    },
+    "浅色模式": {
+        "src": "浅色模式",
+        "dst": "Mod culoare luminoasă"
+    },
+    "深色模式": {
+        "src": "深色模式",
+        "dst": "Mod întunecat"
+    },
+    "对话": {
+        "src": "对话",
+        "dst": "Dialogul"
+    },
+    "对话内容": {
+        "src": "对话内容",
+        "dst": "Conținutul dialogului"
+    },
+    "新对话": {
+        "src": "新对话",
+        "dst": "Dialog nou"
+    },
+    "模型管理": {
+        "src": "模型管理",
+        "dst": "Managementul modelelor"
+    },
+    "删除对话": {
+        "src": "删除对话",
+        "dst": "Șterge dialogul"
+    },
+    "取消": {
+        "src": "取消",
+        "dst": "Anulează"
+    },
+    "删除": {
+        "src": "删除",
+        "dst": "șterge"
+    },
+    "修改对话标题": {
+        "src": "修改对话标题",
+        "dst": "Modificarea titlului dialogului"
+    },
+    "请输入新的对话标题": {
+        "src": "请输入新的对话标题",
+        "dst": "Introduceți un nou titlu de dialog"
+    },
+    "确认": {
+        "src": "确认",
+        "dst": "Confirmare"
+    },
+    "修改标题": {
+        "src": "修改标题",
+        "dst": "Schimbă titlul"
+    },
+    "已深度思考": {
+        "src": "已深度思考",
+        "dst": "A gândit în profunzime"
+    },
+    "对话已停止": {
+        "src": "对话已停止",
+        "dst": "Conversaţia s-a oprit."
+    },
+    "对话删除成功": {
+        "src": "对话删除成功",
+        "dst": "Dialog șters cu succes"
+    },
+    "对话删除失败：": {
+        "src": "对话删除失败：",
+        "dst": "Ștergerea dialogului a eșuat:"
+    },
+    "对话标题修改成功": {
+        "src": "对话标题修改成功",
+        "dst": "Titlul dialogului a fost modificat cu succes"
+    },
+    "对话标题修改失败:": {
+        "src": "对话标题修改失败:",
+        "dst": "Modificarea titlului dialogului a eșuat:"
+    },
+    "安装成功": {
+        "src": "安装成功",
+        "dst": "Instalare reușită"
+    },
+    "正在连接，请稍候...": {
+        "src": "正在连接，请稍候...",
+        "dst": "Conectează-te, te rog aşteaptă."
+    },
+    "等待下载:{0}，请稍候...": {
+        "src": "等待下载:{0}，请稍候...",
+        "dst": "Aşteptaţi descărcarea: {0}, vă rugăm să aşteptaţi..."
+    },
+    "正在下载:{0}，请稍候...": {
+        "src": "正在下载:{0}，请稍候...",
+        "dst": "Descărcare: {0}, vă rugăm să așteptați"
+    },
+    "正在安装:{0}，请稍候...": {
+        "src": "正在安装:{0}，请稍候...",
+        "dst": "Instalare: {0}, aşteptaţi..."
+    },
+    "安装失败": {
+        "src": "安装失败",
+        "dst": "Instalarea a eșuat"
+    },
+    "模型删除成功": {
+        "src": "模型删除成功",
+        "dst": "Model șters cu succes"
+    },
+    "模型删除失败:{0}": {
+        "src": "模型删除失败:{0}",
+        "dst": "Ştergerea modelului a eșuat: {0}"
+    },
+    "模型异常，请重新生成": {
+        "src": "模型异常，请重新生成",
+        "dst": "Modelul este anormal, vă rugăm să regenerați"
+    },
+    "模型管理器安装成功": {
+        "src": "模型管理器安装成功",
+        "dst": "Managerul de modele a fost instalat cu succes"
+    },
+    "模型管理器安装失败": {
+        "src": "模型管理器安装失败",
+        "dst": "Instalarea managerului de modele a eșuat"
+    },
+    "请求出错，状态码:": {
+        "src": "请求出错，状态码:",
+        "dst": "Eroare de solicitare, cod de stare:"
+    },
+    "请求发生错误": {
+        "src": "请求发生错误",
+        "dst": "Eroare la cerere"
+    },
+    "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。": {
+        "src": "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。",
+        "dst": "Încercați reselectarea nodului de descărcare pentru a optimiza viteza de descărcare, PS: Acesta nu va pierde progresul curent de descărcare și va relua automat de la un punct de întrerupere."
+    },
+    "设置": {
+        "src": "设置",
+        "dst": "Setări"
+    },
+    "是否确认删除当前对话": {
+        "src": "是否确认删除当前对话",
+        "dst": "Se confirmă ştergerea conversaţiei curente"
+    },
+    "可用": {
+        "src": "可用",
+        "dst": "Disponibil"
+    },
+    "分享": {
+        "src": "分享",
+        "dst": "share"
+    },
+    "是否确认删除模型，该操作不可逆？": {
+        "src": "是否确认删除模型，该操作不可逆？",
+        "dst": "Confirmați că ștergerea modelului este ireversibilă?"
+    },
+    "将AingDesk分享给好友一起使用": {
+        "src": "将AingDesk分享给好友一起使用",
+        "dst": "Partajează AingDesk cu prietenii tăi"
+    },
+    "请输入名称": {
+        "src": "请输入名称",
+        "dst": "Introduceți numele dvs."
+    },
+    "修改分享": {
+        "src": "修改分享",
+        "dst": "Modificarea partajarii"
+    },
+    "是否确认删除当前分享": {
+        "src": "是否确认删除当前分享",
+        "dst": "Confirmați dacă ștergeți partajarea curentă"
+    },
+    "名称": {
+        "src": "名称",
+        "dst": "Numele"
+    },
+    "访问地址": {
+        "src": "访问地址",
+        "dst": "Adresa de vizitare"
+    },
+    "修改": {
+        "src": "修改",
+        "dst": "Modifică"
+    },
+    "正在下载": {
+        "src": "正在下载",
+        "dst": "Descărcare"
+    },
+    "正在选择下载节点，请稍后": {
+        "src": "正在选择下载节点，请稍后",
+        "dst": "Selectează nodul de descărcare, așteaptă"
+    },
+    "正在下载模型管理器，请稍后": {
+        "src": "正在下载模型管理器，请稍后",
+        "dst": "Descărcarea managerului de modele, mai târziu"
+    },
+    "正在安装模型管理器，可能要几分钟时间，请耐心等待": {
+        "src": "正在安装模型管理器，可能要几分钟时间，请耐心等待",
+        "dst": "Se instalează managerul de modele, poate dura câteva minute, vă rugăm să aveți răbdare"
+    },
+    "创建分享成功": {
+        "src": "创建分享成功",
+        "dst": "Crearea partajarii cu succes"
+    },
+    "修改成功": {
+        "src": "修改成功",
+        "dst": "Modificarea a avut succes"
+    },
+    "正在执行联网搜索...": {
+        "src": "正在执行联网搜索...",
+        "dst": "Execută căutarea rețelei"
+    },
+    "已联网搜索{0}个网址": {
+        "src": "已联网搜索{0}个网址",
+        "dst": "URL-uri căutate pe internet {0}"
+    },
+    "不使用联网搜索": {
+        "src": "不使用联网搜索",
+        "dst": "Fără căutare online"
+    },
+    "不联网": {
+        "src": "不联网",
+        "dst": "Fără rețea"
+    },
+    "百度": {
+        "src": "百度",
+        "dst": "Baiduworld. kgm"
+    },
+    "搜狗": {
+        "src": "搜狗",
+        "dst": "Căutare câine"
+    },
+    "谷歌": {
+        "src": "谷歌",
+        "dst": "pe Google"
+    },
+    "DuckDuckGo": {
+        "src": "DuckDuckGo",
+        "dst": "DuckDuckGo"
+    },
+    "360搜索": {
+        "src": "360搜索",
+        "dst": "360 Căutare"
+    },
+    "正搜索...": {
+        "src": "正搜索...",
+        "dst": "Căutare"
+    },
+    "联网搜索": {
+        "src": "联网搜索",
+        "dst": "Căutare online"
+    },
+    "上传文件": {
+        "src": "上传文件",
+        "dst": "Încărcați fișiere"
+    },
+    "上传时间": {
+        "src": "上传时间",
+        "dst": "Timp de încărcare"
+    },
+    "AI摘要": {
+        "src": "AI摘要",
+        "dst": "Rezumat AI"
+    },
+    "共参考{0}份资料": {
+        "src": "共参考{0}份资料",
+        "dst": "Referințe {0}"
+    },
+    "新建对话": {
+        "src": "新建对话",
+        "dst": "Dialog nou"
+    },
+    "清空对话": {
+        "src": "清空对话",
+        "dst": "Goleşte dialogul"
+    },
+    "知识库": {
+        "src": "知识库",
+        "dst": "Baza de cunoștințe"
+    },
+    "新建知识库": {
+        "src": "新建知识库",
+        "dst": "Noua bază de cunoștințe"
+    },
+    "语言选择": {
+        "src": "语言选择",
+        "dst": "selectarea limbii"
+    },
+    "默认搜索引擎": {
+        "src": "默认搜索引擎",
+        "dst": "motor de căutare implicit"
+    },
+    "加入AingDesk交流群": {
+        "src": "加入AingDesk交流群",
+        "dst": "Alăturați-vă grupului AingDesk"
+    },
+    "当前版本": {
+        "src": "当前版本",
+        "dst": "Versiunea curentă"
+    },
+    "上传文件夹": {
+        "src": "上传文件夹",
+        "dst": "Încărcați un dosar"
+    },
+    "点击上传": {
+        "src": "点击上传",
+        "dst": "Faceți clic pentru a încărca"
+    },
+    "文件支持类型": {
+        "src": "文件支持类型",
+        "dst": "Tipuri de suport pentru fișiere"
+    },
+    "{0}的文件类型不支持": {
+        "src": "{0}的文件类型不支持",
+        "dst": "Tipul de fişier nu este suportat pentru {0}"
+    },
+    "知识库创建成功": {
+        "src": "知识库创建成功",
+        "dst": "Crearea cu succes a bazei de cunoștințe"
+    },
+    "知识库创建失败": {
+        "src": "知识库创建失败",
+        "dst": "Crearea bazei de cunoștințe a eșuat"
+    },
+    "获取知识库列表失败，请重试": {
+        "src": "获取知识库列表失败，请重试",
+        "dst": "Obținerea listei bazei de cunoștințe a eșuat, încercați din nou"
+    },
+    "是否确认删除知识库{0}及其下的所有文档？该操作不可逆": {
+        "src": "是否确认删除知识库{0}及其下的所有文档？该操作不可逆",
+        "dst": "Verificați ștergerea bazei de cunoștințe {0} și a tuturor documentelor aflate sub ea? Operaţia este ireversibilă."
+    },
+    "删除知识库成功": {
+        "src": "删除知识库成功",
+        "dst": "Ştergerea cu succes a bazei de cunoştinţe"
+    },
+    "删除知识库失败，请重试": {
+        "src": "删除知识库失败，请重试",
+        "dst": "Ştergerea bazei de cunoştinţe a eşuat, încercaţi din nou"
+    },
+    "修改知识库成功": {
+        "src": "修改知识库成功",
+        "dst": "Modificarea cu succes a bazei de cunoștințe"
+    },
+    "修改知识库失败，请重试": {
+        "src": "修改知识库失败，请重试",
+        "dst": "Modificarea bazei de cunoștințe a eșuat, vă rugăm să încercați din nou"
+    },
+    "正在解析文档，这可能要几分钟时间...": {
+        "src": "正在解析文档，这可能要几分钟时间...",
+        "dst": "Analizând documentul, acest lucru poate dura câteva minute"
+    },
+    "是否确认删除文档{0}？该操作不可逆": {
+        "src": "是否确认删除文档{0}？该操作不可逆",
+        "dst": "Verificați ștergerea documentului {0}? Operaţia este ireversibilă."
+    },
+    "文档删除成功": {
+        "src": "文档删除成功",
+        "dst": "Ştergerea cu succes a documentului"
+    },
+    "{0}个文件": {
+        "src": "{0}个文件",
+        "dst": "{0} fișiere"
+    },
+    "正在搜索...": {
+        "src": "正在搜索...",
+        "dst": "Caută"
+    },
+    "请输入知识库名称": {
+        "src": "请输入知识库名称",
+        "dst": "Introduceți numele bazei de cunoștințe"
+    },
+    "描述": {
+        "src": "描述",
+        "dst": "descrie"
+    },
+    "请输入知识库描述": {
+        "src": "请输入知识库描述",
+        "dst": "Introduceți descrierea bazei de cunoștințe"
+    },
+    "嵌入模型": {
+        "src": "嵌入模型",
+        "dst": "Modelul încorporat"
+    },
+    "选择模型": {
+        "src": "选择模型",
+        "dst": "Alegeți modelul"
+    },
+    "选择知识库": {
+        "src": "选择知识库",
+        "dst": "Selectați baza de cunoștințe"
+    },
+    "文档嵌入中，请稍后": {
+        "src": "文档嵌入中，请稍后",
+        "dst": "Documentul încorporat, vă rugăm mai târziu"
+    },
+    "已嵌入完成, 可正常调用": {
+        "src": "已嵌入完成, 可正常调用",
+        "dst": "Incorporat finalizat, poate fi apelat în mod normal"
+    },
+    "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Se încorporează, timpul de așteptare depinde de numărul de fișiere, acest lucru poate dura de la câteva minute la zeci de minute"
+    },
+    "第三方模型API": {
+        "src": "第三方模型API",
+        "dst": "API pentru modele terțe părți"
+    },
+    "本地模型": {
+        "src": "本地模型",
+        "dst": "Modelul local"
+    },
+    "添加模型服务商": {
+        "src": "添加模型服务商",
+        "dst": "Adăugarea furnizorului de modele"
+    },
+    "使用教程": {
+        "src": "使用教程",
+        "dst": "Utilizarea tutorialului"
+    },
+    "删除服务商": {
+        "src": "删除服务商",
+        "dst": "Ştergerea furnizorului"
+    },
+    "API密钥": {
+        "src": "API密钥",
+        "dst": "API cheie"
+    },
+    "请输入API密钥": {
+        "src": "请输入API密钥",
+        "dst": "Introduceți cheia API"
+    },
+    "检查": {
+        "src": "检查",
+        "dst": "inspectează"
+    },
+    "点次获取密钥": {
+        "src": "点次获取密钥",
+        "dst": "Obțineți cheile la comandă"
+    },
+    "API地址": {
+        "src": "API地址",
+        "dst": "Adresă API"
+    },
+    "请输入API地址": {
+        "src": "请输入API地址",
+        "dst": "Introduceți adresa API"
+    },
+    "示例": {
+        "src": "示例",
+        "dst": "Exemplu"
+    },
+    "保存API": {
+        "src": "保存API",
+        "dst": "Salvați API-ul"
+    },
+    "默认从/models获取所有模型": {
+        "src": "默认从/models获取所有模型",
+        "dst": "Obține toate modelele implicit din /models"
+    },
+    "开关所有": {
+        "src": "开关所有",
+        "dst": "Comutați toate"
+    },
+    "修改别名": {
+        "src": "修改别名",
+        "dst": "Modificarea aliasului"
+    },
+    "当前服务商下属暂无模型可用": {
+        "src": "当前服务商下属暂无模型可用",
+        "dst": "Nu există modele disponibile pentru furnizorul curent"
+    },
+    "添加模型": {
+        "src": "添加模型",
+        "dst": "Adaugă un model"
+    },
+    "模型ID": {
+        "src": "模型ID",
+        "dst": "ID-ul modelului"
+    },
+    "请输入模型ID": {
+        "src": "请输入模型ID",
+        "dst": "Introduceți ID-ul modelului"
+    },
+    "模型别名": {
+        "src": "模型别名",
+        "dst": "Aliesul modelului"
+    },
+    "请输入模型别名": {
+        "src": "请输入模型别名",
+        "dst": "Introduceți aliasul modelului"
+    },
+    "模型功能": {
+        "src": "模型功能",
+        "dst": "Functii modelului"
+    },
+    "添加": {
+        "src": "添加",
+        "dst": "Adaugă"
+    },
+    "供应商名称": {
+        "src": "供应商名称",
+        "dst": "Numele furnizorului"
+    },
+    "接口地址": {
+        "src": "接口地址",
+        "dst": "Adresă interfață"
+    },
+    "需要兼容openAI格式的接口": {
+        "src": "需要兼容openAI格式的接口",
+        "dst": "Necesită o interfață compatibilă cu formatul openAI"
+    },
+    "密钥": {
+        "src": "密钥",
+        "dst": "cheie secretă"
+    },
+    "请选择模型功能": {
+        "src": "请选择模型功能",
+        "dst": "Vă rugăm să selectați funcția modelului"
+    },
+    "请输入供应商名称": {
+        "src": "请输入供应商名称",
+        "dst": "Introduceți numele furnizorului"
+    },
+    "模型添加成功": {
+        "src": "模型添加成功",
+        "dst": "Model adăugat cu succes"
+    },
+    "是否确定删除当前模型？该操作不可逆": {
+        "src": "是否确定删除当前模型？该操作不可逆",
+        "dst": "Sunteți sigur că ștergeți modelul curent? Operaţia este ireversibilă."
+    },
+    "请填写完整配置信息": {
+        "src": "请填写完整配置信息",
+        "dst": "Completați informațiile complete de configurare"
+    },
+    "配置保存成功": {
+        "src": "配置保存成功",
+        "dst": "Salvare cu succes a configuraţiei"
+    },
+    "缺少API密钥": {
+        "src": "缺少API密钥",
+        "dst": "Cheia API lipseşte"
+    },
+    "缺少API地址": {
+        "src": "缺少API地址",
+        "dst": "Adresa API lipseşte"
+    },
+    "模型启用成功": {
+        "src": "模型启用成功",
+        "dst": "Modelul a fost activat cu succes"
+    },
+    "模型禁用成功": {
+        "src": "模型禁用成功",
+        "dst": "Modelul a fost dezactivat cu succes"
+    },
+    "已启用全部模型": {
+        "src": "已启用全部模型",
+        "dst": "Toate modelele activate"
+    },
+    "已禁用全部模型": {
+        "src": "已禁用全部模型",
+        "dst": "Toate modelele sunt dezactivate"
+    },
+    "添加成功": {
+        "src": "添加成功",
+        "dst": "Adăugare cu succes"
+    },
+    "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！": {
+        "src": "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！",
+        "dst": "Ștergeți furnizorul curent? Această acțiune va șterge toate modelele în același timp, vă rugăm să fiți atenți!"
+    },
+    "删除成功": {
+        "src": "删除成功",
+        "dst": "Șterge cu succes"
+    },
+    "一键把AI模型部署在你的电脑": {
+        "src": "一键把AI模型部署在你的电脑",
+        "dst": "Implementați un model AI într-un singur clic pe computerul dvs."
+    },
+    "免费开源无限制": {
+        "src": "免费开源无限制",
+        "dst": "Liber open source fără limite"
+    },
+    "可在线分享他人使用": {
+        "src": "可在线分享他人使用",
+        "dst": "Împărtășirea online pentru alții"
+    },
+    "支持联网大幅度提升答案质量": {
+        "src": "支持联网大幅度提升答案质量",
+        "dst": "Susținerea rețelei pentru îmbunătățirea semnificativă a calității răspunsurilor"
+    },
+    "使用第三方模型": {
+        "src": "使用第三方模型",
+        "dst": "Utilizarea modelelor terțelor părți"
+    },
+    "使用本地模型": {
+        "src": "使用本地模型",
+        "dst": "Utilizează modelul local"
+    },
+    "简单好用的AI助手": {
+        "src": "简单好用的AI助手",
+        "dst": "Un asistent AI simplu și ușor de utilizat"
+    },
+    "支持联网搜索和知识库": {
+        "src": "支持联网搜索和知识库",
+        "dst": "Sprijinirea căutării online și a bazei de cunoștințe"
+    },
+    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型": {
+        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型",
+        "dst": "Sfat: Dacă lista de partajare este goală, serviciul de conexiune de partajare se va opri automat, iar rețeaua externă nu poate accesa niciun model prin AingDesk în acest moment"
+    },
+    "上传附件": {
+        "src": "上传附件",
+        "dst": "Încărcați atașamente"
+    },
+    "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Modelul [{0}] pe care îl utilizați în prezent a fost dezactivat sau șters. Vă rugăm să reactivați sau să comutați modelele"
+    },
+    "请安装或接入嵌入模型": {
+        "src": "请安装或接入嵌入模型",
+        "dst": "Vă rugăm să instalați sau să accesați modelul încorporat"
+    },
+    "使用本地模型嵌入（推荐）": {
+        "src": "使用本地模型嵌入（推荐）",
+        "dst": "Utilizarea modelului local pentru încorporare (recomandat)"
+    },
+    "请选择从Ollama安装-Embedding-安装bge-m3:latest": {
+        "src": "请选择从Ollama安装-Embedding-安装bge-m3:latest",
+        "dst": "Vă rugăm să alegeți să instalați din Ollama - Încorporare - Instalare bge-m3: latest"
+    },
+    "使用第三方API提供模型嵌入": {
+        "src": "使用第三方API提供模型嵌入",
+        "dst": "Utilizarea API-urilor terțe pentru a furniza încorporarea modelelor"
+    },
+    "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动": {
+        "src": "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动",
+        "dst": "Vă rugăm să alegeți să vă conectați la modele terțe părți care acceptă încorporarea API-urilor terțe părți, cum ar fi mobilitatea pe bază de siliciu"
+    },
+    "从Ollama安装": {
+        "src": "从Ollama安装",
+        "dst": "Instalație de la Ollama"
+    },
+    "接入第三方模型": {
+        "src": "接入第三方模型",
+        "dst": "Integrarea modelelor terțe părți"
+    },
+    "已启用模型该服务商": {
+        "src": "已启用模型该服务商",
+        "dst": "Modelul a fost activat pentru acest furnizor de servicii"
+    },
+    "已禁用模型该服务商": {
+        "src": "已禁用模型该服务商",
+        "dst": "Modelul dezactivat de acest furnizor de servicii"
+    },
+    "无记忆": {
+        "src": "无记忆",
+        "dst": "Fără memorie"
+    },
+    " 能提升单次回复质量，但大模型将没有上下文记忆": {
+        "src": " 能提升单次回复质量，但大模型将没有上下文记忆",
+        "dst": "Poate îmbunătăți calitatea unui singur răspuns, dar modelul mare nu va avea memorie contextuală"
+    },
+    "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式": {
+        "src": "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式",
+        "dst": "Suportă încărcarea de fișiere și imagini (până la 20MB) și suportă formate precum PDF, DOC, TXT, etc."
+    },
+    "附件总大小不能超过20MB": {
+        "src": "附件总大小不能超过20MB",
+        "dst": "Dimensiunea totală a atașamentelor nu poate depăși 20MB"
+    },
+    "请选择知识库": {
+        "src": "请选择知识库",
+        "dst": "Vă rugăm să selectați o bază de cunoștințe"
+    },
+    "文档教程": {
+        "src": "文档教程",
+        "dst": "Document tutorial"
+    },
+    "查看知识库教程": {
+        "src": "查看知识库教程",
+        "dst": "Vizualizați tutoriale din baza de cunoștințe"
+    },
+    "智能体": {
+        "src": "智能体",
+        "dst": "Agent inteligent"
+    },
+    "创建智能体": {
+        "src": "创建智能体",
+        "dst": "Creează un agent inteligent"
+    },
+    "我的智能体": {
+        "src": "我的智能体",
+        "dst": "Agentul meu inteligent"
+    },
+    "预设模板": {
+        "src": "预设模板",
+        "dst": "Șablon predefinit"
+    },
+    "编辑": {
+        "src": "编辑",
+        "dst": "Editare"
+    },
+    "请输入智能体名称": {
+        "src": "请输入智能体名称",
+        "dst": "Vă rugăm să introduceți numele agentului inteligent"
+    },
+    "人物设定": {
+        "src": "人物设定",
+        "dst": "design de caractere"
+    },
+    "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界": {
+        "src": "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界",
+        "dst": "Sunteți un AI juridic profesionist instruit în baza de date juridică chineză, familiarizat cu sistemele juridice majore, cum ar fi Codul Civil, Dreptul Penal și Dreptul Comercial. Sprijiniți revizuirea contractelor, interpretarea dispozițiilor legale, consultanța strategică în litigii și distingeți strict granița dintre consultanța juridică și serviciile de avocatură."
+    },
+    "头像": {
+        "src": "头像",
+        "dst": "Imagine"
+    },
+    "请选择": {
+        "src": "请选择",
+        "dst": "Vă rugăm să selectați"
+    },
+    "保存": {
+        "src": "保存",
+        "dst": "salvează"
+    },
+    "请为您的智能体设定提示词": {
+        "src": "请为您的智能体设定提示词",
+        "dst": "Vă rugăm să setați cuvinte prompte pentru agentul dvs."
+    },
+    "请选择嵌入模型": {
+        "src": "请选择嵌入模型",
+        "dst": "Selectați modelul încorporat"
+    },
+    "第三方API配置": {
+        "src": "第三方API配置",
+        "dst": "Configurare API terță parte"
+    },
+    "智能体创建成功": {
+        "src": "智能体创建成功",
+        "dst": "Agent inteligent creat cu succes"
+    },
+    "智能体修改成功": {
+        "src": "智能体修改成功",
+        "dst": "Agent inteligent modificat cu succes"
+    },
+    "是否确认删除智能体[{0}]?删除后无法恢复": {
+        "src": "是否确认删除智能体[{0}]?删除后无法恢复",
+        "dst": "Ești sigur că ștergi agentul [{0}]? Nu pot fi restaurate după ștergere"
+    },
+    "智能体删除成功": {
+        "src": "智能体删除成功",
+        "dst": "Agent inteligent șters cu succes"
+    },
+    "您当前使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Modelul pe care îl utilizați în prezent a fost dezactivat sau șters. Vă rugăm să reactivați sau să comutați modelul"
+    },
+    "请选择或安装接入模型": {
+        "src": "请选择或安装接入模型",
+        "dst": "Vă rugăm să selectați sau instalați modelul de acces"
+    },
+    "当前对话使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "当前对话使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Modelul utilizat în conversația curentă a fost dezactivat sau șters. Vă rugăm să reactivați sau să comutați modelul"
+    },
+    "模型{0}不存在，请添加本地模型或第三方模型api": {
+        "src": "模型{0}不存在，请添加本地模型或第三方模型api",
+        "dst": "Modelul {0} nu există, vă rugăm să adăugați un model local sau un model API terț"
+    },
+    "模型管理器": {
+        "src": "模型管理器",
+        "dst": "Manager de modele"
+    },
+    "模型存储位置": {
+        "src": "模型存储位置",
+        "dst": "Locația de stocare a modelului"
+    },
+    "选择": {
+        "src": "选择",
+        "dst": "selectează"
+    },
+    "请选择模型管理器": {
+        "src": "请选择模型管理器",
+        "dst": "Alegeți un manager de modele"
+    },
+    "请选择模型管理器安装路径": {
+        "src": "请选择模型管理器安装路径",
+        "dst": "Selectați calea de instalare a managerului de modele"
+    },
+    "图形": {
+        "src": "图形",
+        "dst": "grafică"
+    },
+    "源码": {
+        "src": "源码",
+        "dst": "cod sursă"
+    },
+    "mermaid解析失败,请检查语法": {
+        "src": "mermaid解析失败,请检查语法",
+        "dst": "Analizarea sirenelor a eșuat, verificați sintaxa"
+    },
+    "Ollama接口地址": {
+        "src": "Ollama接口地址",
+        "dst": "Adresa interfeței Olama"
+    },
+    "当前ollama地址不可用": {
+        "src": "当前ollama地址不可用",
+        "dst": "Adresa curentă ollama nu este disponibilă"
+    },
+    "新手指引": {
+        "src": "新手指引",
+        "dst": "Ghid pentru începători"
+    },
+    "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
+        "src": "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
+        "dst": "Bine ați venit la AingDesk, un asistent AI simplu și ușor de utilizat care sprijină baza de cunoștințe, model API, partajare, căutare online și agenți inteligenți Acest software este open source și gratuit și așteptăm cu nerăbdare să împărtășiți software-ul cu alții pentru a sprijini dezvoltarea noastră."
+    },
+    "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
+        "src": "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
+        "dst": "AingDesk este un nou proiect AI care încă se străduiește pentru o creștere rapidă. Dacă întâmpinați probleme în timpul utilizării sau aveți orice cerințe funcționale pentru software, vă puteți alătura grupului nostru WeChat pentru a ne oferi feedback."
+    },
+    "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。": {
+        "src": "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。",
+        "dst": "În cele din urmă, ne puteți oferi o stea pentru proiectul nostru open source. Încurajarea dumneavoastră este extrem de importantă pentru noi să continuăm iterarea proiectelor open source. Vă mulțumim."
+    },
+    "去github点星星": {
+        "src": "去github点星星",
+        "dst": "Du-te la GitHub și faceți clic pe stele"
+    },
+    "您可以在": {
+        "src": "您可以在",
+        "dst": "Poţi"
+    },
+    "中关闭新手指引": {
+        "src": "中关闭新手指引",
+        "dst": "Închide ghidul pentru începători în mijloc"
+    },
+    "文档删除失败": {
+        "src": "文档删除失败",
+        "dst": "Ștergerea documentului a eșuat"
+    },
+    "设置成功": {
+        "src": "设置成功",
+        "dst": "Setare reușită"
+    },
+    "分段标识符": {
+        "src": "分段标识符",
+        "dst": "Identificator segment"
+    },
+    "分段最大长度": {
+        "src": "分段最大长度",
+        "dst": "Lungimea maximă a segmentului"
+    },
+    "分段重叠长度": {
+        "src": "分段重叠长度",
+        "dst": "Lungimea suprapunerii segmentului"
+    },
+    "分段标识符支持函正则表达式，如": {
+        "src": "分段标识符支持函正则表达式，如",
+        "dst": "Identificatorii segmentelor acceptă expresii regulate, cum ar fi"
+    },
+    "正则表达式无需添加修饰符，默认会自动添加g修饰符": {
+        "src": "正则表达式无需添加修饰符，默认会自动添加g修饰符",
+        "dst": "Expresiile regulate nu necesită adăugarea de modificatori și vor adăuga automat modificatorul \"g\" în mod implicit"
+    },
+    "分段重叠长度建议为分段最大长度的10%到20%": {
+        "src": "分段重叠长度建议为分段最大长度的10%到20%",
+        "dst": "Lungimea de suprapunere recomandată pentru segmente este de 10% până la 20% din lungimea maximă a segmentului"
+    },
+    "选择文档进行预览": {
+        "src": "选择文档进行预览",
+        "dst": "Selectează documentul pentru previzualizare"
+    },
+    "预览": {
+        "src": "预览",
+        "dst": "Previzualizare"
+    },
+    "分段最大长度不能小于20": {
+        "src": "分段最大长度不能小于20",
+        "dst": "Lungimea maximă a segmentului nu poate fi mai mică de 20"
+    },
+    "分段最大长度不能大于1000": {
+        "src": "分段最大长度不能大于1000",
+        "dst": "Lungimea maximă a unui segment nu poate depăși 1000"
+    },
+    "请填写分段最大长度": {
+        "src": "请填写分段最大长度",
+        "dst": "Vă rugăm să completați lungimea maximă a segmentului"
+    },
+    "分段重叠长度不能小于0": {
+        "src": "分段重叠长度不能小于0",
+        "dst": "Lungimea suprapunerii segmentelor nu poate fi mai mică de 0"
+    },
+    "分段重叠长度不能大于分段最大长度": {
+        "src": "分段重叠长度不能大于分段最大长度",
+        "dst": "Lungimea suprapunerii segmentelor nu poate depăși lungimea maximă a segmentelor"
+    },
+    "请填写分段重叠长度": {
+        "src": "请填写分段重叠长度",
+        "dst": "Vă rugăm să completați lungimea suprapusă a segmentelor"
+    },
+    "请填写分段标识符": {
+        "src": "请填写分段标识符",
+        "dst": "Vă rugăm să completați identificatorul segmentului"
+    },
+    "文档分片设置": {
+        "src": "文档分片设置",
+        "dst": "Configurări partajare documente"
+    },
+    "继续添加文件": {
+        "src": "继续添加文件",
+        "dst": "Continuați adăugarea fișierelor"
+    },
+    "请选择文件": {
+        "src": "请选择文件",
+        "dst": "Selectați un fișier"
+    },
+    "最大召唤数量": {
+        "src": "最大召唤数量",
+        "dst": "Cantitatea maximă de convocare"
+    },
+    "召回精度": {
+        "src": "召回精度",
+        "dst": "Precizia retragerii"
+    },
+    "文档解析失败": {
+        "src": "文档解析失败",
+        "dst": "Analizarea documentelor a eșuat"
+    },
+    "文档解析成功,等待嵌入": {
+        "src": "文档解析成功,等待嵌入",
+        "dst": "Analizarea documentelor a reușit, așteptând încorporarea"
+    },
+    "数据存储位置": {
+        "src": "数据存储位置",
+        "dst": "Locația stocării datelor"
+    },
+    "更改": {
+        "src": "更改",
+        "dst": "schimbare"
+    },
+    "如何更好的使用知识库?": {
+        "src": "如何更好的使用知识库?",
+        "dst": "Cum să utilizați mai bine baza de cunoștințe?"
+    },
+    "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件": {
+        "src": "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件",
+        "dst": "Comutarea directoarelor va migra datele din directorul vechi în directorul nou, ceea ce poate dura 5-10 minute în funcție de dimensiunea datelor. Vă rugăm să nu închideți software-ul în timpul procesului de migrare"
+    },
+    "选择新位置": {
+        "src": "选择新位置",
+        "dst": "Alege o locație nouă"
+    },
+    "数据迁移失败，请重试": {
+        "src": "数据迁移失败，请重试",
+        "dst": "Migrarea datelor a eșuat, vă rugăm să încercați din nou"
+    },
+    "数据迁移成功": {
+        "src": "数据迁移成功",
+        "dst": "Migrarea datelor cu succes"
+    },
+    "请勿关闭软件,否则将导致软件异常": {
+        "src": "请勿关闭软件,否则将导致软件异常",
+        "dst": "Nu închideţi software-ul, altfel poate cauza anomalii ale software-ului"
+    },
+    "等待复制": {
+        "src": "等待复制",
+        "dst": "Așteaptă replicarea"
+    },
+    "总大小": {
+        "src": "总大小",
+        "dst": "dimensiunea totală"
+    },
+    "速度": {
+        "src": "速度",
+        "dst": "viteză"
+    },
+    "准备迁移数据": {
+        "src": "准备迁移数据",
+        "dst": "Pregătirea migrării datelor"
+    },
+    "迁移数据中": {
+        "src": "迁移数据中",
+        "dst": "În migrarea datelor"
+    },
+    "选择工具": {
+        "src": "选择工具",
+        "dst": "Selectează instrumente"
+    },
+    "工具": {
+        "src": "工具",
+        "dst": "unealtă"
+    },
+    "模型选择": {
+        "src": "模型选择",
+        "dst": "selectarea modelului"
+    },
+    "搜索模型": {
+        "src": "搜索模型",
+        "dst": "Caută model"
+    },
+    "常用模型": {
+        "src": "常用模型",
+        "dst": "Modele comune"
+    },
+    "不使用": {
+        "src": "不使用",
+        "dst": "Nu se utilizează"
+    },
+    "新分享": {
+        "src": "新分享",
+        "dst": "O nouă partajare"
+    },
+    "最大召回数量": {
+        "src": "最大召回数量",
+        "dst": "Cantitatea maximă de rechemare"
+    },
+    "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条": {
+        "src": "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条",
+        "dst": "Numărul maxim de returnări atunci când căutați baza de cunoștințe este recomandat să fie de 3 pentru modelele locale și de 5 pentru modelele online"
+    },
+    "自动": {
+        "src": "自动",
+        "dst": "automată"
+    },
+    "自定义": {
+        "src": "自定义",
+        "dst": "personalizează"
+    },
+    "请输入分隔符": {
+        "src": "请输入分隔符",
+        "dst": "Introduceți un delimitator"
+    },
+    "正在优化知识库,这可能需要几分钟到十几分钟......": {
+        "src": "正在优化知识库,这可能需要几分钟到十几分钟......",
+        "dst": "Optimizăm baza de cunoştinţe, care poate dura câteva minute până la zece minute."
+    },
+    "上传知识库文档": {
+        "src": "上传知识库文档",
+        "dst": "Încărcați documentul bazei de cunoștințe"
+    },
+    "请选择模型管理器的安装路径": {
+        "src": "请选择模型管理器的安装路径",
+        "dst": "Selectați calea de instalare a managerului de modele"
+    },
+    "优化": {
+        "src": "优化",
+        "dst": "optimizează"
+    },
+    "增强索引,并释放多余的空间占用": {
+        "src": "增强索引,并释放多余的空间占用",
+        "dst": "Îmbunătățiți indexarea și eliberați ocuparea excesului de spațiu"
+    },
+    "反馈": {
+        "src": "反馈",
+        "dst": "feedback"
+    },
+    "删除MCP服务器": {
+        "src": "删除MCP服务器",
+        "dst": "Șterge serverul MCP"
+    },
+    "是否可用": {
+        "src": "是否可用",
+        "dst": "Este disponibil"
+    },
+    "请输入MCP服务器名称": {
+        "src": "请输入MCP服务器名称",
+        "dst": "Introduceți numele serverului MCP"
+    },
+    "请输入内容": {
+        "src": "请输入内容",
+        "dst": "Introduceți conținutul"
+    },
+    "类型": {
+        "src": "类型",
+        "dst": "tip"
+    },
+    "服务器地址": {
+        "src": "服务器地址",
+        "dst": "adresa serverului"
+    },
+    "请输入服务器URL地址": {
+        "src": "请输入服务器URL地址",
+        "dst": "Introduceți adresa URL a serverului"
+    },
+    "程序类型": {
+        "src": "程序类型",
+        "dst": "Tipul aplicației"
+    },
+    "当前未安装Nodejs环境，点击": {
+        "src": "当前未安装Nodejs环境，点击",
+        "dst": "Mediul Nodejs nu este instalat în prezent, faceți clic"
+    },
+    "命令": {
+        "src": "命令",
+        "dst": "comandă"
+    },
+    "可执行命令": {
+        "src": "可执行命令",
+        "dst": "Comandă executabilă"
+    },
+    "参数": {
+        "src": "参数",
+        "dst": "parametru"
+    },
+    "环境变量": {
+        "src": "环境变量",
+        "dst": "variabilă de mediu"
+    },
+    "正在安装环境,这可能需要几分钟......": {
+        "src": "正在安装环境,这可能需要几分钟......",
+        "dst": "Instalarea mediului, acest lucru poate dura câteva minute"
+    },
+    "请输入可执行命令": {
+        "src": "请输入可执行命令",
+        "dst": "Introduceți o comandă executabilă"
+    },
+    "编辑配置文件": {
+        "src": "编辑配置文件",
+        "dst": "Editează profilul"
+    },
+    "编辑MCP服务器配置的JSON。保存前请确保格式正确。": {
+        "src": "编辑MCP服务器配置的JSON。保存前请确保格式正确。",
+        "dst": "Editați JSON pentru configurația serverului MCP. Vă rugăm să vă asigurați că formatul este corect înainte de a salva."
+    },
+    "添加服务器": {
+        "src": "添加服务器",
+        "dst": "Adaugă server"
+    },
+    "新配置": {
+        "src": "新配置",
+        "dst": "configurație nouă"
+    },
+    "环境安装成功": {
+        "src": "环境安装成功",
+        "dst": "Instalația de mediu reușită"
+    },
+    "环境安装失败": {
+        "src": "环境安装失败",
+        "dst": "Instalarea mediului a eșuat"
+    },
+    "操作成功": {
+        "src": "操作成功",
+        "dst": "Operațiune reușită"
+    },
+    "请先安装Node.js环境": {
+        "src": "请先安装Node.js环境",
+        "dst": "Vă rugăm să instalați mai întâi mediul Node.js"
+    },
+    "是否删除当前MCP服务器？": {
+        "src": "是否删除当前MCP服务器？",
+        "dst": "Doriți să ștergeți serverul MCP curent?"
+    },
+    "常规设置": {
+        "src": "常规设置",
+        "dst": "Setări generale"
+    },
+    "MCP服务器": {
+        "src": "MCP服务器",
+        "dst": "Server MCP"
+    },
+    "修改模型": {
+        "src": "修改模型",
+        "dst": "Modifică modelul"
+    },
+    "保存成功": {
+        "src": "保存成功",
+        "dst": "Salvat cu succes"
+    },
+    "调用结果:": {
+        "src": "调用结果:",
+        "dst": "Rezultatul apelului:"
+    },
+    "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Analizarea documentelor este reușită, așteptând încorporarea. Timpul de așteptare depinde de numărul de fișiere, care poate dura câteva minute până la zeci de minute"
+    },
+    "正在嵌入中,请稍后...": {
+        "src": "正在嵌入中,请稍后...",
+        "dst": "Încorporarea în curs de desfășurare, vă rugăm să așteptați"
+    }
+}

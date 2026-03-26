@@ -1,0 +1,20 @@
+.layout-wrapper {
+  height: 100vh;
+  background: var(--bt-bg);
+
+  .layout-sider {
+    transition: 0.2s;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .layout-content {
+    padding: var(--bt-pd-normal);
+    height: calc(100% - 67px);
+  }
+
+  .layout-header {
+    padding: 0 var(--bt-pd-normal);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    background: transparent;
+  }
+}

@@ -1,0 +1,1342 @@
+{
+    "让我们开启一段新的对话吧": {
+        "src": "让我们开启一段新的对话吧",
+        "dst": "Pradėkime naują dialogą."
+    },
+    "正在思考...": {
+        "src": "正在思考...",
+        "dst": "Galvojau apie"
+    },
+    "复制": {
+        "src": "复制",
+        "dst": "Kopijuoti"
+    },
+    "暂无信息": {
+        "src": "暂无信息",
+        "dst": "Nėra informacijos"
+    },
+    "重新生成": {
+        "src": "重新生成",
+        "dst": "atkurti"
+    },
+    "请输入对话内容": {
+        "src": "请输入对话内容",
+        "dst": "Įveskite dialogo turinį"
+    },
+    "发送": {
+        "src": "发送",
+        "dst": "Siųsti"
+    },
+    "停止生成": {
+        "src": "停止生成",
+        "dst": "Nustoti generuoti"
+    },
+    "复制成功": {
+        "src": "复制成功",
+        "dst": "Kopijavimas sėkmingas"
+    },
+    "请选择对应模型": {
+        "src": "请选择对应模型",
+        "dst": "Pasirinkite atitinkamą model į"
+    },
+    "当前正在回答，请稍后": {
+        "src": "当前正在回答，请稍后",
+        "dst": "Šiuo metu atsakydamas, prašau palaukti."
+    },
+    "点击[设置]安装模型": {
+        "src": "点击[设置]安装模型",
+        "dst": "Spustelėkite [Nustatymai] įdiegti modelį"
+    },
+    "模型大小:": {
+        "src": "模型大小:",
+        "dst": "Modelio dydis:"
+    },
+    "已下载:": {
+        "src": "已下载:",
+        "dst": "Atsisiųsti:"
+    },
+    "速度:": {
+        "src": "速度:",
+        "dst": "Greitis:"
+    },
+    "引用": {
+        "src": "引用",
+        "dst": "Citacija"
+    },
+    "已复制": {
+        "src": "已复制",
+        "dst": "Kopijuotas"
+    },
+    "处理器:": {
+        "src": "处理器:",
+        "dst": "Procesorius:"
+    },
+    "内存:": {
+        "src": "内存:",
+        "dst": "Atmintis:"
+    },
+    "显卡:": {
+        "src": "显卡:",
+        "dst": "Grafikos plokštė:"
+    },
+    "建议:": {
+        "src": "建议:",
+        "dst": "Rekomendacija:"
+    },
+    "首次使用，请选择要安装的模型": {
+        "src": "首次使用，请选择要安装的模型",
+        "dst": "Naudojant pirmą kartą, pasirinkite modelį, kurį norite įdiegti"
+    },
+    "如:": {
+        "src": "如:",
+        "dst": "Pavyzdžiui:"
+    },
+    "搜索": {
+        "src": "搜索",
+        "dst": "Ieškoti"
+    },
+    "模型刪除中，请稍后": {
+        "src": "模型刪除中，请稍后",
+        "dst": "Pavyzdys ištrinamas, palaukite"
+    },
+    "提示": {
+        "src": "提示",
+        "dst": "Patarimai"
+    },
+    "检测到您没有安装模型管理器，是否立即安装？": {
+        "src": "检测到您没有安装模型管理器，是否立即安装？",
+        "dst": "Nustatėme, kad neįdiegėte modelio tvarkyklos, ar ją įdiegti nedelsiant?"
+    },
+    "暂不安装": {
+        "src": "暂不安装",
+        "dst": "Neįdiegti"
+    },
+    "立即安装": {
+        "src": "立即安装",
+        "dst": "Įdiegti dabar"
+    },
+    "正在安装模型管理器，请稍后": {
+        "src": "正在安装模型管理器，请稍后",
+        "dst": "Įdiegiama modelių tvarkyklė, prašome vėliau"
+    },
+    "大小:": {
+        "src": "大小:",
+        "dst": "Dydis:"
+    },
+    "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。": {
+        "src": "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。",
+        "dst": "Bandykite iš naujo pasirinkti atsisiųsti mazgą, kad optimizuotų atsisiųsti greitį, PS: Jis nepraras dabartinės atsiuntimo pažangos ir automatiškai atnaujins nuo nutraukimo taško."
+    },
+    "所有": {
+        "src": "所有",
+        "dst": "Visi"
+    },
+    "已安装": {
+        "src": "已安装",
+        "dst": "Įdiegta"
+    },
+    "模型": {
+        "src": "模型",
+        "dst": "Modelis"
+    },
+    "大小": {
+        "src": "大小",
+        "dst": "dydis"
+    },
+    "操作": {
+        "src": "操作",
+        "dst": "Operacijos"
+    },
+    "刪除": {
+        "src": "刪除",
+        "dst": "Ištrinti"
+    },
+    "安装": {
+        "src": "安装",
+        "dst": "Įdiegti"
+    },
+    "浅色模式": {
+        "src": "浅色模式",
+        "dst": "Šviesios spalvos režimas"
+    },
+    "深色模式": {
+        "src": "深色模式",
+        "dst": "Tamsus režimas"
+    },
+    "对话": {
+        "src": "对话",
+        "dst": "Dialogas"
+    },
+    "对话内容": {
+        "src": "对话内容",
+        "dst": "Dialogo turinys"
+    },
+    "新对话": {
+        "src": "新对话",
+        "dst": "Naujas dialogas"
+    },
+    "模型管理": {
+        "src": "模型管理",
+        "dst": "Modelių valdymas"
+    },
+    "设置": {
+        "src": "设置",
+        "dst": "Nustatymai"
+    },
+    "删除对话": {
+        "src": "删除对话",
+        "dst": "Pašalinti dialogą"
+    },
+    "是否确认删除当前对话": {
+        "src": "是否确认删除当前对话",
+        "dst": "Ar patvirtinti dabartinio pokalbio ištrynimą"
+    },
+    "取消": {
+        "src": "取消",
+        "dst": "Atšaukti"
+    },
+    "删除": {
+        "src": "删除",
+        "dst": "išbraukti"
+    },
+    "修改对话标题": {
+        "src": "修改对话标题",
+        "dst": "Keisti dialogo pavadinimą"
+    },
+    "请输入新的对话标题": {
+        "src": "请输入新的对话标题",
+        "dst": "Įveskite naują dialogo pavadinimą"
+    },
+    "确认": {
+        "src": "确认",
+        "dst": "Patvirtinti"
+    },
+    "修改标题": {
+        "src": "修改标题",
+        "dst": "Keisti antraštę"
+    },
+    "已深度思考": {
+        "src": "已深度思考",
+        "dst": "Giliai mąstyta"
+    },
+    "对话已停止": {
+        "src": "对话已停止",
+        "dst": "Dialogas sustabdytas"
+    },
+    "对话删除成功": {
+        "src": "对话删除成功",
+        "dst": "Sėkmingai ištrintas dialogas"
+    },
+    "对话删除失败：": {
+        "src": "对话删除失败：",
+        "dst": "Nepavyko pašalinti dialogo:"
+    },
+    "对话标题修改成功": {
+        "src": "对话标题修改成功",
+        "dst": "Sėkmingai pakeistas dialogo antraštė"
+    },
+    "对话标题修改失败:": {
+        "src": "对话标题修改失败:",
+        "dst": "Nepavyko pakeisti dialogo antraštės:"
+    },
+    "安装成功": {
+        "src": "安装成功",
+        "dst": "Įdiegimas sėkmingas"
+    },
+    "正在连接，请稍候...": {
+        "src": "正在连接，请稍候...",
+        "dst": "Prisijungimas, palaukite..."
+    },
+    "等待下载:{0}，请稍候...": {
+        "src": "等待下载:{0}，请稍候...",
+        "dst": "Palaukite atsisiuntimo: {0}, palaukite..."
+    },
+    "正在下载:{0}，请稍候...": {
+        "src": "正在下载:{0}，请稍候...",
+        "dst": "Atsisiųsta: {0}, palaukite..."
+    },
+    "正在安装:{0}，请稍候...": {
+        "src": "正在安装:{0}，请稍候...",
+        "dst": "Įdiegiama: {0}, palaukite..."
+    },
+    "安装失败": {
+        "src": "安装失败",
+        "dst": "Įrengimas nepavyko"
+    },
+    "模型删除成功": {
+        "src": "模型删除成功",
+        "dst": "Modelis buvo sėkmingai pašalintas"
+    },
+    "模型删除失败:{0}": {
+        "src": "模型删除失败:{0}",
+        "dst": "Pavyzdžio ištrinimas nepavyko: {0}"
+    },
+    "模型异常，请重新生成": {
+        "src": "模型异常，请重新生成",
+        "dst": "Modelis yra nenormalus, prašome sugeneruoti iš naujo"
+    },
+    "模型管理器安装成功": {
+        "src": "模型管理器安装成功",
+        "dst": "Modelio tvarkyklė sėkmingai įdiegta"
+    },
+    "模型管理器安装失败": {
+        "src": "模型管理器安装失败",
+        "dst": "Pavyzdžio tvarkytojo įrengimas nepavyko"
+    },
+    "请求出错，状态码:": {
+        "src": "请求出错，状态码:",
+        "dst": "Prašymo klaida, statuso kodas:"
+    },
+    "请求发生错误": {
+        "src": "请求发生错误",
+        "dst": "Klaida užklausoje"
+    },
+    "简介": {
+        "src": "简介",
+        "dst": "Įvadas"
+    },
+    "功能": {
+        "src": "功能",
+        "dst": "Funkcijos"
+    },
+    "可用": {
+        "src": "可用",
+        "dst": "Galima"
+    },
+    "分享": {
+        "src": "分享",
+        "dst": "Dalintis"
+    },
+    "是否确认删除模型，该操作不可逆？": {
+        "src": "是否确认删除模型，该操作不可逆？",
+        "dst": "Ar patvirtinate, kad pašalinus modelį, operacija yra negrįžtama?"
+    },
+    "将AingDesk分享给好友一起使用": {
+        "src": "将AingDesk分享给好友一起使用",
+        "dst": "Pasidalinti AingDesk su draugais, kuriuos naudoti kartu"
+    },
+    "请输入名称": {
+        "src": "请输入名称",
+        "dst": "Įveskite vardą"
+    },
+    "修改分享": {
+        "src": "修改分享",
+        "dst": "Modifikuoti dalijimąsi"
+    },
+    "是否确认删除当前分享": {
+        "src": "是否确认删除当前分享",
+        "dst": "Ar patvirtinti dabartinio bendrinimo ištrynimą"
+    },
+    "名称": {
+        "src": "名称",
+        "dst": "Vardas"
+    },
+    "访问地址": {
+        "src": "访问地址",
+        "dst": "Prieigos adresas"
+    },
+    "修改": {
+        "src": "修改",
+        "dst": "Modifikuoti"
+    },
+    "正在下载": {
+        "src": "正在下载",
+        "dst": "Atsisiųsta"
+    },
+    "正在选择下载节点，请稍后": {
+        "src": "正在选择下载节点，请稍后",
+        "dst": "Pasirinkami atsisiuntimo mazgai, prašome vėliau"
+    },
+    "正在下载模型管理器，请稍后": {
+        "src": "正在下载模型管理器，请稍后",
+        "dst": "Atsisiųsti modelių tvarkyklę, prašome vėliau"
+    },
+    "正在安装模型管理器，可能要几分钟时间，请耐心等待": {
+        "src": "正在安装模型管理器，可能要几分钟时间，请耐心等待",
+        "dst": "Įdiegiama modelio tvarkyklė, gali užtrukti kelias minutes, laukite kantrybės"
+    },
+    "创建分享成功": {
+        "src": "创建分享成功",
+        "dst": "Sėkmingas dalijimasis"
+    },
+    "修改成功": {
+        "src": "修改成功",
+        "dst": "Sėkmingai pakeista"
+    },
+    "正在执行联网搜索...": {
+        "src": "正在执行联网搜索...",
+        "dst": "Atliekama interneto paieška..."
+    },
+    "已联网搜索{0}个网址": {
+        "src": "已联网搜索{0}个网址",
+        "dst": "Ieškoti internete {0} adresų"
+    },
+    "不使用联网搜索": {
+        "src": "不使用联网搜索",
+        "dst": "Nenaudokite internetinės paieškos"
+    },
+    "不联网": {
+        "src": "不联网",
+        "dst": "Neprisijungęs"
+    },
+    "百度": {
+        "src": "百度",
+        "dst": "Baidu"
+    },
+    "搜狗": {
+        "src": "搜狗",
+        "dst": "Sogou"
+    },
+    "谷歌": {
+        "src": "谷歌",
+        "dst": " „Google“"
+    },
+    "DuckDuckGo": {
+        "src": "DuckDuckGo",
+        "dst": "DuckDuckGo"
+    },
+    "360搜索": {
+        "src": "360搜索",
+        "dst": "360 paieškos"
+    },
+    "正搜索...": {
+        "src": "正搜索...",
+        "dst": "Ieškoma..."
+    },
+    "联网搜索": {
+        "src": "联网搜索",
+        "dst": "Interneto paieška"
+    },
+    "上传文件": {
+        "src": "上传文件",
+        "dst": "Įkelti failą"
+    },
+    "上传时间": {
+        "src": "上传时间",
+        "dst": "atsiųsta"
+    },
+    "AI摘要": {
+        "src": "AI摘要",
+        "dst": "AI santrauka"
+    },
+    "共参考{0}份资料": {
+        "src": "共参考{0}份资料",
+        "dst": "Iš viso {0} nuorodų"
+    },
+    "新建对话": {
+        "src": "新建对话",
+        "dst": "Naujas dialogas"
+    },
+    "清空对话": {
+        "src": "清空对话",
+        "dst": "Išvalyti dialogą"
+    },
+    "知识库": {
+        "src": "知识库",
+        "dst": "Žinių bazė"
+    },
+    "新建知识库": {
+        "src": "新建知识库",
+        "dst": "Nauja žinių bazė"
+    },
+    "语言选择": {
+        "src": "语言选择",
+        "dst": "Kalbos pasirinkimas"
+    },
+    "默认搜索引擎": {
+        "src": "默认搜索引擎",
+        "dst": "Numatytas paieškos variklis"
+    },
+    "加入AingDesk交流群": {
+        "src": "加入AingDesk交流群",
+        "dst": "Prisijunkite prie AingDesk grupės"
+    },
+    "当前版本": {
+        "src": "当前版本",
+        "dst": "dabartinė versija"
+    },
+    "上传文件夹": {
+        "src": "上传文件夹",
+        "dst": "Įkelti aplanką"
+    },
+    "点击上传": {
+        "src": "点击上传",
+        "dst": "Spauskite įkelti"
+    },
+    "文件支持类型": {
+        "src": "文件支持类型",
+        "dst": "Failų palaikymo tipai"
+    },
+    "{0}的文件类型不支持": {
+        "src": "{0}的文件类型不支持",
+        "dst": "Failo tipas nepalaikomas {0}"
+    },
+    "知识库创建成功": {
+        "src": "知识库创建成功",
+        "dst": "Žinių bazės sukūrimas sėkmingas"
+    },
+    "知识库创建失败": {
+        "src": "知识库创建失败",
+        "dst": "Nepavyko sukurti žinių bazės"
+    },
+    "获取知识库列表失败，请重试": {
+        "src": "获取知识库列表失败，请重试",
+        "dst": "Nepavyko gauti žinių bazės sąrašo, pabandykite dar kartą"
+    },
+    "是否确认删除知识库{0}及其下的所有文档？该操作不可逆": {
+        "src": "是否确认删除知识库{0}及其下的所有文档？该操作不可逆",
+        "dst": "Norite ištrinti žinių bazę {0} ir visus jos dokumentus? Ši operacija yra negrįžtama."
+    },
+    "删除知识库成功": {
+        "src": "删除知识库成功",
+        "dst": "Žinių bazės pašalinimas sėkmingas"
+    },
+    "删除知识库失败，请重试": {
+        "src": "删除知识库失败，请重试",
+        "dst": "Nepavyko pašalinti žinių bazės, pabandykite dar kartą"
+    },
+    "修改知识库成功": {
+        "src": "修改知识库成功",
+        "dst": "Žinių bazės keitimas sėkmingas"
+    },
+    "修改知识库失败，请重试": {
+        "src": "修改知识库失败，请重试",
+        "dst": "Nepavyko pakeisti žinių bazės, pabandykite dar kartą"
+    },
+    "正在解析文档，这可能要几分钟时间...": {
+        "src": "正在解析文档，这可能要几分钟时间...",
+        "dst": "Išnagrinėjamas dokumentas. Tai gali užtrukti kelias minutes..."
+    },
+    "是否确认删除文档{0}？该操作不可逆": {
+        "src": "是否确认删除文档{0}？该操作不可逆",
+        "dst": "Norite ištrinti dokumentą {0}? Ši operacija yra negrįžtama."
+    },
+    "文档删除成功": {
+        "src": "文档删除成功",
+        "dst": "Dokumentas sėkmingai ištrintas"
+    },
+    "{0}个文件": {
+        "src": "{0}个文件",
+        "dst": " {0} failų"
+    },
+    "正在搜索...": {
+        "src": "正在搜索...",
+        "dst": "Ieškoma"
+    },
+    "请输入知识库名称": {
+        "src": "请输入知识库名称",
+        "dst": "Įveskite žinių bazės pavadinimą"
+    },
+    "描述": {
+        "src": "描述",
+        "dst": "aprašyti"
+    },
+    "请输入知识库描述": {
+        "src": "请输入知识库描述",
+        "dst": "Įveskite žinių bazės aprašymą"
+    },
+    "嵌入模型": {
+        "src": "嵌入模型",
+        "dst": "Įterpti modelį"
+    },
+    "选择模型": {
+        "src": "选择模型",
+        "dst": "Pasirinkite modelį"
+    },
+    "选择知识库": {
+        "src": "选择知识库",
+        "dst": "Pasirinkite žinių bazę"
+    },
+    "文档嵌入中，请稍后": {
+        "src": "文档嵌入中，请稍后",
+        "dst": "Įterpti dokumentą, prašome vėliau"
+    },
+    "已嵌入完成, 可正常调用": {
+        "src": "已嵌入完成, 可正常调用",
+        "dst": "Įdėtas, įprastai skambinamas"
+    },
+    "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Įtvirtinimas vyksta, laukimo laikas priklauso nuo failų skaičiaus, kuris gali trukti nuo kelių minučių iki dešimčių minučių"
+    },
+    "第三方模型API": {
+        "src": "第三方模型API",
+        "dst": "Trečiosios šalies modelis API"
+    },
+    "本地模型": {
+        "src": "本地模型",
+        "dst": "Vietinis modelis"
+    },
+    "添加模型服务商": {
+        "src": "添加模型服务商",
+        "dst": "Pridėti modelio teikėją"
+    },
+    "使用教程": {
+        "src": "使用教程",
+        "dst": "Naudojimo pamokos"
+    },
+    "删除服务商": {
+        "src": "删除服务商",
+        "dst": "Ištrinti paslaugų teikėją"
+    },
+    "API密钥": {
+        "src": "API密钥",
+        "dst": "API raktas"
+    },
+    "请输入API密钥": {
+        "src": "请输入API密钥",
+        "dst": "Įveskite API raktą"
+    },
+    "检查": {
+        "src": "检查",
+        "dst": "patikrinti"
+    },
+    "点次获取密钥": {
+        "src": "点次获取密钥",
+        "dst": "Spauskite, kad gautumėte raktą"
+    },
+    "API地址": {
+        "src": "API地址",
+        "dst": "API adresas"
+    },
+    "请输入API地址": {
+        "src": "请输入API地址",
+        "dst": "Įveskite API adresą"
+    },
+    "示例": {
+        "src": "示例",
+        "dst": "Pavyzdžiai"
+    },
+    "保存API": {
+        "src": "保存API",
+        "dst": "Išsaugoti API"
+    },
+    "默认从/models获取所有模型": {
+        "src": "默认从/models获取所有模型",
+        "dst": "Gauti visus modelius iš /models pagal numatytąjį nustatymą"
+    },
+    "开关所有": {
+        "src": "开关所有",
+        "dst": "Įjungti visus"
+    },
+    "修改别名": {
+        "src": "修改别名",
+        "dst": "Keisti pavadinimą"
+    },
+    "当前服务商下属暂无模型可用": {
+        "src": "当前服务商下属暂无模型可用",
+        "dst": "Šiuo metu nėra modelių, priklausančių paslaugų teikėjui."
+    },
+    "添加模型": {
+        "src": "添加模型",
+        "dst": "Pridėti modelį"
+    },
+    "模型ID": {
+        "src": "模型ID",
+        "dst": "Modelio ID"
+    },
+    "请输入模型ID": {
+        "src": "请输入模型ID",
+        "dst": "Įveskite modelio ID"
+    },
+    "模型别名": {
+        "src": "模型别名",
+        "dst": "Modelio pavadinimas"
+    },
+    "请输入模型别名": {
+        "src": "请输入模型别名",
+        "dst": "Įveskite modelio aliasą"
+    },
+    "模型功能": {
+        "src": "模型功能",
+        "dst": "Modelio funkcijos"
+    },
+    "添加": {
+        "src": "添加",
+        "dst": "Pridėti"
+    },
+    "供应商名称": {
+        "src": "供应商名称",
+        "dst": "Tiekėjo pavadinimas"
+    },
+    "接口地址": {
+        "src": "接口地址",
+        "dst": "Sąsajos adresas"
+    },
+    "需要兼容openAI格式的接口": {
+        "src": "需要兼容openAI格式的接口",
+        "dst": "Reikalinga sąsaja, suderinama su openAI formatu"
+    },
+    "密钥": {
+        "src": "密钥",
+        "dst": "raktas"
+    },
+    "请选择模型功能": {
+        "src": "请选择模型功能",
+        "dst": "Pasirinkite modelio funkcijas"
+    },
+    "请输入供应商名称": {
+        "src": "请输入供应商名称",
+        "dst": "Įveskite tiekėjo pavadinimą"
+    },
+    "模型添加成功": {
+        "src": "模型添加成功",
+        "dst": "Pavyzdys sėkmingai pridėtas"
+    },
+    "是否确定删除当前模型？该操作不可逆": {
+        "src": "是否确定删除当前模型？该操作不可逆",
+        "dst": "Ar tikrai ištrinti dabartinį modelį? Ši operacija yra negrįžtama."
+    },
+    "请填写完整配置信息": {
+        "src": "请填写完整配置信息",
+        "dst": "Užpildykite visą konfigūracijos informaciją"
+    },
+    "配置保存成功": {
+        "src": "配置保存成功",
+        "dst": "Konfiguracija sėkmingai išsaugota"
+    },
+    "缺少API密钥": {
+        "src": "缺少API密钥",
+        "dst": "Trūksta API rakto"
+    },
+    "缺少API地址": {
+        "src": "缺少API地址",
+        "dst": "Trūksta API adreso"
+    },
+    "模型启用成功": {
+        "src": "模型启用成功",
+        "dst": "Modelis sėkmingai įjungtas"
+    },
+    "模型禁用成功": {
+        "src": "模型禁用成功",
+        "dst": "Modelio išjungimas sėkmingas"
+    },
+    "已启用全部模型": {
+        "src": "已启用全部模型",
+        "dst": "Įjungti visi modeliai"
+    },
+    "已禁用全部模型": {
+        "src": "已禁用全部模型",
+        "dst": "Išjungti visi modeliai"
+    },
+    "添加成功": {
+        "src": "添加成功",
+        "dst": "Pridėti sėkmingai"
+    },
+    "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！": {
+        "src": "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！",
+        "dst": "Ar norite ištrinti dabartinį paslaugų teikėją? Ši operacija vienu metu ištrins visus pavaldžius modelius, prašome imtis atsargumo priemonių!"
+    },
+    "删除成功": {
+        "src": "删除成功",
+        "dst": "Sėkmingas pašalinimas"
+    },
+    "一键把AI模型部署在你的电脑": {
+        "src": "一键把AI模型部署在你的电脑",
+        "dst": "Įdiegti AI modelius savo kompiuteryje tik vienu spragtelėjimu"
+    },
+    "免费开源无限制": {
+        "src": "免费开源无限制",
+        "dst": "Nemokamas atviras kodas neribotas"
+    },
+    "可在线分享他人使用": {
+        "src": "可在线分享他人使用",
+        "dst": "Gali būti dalijamasi internetu, kad kiti galėtų naudotis"
+    },
+    "支持联网大幅度提升答案质量": {
+        "src": "支持联网大幅度提升答案质量",
+        "dst": "Atsakymų kokybė gerokai pagerinama tinklo palaikymu"
+    },
+    "使用第三方模型": {
+        "src": "使用第三方模型",
+        "dst": "Trečiųjų šalių modelių naudojimas"
+    },
+    "使用本地模型": {
+        "src": "使用本地模型",
+        "dst": "Naudokite vietinį modelį"
+    },
+    "简单好用的AI助手": {
+        "src": "简单好用的AI助手",
+        "dst": "Paprastas ir naudingas AI asistentas"
+    },
+    "支持联网搜索和知识库": {
+        "src": "支持联网搜索和知识库",
+        "dst": "Internetinės paieškos ir žinių bazės palaikymas"
+    },
+    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型": {
+        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型",
+        "dst": "Įspėjimas: jei dalijimosi sąrašas yra tuščias, dalijimosi ryšiu paslauga automatiškai sustos, o išorinis tinklas šiuo metu negali naudotis jokiais modeliais per AingDesk"
+    },
+    "上传附件": {
+        "src": "上传附件",
+        "dst": "Įkelti priedą"
+    },
+    "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Šiuo metu naudojamas [{0}] modelis buvo išjungtas arba ištrintas. Prašome vėl įjungti arba pakeisti modelius"
+    },
+    "请安装或接入嵌入模型": {
+        "src": "请安装或接入嵌入模型",
+        "dst": "Įdiegti arba prijungti įdėtą model į"
+    },
+    "使用本地模型嵌入（推荐）": {
+        "src": "使用本地模型嵌入（推荐）",
+        "dst": "Naudoti vietinį model į (rekomenduojama)"
+    },
+    "请选择从Ollama安装-Embedding-安装bge-m3:latest": {
+        "src": "请选择从Ollama安装-Embedding-安装bge-m3:latest",
+        "dst": "Pasirinkite įdiegti-įdėti-įdiegti bge-m3 iš Ollama: latest"
+    },
+    "使用第三方API提供模型嵌入": {
+        "src": "使用第三方API提供模型嵌入",
+        "dst": "Trečiųjų šalių API naudojimas modelio įtraukimui"
+    },
+    "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动": {
+        "src": "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动",
+        "dst": "Pasirinkite prisijungti prie trečiųjų šalių modelių, kuriais remiamos Įterptos trečiųjų šalių API, pavyzdžiui, silicio judumas"
+    },
+    "从Ollama安装": {
+        "src": "从Ollama安装",
+        "dst": "Įrengimas iš Ollama"
+    },
+    "接入第三方模型": {
+        "src": "接入第三方模型",
+        "dst": "Integruoti trečiųjų šalių modelius"
+    },
+    "已启用模型该服务商": {
+        "src": "已启用模型该服务商",
+        "dst": "Modelis įjungtas šiam paslaugų teikėjui"
+    },
+    "已禁用模型该服务商": {
+        "src": "已禁用模型该服务商",
+        "dst": "Modelis išjungtas šiam paslaugų teikėjui"
+    },
+    "无记忆": {
+        "src": "无记忆",
+        "dst": "Beprisiminimas"
+    },
+    " 能提升单次回复质量，但大模型将没有上下文记忆": {
+        "src": " 能提升单次回复质量，但大模型将没有上下文记忆",
+        "dst": "Gali pagerinti vieno atsako kokybę, tačiau didelis modelis neturi kontekstinės atminties"
+    },
+    "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式": {
+        "src": "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式",
+        "dst": "Suporta failų ir atvaizdų (iki 20MB) perkėlimą ir palaiko tokius formatus kaip PDF, DOC, TXT ir t. t."
+    },
+    "附件总大小不能超过20MB": {
+        "src": "附件总大小不能超过20MB",
+        "dst": "Bendras priedų dydis negali viršyti 20 MB"
+    },
+    "请选择知识库": {
+        "src": "请选择知识库",
+        "dst": "Pasirinkite žinių bazę"
+    },
+    "文档教程": {
+        "src": "文档教程",
+        "dst": "Dokumento mokymas"
+    },
+    "查看知识库教程": {
+        "src": "查看知识库教程",
+        "dst": "Žiūrėti žinių bazės pamokas"
+    },
+    "智能体": {
+        "src": "智能体",
+        "dst": "Pažangas veiksnys"
+    },
+    "创建智能体": {
+        "src": "创建智能体",
+        "dst": "Sukurti protingą kūną"
+    },
+    "我的智能体": {
+        "src": "我的智能体",
+        "dst": "Mano protingas agentas"
+    },
+    "预设模板": {
+        "src": "预设模板",
+        "dst": "Numatytas šablonas"
+    },
+    "编辑": {
+        "src": "编辑",
+        "dst": "redaguoti"
+    },
+    "请输入智能体名称": {
+        "src": "请输入智能体名称",
+        "dst": "Įveskite protinio kūno pavadinimą"
+    },
+    "人物设定": {
+        "src": "人物设定",
+        "dst": "Žmogaus nustatymai"
+    },
+    "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界": {
+        "src": "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界",
+        "dst": "Jūs esate profesionalus teisinis AI, mokytas Kinijos teisinėje duomenų bazėje, susipažin ęs su pagrindinėmis teisinėmis sistemomis, kaip antai civilinis kodeksas, baudžiamoji teisė ir komercinė teisė."
+    },
+    "头像": {
+        "src": "头像",
+        "dst": "Avataras"
+    },
+    "请选择": {
+        "src": "请选择",
+        "dst": "Pasirinkite"
+    },
+    "保存": {
+        "src": "保存",
+        "dst": "Išsaugoti"
+    },
+    "请为您的智能体设定提示词": {
+        "src": "请为您的智能体设定提示词",
+        "dst": "Nurodykite greitus žodžius savo agentui"
+    },
+    "请选择嵌入模型": {
+        "src": "请选择嵌入模型",
+        "dst": "Pasirinkite įterpimo modelį"
+    },
+    "第三方API配置": {
+        "src": "第三方API配置",
+        "dst": "Trečiosios šalies API konfigūracija"
+    },
+    "智能体创建成功": {
+        "src": "智能体创建成功",
+        "dst": "Pažangas agentas sukurtas sėkmingai"
+    },
+    "智能体修改成功": {
+        "src": "智能体修改成功",
+        "dst": "Pažangasis veiksnys sėkmingai pakeistas"
+    },
+    "是否确认删除智能体[{0}]?删除后无法恢复": {
+        "src": "是否确认删除智能体[{0}]?删除后无法恢复",
+        "dst": "Ar tikrai ištrinsite agent ą [{0}]? Negalima atkurti po ištrinimo"
+    },
+    "智能体删除成功": {
+        "src": "智能体删除成功",
+        "dst": "Pažangasis agentas sėkmingai ištrintas"
+    },
+    "您当前使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Šiuo metu naudojamas modelis buvo išjungtas arba ištrintas. Prašome iš naujo įjungti arba perjungti modelį."
+    },
+    "请选择或安装接入模型": {
+        "src": "请选择或安装接入模型",
+        "dst": "Pasirinkite arba įdiekite prieigos model į"
+    },
+    "当前对话使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "当前对话使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Modelis, naudojamas dabartiniame pokalbyje, buvo išjungtas arba ištrintas. Prašome iš naujo įjungti arba perjungti modelį"
+    },
+    "模型{0}不存在，请添加本地模型或第三方模型api": {
+        "src": "模型{0}不存在，请添加本地模型或第三方模型api",
+        "dst": "Pavyzdžio {0} nėra, pridėkite vietinį model į arba trečiosios šalies modelį API"
+    },
+    "模型管理器": {
+        "src": "模型管理器",
+        "dst": "Modelių valdytojas"
+    },
+    "模型存储位置": {
+        "src": "模型存储位置",
+        "dst": "Pavyzdžio saugojimo vieta"
+    },
+    "选择": {
+        "src": "选择",
+        "dst": "pasirinkti"
+    },
+    "请选择模型管理器": {
+        "src": "请选择模型管理器",
+        "dst": "Pasirinkite modelio valdytoją"
+    },
+    "请选择模型管理器安装路径": {
+        "src": "请选择模型管理器安装路径",
+        "dst": "Pasirinkite modelio valdytojo įrengimo kelią"
+    },
+    "图形": {
+        "src": "图形",
+        "dst": "grafinis"
+    },
+    "源码": {
+        "src": "源码",
+        "dst": "šaltinio kodas"
+    },
+    "mermaid解析失败,请检查语法": {
+        "src": "mermaid解析失败,请检查语法",
+        "dst": "Mermaid parsing failed, please check the syntax"
+    },
+    "Ollama接口地址": {
+        "src": "Ollama接口地址",
+        "dst": "Olamos sąsajos adresas"
+    },
+    "当前ollama地址不可用": {
+        "src": "当前ollama地址不可用",
+        "dst": "Dabartinis ollama adresas nėra"
+    },
+    "新手指引": {
+        "src": "新手指引",
+        "dst": "Pradėtojo vadovas"
+    },
+    "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
+        "src": "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
+        "dst": "Sveiki atvykę į AingDesk, paprastas ir lengvai naudojamas AI asistentas, kuris remia žinių bazę, API model į, dalijimąsi, internetinę paiešką ir pažangiuosius agentus. Ši programinė įranga yra atviras šaltinis ir nemokamas, ir mes laukiame jūsų dalijimosi programine įranga su kitais, kad paremtume mūsų vystymąsi."
+    },
+    "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
+        "src": "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
+        "dst": "AingDesk yra naujas AI projektas, kuris vis dar siekia spartaus augimo. Jei susiduriate su kokiomis nors problemomis naudojant programinę įrangą arba turi kokių nors funkcinių reikalavimų programinei įrangai, galite prisijungti prie mūsų WeChat grupės, kad mums duotume grįžtamąją informaciją."
+    },
+    "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。": {
+        "src": "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。",
+        "dst": "Galiausiai galite mums suteikti žvaigždę mūsų atvirojo kodo projektui. Jūsų raginimas mums labai svarbus tęsti atvirojo kodo projektų kartojimą. Ačiū."
+    },
+    "去github点星星": {
+        "src": "去github点星星",
+        "dst": "Eiti į GitHub ir paspausti žvaigždes"
+    },
+    "您可以在": {
+        "src": "您可以在",
+        "dst": "Gali"
+    },
+    "中关闭新手指引": {
+        "src": "中关闭新手指引",
+        "dst": "Uždaryti pradininko vadovą viduryje"
+    },
+    "文档删除失败": {
+        "src": "文档删除失败",
+        "dst": "Nepavyko ištrinti dokumento"
+    },
+    "设置成功": {
+        "src": "设置成功",
+        "dst": "Sėkmingas nustatymas"
+    },
+    "分段标识符": {
+        "src": "分段标识符",
+        "dst": "Segmento identifikatorius"
+    },
+    "分段最大长度": {
+        "src": "分段最大长度",
+        "dst": "Didžiausias segmento ilgis"
+    },
+    "分段重叠长度": {
+        "src": "分段重叠长度",
+        "dst": "Segmento dubliavimo ilgis"
+    },
+    "分段标识符支持函正则表达式，如": {
+        "src": "分段标识符支持函正则表达式，如",
+        "dst": "Segment ų identifikatoriai palaiko reguliarias išraiškas, pavyzdžiui,"
+    },
+    "正则表达式无需添加修饰符，默认会自动添加g修饰符": {
+        "src": "正则表达式无需添加修饰符，默认会自动添加g修饰符",
+        "dst": "Reguliarios išraiškos nereikalauja pridėti modifikatorių ir automatiškai pridės modifikatorių \"g\"."
+    },
+    "分段重叠长度建议为分段最大长度的10%到20%": {
+        "src": "分段重叠长度建议为分段最大长度的10%到20%",
+        "dst": "Rekomenduojamas segment ų dubliavimo ilgis yra 10–20 % didžiausio segmento ilgio."
+    },
+    "选择文档进行预览": {
+        "src": "选择文档进行预览",
+        "dst": "Pasirinkite dokumentą, skirtą išankstiniam peržiūrėjimui"
+    },
+    "预览": {
+        "src": "预览",
+        "dst": "Peržiūra"
+    },
+    "分段最大长度不能小于20": {
+        "src": "分段最大长度不能小于20",
+        "dst": "Didžiausias segmento ilgis negali būti mažesnis kaip 20"
+    },
+    "分段最大长度不能大于1000": {
+        "src": "分段最大长度不能大于1000",
+        "dst": "Didžiausias segmento ilgis negali viršyti 1000"
+    },
+    "请填写分段最大长度": {
+        "src": "请填写分段最大长度",
+        "dst": "Prašome užpildyti didžiausią segmento ilgį"
+    },
+    "分段重叠长度不能小于0": {
+        "src": "分段重叠长度不能小于0",
+        "dst": "Skirtingas segmentų ilgis negali būti mažesnis kaip 0"
+    },
+    "分段重叠长度不能大于分段最大长度": {
+        "src": "分段重叠长度不能大于分段最大长度",
+        "dst": "Skirtingas segmentų ilgis negali viršyti didžiausio segmentų ilgio"
+    },
+    "请填写分段重叠长度": {
+        "src": "请填写分段重叠长度",
+        "dst": "Prašome užpildyti tarpusavio segmentų ilgį"
+    },
+    "请填写分段标识符": {
+        "src": "请填写分段标识符",
+        "dst": "Prašome užpildyti segmento identifikatorių"
+    },
+    "文档分片设置": {
+        "src": "文档分片设置",
+        "dst": "Dokumentų pasidalijimo nustatymai"
+    },
+    "继续添加文件": {
+        "src": "继续添加文件",
+        "dst": "Toliau pridėti failus"
+    },
+    "请选择文件": {
+        "src": "请选择文件",
+        "dst": "Pasirinkite failą"
+    },
+    "最大召唤数量": {
+        "src": "最大召唤数量",
+        "dst": "Didžiausias suvestinis kiekis"
+    },
+    "召回精度": {
+        "src": "召回精度",
+        "dst": "Atšaukimo tikslumas"
+    },
+    "文档解析失败": {
+        "src": "文档解析失败",
+        "dst": "Nepavyko analizuoti dokumento"
+    },
+    "文档解析成功,等待嵌入": {
+        "src": "文档解析成功,等待嵌入",
+        "dst": "Dokumentų analizavimas sėkmingas, laukiant įterpimo"
+    },
+    "数据存储位置": {
+        "src": "数据存储位置",
+        "dst": "Duomenų saugojimo vieta"
+    },
+    "更改": {
+        "src": "更改",
+        "dst": "pokyčiai"
+    },
+    "如何更好的使用知识库?": {
+        "src": "如何更好的使用知识库?",
+        "dst": "Kaip geriau panaudoti žinių bazę?"
+    },
+    "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件": {
+        "src": "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件",
+        "dst": "Perkeldami aplankus bus perkelti duomenys iš senojo aplanko į naują aplanką, kuris gali trukti 5- 10 minučių priklausomai nuo duomenų dydžio. Prašome neišdaryti programinės įrangos perėjimo proceso metu."
+    },
+    "选择新位置": {
+        "src": "选择新位置",
+        "dst": "Pasirinkite naują vietą"
+    },
+    "数据迁移失败，请重试": {
+        "src": "数据迁移失败，请重试",
+        "dst": "Duomenų perdavimas nepavyko, prašome pabandyti dar kartą"
+    },
+    "数据迁移成功": {
+        "src": "数据迁移成功",
+        "dst": "Duomenų perdavimas sėkmingas"
+    },
+    "请勿关闭软件,否则将导致软件异常": {
+        "src": "请勿关闭软件,否则将导致软件异常",
+        "dst": "Neuždarykite programinės įrangos, kitaip ji gali sukelti programinės įrangos anomalijas."
+    },
+    "等待复制": {
+        "src": "等待复制",
+        "dst": "Laukiama replikacijos"
+    },
+    "总大小": {
+        "src": "总大小",
+        "dst": "bendras dydis"
+    },
+    "速度": {
+        "src": "速度",
+        "dst": "greitis"
+    },
+    "准备迁移数据": {
+        "src": "准备迁移数据",
+        "dst": "Pasirengimas migracijos duomenims"
+    },
+    "迁移数据中": {
+        "src": "迁移数据中",
+        "dst": "Migracijos duomenys"
+    },
+    "选择工具": {
+        "src": "选择工具",
+        "dst": "Pasirinkite įrankius"
+    },
+    "工具": {
+        "src": "工具",
+        "dst": "įrankis"
+    },
+    "模型选择": {
+        "src": "模型选择",
+        "dst": "modelio atranka"
+    },
+    "搜索模型": {
+        "src": "搜索模型",
+        "dst": "Paieškos modelis"
+    },
+    "常用模型": {
+        "src": "常用模型",
+        "dst": "Bendri modeliai"
+    },
+    "不使用": {
+        "src": "不使用",
+        "dst": "Nenaudojama"
+    },
+    "新分享": {
+        "src": "新分享",
+        "dst": "Naujas pasidalijimas"
+    },
+    "最大召回数量": {
+        "src": "最大召回数量",
+        "dst": "Didžiausias susigrąžinimo kiekis"
+    },
+    "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条": {
+        "src": "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条",
+        "dst": "Didžiausias grąžų skaičius ieškant žinių bazės rekomenduojamas būti 3 vietos modeliams ir 5 internetiniams modeliams."
+    },
+    "自动": {
+        "src": "自动",
+        "dst": "automatinis"
+    },
+    "自定义": {
+        "src": "自定义",
+        "dst": "pritaikyti"
+    },
+    "请输入分隔符": {
+        "src": "请输入分隔符",
+        "dst": "Įveskite ribotuvą"
+    },
+    "正在优化知识库,这可能需要几分钟到十几分钟......": {
+        "src": "正在优化知识库,这可能需要几分钟到十几分钟......",
+        "dst": "Mes optimizuojame žinių bazę, kuri gali užtrukti keletą minučių iki tuzinos minučių"
+    },
+    "上传知识库文档": {
+        "src": "上传知识库文档",
+        "dst": "Atsiųsti žinių bazės dokumentą"
+    },
+    "请选择模型管理器的安装路径": {
+        "src": "请选择模型管理器的安装路径",
+        "dst": "Pasirinkite modelio valdytojo įrengimo kelią"
+    },
+    "优化": {
+        "src": "优化",
+        "dst": "optimizuoti"
+    },
+    "增强索引,并释放多余的空间占用": {
+        "src": "增强索引,并释放多余的空间占用",
+        "dst": "Didinti indeksavimą ir palengvinti pernelyg didelį kosmoso užimtumą"
+    },
+    "反馈": {
+        "src": "反馈",
+        "dst": "grįžtamoji informacija"
+    },
+    "删除MCP服务器": {
+        "src": "删除MCP服务器",
+        "dst": "Ištrinti MCP server į"
+    },
+    "是否可用": {
+        "src": "是否可用",
+        "dst": "Ar jis prieinamas"
+    },
+    "请输入MCP服务器名称": {
+        "src": "请输入MCP服务器名称",
+        "dst": "Įrašykite MCP serverio pavadinimą"
+    },
+    "请输入内容": {
+        "src": "请输入内容",
+        "dst": "Įveskite turinį"
+    },
+    "类型": {
+        "src": "类型",
+        "dst": "tipas"
+    },
+    "服务器地址": {
+        "src": "服务器地址",
+        "dst": "serverio adresas"
+    },
+    "请输入服务器URL地址": {
+        "src": "请输入服务器URL地址",
+        "dst": "Įveskite serverio URL adresą"
+    },
+    "程序类型": {
+        "src": "程序类型",
+        "dst": "Programos tipas"
+    },
+    "当前未安装Nodejs环境，点击": {
+        "src": "当前未安装Nodejs环境，点击",
+        "dst": "Nodejs aplinkos šiuo metu nėra įdiegta, spauskite"
+    },
+    "命令": {
+        "src": "命令",
+        "dst": "komanda"
+    },
+    "可执行命令": {
+        "src": "可执行命令",
+        "dst": "Vykdomoji komanda"
+    },
+    "参数": {
+        "src": "参数",
+        "dst": "parametras"
+    },
+    "环境变量": {
+        "src": "环境变量",
+        "dst": "aplinkos kintamasis"
+    },
+    "正在安装环境,这可能需要几分钟......": {
+        "src": "正在安装环境,这可能需要几分钟......",
+        "dst": "Įdiegiant aplinką gali prireikti kelių minučių"
+    },
+    "请输入可执行命令": {
+        "src": "请输入可执行命令",
+        "dst": "Įveskite vykdomąją komandą"
+    },
+    "编辑配置文件": {
+        "src": "编辑配置文件",
+        "dst": "Keisti profilį"
+    },
+    "编辑MCP服务器配置的JSON。保存前请确保格式正确。": {
+        "src": "编辑MCP服务器配置的JSON。保存前请确保格式正确。",
+        "dst": "Keisti JSON MCP serverio konfigūracijai. Prašome užtikrinti, kad formatas būtų teisingas prieš įrašant."
+    },
+    "添加服务器": {
+        "src": "添加服务器",
+        "dst": "Pridėti server į"
+    },
+    "新配置": {
+        "src": "新配置",
+        "dst": "nauja konfigūracija"
+    },
+    "环境安装成功": {
+        "src": "环境安装成功",
+        "dst": "Aplinkos įrengimas sėkmingas"
+    },
+    "环境安装失败": {
+        "src": "环境安装失败",
+        "dst": "Aplinkos įrengimas nepavyko"
+    },
+    "操作成功": {
+        "src": "操作成功",
+        "dst": "Operacija sėkminga"
+    },
+    "请先安装Node.js环境": {
+        "src": "请先安装Node.js环境",
+        "dst": "Prašome pirmiausia įdiegti Node.js aplinką"
+    },
+    "是否删除当前MCP服务器？": {
+        "src": "是否删除当前MCP服务器？",
+        "dst": "Ar norite ištrinti dabartinį MCP server į?"
+    },
+    "常规设置": {
+        "src": "常规设置",
+        "dst": "Bendrieji nustatymai"
+    },
+    "MCP服务器": {
+        "src": "MCP服务器",
+        "dst": "MCP serveris"
+    },
+    "修改模型": {
+        "src": "修改模型",
+        "dst": "Pakeisti model į"
+    },
+    "保存成功": {
+        "src": "保存成功",
+        "dst": "Sėkmingai išsaugoti"
+    },
+    "调用结果:": {
+        "src": "调用结果:",
+        "dst": "Skambinimo rezultatas:"
+    },
+    "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Dokumento apdorojimas sėkmingas, laukiant įterpimo. Laukimo laikas priklauso nuo failų skaičiaus, kuris gali trukti keletą minučių iki dešimčių minučių."
+    },
+    "正在嵌入中,请稍后...": {
+        "src": "正在嵌入中,请稍后...",
+        "dst": "Įterpimas vyksta, prašome palaukti"
+    }
+}

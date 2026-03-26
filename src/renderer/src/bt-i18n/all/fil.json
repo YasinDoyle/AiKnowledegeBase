@@ -1,0 +1,1342 @@
+{
+    "让我们开启一段新的对话吧": {
+        "src": "让我们开启一段新的对话吧",
+        "dst": "Magsimula tayo ng bagong pag-uusap"
+    },
+    "正在思考...": {
+        "src": "正在思考...",
+        "dst": "Pag-iisip tungkol"
+    },
+    "复制": {
+        "src": "复制",
+        "dst": "copy"
+    },
+    "暂无信息": {
+        "src": "暂无信息",
+        "dst": "Walang impormasyon sa kasalukuyan"
+    },
+    "重新生成": {
+        "src": "重新生成",
+        "dst": "Rebenerate"
+    },
+    "请输入对话内容": {
+        "src": "请输入对话内容",
+        "dst": "Pakiusap ipasok ang nilalaman ng pag-uusap"
+    },
+    "发送": {
+        "src": "发送",
+        "dst": "ipadala"
+    },
+    "停止生成": {
+        "src": "停止生成",
+        "dst": "Itigil ang paglikha"
+    },
+    "复制成功": {
+        "src": "复制成功",
+        "dst": "Magtagumpay ang kopya"
+    },
+    "请选择对应模型": {
+        "src": "请选择对应模型",
+        "dst": "Mangyaring piliin ang katulad na modelo"
+    },
+    "当前正在回答，请稍后": {
+        "src": "当前正在回答，请稍后",
+        "dst": "Sa kasalukuyang pagsagot, mangyaring maghintay ng sandali"
+    },
+    "点击[设置]安装模型": {
+        "src": "点击[设置]安装模型",
+        "dst": "Mag-click sa [Settings] upang i-install ang modelo"
+    },
+    "模型大小:": {
+        "src": "模型大小:",
+        "dst": "sukat ng modelo:"
+    },
+    "已下载:": {
+        "src": "已下载:",
+        "dst": "Downloaded:"
+    },
+    "速度:": {
+        "src": "速度:",
+        "dst": "Bilis:"
+    },
+    "引用": {
+        "src": "引用",
+        "dst": "quote"
+    },
+    "已复制": {
+        "src": "已复制",
+        "dst": "Copied"
+    },
+    "处理器:": {
+        "src": "处理器:",
+        "dst": "Processor:"
+    },
+    "内存:": {
+        "src": "内存:",
+        "dst": "Memory:"
+    },
+    "显卡:": {
+        "src": "显卡:",
+        "dst": "Graphics card:"
+    },
+    "建议:": {
+        "src": "建议:",
+        "dst": "Sumungkahi:"
+    },
+    "首次使用，请选择要安装的模型": {
+        "src": "首次使用，请选择要安装的模型",
+        "dst": "Para sa unang gamitin, mangyaring piliin ang modelo upang i-install"
+    },
+    "如:": {
+        "src": "如:",
+        "dst": "Halimbawa:"
+    },
+    "搜索": {
+        "src": "搜索",
+        "dst": "search"
+    },
+    "模型刪除中，请稍后": {
+        "src": "模型刪除中，请稍后",
+        "dst": "Maghintay"
+    },
+    "提示": {
+        "src": "提示",
+        "dst": "Mga Tips"
+    },
+    "检测到您没有安装模型管理器，是否立即安装？": {
+        "src": "检测到您没有安装模型管理器，是否立即安装？",
+        "dst": "Naintindihan na hindi ka naka-install ng Model Manager, gusto mo bang i-install ito ngayon?"
+    },
+    "暂不安装": {
+        "src": "暂不安装",
+        "dst": "Hindi naka-install temporaryo"
+    },
+    "立即安装": {
+        "src": "立即安装",
+        "dst": "I-install na ngayon"
+    },
+    "正在安装模型管理器，请稍后": {
+        "src": "正在安装模型管理器，请稍后",
+        "dst": "Inilagay ang Model Manager, mangyaring maghintay"
+    },
+    "大小:": {
+        "src": "大小:",
+        "dst": "laki:"
+    },
+    "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。": {
+        "src": "尝试重新选择下载节点，以优化下载速度，PS:不会丢失当前下载进度，将自动断点续传。",
+        "dst": "Subukan mong i-reselect ang download node upang optimize ang download speed, PS: Hindi nito mawawala ang kasalukuyang pag-unlad ng download at awtomatiko na ipagpatuloy mula sa breakpoint."
+    },
+    "所有": {
+        "src": "所有",
+        "dst": "Lahat sila"
+    },
+    "已安装": {
+        "src": "已安装",
+        "dst": "na-install"
+    },
+    "模型": {
+        "src": "模型",
+        "dst": "Modelo"
+    },
+    "大小": {
+        "src": "大小",
+        "dst": "paper size"
+    },
+    "简介": {
+        "src": "简介",
+        "dst": "maikling pagpapakilala"
+    },
+    "功能": {
+        "src": "功能",
+        "dst": "paper size"
+    },
+    "操作": {
+        "src": "操作",
+        "dst": "operasyon"
+    },
+    "刪除": {
+        "src": "刪除",
+        "dst": "Stock label"
+    },
+    "安装": {
+        "src": "安装",
+        "dst": "i-install"
+    },
+    "浅色模式": {
+        "src": "浅色模式",
+        "dst": "liwanag na kulay mode"
+    },
+    "深色模式": {
+        "src": "深色模式",
+        "dst": "Dark Mode"
+    },
+    "对话": {
+        "src": "对话",
+        "dst": "dialog"
+    },
+    "对话内容": {
+        "src": "对话内容",
+        "dst": "Kalaman ng dialog"
+    },
+    "新对话": {
+        "src": "新对话",
+        "dst": "Bagong dialog"
+    },
+    "模型管理": {
+        "src": "模型管理",
+        "dst": "Model management"
+    },
+    "设置": {
+        "src": "设置",
+        "dst": "itakda"
+    },
+    "删除对话": {
+        "src": "删除对话",
+        "dst": "Stock label"
+    },
+    "是否确认删除当前对话": {
+        "src": "是否确认删除当前对话",
+        "dst": "Sigurado ka bang i-delete ang kasalukuyang pag-uusap"
+    },
+    "取消": {
+        "src": "取消",
+        "dst": "kanselahin"
+    },
+    "删除": {
+        "src": "删除",
+        "dst": "delete"
+    },
+    "修改对话标题": {
+        "src": "修改对话标题",
+        "dst": "Baguhin ang pamagat ng dialog"
+    },
+    "请输入新的对话标题": {
+        "src": "请输入新的对话标题",
+        "dst": "Pakiusap ipasok ang bagong pamagat ng pag-uusap"
+    },
+    "确认": {
+        "src": "确认",
+        "dst": "confirm"
+    },
+    "修改标题": {
+        "src": "修改标题",
+        "dst": "Baguhin ang pamagat"
+    },
+    "已深度思考": {
+        "src": "已深度思考",
+        "dst": "Malalim pondered"
+    },
+    "对话已停止": {
+        "src": "对话已停止",
+        "dst": "Ang pag-uusap ay tumigil"
+    },
+    "对话删除成功": {
+        "src": "对话删除成功",
+        "dst": "Ang dialog ay matagumpay na nabalis"
+    },
+    "对话删除失败：": {
+        "src": "对话删除失败：",
+        "dst": "Nabigo ang pagtanggal ng dialog:"
+    },
+    "对话标题修改成功": {
+        "src": "对话标题修改成功",
+        "dst": "Ang pamagat ng dialog ay matagumpay na binago"
+    },
+    "对话标题修改失败:": {
+        "src": "对话标题修改失败:",
+        "dst": "Nabigo ang pagbabago sa pamagat ng dialog:"
+    },
+    "安装成功": {
+        "src": "安装成功",
+        "dst": "Ang pag-install ay matagumpay"
+    },
+    "正在连接，请稍候...": {
+        "src": "正在连接，请稍候...",
+        "dst": "Mag-uugnay, mangyaring maghintay"
+    },
+    "等待下载:{0}，请稍候...": {
+        "src": "等待下载:{0}，请稍候...",
+        "dst": "Hinihintay ang download: {0}, pakiusap maghintay"
+    },
+    "正在下载:{0}，请稍候...": {
+        "src": "正在下载:{0}，请稍候...",
+        "dst": "Nag-download: {0}, pakiusap maghintay"
+    },
+    "正在安装:{0}，请稍候...": {
+        "src": "正在安装:{0}，请稍候...",
+        "dst": "Inilagay: {0}, mangyaring maghintay"
+    },
+    "安装失败": {
+        "src": "安装失败",
+        "dst": "Nabigo ang pag-install"
+    },
+    "模型删除成功": {
+        "src": "模型删除成功",
+        "dst": "Ang modelo ay matagumpay na naialis"
+    },
+    "模型删除失败:{0}": {
+        "src": "模型删除失败:{0}",
+        "dst": "Nabigo ang pagtanggal ng modelo: {0}"
+    },
+    "模型异常，请重新生成": {
+        "src": "模型异常，请重新生成",
+        "dst": "Maliban sa modelo, mangyaring magbago"
+    },
+    "模型管理器安装成功": {
+        "src": "模型管理器安装成功",
+        "dst": "Ang Model Manager ay matagumpay na naka-install"
+    },
+    "模型管理器安装失败": {
+        "src": "模型管理器安装失败",
+        "dst": "Nabigo ang pag-install ng Model Manager"
+    },
+    "请求出错，状态码:": {
+        "src": "请求出错，状态码:",
+        "dst": "May pagkakamali, status code:"
+    },
+    "请求发生错误": {
+        "src": "请求发生错误",
+        "dst": "Naganap ang pagkakamali sa paghingi"
+    },
+    "可用": {
+        "src": "可用",
+        "dst": "available"
+    },
+    "分享": {
+        "src": "分享",
+        "dst": "share"
+    },
+    "是否确认删除模型，该操作不可逆？": {
+        "src": "是否确认删除模型，该操作不可逆？",
+        "dst": "Sigurado ka bang i-delete ang modelo? Ang operasyon na ito ay hindi babalik?"
+    },
+    "将AingDesk分享给好友一起使用": {
+        "src": "将AingDesk分享给好友一起使用",
+        "dst": "Ibahagi ang AingDesk sa mga kaibigan na gamitin nang magkasama"
+    },
+    "请输入名称": {
+        "src": "请输入名称",
+        "dst": "Pakiusap ipasok ang pangalan"
+    },
+    "修改分享": {
+        "src": "修改分享",
+        "dst": "Baguhin ang Share"
+    },
+    "是否确认删除当前分享": {
+        "src": "是否确认删除当前分享",
+        "dst": "Sigurado ka bang i-delete ang kasalukuyang bahagi"
+    },
+    "名称": {
+        "src": "名称",
+        "dst": "pangalan"
+    },
+    "访问地址": {
+        "src": "访问地址",
+        "dst": "Access address"
+    },
+    "修改": {
+        "src": "修改",
+        "dst": "ayusin"
+    },
+    "正在下载": {
+        "src": "正在下载",
+        "dst": "Kinukuha"
+    },
+    "正在选择下载节点，请稍后": {
+        "src": "正在选择下载节点，请稍后",
+        "dst": "Pagpipili ng download node, mangyaring maghintay"
+    },
+    "正在下载模型管理器，请稍后": {
+        "src": "正在下载模型管理器，请稍后",
+        "dst": "Kinukuha ang Model Manager, mangyaring maghintay"
+    },
+    "正在安装模型管理器，可能要几分钟时间，请耐心等待": {
+        "src": "正在安装模型管理器，可能要几分钟时间，请耐心等待",
+        "dst": "Pag-install ng Model Manager, maaaring magtatagal ng ilang minuto, mangyaring maging pasyente"
+    },
+    "创建分享成功": {
+        "src": "创建分享成功",
+        "dst": "Ang matagumpay na pagbabahagi"
+    },
+    "修改成功": {
+        "src": "修改成功",
+        "dst": "Binago matagumpay"
+    },
+    "正在执行联网搜索...": {
+        "src": "正在执行联网搜索...",
+        "dst": "Kinukuha ang paghahanap ng network"
+    },
+    "已联网搜索{0}个网址": {
+        "src": "已联网搜索{0}个网址",
+        "dst": "Hinahanap ang {0} URLs online"
+    },
+    "不使用联网搜索": {
+        "src": "不使用联网搜索",
+        "dst": "Huwag gamitin ang paghahanap sa internet"
+    },
+    "不联网": {
+        "src": "不联网",
+        "dst": "Hindi konektado sa internet"
+    },
+    "百度": {
+        "src": "百度",
+        "dst": "Baidu"
+    },
+    "搜狗": {
+        "src": "搜狗",
+        "dst": "Sogou"
+    },
+    "谷歌": {
+        "src": "谷歌",
+        "dst": "Google"
+    },
+    "DuckDuckGo": {
+        "src": "DuckDuckGo",
+        "dst": "DuckDuckGo"
+    },
+    "360搜索": {
+        "src": "360搜索",
+        "dst": "360 Paghahanap"
+    },
+    "正搜索...": {
+        "src": "正搜索...",
+        "dst": "Paghahanap"
+    },
+    "联网搜索": {
+        "src": "联网搜索",
+        "dst": "Paghahanap online"
+    },
+    "上传文件": {
+        "src": "上传文件",
+        "dst": "I-upload ang mga file"
+    },
+    "上传时间": {
+        "src": "上传时间",
+        "dst": "i-upload"
+    },
+    "AI摘要": {
+        "src": "AI摘要",
+        "dst": "Stock label"
+    },
+    "共参考{0}份资料": {
+        "src": "共参考{0}份资料",
+        "dst": "Kabilang ng mga materyales ng reference {0}"
+    },
+    "新建对话": {
+        "src": "新建对话",
+        "dst": "Maglikha ng bagong pag-uusap"
+    },
+    "清空对话": {
+        "src": "清空对话",
+        "dst": "Linisin ang pag-uusap"
+    },
+    "知识库": {
+        "src": "知识库",
+        "dst": "knowledge base"
+    },
+    "新建知识库": {
+        "src": "新建知识库",
+        "dst": "Maglikha ng bagong pangunahing kaalaman"
+    },
+    "语言选择": {
+        "src": "语言选择",
+        "dst": "pagpili ng wika"
+    },
+    "默认搜索引擎": {
+        "src": "默认搜索引擎",
+        "dst": "default search engine"
+    },
+    "加入AingDesk交流群": {
+        "src": "加入AingDesk交流群",
+        "dst": "Magsumali sa grupong komunikasyon ng AingDesk"
+    },
+    "当前版本": {
+        "src": "当前版本",
+        "dst": "kasalukuyang bersyon"
+    },
+    "上传文件夹": {
+        "src": "上传文件夹",
+        "dst": "I-upload ang folder"
+    },
+    "点击上传": {
+        "src": "点击上传",
+        "dst": "Mag-click para i-upload"
+    },
+    "文件支持类型": {
+        "src": "文件支持类型",
+        "dst": "Mga uri ng file support"
+    },
+    "{0}的文件类型不支持": {
+        "src": "{0}的文件类型不支持",
+        "dst": "Ang uri ng file ng {0} ay hindi suportado"
+    },
+    "知识库创建成功": {
+        "src": "知识库创建成功",
+        "dst": "Ang knowledge base ay naglikha ng matagumpay"
+    },
+    "知识库创建失败": {
+        "src": "知识库创建失败",
+        "dst": "Nabigo ang paglikha ng Knowledge Base"
+    },
+    "获取知识库列表失败，请重试": {
+        "src": "获取知识库列表失败，请重试",
+        "dst": "Hindi makuha ang listahan ng base ng kaalaman, subukan muli"
+    },
+    "是否确认删除知识库{0}及其下的所有文档？该操作不可逆": {
+        "src": "是否确认删除知识库{0}及其下的所有文档？该操作不可逆",
+        "dst": "Sigurado ka bang i-delete ang knowledge base {0} at ang lahat ng dokumento sa ilalim nito? Ang operasyon na ito ay hindi maibabalik"
+    },
+    "删除知识库成功": {
+        "src": "删除知识库成功",
+        "dst": "Ang matagumpay na pinaalis na knowledge base"
+    },
+    "删除知识库失败，请重试": {
+        "src": "删除知识库失败，请重试",
+        "dst": "Hindi ma-delete ang knowledge base, mangyaring subukan muli"
+    },
+    "修改知识库成功": {
+        "src": "修改知识库成功",
+        "dst": "Ang matagumpay na pagbabago ng base ng kaalaman"
+    },
+    "修改知识库失败，请重试": {
+        "src": "修改知识库失败，请重试",
+        "dst": "Nabigo sa pagbabago ng knowledge base, mangyaring subukan muli"
+    },
+    "正在解析文档，这可能要几分钟时间...": {
+        "src": "正在解析文档，这可能要几分钟时间...",
+        "dst": "Ang pagsusuri ng dokumento ay maaaring magtatagal ng ilang minuto"
+    },
+    "是否确认删除文档{0}？该操作不可逆": {
+        "src": "是否确认删除文档{0}？该操作不可逆",
+        "dst": "Sigurado ka bang i-delete ang dokumento {0}? Ang operasyon na ito ay hindi maibabalik"
+    },
+    "文档删除成功": {
+        "src": "文档删除成功",
+        "dst": "Ang dokumento ay matagumpay na naialis"
+    },
+    "{0}个文件": {
+        "src": "{0}个文件",
+        "dst": "{0} file"
+    },
+    "正在搜索...": {
+        "src": "正在搜索...",
+        "dst": "Hinahanap"
+    },
+    "请输入知识库名称": {
+        "src": "请输入知识库名称",
+        "dst": "Mangyaring ipasok ang pangalan ng base ng kaalaman"
+    },
+    "描述": {
+        "src": "描述",
+        "dst": "description"
+    },
+    "请输入知识库描述": {
+        "src": "请输入知识库描述",
+        "dst": "Mangyaring ipasok ang paglalarawan ng base ng kaalaman"
+    },
+    "嵌入模型": {
+        "src": "嵌入模型",
+        "dst": "Embedded model"
+    },
+    "选择模型": {
+        "src": "选择模型",
+        "dst": "Piliin ang Modelo"
+    },
+    "选择知识库": {
+        "src": "选择知识库",
+        "dst": "Piliin ang Knowledge Base"
+    },
+    "文档嵌入中，请稍后": {
+        "src": "文档嵌入中，请稍后",
+        "dst": "Pag-embed ng dokumento, mangyaring maghintay"
+    },
+    "已嵌入完成, 可正常调用": {
+        "src": "已嵌入完成, 可正常调用",
+        "dst": "query-sort"
+    },
+    "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "正在嵌入中, 等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Ang pag-uumpisa ay nagaganap, ang oras ng paghihintay ay depende sa bilang ng mga file, na maaaring magtatagal ng ilang minuto hanggang sampung minuto"
+    },
+    "第三方模型API": {
+        "src": "第三方模型API",
+        "dst": "Third party model API"
+    },
+    "本地模型": {
+        "src": "本地模型",
+        "dst": "Lokal na modelo"
+    },
+    "添加模型服务商": {
+        "src": "添加模型服务商",
+        "dst": "Idagdag ang modelong provider ng serbisyo"
+    },
+    "使用教程": {
+        "src": "使用教程",
+        "dst": "Gamit ang mga Tutorial"
+    },
+    "删除服务商": {
+        "src": "删除服务商",
+        "dst": "Stock label"
+    },
+    "API密钥": {
+        "src": "API密钥",
+        "dst": "Key ng API"
+    },
+    "请输入API密钥": {
+        "src": "请输入API密钥",
+        "dst": "Paki-pasok ang API key"
+    },
+    "检查": {
+        "src": "检查",
+        "dst": "suriin"
+    },
+    "点次获取密钥": {
+        "src": "点次获取密钥",
+        "dst": "Klik para makuha ang susi"
+    },
+    "API地址": {
+        "src": "API地址",
+        "dst": "API address"
+    },
+    "请输入API地址": {
+        "src": "请输入API地址",
+        "dst": "Paki-enter ang address ng API"
+    },
+    "示例": {
+        "src": "示例",
+        "dst": "Halimbawa"
+    },
+    "保存API": {
+        "src": "保存API",
+        "dst": "I-save ang API"
+    },
+    "默认从/models获取所有模型": {
+        "src": "默认从/models获取所有模型",
+        "dst": "Sa pamamagitan ng default, lahat ng modelo ay nakukuha mula sa/modelo"
+    },
+    "开关所有": {
+        "src": "开关所有",
+        "dst": "Baguhin ang lahat"
+    },
+    "修改别名": {
+        "src": "修改别名",
+        "dst": "Baguhin ang pangalan"
+    },
+    "当前服务商下属暂无模型可用": {
+        "src": "当前服务商下属暂无模型可用",
+        "dst": "Walang mga modelo para sa mga subordinate ng service provider"
+    },
+    "添加模型": {
+        "src": "添加模型",
+        "dst": "Idagdag ang Modelo"
+    },
+    "模型ID": {
+        "src": "模型ID",
+        "dst": "ID ng Model"
+    },
+    "请输入模型ID": {
+        "src": "请输入模型ID",
+        "dst": "Pakipasok ang ID ng modelo"
+    },
+    "模型别名": {
+        "src": "模型别名",
+        "dst": "Pangalan ng modelo"
+    },
+    "请输入模型别名": {
+        "src": "请输入模型别名",
+        "dst": "Pakiusap ipasok ang pangalan ng modelo"
+    },
+    "模型功能": {
+        "src": "模型功能",
+        "dst": "Fungsyalidad ng modelo"
+    },
+    "添加": {
+        "src": "添加",
+        "dst": "dagdag"
+    },
+    "供应商名称": {
+        "src": "供应商名称",
+        "dst": "Pangalan ng Supplier"
+    },
+    "接口地址": {
+        "src": "接口地址",
+        "dst": "Address ng interface"
+    },
+    "需要兼容openAI格式的接口": {
+        "src": "需要兼容openAI格式的接口",
+        "dst": "Kailangang magkaroon ng interface na kompatible sa openAI format"
+    },
+    "密钥": {
+        "src": "密钥",
+        "dst": "lihim na key"
+    },
+    "请选择模型功能": {
+        "src": "请选择模型功能",
+        "dst": "Mangyaring piliin ang modelong fungsyon"
+    },
+    "请输入供应商名称": {
+        "src": "请输入供应商名称",
+        "dst": "Paki-enter ang pangalan ng supplier"
+    },
+    "模型添加成功": {
+        "src": "模型添加成功",
+        "dst": "Ang modelo ay nagdagdag matagumpay"
+    },
+    "是否确定删除当前模型？该操作不可逆": {
+        "src": "是否确定删除当前模型？该操作不可逆",
+        "dst": "Sigurado ka bang i-delete ang kasalukuyang modelo? Ang operasyon na ito ay hindi maibabalik"
+    },
+    "请填写完整配置信息": {
+        "src": "请填写完整配置信息",
+        "dst": "Mangyaring punan ang kumpletong impormasyon sa configuration"
+    },
+    "配置保存成功": {
+        "src": "配置保存成功",
+        "dst": "Ang configuration ay nagtagumpay"
+    },
+    "缺少API密钥": {
+        "src": "缺少API密钥",
+        "dst": "Walang API key"
+    },
+    "模型启用成功": {
+        "src": "模型启用成功",
+        "dst": "Ang modelo ay nagtagumpay"
+    },
+    "模型禁用成功": {
+        "src": "模型禁用成功",
+        "dst": "Ang modelo ay matagumpay na inaalis"
+    },
+    "已启用全部模型": {
+        "src": "已启用全部模型",
+        "dst": "Lahat ng mga modelo ay naka-enabled"
+    },
+    "已禁用全部模型": {
+        "src": "已禁用全部模型",
+        "dst": "Lahat ng mga modelo ay disabled"
+    },
+    "添加成功": {
+        "src": "添加成功",
+        "dst": "Magdagdag matagumpay"
+    },
+    "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！": {
+        "src": "是否删除当前服务商? 该操作会同时删除下属所有模型，请谨慎操作！",
+        "dst": "Gusto mo bang i-delete ang kasalukuyang provider ng serbisyo? Ang operasyon na ito ay magpapaalis ng lahat ng mga subordinate na modelo, mangyaring magpatuloy ng maingat!"
+    },
+    "删除成功": {
+        "src": "删除成功",
+        "dst": "Mag-alis na matagumpay"
+    },
+    "一键把AI模型部署在你的电脑": {
+        "src": "一键把AI模型部署在你的电脑",
+        "dst": "Gamitin ang mga AI modelo sa inyong kompyuter gamit ang isang click lamang"
+    },
+    "免费开源无限制": {
+        "src": "免费开源无限制",
+        "dst": "Libreng bukas na source na walang paghihigpit"
+    },
+    "可在线分享他人使用": {
+        "src": "可在线分享他人使用",
+        "dst": "Maaaring ibinahagi sa internet para sa iba gamitin"
+    },
+    "支持联网大幅度提升答案质量": {
+        "src": "支持联网大幅度提升答案质量",
+        "dst": "Suportahan ang networking upang mabuti ang kalidad ng sagot"
+    },
+    "使用第三方模型": {
+        "src": "使用第三方模型",
+        "dst": "Gamit ang mga modelo ng third party"
+    },
+    "使用本地模型": {
+        "src": "使用本地模型",
+        "dst": "Gamitin ang lokal na modelo"
+    },
+    "缺少API地址": {
+        "src": "缺少API地址",
+        "dst": "Walang API address"
+    },
+    "简单好用的AI助手": {
+        "src": "简单好用的AI助手",
+        "dst": "Isang simpleng at madaling gamitin na katulong sa AI"
+    },
+    "支持联网搜索和知识库": {
+        "src": "支持联网搜索和知识库",
+        "dst": "Suportahan ang online na paghahanap at kaalaman base"
+    },
+    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型": {
+        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型",
+        "dst": "Tip: Kung walang laman ang listahan ng pagbabahagi, ang serbisyo ng pagbabahagi ng koneksyon ay awtomatiko na itigil, at ang eksternal na network ay hindi maaaring makapag-access sa anumang modelo sa pamamagitan ng AingDesk sa oras na ito"
+    },
+    "上传附件": {
+        "src": "上传附件",
+        "dst": "I-upload ang mga attachments"
+    },
+    "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的[{0}]模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Ang [{0}] modelo na ginagamit mo ay naka-disable o naka-delete. Paki-enable o palitan muli ang mga modelo"
+    },
+    "请安装或接入嵌入模型": {
+        "src": "请安装或接入嵌入模型",
+        "dst": "Pakiusap i-install o i-connect ang embedded model"
+    },
+    "使用本地模型嵌入（推荐）": {
+        "src": "使用本地模型嵌入（推荐）",
+        "dst": "Gamitin ang local model embedding (ipinapahirapang)"
+    },
+    "请选择从Ollama安装-Embedding-安装bge-m3:latest": {
+        "src": "请选择从Ollama安装-Embedding-安装bge-m3:latest",
+        "dst": "Mangyaring pumili upang i-install mula sa Ollama - Embedding - I-install ng bge-m3: latest"
+    },
+    "使用第三方API提供模型嵌入": {
+        "src": "使用第三方API提供模型嵌入",
+        "dst": "Gamitin ang third party APIs upang magbigay ng model embedding"
+    },
+    "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动": {
+        "src": "请选择接入第三方模型,接入支持Embedding三方API,如硅基流动",
+        "dst": "Mangyaring pumili ng koneksyon sa mga modelong third party na suportahan ang Embedding third party APIs, tulad ng silicon-based mobility"
+    },
+    "从Ollama安装": {
+        "src": "从Ollama安装",
+        "dst": "I-install mula sa Ollama"
+    },
+    "接入第三方模型": {
+        "src": "接入第三方模型",
+        "dst": "Mag-integrate ang mga modelong third-party"
+    },
+    "已启用模型该服务商": {
+        "src": "已启用模型该服务商",
+        "dst": "Ang modelo ay naka-enabled para sa provider ng serbisyo na ito"
+    },
+    "已禁用模型该服务商": {
+        "src": "已禁用模型该服务商",
+        "dst": "Ang modelo ay disabled para sa provider ng serbisyo na ito"
+    },
+    "无记忆": {
+        "src": "无记忆",
+        "dst": "Walang Memory"
+    },
+    " 能提升单次回复质量，但大模型将没有上下文记忆": {
+        "src": " 能提升单次回复质量，但大模型将没有上下文记忆",
+        "dst": "Maaaring mabuti ang kalidad ng isang tugon, ngunit ang malaking modelo ay hindi magkakaroon ng kontekstual memory"
+    },
+    "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式": {
+        "src": "支持上传文件、图片(最大不超过20MB), 支持PDF、DOC、TXT等格式",
+        "dst": "Suportahan ang pag-upload ng mga file at mga larawan (hanggang 20MB), at suportahan ang mga formatong tulad ng PDF, DOC, TXT, atbp."
+    },
+    "附件总大小不能超过20MB": {
+        "src": "附件总大小不能超过20MB",
+        "dst": "Ang kabuuang sukat ng mga attachments ay hindi maaaring lampas sa 20MB"
+    },
+    "请选择知识库": {
+        "src": "请选择知识库",
+        "dst": "Mangyaring piliin ang isang pangunahing kaalaman"
+    },
+    "文档教程": {
+        "src": "文档教程",
+        "dst": "Tutorial ng Dokumento"
+    },
+    "查看知识库教程": {
+        "src": "查看知识库教程",
+        "dst": "Tingnan ang Knowledge Base Tutorial"
+    },
+    "智能体": {
+        "src": "智能体",
+        "dst": "Intelligent agent"
+    },
+    "创建智能体": {
+        "src": "创建智能体",
+        "dst": "Gumawa ng matalinong agent"
+    },
+    "我的智能体": {
+        "src": "我的智能体",
+        "dst": "Ang aking intelihente agent"
+    },
+    "预设模板": {
+        "src": "预设模板",
+        "dst": "Stock label"
+    },
+    "编辑": {
+        "src": "编辑",
+        "dst": "edit"
+    },
+    "请输入智能体名称": {
+        "src": "请输入智能体名称",
+        "dst": "Pakiusap ipasok ang pangalan ng intelihente na agent"
+    },
+    "人物设定": {
+        "src": "人物设定",
+        "dst": "disenyo ng karakter"
+    },
+    "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界": {
+        "src": "你是经过中国法律数据库训练的专业法律AI，熟悉民法典,刑法,商法等主要法律体系，支持合同审查,法律条文解读,诉讼策略建议，严格区分法律咨询与律师服务边界",
+        "dst": "Ikaw ay isang propesyonal na legal na AI na nagsasanay sa legal database ng Tsina, pamilyar sa mga malalaking sistema ng batas tulad ng Civil Code, Criminal Law, at Commercial Law."
+    },
+    "头像": {
+        "src": "头像",
+        "dst": "Litrato ng profile"
+    },
+    "请选择": {
+        "src": "请选择",
+        "dst": "Mangyaring piliin"
+    },
+    "保存": {
+        "src": "保存",
+        "dst": "save"
+    },
+    "请为您的智能体设定提示词": {
+        "src": "请为您的智能体设定提示词",
+        "dst": "Paki-set ang prompt na salita para sa iyong agent"
+    },
+    "请选择嵌入模型": {
+        "src": "请选择嵌入模型",
+        "dst": "Mangyaring piliin ang embedded model"
+    },
+    "第三方API配置": {
+        "src": "第三方API配置",
+        "dst": "Ang configuration ng API ng third party"
+    },
+    "智能体创建成功": {
+        "src": "智能体创建成功",
+        "dst": "Ang maliwanag na agent ay naglikha ng matagumpay"
+    },
+    "智能体修改成功": {
+        "src": "智能体修改成功",
+        "dst": "Ang intelihente agent ay nagbago matagumpay"
+    },
+    "是否确认删除智能体[{0}]?删除后无法恢复": {
+        "src": "是否确认删除智能体[{0}]?删除后无法恢复",
+        "dst": "Sigurado ka bang i-delete ang agent [{0}]? Hindi makapagbalik pagkatapos ng pagpadala"
+    },
+    "智能体删除成功": {
+        "src": "智能体删除成功",
+        "dst": "Ang inteligente agent ay matagumpay na nabalis"
+    },
+    "您当前使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "您当前使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Ang modelo na ginagamit mo ngayon ay disabled o nabalis. Paki-enable o palitan ang modelo"
+    },
+    "请选择或安装接入模型": {
+        "src": "请选择或安装接入模型",
+        "dst": "Mangyaring piliin o i-install ang access model"
+    },
+    "模型{0}不存在，请添加本地模型或第三方模型api": {
+        "src": "模型{0}不存在，请添加本地模型或第三方模型api",
+        "dst": "Walang modelo {0} na mayroon, mangyaring idagdag ang lokal na modelo o third-party model API"
+    },
+    "模型管理器": {
+        "src": "模型管理器",
+        "dst": "Model Manager"
+    },
+    "模型存储位置": {
+        "src": "模型存储位置",
+        "dst": "Lokasyon ng paglalagay ng modelo"
+    },
+    "选择": {
+        "src": "选择",
+        "dst": "piliin"
+    },
+    "请选择模型管理器": {
+        "src": "请选择模型管理器",
+        "dst": "Mangyaring piliin ang Model Manager"
+    },
+    "请选择模型管理器安装路径": {
+        "src": "请选择模型管理器安装路径",
+        "dst": "Mangyaring piliin ang path ng pag-install para sa Model Manager"
+    },
+    "当前对话使用的模型已被禁用或删除，请重新启用或切换模型": {
+        "src": "当前对话使用的模型已被禁用或删除，请重新启用或切换模型",
+        "dst": "Ang modelo na ginagamit sa kasalukuyang pag-uusap ay hindi na-disabled o nawala. Paki-enable o i-switch ang modelo"
+    },
+    "图形": {
+        "src": "图形",
+        "dst": "graphic"
+    },
+    "源码": {
+        "src": "源码",
+        "dst": "source code"
+    },
+    "mermaid解析失败,请检查语法": {
+        "src": "mermaid解析失败,请检查语法",
+        "dst": "Nabigo ang pagparse ng Mermaid, mangyaring suriin ang syntax"
+    },
+    "Ollama接口地址": {
+        "src": "Ollama接口地址",
+        "dst": "Olama interface address"
+    },
+    "当前ollama地址不可用": {
+        "src": "当前ollama地址不可用",
+        "dst": "Wala ang kasalukuyang address sa ollama"
+    },
+    "新手指引": {
+        "src": "新手指引",
+        "dst": "keyboard label"
+    },
+    "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
+        "src": "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
+        "dst": "Maligayang pagdating sa AingDesk, isang simpleng at madaling gamitin na katulong sa AI na sumusuporta sa knowledge base, model API, sharing, online search, at intelligent agents. ang software na ito ay bukas na source at libre, at inaasahang ibahagi mo ang software sa iba upang suportahan ang ating pag-unlad."
+    },
+    "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
+        "src": "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
+        "dst": "Ang AingDesk ay isang bagong proyekto ng AI na naghahanap pa rin sa mabilis na paglaki. Kung mayroon kang anumang problema habang ginagamit o may anumang pangangailangan para sa software, maaari mong sumali sa aming grupo ng WeChat upang magbigay ng feedback sa amin."
+    },
+    "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。": {
+        "src": "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。",
+        "dst": "Sa wakas, maaari mong magbigay sa amin ng bituin para sa aming proyektong open source."
+    },
+    "去github点星星": {
+        "src": "去github点星星",
+        "dst": "Pumunta sa GitHub at i-click sa mga bituin"
+    },
+    "您可以在": {
+        "src": "您可以在",
+        "dst": "Maaari mo"
+    },
+    "中关闭新手指引": {
+        "src": "中关闭新手指引",
+        "dst": "Isara ang gabay ng nagsisimula sa gitna"
+    },
+    "文档删除失败": {
+        "src": "文档删除失败",
+        "dst": "Nabigo ang pagtanggal ng dokumento"
+    },
+    "设置成功": {
+        "src": "设置成功",
+        "dst": "Ang pag-aayos ay matagumpay"
+    },
+    "分段标识符": {
+        "src": "分段标识符",
+        "dst": "Tagapakilala ng Segment"
+    },
+    "分段最大长度": {
+        "src": "分段最大长度",
+        "dst": "Ang pinakamalaking haba ng segment"
+    },
+    "分段重叠长度": {
+        "src": "分段重叠长度",
+        "dst": "query-sort"
+    },
+    "分段标识符支持函正则表达式，如": {
+        "src": "分段标识符支持函正则表达式，如",
+        "dst": "Ang mga ID ng segmen ay suportahan ng mga regular na expression, tulad ng"
+    },
+    "正则表达式无需添加修饰符，默认会自动添加g修饰符": {
+        "src": "正则表达式无需添加修饰符，默认会自动添加g修饰符",
+        "dst": "Hindi nangangailangan ng mga regular na expression ang pagdagdag ng mga modifier at awtomatiko ang 'g' modifier sa pamamagitan ng default"
+    },
+    "分段重叠长度建议为分段最大长度的10%到20%": {
+        "src": "分段重叠长度建议为分段最大长度的10%到20%",
+        "dst": "Ang inirerekomenda na haba ng overlap para sa mga segment ay 10% hanggang 20% ng pinakamalaking haba ng segment"
+    },
+    "选择文档进行预览": {
+        "src": "选择文档进行预览",
+        "dst": "Piliin ang dokumento para sa preview"
+    },
+    "预览": {
+        "src": "预览",
+        "dst": "Preview"
+    },
+    "分段最大长度不能小于20": {
+        "src": "分段最大长度不能小于20",
+        "dst": "Ang pinakamalaking haba ng segment ay hindi maaaring maging mas mababa sa 20"
+    },
+    "分段最大长度不能大于1000": {
+        "src": "分段最大长度不能大于1000",
+        "dst": "Ang pinakamalaking haba ng isang segment ay hindi maaaring lumalabas sa 1000"
+    },
+    "请填写分段最大长度": {
+        "src": "请填写分段最大长度",
+        "dst": "Paki-punan ang pinakamalaking haba ng segment"
+    },
+    "分段重叠长度不能小于0": {
+        "src": "分段重叠长度不能小于0",
+        "dst": "Ang magkakasundo na haba ng mga segmento ay hindi maaaring maging mas mababa sa 0"
+    },
+    "分段重叠长度不能大于分段最大长度": {
+        "src": "分段重叠长度不能大于分段最大长度",
+        "dst": "Ang magkakasundo na haba ng mga segment ay hindi maaaring lumalabas sa pinakamalaking haba ng mga segment"
+    },
+    "请填写分段重叠长度": {
+        "src": "请填写分段重叠长度",
+        "dst": "Mangyaring punan ang magkakasundo na haba ng mga segment"
+    },
+    "请填写分段标识符": {
+        "src": "请填写分段标识符",
+        "dst": "Paki-punan ang identifier ng segment"
+    },
+    "文档分片设置": {
+        "src": "文档分片设置",
+        "dst": "Mga Pagbabahagi ng Dokumento"
+    },
+    "继续添加文件": {
+        "src": "继续添加文件",
+        "dst": "Ituloy ang pagdagdag ng mga file"
+    },
+    "请选择文件": {
+        "src": "请选择文件",
+        "dst": "Mangyaring pumili ng file"
+    },
+    "最大召唤数量": {
+        "src": "最大召唤数量",
+        "dst": "Ang pinakamalaking dami ng pagtatanong"
+    },
+    "召回精度": {
+        "src": "召回精度",
+        "dst": "Tanggapan ang tumutukoy"
+    },
+    "文档解析失败": {
+        "src": "文档解析失败",
+        "dst": "Nabigo ang pagparse ng dokumento"
+    },
+    "文档解析成功,等待嵌入": {
+        "src": "文档解析成功,等待嵌入",
+        "dst": "Ang pag-parse ng dokumento ay matagumpay, naghihintay sa pag-embed"
+    },
+    "数据存储位置": {
+        "src": "数据存储位置",
+        "dst": "Lokasyon ng Data Storage"
+    },
+    "更改": {
+        "src": "更改",
+        "dst": "baguhin"
+    },
+    "如何更好的使用知识库?": {
+        "src": "如何更好的使用知识库?",
+        "dst": "Paano upang mas mahusay na gamitin ang base ng kaalaman?"
+    },
+    "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件": {
+        "src": "切换目录会将旧目录数据迁移到新目录,视数据大小可能需要5-10分钟，迁移过程中请勿关闭软件",
+        "dst": "Ang pagpapalit ng mga direktoryo ay magtatagal ng mga datos mula sa lumang direktoryo patungo sa bagong direktoryo, na maaaring magtatagal ng 5-10 minuto ayon sa sukat ng mga datos. Mangyaring huwag isara ang software sa panahon ng proseso ng paglipat"
+    },
+    "选择新位置": {
+        "src": "选择新位置",
+        "dst": "Piliin ang bagong lokasyon"
+    },
+    "数据迁移失败，请重试": {
+        "src": "数据迁移失败，请重试",
+        "dst": "Nabigo ang paglipat ng datos, mangyaring subukan muli"
+    },
+    "数据迁移成功": {
+        "src": "数据迁移成功",
+        "dst": "Ang paglipat ng mga datos ay matagumpay"
+    },
+    "请勿关闭软件,否则将导致软件异常": {
+        "src": "请勿关闭软件,否则将导致软件异常",
+        "dst": "Huwag isara ang software, kung hindi ito ay maaaring sanhi ng mga abnormalities sa software"
+    },
+    "等待复制": {
+        "src": "等待复制",
+        "dst": "Hinihintay ang replikasyon"
+    },
+    "总大小": {
+        "src": "总大小",
+        "dst": "kabuuang sukat"
+    },
+    "速度": {
+        "src": "速度",
+        "dst": "bilis"
+    },
+    "准备迁移数据": {
+        "src": "准备迁移数据",
+        "dst": "Naghahanda sa pagmigra ng datos"
+    },
+    "迁移数据中": {
+        "src": "迁移数据中",
+        "dst": "Sa paglipat ng datos"
+    },
+    "选择工具": {
+        "src": "选择工具",
+        "dst": "Piliin ang mga kagamitan"
+    },
+    "工具": {
+        "src": "工具",
+        "dst": "tool"
+    },
+    "模型选择": {
+        "src": "模型选择",
+        "dst": "pagpili ng modelo"
+    },
+    "搜索模型": {
+        "src": "搜索模型",
+        "dst": "Mga Modelo ng Paghahanap"
+    },
+    "常用模型": {
+        "src": "常用模型",
+        "dst": "Mga karaniwang modelo"
+    },
+    "不使用": {
+        "src": "不使用",
+        "dst": "Hindi ginagamit"
+    },
+    "新分享": {
+        "src": "新分享",
+        "dst": "Bagong pagbabahagi"
+    },
+    "最大召回数量": {
+        "src": "最大召回数量",
+        "dst": "Ang pinakamalaking dami ng pagbabalik"
+    },
+    "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条": {
+        "src": "检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条",
+        "dst": "Ang pinakamalaking bilang ng mga pagbabalik sa paghahanap ng knowledge base ay ipinapahirap na maging tatlo para sa mga lokal na modelo at lima para sa mga online na modelo."
+    },
+    "自动": {
+        "src": "自动",
+        "dst": "awtomatiko"
+    },
+    "自定义": {
+        "src": "自定义",
+        "dst": "customize"
+    },
+    "请输入分隔符": {
+        "src": "请输入分隔符",
+        "dst": "Pakipasok ang delimiter"
+    },
+    "正在优化知识库,这可能需要几分钟到十几分钟......": {
+        "src": "正在优化知识库,这可能需要几分钟到十几分钟......",
+        "dst": "Ginagawa namin ang optimization ng knowledge base, na maaaring magtatagal ng ilang minuto hanggang sa isang dosenang minuto"
+    },
+    "上传知识库文档": {
+        "src": "上传知识库文档",
+        "dst": "I-upload ang knowledge base document"
+    },
+    "请选择模型管理器的安装路径": {
+        "src": "请选择模型管理器的安装路径",
+        "dst": "Mangyaring piliin ang path ng pag-install para sa Model Manager"
+    },
+    "优化": {
+        "src": "优化",
+        "dst": "optimize"
+    },
+    "增强索引,并释放多余的空间占用": {
+        "src": "增强索引,并释放多余的空间占用",
+        "dst": "Enhance indexing and free up excess space occupation"
+    },
+    "反馈": {
+        "src": "反馈",
+        "dst": "feedback"
+    },
+    "删除MCP服务器": {
+        "src": "删除MCP服务器",
+        "dst": "Hapusin ang MCP server"
+    },
+    "是否可用": {
+        "src": "是否可用",
+        "dst": "Maaari ba ito"
+    },
+    "请输入MCP服务器名称": {
+        "src": "请输入MCP服务器名称",
+        "dst": "Pakiusap ipasok ang pangalan ng MCP server"
+    },
+    "请输入内容": {
+        "src": "请输入内容",
+        "dst": "Pakipasok ang nilalaman"
+    },
+    "类型": {
+        "src": "类型",
+        "dst": "type"
+    },
+    "服务器地址": {
+        "src": "服务器地址",
+        "dst": "server address"
+    },
+    "请输入服务器URL地址": {
+        "src": "请输入服务器URL地址",
+        "dst": "Paki-enter ang URL ng server"
+    },
+    "程序类型": {
+        "src": "程序类型",
+        "dst": "Mataguhin ng Application"
+    },
+    "当前未安装Nodejs环境，点击": {
+        "src": "当前未安装Nodejs环境，点击",
+        "dst": "Ang kapaligiran ng Nodejs ay hindi kasalukuyang naka-install, i-click"
+    },
+    "命令": {
+        "src": "命令",
+        "dst": "command"
+    },
+    "可执行命令": {
+        "src": "可执行命令",
+        "dst": "query-sort"
+    },
+    "参数": {
+        "src": "参数",
+        "dst": "parameter"
+    },
+    "环境变量": {
+        "src": "环境变量",
+        "dst": "environment variable"
+    },
+    "正在安装环境,这可能需要几分钟......": {
+        "src": "正在安装环境,这可能需要几分钟......",
+        "dst": "Pag-install ng kapaligiran, maaaring magtatagal ito ng ilang minuto"
+    },
+    "请输入可执行命令": {
+        "src": "请输入可执行命令",
+        "dst": "Pakiusap ipasok ang command ng executable"
+    },
+    "编辑配置文件": {
+        "src": "编辑配置文件",
+        "dst": "Edit Profile"
+    },
+    "编辑MCP服务器配置的JSON。保存前请确保格式正确。": {
+        "src": "编辑MCP服务器配置的JSON。保存前请确保格式正确。",
+        "dst": "I-edit ang JSON para sa configuration ng MCP server. Pakiusap siguraduhin na ang format ay tama bago i-save."
+    },
+    "添加服务器": {
+        "src": "添加服务器",
+        "dst": "Idagdag ang server"
+    },
+    "新配置": {
+        "src": "新配置",
+        "dst": "bagong kaayusan"
+    },
+    "环境安装成功": {
+        "src": "环境安装成功",
+        "dst": "Ang paglagay ng kapaligiran ay matagumpay"
+    },
+    "环境安装失败": {
+        "src": "环境安装失败",
+        "dst": "Nabigo ang install ng environment"
+    },
+    "操作成功": {
+        "src": "操作成功",
+        "dst": "Ang operasyon ay matagumpay"
+    },
+    "请先安装Node.js环境": {
+        "src": "请先安装Node.js环境",
+        "dst": "Paki-install muna ang Node.js environment"
+    },
+    "是否删除当前MCP服务器？": {
+        "src": "是否删除当前MCP服务器？",
+        "dst": "Gusto mo bang i-delete ang kasalukuyang MCP server?"
+    },
+    "常规设置": {
+        "src": "常规设置",
+        "dst": "Mga pangkalahatang setting"
+    },
+    "MCP服务器": {
+        "src": "MCP服务器",
+        "dst": "MCP server"
+    },
+    "修改模型": {
+        "src": "修改模型",
+        "dst": "Baguhin ang modelo"
+    },
+    "保存成功": {
+        "src": "保存成功",
+        "dst": "Ang matagumpay na nai-save"
+    },
+    "调用结果:": {
+        "src": "调用结果:",
+        "dst": "Resultado ng tawag:"
+    },
+    "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟": {
+        "src": "文档解析成功,等待嵌入,等待时长视文件数量，这可能需要几分钟到十几分钟",
+        "dst": "Ang pag-parse ng dokumento ay matagumpay, naghihintay para sa pag-embed. Ang oras ng paghihintay ay depende sa bilang ng mga file, na maaaring magtatagal ng ilang minuto hanggang sampung minuto"
+    },
+    "正在嵌入中,请稍后...": {
+        "src": "正在嵌入中,请稍后...",
+        "dst": "Maghintay"
+    }
+}
