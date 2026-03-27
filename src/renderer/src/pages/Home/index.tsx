@@ -4,8 +4,9 @@ import useGlobalStore from '@/stores/global'
 import useSiderStore from '@/stores/sider'
 import useKnowledgeStore from '@/stores/knowledge'
 import Sider from '@/pages/Sider'
+import HeaderBar from '@/pages/Header'
+import ChatContent from '@/pages/ChatContent'
 import './index.scss'
-import { use } from 'i18next'
 
 const { Header, Content } = Layout
 
@@ -40,10 +41,10 @@ function Home() {
       {/* 主内容区 */}
       <Layout>
         <Header className="layout-header">
-          <span>{t('对话')}</span>
+          <HeaderBar />
         </Header>
         <Content className="layout-content">
-          <div className="p-4">{t('欢迎使用')}</div>
+          <ChatContent />
         </Content>
       </Layout>
     </Layout>

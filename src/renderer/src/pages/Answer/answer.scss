@@ -1,0 +1,144 @@
+@use '@/assets/base';
+
+.answer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 10px;
+  justify-content: start;
+
+  .answer-logo {
+    border-radius: 4px;
+  }
+
+  .answer-token {
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 4px var(--bt-pd-normal) 20px 0;
+    position: relative;
+
+    .answer-tools {
+      @include base.tools;
+    }
+
+    @include base.tools-visible;
+  }
+}
+
+.answer-tools {
+  height: 40px;
+  visibility: hidden;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+
+  .tool-item {
+    cursor: pointer;
+    display: flex;
+    padding: 4px;
+    transition: 0.2s;
+    border-radius: 4px;
+    font-size: 16px;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+}
+
+.answer:hover .answer-tools {
+  visibility: visible;
+}
+
+/* Markdown 内容样式 */
+.markdown-content {
+  p {
+    margin-block-end: 1em;
+  }
+
+  ul {
+    padding-inline-start: 40px;
+    margin: var(--bt-mg-small);
+    li {
+      list-style: initial;
+    }
+  }
+
+  ol li {
+    list-style: initial;
+  }
+
+  .hljs-wrapper {
+    overflow-x: auto;
+    background-color: var(--md-code-bg, #f9fafb);
+    padding: 40px var(--bt-pd-normal) 0;
+    position: relative;
+
+    .tool-header {
+      height: 40px;
+      width: 100%;
+      background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Microsoft YAHEI';
+      color: #fff;
+
+      .tool-header-tit {
+        padding-left: var(--bt-pd-normal);
+      }
+    }
+
+    code {
+      display: inline-block;
+      width: 100%;
+      background-color: transparent;
+      padding: 0;
+      white-space: pre-line;
+    }
+
+    .code-block {
+      width: 100%;
+      box-sizing: border-box;
+      overflow-x: auto;
+    }
+  }
+
+  .hljs {
+    background-color: transparent !important;
+    color: var(--md-font-color, #545454) !important;
+    white-space: pre-wrap;
+  }
+
+  code {
+    background-color: transparent;
+    padding: 3px;
+    display: inline-block;
+  }
+
+  blockquote {
+    background-color: #f5f5f5;
+    padding: 2px 0 2px 5px;
+    margin: var(--bt-mg-small) 0 0 0;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.tool-wrapper {
+  padding: 0 var(--bt-pd-normal) 0 0;
+  height: 40px;
+  display: flex;
+  gap: var(--bt-mg-small);
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    cursor: pointer;
+  }
+}

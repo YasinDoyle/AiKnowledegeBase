@@ -1,0 +1,71 @@
+@use '@/assets/base';
+
+.search-tools-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  .search-tools {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .tools {
+      width: 100%;
+      position: relative;
+      border-top: 1px solid rgb(224, 224, 230);
+
+      .input-token {
+        padding-bottom: 70px;
+        border: none !important;
+        box-shadow: none !important;
+
+        &:focus {
+          box-shadow: none !important;
+        }
+      }
+
+      .send-tools {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        box-sizing: border-box;
+        padding: 0 15px;
+        left: 0;
+        bottom: 15px;
+
+        .send-btn {
+          padding: 20px 40px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .chat-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 20;
+    @include base.row-flex-between;
+    justify-content: center;
+    color: #fff;
+  }
+}
+
+.upload-file-list {
+  box-sizing: border-box;
+  padding: 10px;
+  background: base.$gray-2;
+  @include base.row-flex-between;
+  justify-content: flex-start;
+
+  .file-item {
+    @include base.file-item;
+  }
+}

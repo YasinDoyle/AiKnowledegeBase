@@ -50,7 +50,6 @@ class IndexController {
         languages,
         current: currentLanguage,
       }
-
       // 返回成功响应
       return pub.return_success(pub.lang('获取成功'), data)
     } catch (error) {

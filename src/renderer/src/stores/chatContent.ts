@@ -11,8 +11,10 @@ interface ChatContentState {
 
   setChatHistory: (h: ChatInfo) => void
   setUserScrollSelf: (v: boolean) => void
+  setScrollTop: (v: number) => void
   setIsInChat: (v: boolean) => void
   setGuideActive: (v: boolean) => void
+  setCurrentTalkingChatId: (id: string) => void
 }
 
 const useChatContentStore = create<ChatContentState>((set) => ({
@@ -25,8 +27,10 @@ const useChatContentStore = create<ChatContentState>((set) => ({
 
   setChatHistory: (h) => set({ chatHistory: h }),
   setUserScrollSelf: (v) => set({ userScrollSelf: v }),
+  setScrollTop: (v) => set({ scrollTop: v }),
   setIsInChat: (v) => set({ isInChat: v }),
   setGuideActive: (v) => set({ guideActive: v }),
+  setCurrentTalkingChatId: (id) => set({ currentTalkingChatId: id }),
 }))
 
 export default useChatContentStore
