@@ -6,13 +6,12 @@ import i18n from '@/i18n'
 import useSiderStore from '@/stores/sider'
 import useChatContentStore from '@/stores/chatContent'
 import useKnowledgeStore from '@/stores/knowledge'
-import useAgentStore from '@/stores/agent'
 import useChatToolsStore from '@/stores/chatTools'
 import useHeaderStore from '@/stores/header'
 import useSoftSettingsStore from '@/stores/softSettings'
 import useThirdPartyApiStore from '@/stores/thirdPartyApi'
 import { createChat, getChatInfo } from '@/pages/Sider/controller'
-import type { ChatInfo, MultipeQuestionDto, MultipleModelListDto } from '@/types'
+import type { MultipeQuestionDto, MultipleModelListDto } from '@/types'
 
 const t = i18n.t.bind(i18n)
 

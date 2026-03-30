@@ -1,5 +1,6 @@
 import { app as electronApp } from 'electron'
-import { autoUpdater } from 'electron-updater'
+import pkg from 'electron-updater'
+const { autoUpdater } = pkg
 import { logger, getMainWindow } from '../../lib/utils'
 import { pub } from '../../class/public'
 
@@ -19,10 +20,7 @@ class AutoUpdaterService {
       windows: true,
       macOS: true,
       linux: true,
-      options: {
-        provider: 'generic',
-        url: 'https://aingdesk.bt.cn/',
-      },
+      options: {},
       force: true,
     }
   }
@@ -56,24 +54,9 @@ class AutoUpdaterService {
     const version = electronApp.getVersion()
     logger.info('[autoUpdater] current version: ', version)
 
-    // 设置下载服务器地址
-    let server = cfg.options.url
-    let lastChar = server.substring(server.length - 1)
-    server = lastChar === '/' ? server : server + '/'
-    logger.info('[autoUpdater] server: ', server)
-    cfg.options.url = server
-
-    // 强制执行开发更新
+    // GitHub provider — 配置由 electron-builder 打包时自动注入 app-update.yml
     autoUpdater.forceDevUpdateConfig = true
-
-    // 是否后台自动下载
-    autoUpdater.autoDownload = cfg.force ? true : false
-
-    try {
-      autoUpdater.setFeedURL(cfg.options)
-    } catch (error) {
-      logger.error('[autoUpdater] setFeedURL error : ', error)
-    }
+    autoUpdater.autoDownload = cfg.force
 
     autoUpdater.on('checking-for-update', () => {
       this.sendStatusToWindow(pub.lang('正在检查更新...'))

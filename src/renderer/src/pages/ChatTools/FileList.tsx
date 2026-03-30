@@ -31,7 +31,7 @@ export default function FileList() {
       )}
       {questionImageList.length > 0 && (
         <div className="upload-file-list">
-          {questionImageList.map((item, index) => (
+          {questionImageList.map((_item, index) => (
             <div key={index} className="file-item">
               <span
                 className="del-file text-red-5 cursor-pointer"

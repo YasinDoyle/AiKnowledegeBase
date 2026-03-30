@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { Button, Popover } from 'antd'
 import { useTranslation } from 'react-i18next'
-import useSiderStore from '@/stores/sider'
 import useGlobalStore from '@/stores/global'
 import { getChatList, makeNewChat, doFold, cleanAllChats } from './controller'
 import ChatList from './ChatList'
@@ -15,7 +14,6 @@ import './index.scss'
 function Sider() {
   const { t } = useTranslation()
   const siderBg = useGlobalStore((s) => s.siderBg)
-  const themeMode = useGlobalStore((s) => s.themeMode)
 
   useEffect(() => {
     getChatList()

@@ -5,8 +5,6 @@ import useHeaderStore from '@/stores/header'
 import type { ShareItem } from '@/stores/header'
 import useSiderStore from '@/stores/sider'
 import useThirdPartyApiStore from '@/stores/thirdPartyApi'
-import useChatContentStore from '@/stores/chatContent'
-import useChatToolsStore from '@/stores/chatTools'
 import type { SupplierModelItem } from '@/types'
 
 const t = i18n.t.bind(i18n)

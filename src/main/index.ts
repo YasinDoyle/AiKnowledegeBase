@@ -1,6 +1,7 @@
 import { app, BrowserWindow, shell } from 'electron'
 import { fileURLToPath } from 'node:url'
 import { registerIpcHandlers } from './ipc-register'
+import { autoUpdaterService } from './service/os/auto_updater'
 import path from 'node:path'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -88,8 +89,10 @@ if (!gotTheLock) {
   app.whenReady().then(() => {
     createWindow()
     registerIpcHandlers()
-    // TODO: 初始化 service
-    // initBackgroundServices()
+    // 生产环境启动自动更新
+    if (app.isPackaged) {
+      autoUpdaterService.create()
+    }
   })
 }
 
