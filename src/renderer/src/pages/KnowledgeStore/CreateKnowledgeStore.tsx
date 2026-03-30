@@ -45,7 +45,7 @@ export default function CreateKnowledgeStore() {
             placeholder={t('请选择嵌入模型')}
             value={formData.embeddingModel || undefined}
             options={modelOptions}
-            onChange={(val, opt: any) => doSelectModel(val, opt?.supplierName)}
+            onChange={(val, opt: any) => doSelectModel(val as string, opt?.supplierName)}
           />
         </Form.Item>
         <Form.Item label={t('最大召回数量')}>

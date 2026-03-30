@@ -10,7 +10,7 @@ import {
   openMcpConfigFile,
 } from './controller'
 import McpServerItemConfig from './McpServerItemConfig'
-import McpSeverDropdown from './McpSeverDropdown'
+import McpSeverDropdown from './McpServerDropdown'
 import McpConfigFile from './McpConfigFile'
 
 export default function McpServer() {

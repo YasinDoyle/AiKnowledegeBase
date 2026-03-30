@@ -1,7 +1,6 @@
 import { Card } from 'antd'
 import useAgentStore from '@/stores/agent'
 import { chooseAgentForChat } from './controller'
-import type { AgentItemDto } from '@/types'
 
 export default function PresetAgent() {
   const agentList = useAgentStore((s) => s.agentList)

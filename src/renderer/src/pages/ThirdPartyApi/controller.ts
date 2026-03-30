@@ -106,7 +106,7 @@ export async function addModels() {
 export async function editModels() {
   const store = useThirdPartyApiStore.getState()
   try {
-    const { status, ...filteredFormData } = store.addModelFormData
+    const { status: _status, ...filteredFormData } = store.addModelFormData
     await ipcInvoke('model:modify_model', {
       ...filteredFormData,
       supplierName: store.currentChooseApi?.supplierName,

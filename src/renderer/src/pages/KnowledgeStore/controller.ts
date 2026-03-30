@@ -2,7 +2,7 @@ import { ipcInvoke } from '@/api'
 import { message } from '@/utils/message'
 import i18n from '@/i18n'
 import useKnowledgeStore from '@/stores/knowledge'
-import type { ActiveKnowledgeDocDto } from '@/types'
+import type { ActiveKnowledgeDocDto, KnowledgeDocumentInfo } from '@/types'
 
 const t = i18n.t.bind(i18n)
 
