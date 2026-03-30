@@ -1,7 +1,9 @@
 {
   "name": "aiknowledegebase",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "Simple and easy-to-use AI assistant with knowledge base, model API, sharing, web search, and agents",
+  "author": "YasinDoyle",
   "type": "module",
   "scripts": {
     "dev": "vite",
