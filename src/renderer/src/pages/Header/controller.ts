@@ -17,7 +17,7 @@ const t = i18n.t.bind(i18n)
 export async function getModelList() {
   const header = useHeaderStore.getState()
   try {
-    const res = await ipcInvoke('settings:get_model_list')
+    const res = await ipcInvoke('chat:get_model_list')
     if (res.code === 200) {
       const source: Record<string, SupplierModelItem[]> = res.message
       header.setModelListSource(source)
