@@ -58,6 +58,14 @@ export default defineConfig({
       renderer: process.env.NODE_ENV === 'test' ? undefined : {},
     }),
   ],
+  // Sass 使用新版 API，消除 legacy-js-api 警告
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+      },
+    },
+  },
   // 路径别名，方便 import
   resolve: {
     alias: {
