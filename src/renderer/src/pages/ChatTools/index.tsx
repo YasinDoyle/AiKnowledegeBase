@@ -105,10 +105,9 @@ export default function ChatTools() {
               </Button>
             </Tooltip>
 
-            {/* 知识库 — Phase 5 完善 */}
             <Popover
               trigger="click"
-              content={<div style={{ padding: 10 }}>{t('知识库选择面板（Phase 5 实现）')}</div>}
+              content={<div style={{ padding: 10 }}>{t('知识库选择面板')}</div>}
             >
               <Button
                 ghost={activeKnowledgeForChat.length > 0}

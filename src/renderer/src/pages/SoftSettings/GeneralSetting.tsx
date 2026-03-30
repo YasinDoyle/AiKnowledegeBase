@@ -104,7 +104,7 @@ export default function GeneralSettings() {
       </List.Item>
       <List.Item>
         <div className="w-full flex flex-col items-center gap-2">
-          <span>{t('加入AingDesk交流群')}</span>
+          <span>{t('加入AiKnowledgeBase交流群')}</span>
           <img src={wechat} alt="wechat" width={100} />
         </div>
       </List.Item>

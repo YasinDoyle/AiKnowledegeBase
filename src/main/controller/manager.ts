@@ -2,8 +2,8 @@ import { pub } from '../class/public'
 import { OllamaService } from '../service/ollama'
 import * as os from 'os'
 import { logger } from '../lib/utils'
-const { execSync } = require('child_process')
-const iconv = require('iconv-lite')
+import { execSync } from 'child_process'
+import iconv from 'iconv-lite'
 
 /**
  * manager controller 类，负责管理模型和系统配置信息

@@ -27,7 +27,6 @@ function Home() {
         <Sider />
       </Layout.Sider>
 
-      {/* 知识库侧栏 — Phase 5 填充 */}
       {knowledgeSiderWidth > 0 && (
         <Layout.Sider
           width={knowledgeSiderWidth}

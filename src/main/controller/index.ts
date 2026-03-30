@@ -1,7 +1,7 @@
 import { pub } from '../class/public'
 import * as path from 'path'
 import { logger } from '../lib/utils'
-const { dialog } = require('electron')
+import { dialog } from 'electron'
 
 /**
  * index controller 类，用于处理主进程的语言相关逻辑

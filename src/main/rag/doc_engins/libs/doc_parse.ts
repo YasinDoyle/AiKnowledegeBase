@@ -1,4 +1,4 @@
-const WordExtractor = require('word-extractor')
+import WordExtractor from 'word-extractor'
 
 /**
  * 开始解析(此函数为统一入口，其它同类模块也使用此函数名作为入口)

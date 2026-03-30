@@ -311,9 +311,9 @@
         "src": "是否确认删除模型，该操作不可逆？",
         "dst": "Kas olete kindel, et mudeli kustutamine on pöördumatu?"
     },
-    "将AingDesk分享给好友一起使用": {
-        "src": "将AingDesk分享给好友一起使用",
-        "dst": "AingDeski jagamine sõpradega"
+    "将AiKnowledgeBase分享给好友一起使用": {
+        "src": "将AiKnowledgeBase分享给好友一起使用",
+        "dst": "AiKnowledgeBasei jagamine sõpradega"
     },
     "请输入名称": {
         "src": "请输入名称",
@@ -447,9 +447,9 @@
         "src": "默认搜索引擎",
         "dst": "Vaikimisi otsingumootor"
     },
-    "加入AingDesk交流群": {
-        "src": "加入AingDesk交流群",
-        "dst": "Liitu AingDeski suhtlusrühmaga"
+    "加入AiKnowledgeBase交流群": {
+        "src": "加入AiKnowledgeBase交流群",
+        "dst": "Liitu AiKnowledgeBasei suhtlusrühmaga"
     },
     "当前版本": {
         "src": "当前版本",
@@ -763,9 +763,9 @@
         "src": "支持联网搜索和知识库",
         "dst": "Veebipõhise otsingu ja teadmistebaasi toetamine"
     },
-    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型": {
-        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型",
-        "dst": "Näpunäide: kui jagamise nimekiri on tühi, peatub jagamise ühenduse teenus automaatselt ja AingDeski kaudu ei ole ühtegi mudelit võrguväliselt kättesaadav"
+    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AiKnowledgeBase访问到任何模型": {
+        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AiKnowledgeBase访问到任何模型",
+        "dst": "Näpunäide: kui jagamise nimekiri on tühi, peatub jagamise ühenduse teenus automaatselt ja AiKnowledgeBasei kaudu ei ole ühtegi mudelit võrguväliselt kättesaadav"
     },
     "上传附件": {
         "src": "上传附件",
@@ -967,13 +967,13 @@
         "src": "新手指引",
         "dst": "Algaja juhend"
     },
-    "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
-        "src": "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
-        "dst": "Tere tulemast AingDeski, lihtsa ja lihtsalt kasutatava AI assistendi, mis toetab teadmistebaasi, mudeli API, jagamist, online-otsingut ja intelligentseid agente. See tarkvara on avatud lähtekoodiga ja tasuta. Me ootame, et jagate tarkvara teistega, et toetada meie arendust."
+    "欢迎使用AiKnowledgeBase，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
+        "src": "欢迎使用AiKnowledgeBase，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
+        "dst": "Tere tulemast AiKnowledgeBasei, lihtsa ja lihtsalt kasutatava AI assistendi, mis toetab teadmistebaasi, mudeli API, jagamist, online-otsingut ja intelligentseid agente. See tarkvara on avatud lähtekoodiga ja tasuta. Me ootame, et jagate tarkvara teistega, et toetada meie arendust."
     },
-    "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
-        "src": "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
-        "dst": "AingDesk on uus AI projekt, mis püüab endiselt kiiresti kasvada. Kui teil tekib kasutamise ajal probleeme või teil on tarkvara funktsionaalseid nõudeid, võite liituda meie WeChat grupiga, et anda meile tagasisidet."
+    "AiKnowledgeBase是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
+        "src": "AiKnowledgeBase是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
+        "dst": "AiKnowledgeBase on uus AI projekt, mis püüab endiselt kiiresti kasvada. Kui teil tekib kasutamise ajal probleeme või teil on tarkvara funktsionaalseid nõudeid, võite liituda meie WeChat grupiga, et anda meile tagasisidet."
     },
     "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。": {
         "src": "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。",

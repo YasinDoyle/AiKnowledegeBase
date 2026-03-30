@@ -2,6 +2,7 @@ import { Dropdown, Tooltip } from 'antd'
 import { useTranslation } from 'react-i18next'
 import useKnowledgeStore from '@/stores/knowledge'
 import { dealPopOperation } from './controller'
+import { singleActive, openCreateKnowledge } from '../KnowledgeStore/controller'
 import './KnowledgeList.scss'
 
 function KnowledgeList() {
@@ -24,13 +25,11 @@ function KnowledgeList() {
   ]
 
   const openKnowledgeStore = (item: any) => {
-    // Phase 5 实现，占位
-    console.log('openKnowledgeStore', item)
+    singleActive(item.ragName)
   }
 
   const createNewKnowledgeStore = () => {
-    // Phase 5 实现，占位
-    console.log('createNewKnowledgeStore')
+    openCreateKnowledge()
   }
 
   return (

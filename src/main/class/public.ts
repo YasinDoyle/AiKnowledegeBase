@@ -800,7 +800,7 @@ class Public {
    */
   get_mac_address(): string {
     let mac = ''
-    let interfaces = require('os').networkInterfaces()
+    let interfaces = import('os').networkInterfaces()
     for (let dev in interfaces) {
       let iface = interfaces[dev]
       for (let i = 0; i < iface.length; i++) {

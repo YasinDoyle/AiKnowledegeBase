@@ -15,7 +15,7 @@ class TotalService {
     })
 
     // User-Agent
-    let userAgent = 'AingDesk/' + pub.version() + ' (' + pub.os_type() + ')'
+    let userAgent = 'AiKnowledgeBase/' + pub.version() + ' (' + pub.os_type() + ')'
 
     // 请求配置
     let options = {

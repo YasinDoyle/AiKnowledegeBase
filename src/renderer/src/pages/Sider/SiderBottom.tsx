@@ -1,14 +1,12 @@
 import { useTranslation } from 'react-i18next'
 import { openThirdPartyModel } from './controller'
+import { openAgent } from '../Agent/controller'
+import { openModelManage } from '../Settings/controller'
+import { openSoftSettings } from '../SoftSettings/controller'
 import './SiderBottom.scss'
 
 function SiderBottom() {
   const { t } = useTranslation()
-
-  // Phase 5 实现，占位
-  const openAgent = () => console.log('openAgent')
-  const openModelManage = () => console.log('openModelManage')
-  const openSoftSettings = () => console.log('openSoftSettings')
 
   return (
     <ul className="recent-list">

@@ -8,6 +8,7 @@ import useChatToolsStore from '@/stores/chatTools'
 import useKnowledgeStore from '@/stores/knowledge'
 import useAgentStore from '@/stores/agent'
 import useChatContentStore from '@/stores/chatContent'
+import { openDelKnowledge, optimizeTable, singleActive } from '../KnowledgeStore/controller'
 import type { ChatInfo, ChatItemInfo } from '@/types'
 
 const t = i18n.t.bind(i18n)
@@ -273,8 +274,15 @@ export function doFold() {
  * 知识库操作
  */
 export function dealPopOperation(val: string, knowledge: any) {
-  // Phase 5 实现，占位
-  console.log('dealPopOperation', val, knowledge)
+  const knowledgeStore = useKnowledgeStore.getState()
+  if (val === 'delChat') {
+    knowledgeStore.setActiveKnowledge(knowledge.ragName)
+    openDelKnowledge()
+  } else if (val === 'modifyTitle') {
+    singleActive(knowledge.ragName)
+  } else if (val === 'optimization') {
+    optimizeTable(knowledge.ragName)
+  }
 }
 
 /**

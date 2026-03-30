@@ -132,7 +132,7 @@ class McpService {
 
     // 发起下载请求
     let headers = {
-      'User-Agent': 'AingDesk/' + pub.version(),
+      'User-Agent': 'AiKnowledgeBase/' + pub.version(),
     }
     let downloadBytes = 0
     if (pub.file_exists(saveFile)) {
@@ -206,7 +206,7 @@ class McpService {
 
     this.download_file(downloadUrl, bunzipFile).then(async () => {
       // 解压缩
-      let unzip = require('unzipper')
+      const unzip = await import('unzipper')
       let unzipStream = fs.createReadStream(bunzipFile).pipe(unzip.Extract({ path: binPath }))
       return new Promise((resolve, reject) => {
         unzipStream.on('close', () => {

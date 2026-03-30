@@ -332,8 +332,8 @@ class McpController {
     await mcpService.download_file(downloadUrl, uvzipFile)
 
     // 解压缩
-    let unzip = require('unzipper')
-    let fs = require('fs')
+    const unzip = await import('unzipper')
+    const fs = await import('fs')
     let unzipStream = fs.createReadStream(uvzipFile).pipe(unzip.Extract({ path: binPath }))
     return new Promise((resolve, reject) => {
       unzipStream.on('close', () => {

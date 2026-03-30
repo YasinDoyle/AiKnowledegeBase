@@ -1,4 +1,4 @@
-const { Menu, clipboard, shell } = require('electron')
+import { Menu, clipboard, shell } from 'electron'
 import { pub } from './public'
 // 右键菜单配置
 class ContextMenu {

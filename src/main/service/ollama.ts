@@ -553,7 +553,7 @@ class OllamaService {
 
       // 发起下载请求
       let headers = {
-        'User-Agent': 'AingDesk/' + pub.version(),
+        'User-Agent': 'AiKnowledgeBase/' + pub.version(),
       }
 
       if (downloadBytes > 0) {

@@ -118,10 +118,10 @@ export async function getLanguages() {
 }
 
 export function toStar() {
-  window.open('https://github.com/aingdesk/AingDesk')
+  window.open('https://github.com/YasinDoyle/AiKnowledegeBase')
 }
 export function toIssue() {
-  window.open('https://github.com/aingdesk/AingDesk/issues')
+  window.open('https://github.com/YasinDoyle/AiKnowledegeBase/issues')
 }
 export function jumpToTutorial() {
   window.open('https://docs.aingdesk.com/zh-Hans/')

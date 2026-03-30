@@ -6,7 +6,7 @@ export default function WelcomeContent() {
   const { t } = useTranslation()
 
   function jumpToGithub() {
-    window.open('https://github.com/aingdesk/AingDesk')
+    window.open('https://github.com/YasinDoyle/AiKnowledegeBase')
   }
 
   return (
@@ -14,14 +14,14 @@ export default function WelcomeContent() {
       <WelcomeRow>
         <p>
           {t(
-            '欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。',
+            '欢迎使用AiKnowledgeBase，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。',
           )}
         </p>
       </WelcomeRow>
       <WelcomeRow>
         <p>
           {t(
-            'AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。',
+            'AiKnowledgeBase是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。',
           )}
         </p>
       </WelcomeRow>

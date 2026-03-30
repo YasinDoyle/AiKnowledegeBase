@@ -311,9 +311,9 @@
         "src": "是否确认删除模型，该操作不可逆？",
         "dst": "Sigurado ka bang i-delete ang modelo? Ang operasyon na ito ay hindi babalik?"
     },
-    "将AingDesk分享给好友一起使用": {
-        "src": "将AingDesk分享给好友一起使用",
-        "dst": "Ibahagi ang AingDesk sa mga kaibigan na gamitin nang magkasama"
+    "将AiKnowledgeBase分享给好友一起使用": {
+        "src": "将AiKnowledgeBase分享给好友一起使用",
+        "dst": "Ibahagi ang AiKnowledgeBase sa mga kaibigan na gamitin nang magkasama"
     },
     "请输入名称": {
         "src": "请输入名称",
@@ -447,9 +447,9 @@
         "src": "默认搜索引擎",
         "dst": "default search engine"
     },
-    "加入AingDesk交流群": {
-        "src": "加入AingDesk交流群",
-        "dst": "Magsumali sa grupong komunikasyon ng AingDesk"
+    "加入AiKnowledgeBase交流群": {
+        "src": "加入AiKnowledgeBase交流群",
+        "dst": "Magsumali sa grupong komunikasyon ng AiKnowledgeBase"
     },
     "当前版本": {
         "src": "当前版本",
@@ -763,9 +763,9 @@
         "src": "支持联网搜索和知识库",
         "dst": "Suportahan ang online na paghahanap at kaalaman base"
     },
-    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型": {
-        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AingDesk访问到任何模型",
-        "dst": "Tip: Kung walang laman ang listahan ng pagbabahagi, ang serbisyo ng pagbabahagi ng koneksyon ay awtomatiko na itigil, at ang eksternal na network ay hindi maaaring makapag-access sa anumang modelo sa pamamagitan ng AingDesk sa oras na ito"
+    "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AiKnowledgeBase访问到任何模型": {
+        "src": "提示：如果分享列表为空，分享连接服务将自动停止，此时外网无法通过AiKnowledgeBase访问到任何模型",
+        "dst": "Tip: Kung walang laman ang listahan ng pagbabahagi, ang serbisyo ng pagbabahagi ng koneksyon ay awtomatiko na itigil, at ang eksternal na network ay hindi maaaring makapag-access sa anumang modelo sa pamamagitan ng AiKnowledgeBase sa oras na ito"
     },
     "上传附件": {
         "src": "上传附件",
@@ -971,13 +971,13 @@
         "src": "新手指引",
         "dst": "keyboard label"
     },
-    "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
-        "src": "欢迎使用AingDesk，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
-        "dst": "Maligayang pagdating sa AingDesk, isang simpleng at madaling gamitin na katulong sa AI na sumusuporta sa knowledge base, model API, sharing, online search, at intelligent agents. ang software na ito ay bukas na source at libre, at inaasahang ibahagi mo ang software sa iba upang suportahan ang ating pag-unlad."
+    "欢迎使用AiKnowledgeBase，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。": {
+        "src": "欢迎使用AiKnowledgeBase，这是一款简单好用的AI助手，支持知识库、模型API、分享、联网搜索、智能体，此软件开源免费，也期待您分享软件给别人来支持我们的发展。",
+        "dst": "Maligayang pagdating sa AiKnowledgeBase, isang simpleng at madaling gamitin na katulong sa AI na sumusuporta sa knowledge base, model API, sharing, online search, at intelligent agents. ang software na ito ay bukas na source at libre, at inaasahang ibahagi mo ang software sa iba upang suportahan ang ating pag-unlad."
     },
-    "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
-        "src": "AingDesk是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
-        "dst": "Ang AingDesk ay isang bagong proyekto ng AI na naghahanap pa rin sa mabilis na paglaki. Kung mayroon kang anumang problema habang ginagamit o may anumang pangangailangan para sa software, maaari mong sumali sa aming grupo ng WeChat upang magbigay ng feedback sa amin."
+    "AiKnowledgeBase是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。": {
+        "src": "AiKnowledgeBase是一个新的AI项目，它还在努力快速成长中，如果您在使用过程中遇到什么问题，或者您对软件有什么功能需求，可以加入我们微信群给我们进行反馈。",
+        "dst": "Ang AiKnowledgeBase ay isang bagong proyekto ng AI na naghahanap pa rin sa mabilis na paglaki. Kung mayroon kang anumang problema habang ginagamit o may anumang pangangailangan para sa software, maaari mong sumali sa aming grupo ng WeChat upang magbigay ng feedback sa amin."
     },
     "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。": {
         "src": "最后您可以给我们开源项目点星星，您的这点鼓励对我们继续迭代开源项目极其重要，感谢。",
