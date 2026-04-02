@@ -6,6 +6,7 @@
  * 前端调用：window.ipcRenderer.invoke('chat:get_chat_list')
  */
 import { ipcMain } from 'electron'
+import { win } from './index'
 
 // 导入所有 controller（统一导出类，在此处统一实例化）
 import IndexController from './controller/index'
@@ -46,7 +47,7 @@ export function registerIpcHandlers() {
   ipcMain.handle('chat:get_chat_list', () => chatCtrl.get_chat_list())
   ipcMain.handle('chat:create_chat', (_e, args) => chatCtrl.create_chat(args))
   ipcMain.handle('chat:get_model_list', () => chatCtrl.get_model_list())
-  ipcMain.handle('chat:chat', (_e, args) => chatCtrl.chat(args, _e))
+  ipcMain.handle('chat:chat', (_e, args) => chatCtrl.chat(args, win?.webContents ?? null))
   ipcMain.handle('chat:get_chat_info', (_e, args) => chatCtrl.get_chat_info(args))
   ipcMain.handle('chat:remove_chat', (_e, args) => chatCtrl.remove_chat(args))
   ipcMain.handle('chat:modify_chat_title', (_e, args) => chatCtrl.modify_chat_title(args))

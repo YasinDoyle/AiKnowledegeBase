@@ -1,3 +1,4 @@
+import type { WebContents } from 'electron'
 import { logger } from '../lib/utils'
 import { pub } from '../class/public'
 import * as path from 'path'
@@ -11,7 +12,6 @@ import {
 } from '../service/model'
 import { getPromptForWeb } from '../search_engines/search'
 import { Rag } from '../rag/rag'
-import { Stream } from 'stream'
 import { MCPClient } from './mcp_client'
 import { ChatContext, ChatHistory, ChatService, ModelInfo } from './chat'
 
@@ -401,7 +401,7 @@ export class ToChatService {
       compare_id?: string
       mcp_servers?: string[]
     },
-    event: any,
+    webContents: WebContents | null,
   ): Promise<any> {
     let {
       context_id: uuid,
@@ -616,15 +616,15 @@ export class ToChatService {
     if (mcp_servers.length > 0) {
       isOllama = false
     }
-    event.response.set('Content-Type', 'text/event-stream;charset=utf-8')
-    event.response.set('Connection', 'keep-alive')
-    event.response.status = 200
-    const s = new Stream.Readable({
-      read() {},
-    })
+    // 向渲染进程推送流式数据
+    const sendChunk = (text: string | null) => {
+      if (webContents && !webContents.isDestroyed()) {
+        webContents.send('chat:chunk', { context_id: uuid, text })
+      }
+    }
     const PushOther = async (msg) => {
       if (msg) {
-        s.push(msg)
+        sendChunk(msg)
         if (msg.indexOf('<mcptool>') !== -1) {
           chatHistoryRes.tools_result.push(msg)
         }
@@ -652,14 +652,14 @@ export class ToChatService {
         chatHistoryRes.stat = resInfo
         if (!isOllama) {
           chatHistoryRes.content += chunk.choices[0]?.delta?.content || ''
-          s.push(chunk.choices[0]?.delta?.content || '')
+          sendChunk(chunk.choices[0]?.delta?.content || '')
         }
-        s.push(null)
+        sendChunk(null)
         await this.set_chat_history(uuid, resUUID, chatHistoryRes)
         return false
       }
       if (isOllama) {
-        s.push(chunk.message.content)
+        sendChunk(chunk.message.content)
         chatHistoryRes.content += chunk.message.content
       } else {
         if (chunk.choices[0]?.delta?.reasoning_content) {
@@ -667,11 +667,11 @@ export class ToChatService {
           if (!isThinking) {
             isThinking = true
             if (reasoningContent.indexOf('<think>') === -1) {
-              s.push('\n<think>\n')
+              sendChunk('\n<think>\n')
               chatHistoryRes.content += '\n<think>\n'
             }
           }
-          s.push(reasoningContent)
+          sendChunk(reasoningContent)
           chatHistoryRes.content += reasoningContent
           if (reasoningContent.indexOf('</think>') !== -1) {
             isThinkingEnd = true
@@ -680,12 +680,12 @@ export class ToChatService {
           if (isThinking) {
             isThinking = false
             if (!isThinkingEnd) {
-              s.push('\n</think>\n')
+              sendChunk('\n</think>\n')
               chatHistoryRes.content += '\n</think>\n'
               isThinkingEnd = true
             }
           }
-          s.push(chunk.choices[0]?.delta?.content || '')
+          sendChunk(chunk.choices[0]?.delta?.content || '')
           chatHistoryRes.content += chunk.choices[0]?.delta?.content || ''
         }
       }
@@ -698,8 +698,8 @@ export class ToChatService {
 
         const endContent = pub.lang('\n\n---\n**内容不完整:** 用户手动停止生成')
         chatHistoryRes.content += endContent
-        s.push(endContent)
-        s.push(null)
+        sendChunk(endContent)
+        sendChunk(null)
         await this.set_chat_history(uuid, resUUID, chatHistoryRes)
         return false
       }
@@ -747,6 +747,5 @@ export class ToChatService {
         }
       })()
     }
-    return s
   }
 }

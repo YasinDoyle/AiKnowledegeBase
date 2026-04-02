@@ -23,3 +23,17 @@ export type IpcResult = {
 export async function ipcInvoke<T = any>(channel: string, params?: T): Promise<IpcResult> {
   return window.ipcRenderer.invoke(channel, params)
 }
+
+/**
+ * 监听主进程推送的消息（用于流式数据等）
+ */
+export function ipcOn(channel: string, listener: (...args: any[]) => void) {
+  window.ipcRenderer.on(channel, listener)
+}
+
+/**
+ * 移除监听
+ */
+export function ipcOff(channel: string, listener: (...args: any[]) => void) {
+  window.ipcRenderer.off(channel, listener)
+}

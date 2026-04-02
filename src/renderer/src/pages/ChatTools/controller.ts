@@ -1,5 +1,4 @@
-import axios from 'axios'
-import { ipcInvoke } from '@/api'
+import { ipcInvoke, ipcOn, ipcOff } from '@/api'
 import { message } from '@/utils/message'
 import { eventBus } from '@/utils/tools'
 import i18n from '@/i18n'
@@ -67,94 +66,100 @@ export async function sendChat(params: ChatParams, multiModelList?: MultipleMode
       }
     }
 
-    const chatAxiosArr: Promise<any>[] = []
+    // 累积文本（单模型：string，多模型：string[]）
+    let accumulated = multiModelList ? new Array(multiModelList.length).fill('') : ''
+
+    // 监听主进程推送的流式 chunk
+    const onChunk = (_event: any, data: { context_id: string; text: string | null }) => {
+      if (data.context_id !== sider.currentContextId || !currentChat) return
+      if (data.text === null) return // 流结束标记
+
+      if (!multiModelList) {
+        // 单模型：累积文本
+        accumulated = (accumulated as string) + data.text
+        const newHistory = new Map(useChatContentStore.getState().chatHistory)
+        newHistory.set(currentChat, {
+          content: accumulated as string,
+          stat: { model: header.currentModel },
+          id: '',
+        })
+        useChatContentStore.getState().setChatHistory(newHistory)
+      }
+      // 多模型场景由各自的 IPC 调用处理
+    }
+    ipcOn('chat:chunk', onChunk)
+
+    const commonParams = {
+      context_id: sider.currentContextId,
+      search: chatTools.netActive ? softSettings.targetNet : '',
+      rag_list: JSON.stringify(knowledge.activeKnowledgeForChat),
+      temp_chat: String(chatTools.tempChat),
+      mcp_servers: chatTools.mcpListChoosed,
+      ...params,
+    }
 
     if (!multiModelList) {
       // 单模型
-      await axios.post(
-        'http://127.0.0.1:7071/chat/chat',
-        {
-          model: model!,
-          parameters: parameters!,
-          supplierName: thirdParty.currentSupplierName,
-          context_id: sider.currentContextId,
-          search: chatTools.netActive ? softSettings.targetNet : '',
-          rag_list: JSON.stringify(knowledge.activeKnowledgeForChat),
-          temp_chat: String(chatTools.tempChat),
-          mcp_servers: chatTools.mcpListChoosed,
-          ...params,
-        },
-        {
-          responseType: 'text',
-          onDownloadProgress: (e: any) => {
-            const text = e.event.currentTarget.responseText
-            if (chatContent.currentTalkingChatId === sider.currentContextId && currentChat) {
-              const newHistory = new Map(chatContent.chatHistory)
-              newHistory.set(currentChat, {
-                content: text,
-                stat: { model: header.currentModel },
-                id: '',
-              })
-              chatContent.setChatHistory(newHistory)
-            }
-          },
-        },
-      )
+      await ipcInvoke('chat:chat', {
+        model: model!,
+        parameters: parameters!,
+        supplierName: thirdParty.currentSupplierName,
+        ...commonParams,
+      })
     } else {
-      for (let i = 0; i < multiModelList.length; i++) {
-        const p = axios.post(
-          'http://127.0.0.1:7071/chat/chat',
-          {
-            model: multiModelList[i].model,
-            parameters: multiModelList[i].parameters,
-            supplierName: multiModelList[i].supplierName,
-            context_id: sider.currentContextId,
-            search: chatTools.netActive ? softSettings.targetNet : '',
-            rag_list: JSON.stringify(knowledge.activeKnowledgeForChat),
-            temp_chat: String(chatTools.tempChat),
-            mcp_servers: chatTools.mcpListChoosed,
+      // 多模型：并发请求，每个模型独立累积
+      const chatPromises = multiModelList.map((mp, i) => {
+        return new Promise<void>((resolve) => {
+          // 每个模型用独立的 chunk 监听通过 context_id 区分
+          // 注意：多模型共享同一 context_id，用 compare_id 区分
+          const onMultiChunk = (_event: any, data: { context_id: string; text: string | null }) => {
+            if (data.context_id !== sider.currentContextId || !currentChat) return
+            if (data.text === null) {
+              ipcOff('chat:chunk', onMultiChunk)
+              resolve()
+              return
+            }
+            ;(accumulated as string[])[i] += data.text
+            const newHistory = new Map(useChatContentStore.getState().chatHistory)
+            const chat = { ...newHistory.get(currentChat)! }
+            const contentArr = [...(chat.content as string[])]
+            contentArr[i] = (accumulated as string[])[i]
+            chat.content = contentArr
+            const statArr = [...(chat.stat as any[])]
+            statArr[i] = { model: mp.model }
+            chat.stat = statArr
+            chat.id = ''
+            newHistory.set(currentChat, chat)
+            useChatContentStore.getState().setChatHistory(newHistory)
+          }
+          ipcOn('chat:chunk', onMultiChunk)
+          ipcInvoke('chat:chat', {
+            model: mp.model,
+            parameters: mp.parameters,
+            supplierName: mp.supplierName,
             compare_id: chatTools.compareId,
-            ...params,
-          },
-          {
-            responseType: 'text',
-            onDownloadProgress: (e: any) => {
-              const text = e.event.currentTarget.responseText
-              if (chatContent.currentTalkingChatId === sider.currentContextId && currentChat) {
-                const newHistory = new Map(chatContent.chatHistory)
-                const chat = { ...newHistory.get(currentChat)! }
-                const contentArr = [...(chat.content as string[])]
-                contentArr[i] = text
-                chat.content = contentArr
-                const statArr = [...(chat.stat as any[])]
-                statArr[i] = { model: multiModelList[i].model }
-                chat.stat = statArr
-                chat.id = ''
-                newHistory.set(currentChat, chat)
-                chatContent.setChatHistory(newHistory)
-              }
-            },
-          },
-        )
-        chatAxiosArr.push(p)
-      }
+            ...commonParams,
+          })
+        })
+      })
+      await Promise.all(chatPromises)
     }
 
-    await Promise.all(chatAxiosArr)
+    ipcOff('chat:chunk', onChunk)
 
     // 请求结束 — 获取最后一条对话并更新 stat
     const lastChat = await ipcInvoke('chat:get_last_chat_history', {
       context_id: sider.currentContextId,
     })
     if (currentChat) {
-      const newHistory = new Map(chatContent.chatHistory)
+      const newHistory = new Map(useChatContentStore.getState().chatHistory)
       const entry = newHistory.get(currentChat)
       if (entry) {
         Object.assign(entry.stat as object, lastChat.message.stat)
         entry.search_result = lastChat.message.search_result
         entry.id = lastChat.message.id
         newHistory.set(currentChat, { ...entry })
-        chatContent.setChatHistory(newHistory)
+        useChatContentStore.getState().setChatHistory(newHistory)
       }
     }
 

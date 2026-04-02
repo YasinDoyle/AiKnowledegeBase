@@ -1,5 +1,5 @@
-import Stream from 'stream'
-import { ChatService, ChatContext, ChatHistory, ModelInfo } from '../service/chat'
+import type { WebContents } from 'electron'
+import { ChatService } from '../service/chat'
 import { pub } from '../class/public'
 import { logger } from '../lib/utils'
 import { getPromptForWeb } from '../search_engines/search'
@@ -184,8 +184,8 @@ class ChatController {
    * @param {any} args.rag_results - RAG结果列表
    * @param {any} args.search_results - 搜索结果列表
    * @param {string} args.compare_id - 对比ID
-   * @param {any} event - 事件对象，用于处理HTTP响应
-   * @returns {Promise<any>} - 可读流，用于流式响应对话结果
+   * @param {WebContents | null} webContents - 用于向渲染进程推送流式数据
+   * @returns {Promise<any>} - 对话结果
    */
   async chat(
     args: {
@@ -205,10 +205,10 @@ class ChatController {
       compare_id?: string
       mcp_servers?: string[]
     },
-    event: any,
+    webContents: WebContents | null,
   ): Promise<any> {
     let toChatService = new ToChatService()
-    return await toChatService.chat(args, event)
+    return await toChatService.chat(args, webContents)
   }
 
   /**

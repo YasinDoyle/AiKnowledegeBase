@@ -19,7 +19,7 @@ process.env.VITE_PUBLIC = VITE_DEV_SERVER_URL
 // 对应原 lifecycle.ts 的 WindowSize
 const windowSize: { size?: number[]; position?: number[] } = {}
 
-let win: BrowserWindow | null = null
+export let win: BrowserWindow | null = null
 
 function createWindow() {
   win = new BrowserWindow({
