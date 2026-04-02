@@ -11,7 +11,7 @@ import Question from '@/pages/Question'
 import Answer from '@/pages/Answer'
 import ChatTools from '@/pages/ChatTools'
 import Share from '@/pages/Header/Share'
-import MarkdownRender from '@/pages/Answer/MarkdownRender'
+import KnowledgeStore from '@/pages/KnowledgeStore'
 import { scrollMove, handleScrollCallback, handleMouseLeave } from './controller'
 import { eventBus } from '@/utils/tools'
 import type { AnswerInfo, MultipeQuestionDto } from '@/types'
@@ -48,11 +48,7 @@ export default function ChatContent() {
 
   // 知识库文档预览模式
   if (activeKnowledge) {
-    return (
-      <div className="doc-content">
-        <MarkdownRender content="" />
-      </div>
-    )
+    return <KnowledgeStore />
   }
 
   return (

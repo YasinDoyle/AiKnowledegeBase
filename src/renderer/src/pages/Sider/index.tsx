@@ -3,6 +3,7 @@ import { Button, Popover } from 'antd'
 import { useTranslation } from 'react-i18next'
 import useGlobalStore from '@/stores/global'
 import { getChatList, makeNewChat, doFold, cleanAllChats } from './controller'
+import { getRagList } from '../KnowledgeStore/controller'
 import ChatList from './ChatList'
 import KnowledgeList from './KnowledgeList'
 import SiderBottom from './SiderBottom'
@@ -17,6 +18,7 @@ function Sider() {
 
   useEffect(() => {
     getChatList()
+    getRagList()
   }, [])
 
   return (

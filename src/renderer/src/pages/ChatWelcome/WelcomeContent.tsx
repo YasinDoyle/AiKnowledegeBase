@@ -18,9 +18,8 @@ export default function WelcomeContent() {
           )}
         </p>
       </WelcomeRow>
-      <WelcomeRow>😀</WelcomeRow>
       <WelcomeRow>
-        <p>{t('让我们开启一段新的对话吧')}🎯</p>
+        <p>{t('让我们开启一段新的对话吧')}😀</p>
       </WelcomeRow>
       <WelcomeRow>
         <p>

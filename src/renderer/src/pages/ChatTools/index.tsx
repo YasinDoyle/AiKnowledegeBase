@@ -15,6 +15,7 @@ import useKnowledgeStore from '@/stores/knowledge'
 import useSoftSettingsStore from '@/stores/softSettings'
 import FileList from './FileList'
 import ToolsChoosePanel from './ToolsChoosePanel'
+import KnowledgeChoosePanel from '@/pages/KnowledgeStore/KnowledgeChoosePanel'
 import {
   sendChatToModel,
   handleKeyDown,
@@ -105,10 +106,7 @@ export default function ChatTools() {
               </Button>
             </Tooltip>
 
-            <Popover
-              trigger="click"
-              content={<div style={{ padding: 10 }}>{t('知识库选择面板')}</div>}
-            >
+            <Popover trigger="click" content={<KnowledgeChoosePanel />}>
               <Button
                 ghost={activeKnowledgeForChat.length > 0}
                 type={activeKnowledgeForChat.length > 0 ? 'primary' : 'default'}
