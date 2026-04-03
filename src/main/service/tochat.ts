@@ -3,17 +3,11 @@ import { logger } from '../lib/utils'
 import { pub } from '../class/public'
 import * as path from 'path'
 import { agentService } from './agent'
-import {
-  ModelService,
-  GetSupplierModels,
-  getModelContextLength,
-  setModelUsedTotal,
-  getModelUsedTotalList,
-} from '../service/model'
+import { getModelContextLength, setModelUsedTotal } from '../service/model'
 import { getPromptForWeb } from '../search_engines/search'
 import { Rag } from '../rag/rag'
-import { MCPClient } from './mcp_client'
 import { ChatContext, ChatHistory, ChatService, ModelInfo } from './chat'
+import { createChatAdapter, MCPChatAdapter, OllamaChatAdapter } from './chat_adapter'
 
 /**
  * 存储所有模型信息的数组
@@ -227,79 +221,6 @@ ${pub.lang('图片')} ${idx + 1} ${pub.lang('OCR解析结果')} end
   }
 }
 
-// 提取处理非Ollama模型图片的函数
-const handleNonOllamaImages = (letHistory: any) => {
-  if (letHistory.images && letHistory.images.length > 0) {
-    const content = []
-    content.push({ type: 'text', text: letHistory.content })
-    for (const image of letHistory.images) {
-      content.push({ type: 'image_url', image_url: { url: image } })
-    }
-    letHistory.content = content
-  }
-  if (letHistory.images) delete letHistory.images
-}
-
-// 提取处理Ollama模型图片的函数
-const handleOllamaImages = (letHistory: any) => {
-  if (letHistory.images && letHistory.images.length > 0) {
-    const images = []
-    for (const image of letHistory.images) {
-      const imgArr = image.split(',')
-      if (imgArr.length > 1) {
-        images.push(imgArr[1])
-      }
-    }
-    letHistory.images = images
-  }
-}
-
-// 提取计算上下文长度的函数
-const calculateContextLength = (history: any[]) => {
-  let contextLength = 0
-  for (const message of history) {
-    contextLength += message.content.length
-  }
-  return contextLength
-}
-
-// 时间戳转2025-04-18T03:49:41.0108203Z格式
-const formatDate = (timestamp: number) => {
-  if (typeof timestamp !== 'number') {
-    return timestamp
-  }
-  const date = new Date(timestamp * 1000)
-  return date.toISOString()
-}
-
-// 提取获取响应信息的函数
-const getResponseInfo = (chunk: any, isOllama: boolean, modelStr: string, resTimeMs: number) => {
-  if (isOllama) {
-    return {
-      model: chunk.model,
-      created_at: chunk.created_at.toString(),
-      total_duration: chunk.total_duration / 1000000000,
-      load_duration: chunk.load_duration / 1000000,
-      prompt_eval_count: chunk.prompt_eval_count,
-      prompt_eval_duration: chunk.prompt_eval_duration / 1000000,
-      eval_count: chunk.eval_count,
-      eval_duration: chunk.eval_duration / 1000000000,
-    }
-  } else {
-    const nowTime = pub.time()
-    return {
-      model: modelStr,
-      created_at: formatDate(chunk.created),
-      total_duration: nowTime - chunk.created,
-      load_duration: 0,
-      prompt_eval_count: chunk.usage?.prompt_tokens || 0,
-      prompt_eval_duration: chunk.created * 1000 - resTimeMs,
-      eval_count: chunk.usage?.completion_tokens || 0,
-      eval_duration: nowTime - resTimeMs / 1000,
-    }
-  }
-}
-
 export class ToChatService {
   /**
    * 获取指定模型的信息
@@ -423,13 +344,15 @@ export class ToChatService {
       supplierName = 'ollama'
     }
     const isTempChat = temp_chat === 'true'
-    let isOllama = supplierName === 'ollama'
-    let modelStr = modelName
-    if (isOllama) {
-      modelStr = `${modelName}:${parameters}`
-    } else {
+    const isOllama = supplierName === 'ollama'
+
+    // 1. 创建适配器，统一处理 Ollama / 第三方 / MCP 差异
+    const adapter = createChatAdapter(supplierName, mcp_servers)
+    const modelStr = adapter.buildModelStr(modelName, parameters)
+    if (!isOllama) {
       parameters = supplierName
     }
+
     const images_list = images ? images.split(',') : []
     const doc_files_list = doc_files ? doc_files.split(',') : []
     setModelUsedTotal(supplierName, modelStr)
@@ -529,6 +452,8 @@ export class ToChatService {
       regenerate_id,
     )
     await chatService.update_chat_config(uuid, 'search_type', search)
+
+    // 2. 内容增强：RAG / 搜索 / Agent / 文档 / 图片
     let isSystemPrompt = false
     search = await handleRag(
       args,
@@ -572,51 +497,29 @@ export class ToChatService {
     if (letHistory.doc_files !== undefined) {
       delete letHistory.doc_files
     }
+
+    // 3. 视觉图片格式化（由适配器统一处理）
     if (isVision) {
-      if (!isOllama) {
-        handleNonOllamaImages(letHistory)
-      } else {
-        handleOllamaImages(letHistory)
-      }
+      adapter.formatVisionImages(letHistory)
     }
     if (letHistory.images && letHistory.images.length === 0) {
       delete letHistory.images
     }
-
     if (!isVision && letHistory.images) {
       delete letHistory.images
     }
 
     history = this.formatMessage(history)
 
-    const requestOption: any = {
+    // 4. 构建请求参数（由适配器追加各自特有的选项）
+    let requestOption: any = {
       model: modelStr,
       messages: history,
       stream: true,
     }
-    if (isOllama) {
-      const contextLength = calculateContextLength(history)
-      let max_ctx = 4096
-      let min_ctx = 2048
-      const parametersNumber = Number(parameters?.replace('b', '')) || 4
-      if (parametersNumber && parametersNumber <= 4) max_ctx = 8192
-      let num_ctx = Math.max(min_ctx, Math.min(max_ctx, contextLength / 2))
-      num_ctx = Math.ceil(num_ctx / min_ctx) * min_ctx
-      requestOption.options = {
-        num_ctx,
-      }
-    }
-    if (modelName.indexOf('deepseek') !== -1) {
-      if (isOllama) {
-        requestOption.options.temperature = 0.6
-      } else {
-        requestOption.temperature = 0.6
-      }
-    }
-    if (mcp_servers.length > 0) {
-      isOllama = false
-    }
-    // 向渲染进程推送流式数据
+    requestOption = adapter.buildRequestOptions(requestOption, parameters, modelName)
+
+    // 5. 向渲染进程推送流式数据
     const sendChunk = (text: string | null) => {
       if (webContents && !webContents.isDestroyed()) {
         webContents.send('chat:chunk', { context_id: uuid, text })
@@ -630,72 +533,65 @@ export class ToChatService {
         }
       }
     }
+
+    // 6. 流式响应回调（通过适配器消除 isOllama 分支）
     let res: any
     chatHistoryRes.content = ''
     let resTimeMs = 0
     let isThinking = false
     let isThinkingEnd = false
     const ResEvent = async (chunk) => {
-      if (!isOllama) resTimeMs = new Date().getTime()
+      if (!(adapter instanceof OllamaChatAdapter)) resTimeMs = new Date().getTime()
       if (chunk.choices && chunk.choices.length === 0) {
         return
       }
-      if (
-        (isOllama && chunk.done) ||
-        (!isOllama &&
-          (chunk.choices[0].finish_reason === 'stop' ||
-            chunk.choices[0].finish_reason === 'normal'))
-      ) {
-        const resInfo = getResponseInfo(chunk, isOllama, modelStr, resTimeMs)
-        chatHistoryRes.created_at = chunk.created_at ? chunk.created_at.toString() : chunk.created
-        chatHistoryRes.create_time = chunk.created ? chunk.created : pub.time()
+      // 结束帧处理
+      if (adapter.isEndChunk(chunk)) {
+        const resInfo = adapter.buildResponseInfo(chunk, modelStr, resTimeMs)
+        chatHistoryRes.created_at = String(adapter.getCreatedAt(chunk))
+        chatHistoryRes.create_time = adapter.getCreateTime(chunk)
         chatHistoryRes.stat = resInfo
-        if (!isOllama) {
-          chatHistoryRes.content += chunk.choices[0]?.delta?.content || ''
-          sendChunk(chunk.choices[0]?.delta?.content || '')
+        const endContent = adapter.getEndContent(chunk)
+        if (endContent) {
+          chatHistoryRes.content += endContent
+          sendChunk(endContent)
         }
         sendChunk(null)
         await this.set_chat_history(uuid, resUUID, chatHistoryRes)
         return false
       }
-      if (isOllama) {
-        sendChunk(chunk.message.content)
-        chatHistoryRes.content += chunk.message.content
-      } else {
-        if (chunk.choices[0]?.delta?.reasoning_content) {
-          let reasoningContent = chunk.choices[0]?.delta?.reasoning_content || ''
-          if (!isThinking) {
-            isThinking = true
-            if (reasoningContent.indexOf('<think>') === -1) {
-              sendChunk('\n<think>\n')
-              chatHistoryRes.content += '\n<think>\n'
-            }
+      // 正文 delta 处理
+      const reasoningDelta = adapter.getReasoningDelta(chunk)
+      if (reasoningDelta !== null) {
+        // 深度思考内容（reasoning_content）
+        if (!isThinking) {
+          isThinking = true
+          if (reasoningDelta.indexOf('<think>') === -1) {
+            sendChunk('\n<think>\n')
+            chatHistoryRes.content += '\n<think>\n'
           }
-          sendChunk(reasoningContent)
-          chatHistoryRes.content += reasoningContent
-          if (reasoningContent.indexOf('</think>') !== -1) {
+        }
+        sendChunk(reasoningDelta)
+        chatHistoryRes.content += reasoningDelta
+        if (reasoningDelta.indexOf('</think>') !== -1) {
+          isThinkingEnd = true
+        }
+      } else {
+        if (isThinking) {
+          isThinking = false
+          if (!isThinkingEnd) {
+            sendChunk('\n</think>\n')
+            chatHistoryRes.content += '\n</think>\n'
             isThinkingEnd = true
           }
-        } else {
-          if (isThinking) {
-            isThinking = false
-            if (!isThinkingEnd) {
-              sendChunk('\n</think>\n')
-              chatHistoryRes.content += '\n</think>\n'
-              isThinkingEnd = true
-            }
-          }
-          sendChunk(chunk.choices[0]?.delta?.content || '')
-          chatHistoryRes.content += chunk.choices[0]?.delta?.content || ''
         }
+        const contentDelta = adapter.getContentDelta(chunk)
+        sendChunk(contentDelta)
+        chatHistoryRes.content += contentDelta
       }
+      // 用户手动停止
       if (!ContextStatusMap.get(uuid)) {
-        try {
-          if (isOllama) res.abort()
-        } catch (error) {
-          logger.error('Abort error:', error.message)
-        }
-
+        adapter.abort(res)
         const endContent = pub.lang('\n\n---\n**内容不完整:** 用户手动停止生成')
         chatHistoryRes.content += endContent
         sendChunk(endContent)
@@ -706,40 +602,21 @@ export class ToChatService {
       return true
     }
 
-    if (mcp_servers.length > 0) {
+    // 7. 发起请求
+    if (adapter instanceof MCPChatAdapter) {
       try {
-        isOllama = false
-        const modelService = new ModelService(supplierName)
-        if (modelService.connect()) {
-          const openaiObj = modelService.client
-          const mcpServers = await MCPClient.getActiveServers(mcp_servers)
-          const mcpClient = new MCPClient()
-          await mcpClient.connectToServer(mcpServers)
-          mcpClient.processQuery(openaiObj, supplierName, modelStr, history, ResEvent, PushOther)
-        } else {
-          return pub.lang('模型连接失败:{}', modelService.error)
-        }
+        await adapter.sendMCPRequest(supplierName, modelStr, history, ResEvent, PushOther)
       } catch (error: any) {
         return pub.lang('出错了: {}', error.message)
       }
     } else {
-      if (isOllama) {
-        try {
-          const ollama = pub.init_ollama()
-          res = await ollama.chat(requestOption)
-        } catch (error: any) {
-          return pub.lang('调用模型接口时出错了: {}', error.message)
+      try {
+        res = await adapter.sendRequest(requestOption, supplierName)
+      } catch (error: any) {
+        if (error.error && error.error.message) {
+          return pub.lang('调用模型接口时出错了: {}', error.error.message)
         }
-      } else {
-        const modelService = new ModelService(supplierName)
-        try {
-          res = await modelService.chat(requestOption)
-        } catch (error: any) {
-          if (error.error && error.error.message) {
-            return pub.lang('调用模型接口时出错了: {}', error.error.message)
-          }
-          return error
-        }
+        return pub.lang('调用模型接口时出错了: {}', error.message)
       }
       ;(async () => {
         for await (const chunk of res) {
