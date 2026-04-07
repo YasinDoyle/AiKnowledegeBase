@@ -32,7 +32,7 @@ class McpService {
    * @returns {ServerConfig[]} - 返回MCP服务器列表
    */
   get_mcp_servers(): ServerConfig[] {
-    let mcpConfig = this.read_mcp_config()
+    const mcpConfig = this.read_mcp_config()
     if (mcpConfig && mcpConfig.mcpServers) {
       return mcpConfig.mcpServers
     }
@@ -97,7 +97,7 @@ class McpService {
   }
 
   get_bun_bin() {
-    let binPath = this.get_bin_path()
+    const binPath = this.get_bin_path()
     if (pub.is_windows()) {
       return path.resolve(binPath, 'bun.exe')
     }
@@ -105,7 +105,7 @@ class McpService {
   }
 
   get_uv_bin() {
-    let binPath = this.get_bin_path()
+    const binPath = this.get_bin_path()
     if (pub.is_windows()) {
       return path.resolve(binPath, 'uv.exe')
     }
@@ -128,16 +128,16 @@ class McpService {
   }
 
   async download_file(url: string, saveFile: string) {
-    let abort = new AbortController()
+    const abort = new AbortController()
 
     // 发起下载请求
-    let headers = {
+    const headers: Record<string, string> = {
       'User-Agent': 'AiKnowledgeBase/' + pub.version(),
     }
     let downloadBytes = 0
     if (pub.file_exists(saveFile)) {
       const stats = pub.stat(saveFile)
-      downloadBytes = stats.size
+      downloadBytes = stats?.size ?? 0
     }
 
     if (downloadBytes > 0) {
@@ -180,7 +180,7 @@ class McpService {
         })
       })
     } catch (e) {
-      if (e.message.indexOf('status code 416') !== -1) {
+      if ((e as Error).message.indexOf('status code 416') !== -1) {
         logger.info(`文件 ${saveFile} 已经下载完成，跳过下载`)
         return true
       }
@@ -193,21 +193,21 @@ class McpService {
    * @param args - 参数对象
    */
   async install_npx() {
-    let bunFile = this.get_bun_bin()
+    const bunFile = this.get_bun_bin()
     if (pub.file_exists(bunFile)) {
       return pub.return_success(pub.lang('已安装'))
     }
-    global.bunInstall = true
-    let binPath = this.get_bin_path()
-    let os_path = this.get_os_path()
+    ;(global as any).bunInstall = true
+    const binPath = this.get_bin_path()
+    const os_path = this.get_os_path()
 
-    let downloadUrl = `https://aingdesk.bt.cn/bin/${os_path}/bun.zip`
-    let bunzipFile = path.resolve(binPath, 'bun.zip')
+    const downloadUrl = `https://aingdesk.bt.cn/bin/${os_path}/bun.zip`
+    const bunzipFile = path.resolve(binPath, 'bun.zip')
 
     this.download_file(downloadUrl, bunzipFile).then(async () => {
       // 解压缩
       const unzip = await import('unzipper')
-      let unzipStream = fs.createReadStream(bunzipFile).pipe(unzip.Extract({ path: binPath }))
+      const unzipStream = fs.createReadStream(bunzipFile).pipe(unzip.Extract({ path: binPath }))
       return new Promise((resolve, reject) => {
         unzipStream.on('close', () => {
           // 删除压缩包
@@ -234,10 +234,10 @@ class McpService {
    * @returns {void}
    */
   clear_node_env() {
-    let env = process.env
-    let PATH_ARR = env['PATH'].split(';')
-    let NEW_PATH_ARR = []
-    for (let key in PATH_ARR) {
+    const env = process.env
+    const PATH_ARR = (env['PATH'] ?? '').split(';')
+    const NEW_PATH_ARR = []
+    for (const key in PATH_ARR) {
       if (PATH_ARR[key].indexOf('node') == -1 && PATH_ARR[key].indexOf('npm') == -1) {
         NEW_PATH_ARR.push(PATH_ARR[key])
       }
@@ -252,11 +252,11 @@ class McpService {
    * @returns
    */
   save_mcp_tools(name: string, tools: any) {
-    let mcpToolsSavePath = path.resolve(pub.get_data_path(), 'mcp_tools')
+    const mcpToolsSavePath = path.resolve(pub.get_data_path(), 'mcp_tools')
     if (!pub.file_exists(mcpToolsSavePath)) {
       pub.mkdir(mcpToolsSavePath)
     }
-    let mcpToolsFile = path.resolve(mcpToolsSavePath, `${name}.json`)
+    const mcpToolsFile = path.resolve(mcpToolsSavePath, `${name}.json`)
     try {
       pub.write_json(mcpToolsFile, tools)
     } catch (e) {
@@ -270,11 +270,11 @@ class McpService {
    * @returns
    */
   read_mcp_tools(name: string) {
-    let mcpToolsSavePath = path.resolve(pub.get_data_path(), 'mcp_tools')
+    const mcpToolsSavePath = path.resolve(pub.get_data_path(), 'mcp_tools')
     if (!pub.file_exists(mcpToolsSavePath)) {
       return []
     }
-    let mcpToolsFile = path.resolve(mcpToolsSavePath, `${name}.json`)
+    const mcpToolsFile = path.resolve(mcpToolsSavePath, `${name}.json`)
     if (!pub.file_exists(mcpToolsFile)) {
       return []
     }
@@ -291,8 +291,8 @@ class McpService {
    * @returns {Promise<any>} - 返回同步结果
    */
   async sync_cloud_mcp() {
-    let downloadUrl = `https://aingdesk.bt.cn/config/common-mcp-server.json`
-    let res = await pub.httpRequest(downloadUrl)
+    const downloadUrl = `https://aingdesk.bt.cn/config/common-mcp-server.json`
+    const res = await pub.httpRequest(downloadUrl)
 
     if (res.statusCode !== 200) {
       return pub.return_error(pub.lang('获取失败'))

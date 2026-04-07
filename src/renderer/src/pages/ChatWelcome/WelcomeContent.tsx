@@ -1,13 +1,8 @@
-import { Button } from 'antd'
 import { useTranslation } from 'react-i18next'
 import logoImg from '@/assets/images/logo.png'
 
 export default function WelcomeContent() {
   const { t } = useTranslation()
-
-  function jumpToGithub() {
-    window.open('https://github.com/YasinDoyle/AiKnowledegeBase')
-  }
 
   return (
     <>

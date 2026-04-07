@@ -8,7 +8,7 @@ import { ChatContext, ChatHistory } from './chat'
 import ChatController from '../controller/chat'
 import { getPromptForWeb } from '../search_engines/search'
 import { Rag } from '../rag/rag'
-import { ModelService, GetSupplierModels, getModelContextLength } from '../service/model'
+import { ModelService } from '../service/model'
 import { ToChatService } from './tochat'
 // 常量定义
 const CLOUD_SERVER_HOST = 'share.aingdesk.com'
@@ -16,7 +16,7 @@ const CLOUD_SERVER_PORT = 9999
 const HEADER_SIZE = 4
 
 // 存储需要中断的对话 ID
-let ContextStatusMap = new Map<string, boolean>()
+const ContextStatusMap = new Map<string, boolean>()
 
 class ShareService {
   // 获取对话列表
@@ -107,7 +107,7 @@ class ShareService {
   }
 
   // 中断对话
-  abortChat(contextId: string) {
+  abortChat(_contextId: string) {
     return pub.return_error(pub.lang('暂不支持远程中断'), null)
     // ContextStatusMap.set(contextId, false);
     // return pub.return_success(pub.lang('中断成功'));
@@ -144,7 +144,7 @@ class ShareService {
       images,
       rag_list,
       agent_name,
-      mcp_servers,
+      mcp_servers: _mcp_servers,
     } = data
     const shareId = shareInfo.share_id
     supplierName = supplierName || 'ollama'
@@ -255,7 +255,7 @@ class ShareService {
       shareChatService.update_chat_config(shareId, contextId, 'rag_list', rag_list)
 
       if (rag_list.length > 0) {
-        let { userPrompt, systemPrompt, searchResultList, query } =
+        const { userPrompt, systemPrompt, searchResultList, query } =
           await new Rag().searchAndSuggest(
             supplierName,
             modelStr,
@@ -297,7 +297,7 @@ class ShareService {
         lastHistory += pub.lang('回答:') + history[history.length - 2].content + '\n'
       }
 
-      let { userPrompt, systemPrompt, searchResultList, query } = await getPromptForWeb(
+      const { userPrompt, systemPrompt, searchResultList, query } = await getPromptForWeb(
         content,
         modelStr,
         lastHistory,
@@ -325,7 +325,7 @@ class ShareService {
     }
 
     try {
-      let letHistory = history[history.length - 1]
+      const letHistory = history[history.length - 1]
 
       // 嵌入system提示
       //             if(letHistory.content === content) {
@@ -347,7 +347,7 @@ class ShareService {
 
         const doc_files_str = letHistory.doc_files
           .map(
-            (doc_file, idx) =>
+            (doc_file: string, idx: number) =>
               `[${pub.lang('用户文档')} ${idx + 1} begin]
 ${pub.lang('内容')}: ${doc_file}
 [${pub.lang('用户文档')} ${idx} end]`,
@@ -611,7 +611,7 @@ ${pub.lang('内容')}: ${doc_file}
   }
 
   // 处理接收到的数据
-  handleReceivedData(conn, data) {
+  handleReceivedData(conn: tls.TLSSocket, data: Buffer) {
     try {
       const shareData = JSON.parse(data.toString('utf8'))
       if (!shareData.msgId) {
@@ -764,10 +764,10 @@ ${pub.lang('内容')}: ${doc_file}
   }
 
   // 接收数据
-  receiveData(conn) {
+  receiveData(conn: tls.TLSSocket) {
     let buffer = Buffer.alloc(0)
     let bodySize: any = null
-    conn.on('data', (chunk) => {
+    conn.on('data', (chunk: Buffer) => {
       buffer = Buffer.concat([buffer, chunk])
 
       while (true) {
@@ -795,8 +795,8 @@ ${pub.lang('内容')}: ${doc_file}
   }
 
   // 连接到云服务器
-  connectToCloudServer(shareIdPrefix) {
-    global.connectToCloudServer = false
+  connectToCloudServer(shareIdPrefix: string) {
+    ;(global as any).connectToCloudServer = false
 
     if (pub.C('shareServiceStatus') === false) {
       return null
@@ -834,7 +834,7 @@ ${pub.lang('内容')}: ${doc_file}
       socket.destroy()
     })
 
-    if (socket) global.connectToCloudServer = true
+    if (socket) (global as any).connectToCloudServer = true
 
     // 接收数据
     this.receiveData(socket)
@@ -862,7 +862,7 @@ ${pub.lang('内容')}: ${doc_file}
   }
 
   // 开始重连
-  startReconnect(socket, shareIdPrefix) {
+  startReconnect(socket: tls.TLSSocket | null, shareIdPrefix: string) {
     // 每隔 5 秒检查一次连接状态
     setInterval(() => {
       if (!socket || socket.destroyed) {

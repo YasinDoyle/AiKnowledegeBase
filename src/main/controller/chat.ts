@@ -1,20 +1,9 @@
 import type { WebContents } from 'electron'
-import { ChatService } from '../service/chat'
-import { pub } from '../class/public'
+import { ChatService, ModelInfo } from '../service/chat'
+import { pub, ReturnMsg as Result } from '../class/public'
 import { logger } from '../lib/utils'
-import { getPromptForWeb } from '../search_engines/search'
-import { Rag } from '../rag/rag'
-import {
-  ModelService,
-  GetSupplierModels,
-  getModelContextLength,
-  setModelUsedTotal,
-  getModelUsedTotalList,
-} from '../service/model'
-import path from 'path'
-import { agentService } from '../service/agent'
+import { GetSupplierModels, getModelUsedTotalList } from '../service/model'
 import { ollamaService } from '../service/ollama'
-import { MCPClient } from '../service/mcp_client'
 import {
   ContextStatusMap,
   ModelListInfo,
@@ -34,12 +23,9 @@ class ChatController {
    * 获取对话列表
    * @returns {Promise<any>} - 包含对话列表的成功响应
    */
-  async get_chat_list(): Promise<any> {
-    // 创建 ChatService 实例
+  async get_chat_list(): Promise<Result> {
     const chatService = new ChatService()
-    // 获取对话列表
     const chatList = chatService.get_chat_list()
-    // 返回成功响应
     return pub.return_success(pub.lang('对话列表获取成功'), chatList)
   }
 
@@ -58,18 +44,17 @@ class ChatController {
     title: string
     supplierName?: string
     agent_name?: string
-  }): Promise<any> {
-    let { model, parameters, title, supplierName, agent_name } = args
-    if (!agent_name) agent_name = ''
+  }): Promise<Result> {
+    const { model, parameters, title, supplierName, agent_name: rawAgent } = args
+    const agent_name = rawAgent || ''
     // 创建新对话并获取相关数据
     const data = new ChatService().create_chat(
       model,
       parameters,
       title,
       supplierName as string,
-      agent_name as string,
+      agent_name,
     )
-    // 返回成功响应
     return pub.return_success(pub.lang('对话创建成功'), data)
   }
 
@@ -78,30 +63,23 @@ class ChatController {
    * @param result
    * @returns
    */
-  get_model_top5(result: any) {
-    // 增加常用模型
-    let commonModels = []
-    let modelsTotal = getModelUsedTotalList()
-    for (let key of Object.keys(result)) {
-      let modelList = result[key]
-      for (let model of modelList) {
-        let index = `${model.supplierName}/${model.model}`
+  get_model_top5(result: Record<string, Array<ModelInfo & { total?: number }>>) {
+    const commonModels: Array<ModelInfo & { total: number }> = []
+    const modelsTotal = getModelUsedTotalList()
+    for (const key of Object.keys(result)) {
+      const modelList = result[key]
+      for (const model of modelList) {
+        const index = `${model.supplierName}/${model.model}`
         if (modelsTotal[index]) {
           model.total = modelsTotal[index]
-          commonModels.push(model)
+          commonModels.push(model as ModelInfo & { total: number })
         }
       }
     }
 
-    // 按照使用次数排序
-    commonModels = commonModels.sort((a, b) => {
-      return b.total - a.total
-    })
-
-    // 取前5个模型
-    commonModels = commonModels.slice(0, 5)
-    if (commonModels.length > 0) {
-      result['commonModelList'] = commonModels
+    const sortedModels = commonModels.sort((a, b) => b.total - a.total).slice(0, 5)
+    if (sortedModels.length > 0) {
+      result['commonModelList'] = sortedModels
     }
     return result
   }
@@ -110,10 +88,9 @@ class ChatController {
    * 获取模型列表
    * @returns {Promise<any>} - 包含模型列表信息的成功响应
    */
-  async get_model_list(): Promise<any> {
-    // 清空模型信息列表
+  async get_model_list(): Promise<Result> {
     clearModelListInfo()
-    let ollamaModelList = await ollamaService.model_list()
+    const ollamaModelList = await ollamaService.model_list()
     try {
       // 获取所有模型信息
       MODEL_LIST_RETRY++
@@ -128,9 +105,9 @@ class ChatController {
           modelInfo.name.indexOf('multilingual') == -1 &&
           modelInfo.name.indexOf('r1-1776') == -1
         ) {
-          let capability = ['llm']
-          let lastName = modelInfo.name.split(':')[0].toLocaleLowerCase()
-          for (let mod of ollamaModelList) {
+          let capability: string[] = ['llm']
+          const lastName = modelInfo.name.split(':')[0].toLocaleLowerCase()
+          for (const mod of ollamaModelList) {
             if (mod.model == lastName) {
               capability = mod.capability
               break
@@ -160,10 +137,8 @@ class ChatController {
     let result = await GetSupplierModels()
     result['ollama'] = ModelListInfo
 
-    // 计算常用模型
     result = this.get_model_top5(result)
 
-    // 返回成功响应
     return pub.return_success(pub.lang('大模型列表获取成功'), result)
   }
 
@@ -206,8 +181,8 @@ class ChatController {
       mcp_servers?: string[]
     },
     webContents: WebContents | null,
-  ): Promise<any> {
-    let toChatService = new ToChatService()
+  ): Promise<Result> {
+    const toChatService = new ToChatService()
     return await toChatService.chat(args, webContents)
   }
 
@@ -217,12 +192,10 @@ class ChatController {
    * @param {string} args.context_id - 对话的唯一标识符
    * @returns {Promise<any>} - 包含对话信息的成功响应
    */
-  async get_chat_info(args: { context_id: string }): Promise<any> {
+  async get_chat_info(args: { context_id: string }): Promise<Result> {
     const { context_id: uuid } = args
-    let chatService = new ChatService()
-    // 获取对话历史
+    const chatService = new ChatService()
     const data = chatService.get_chat_history(uuid)
-    // 返回成功响应
     return pub.return_success(pub.lang('对话信息获取成功'), data)
   }
 
@@ -232,12 +205,11 @@ class ChatController {
    * @param {string} args.context_id - 对话的唯一标识符,多个用逗号分隔
    * @returns {Promise<any>} - 删除成功的响应
    */
-  async remove_chat(args: { context_id: string }): Promise<any> {
-    let { context_id } = args
+  async remove_chat(args: { context_id: string }): Promise<Result> {
+    const { context_id } = args
     const chatService = new ChatService()
-    // 删除对话
-    let uuids = context_id.split(',')
-    for (let uuid of uuids) {
+    const uuids = context_id.split(',')
+    for (const uuid of uuids) {
       chatService.delete_chat(uuid)
       // 删除对话状态
       if (ContextStatusMap.has(uuid)) {
@@ -255,7 +227,7 @@ class ChatController {
    * @param {string} args.title - 新的对话标题
    * @returns {Promise<any>} - 修改结果的响应
    */
-  async modify_chat_title(args: { context_id: string; title: string }): Promise<any> {
+  async modify_chat_title(args: { context_id: string; title: string }): Promise<Result> {
     const { context_id: uuid, title } = args
     const chatService = new ChatService()
     // 更新对话标题
@@ -273,7 +245,7 @@ class ChatController {
    * @param {string} args.id - 要删除的历史记录的唯一标识符
    * @returns {Promise<any>} - 删除成功的响应
    */
-  async delete_chat_history(args: { context_id: string; id: string }): Promise<any> {
+  async delete_chat_history(args: { context_id: string; id: string }): Promise<Result> {
     const { context_id: uuid, id: history_id } = args
     const chatService = new ChatService()
     // 删除对话历史记录
@@ -288,7 +260,7 @@ class ChatController {
    * @param {string} args.context_id - 对话的唯一标识符
    * @returns {Promise<any>} - 中断成功的响应
    */
-  async stop_generate(args: { context_id: string }): Promise<any> {
+  async stop_generate(args: { context_id: string }): Promise<Result> {
     const { context_id: uuid } = args
     // 设置对话状态为中断
     ContextStatusMap.set(uuid, false)
@@ -302,7 +274,7 @@ class ChatController {
    * @param {string} args.context_id - 对话的唯一标识符
    * @returns {Promise<any>} - 包含最后一条历史记录的成功响应
    */
-  async get_last_chat_history(args: { context_id: string }): Promise<any> {
+  async get_last_chat_history(args: { context_id: string }): Promise<Result> {
     const { context_id: uuid } = args
     const chatService = new ChatService()
     // 获取最后一条历史记录

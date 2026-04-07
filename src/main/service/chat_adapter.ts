@@ -118,8 +118,8 @@ export class OllamaChatAdapter implements ChatAdapter {
   abort(res: any): void {
     try {
       res?.abort()
-    } catch (error: any) {
-      logger.error('Ollama abort error:', error.message)
+    } catch (error: unknown) {
+      logger.error('Ollama abort error:', (error as Error).message)
     }
   }
 }

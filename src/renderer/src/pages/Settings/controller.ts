@@ -54,7 +54,7 @@ export async function getModelList() {
       header.setModelListSource(res.message)
       const flatList: SupplierModelItem[] = Object.values(
         res.message as Record<string, SupplierModelItem[]>,
-      ).reduce((p: any, v: any) => [...p, ...v], [])
+      ).flat()
       header.setModelList(flatList)
       if (flatList.length && !thirdParty.currentSupplierName) {
         thirdParty.setCurrentSupplierName(flatList[0].supplierName)

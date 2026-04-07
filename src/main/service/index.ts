@@ -24,44 +24,44 @@ class IndexService {
    * @returns
    */
   public async copyDataPath(): Promise<any> {
-    if (global.isCopyDataPath) {
+    if ((global as any).isCopyDataPath) {
       return
     }
-    global.isCopyDataPath = true
+    ;(global as any).isCopyDataPath = true
     // 复制数据到新路径
-    let savePathConfigFile = path.resolve(pub.get_system_data_path(), 'save_path.json')
-    let savePathConfig = pub.read_json(savePathConfigFile)
+    const savePathConfigFile = path.resolve(pub.get_system_data_path(), 'save_path.json')
+    const savePathConfig = pub.read_json(savePathConfigFile)
     try {
-      let oldPath = savePathConfig.oldPath
-      let newPath = savePathConfig.currentPath
+      const oldPath = savePathConfig.oldPath
+      const newPath = savePathConfig.currentPath
       savePathConfig.copyStatus.status = 1
       savePathConfig.copyStatus.startTime = pub.time()
       savePathConfig.copyStatus.total = pub.getDirSize(oldPath)
       pub.write_json(savePathConfigFile, savePathConfig)
 
-      let files = this.listFiles(oldPath)
+      const files = this.listFiles(oldPath)
       savePathConfig.copyStatus.fileTotal = files.length
       savePathConfig.copyStatus.fileCurrent = 0
 
       let lastTime = pub.time()
       let lastCurrent = 0
-      for (let filename of files) {
-        let newFilename = filename.replace(oldPath, newPath)
-        let dstPath = path.dirname(newFilename)
-        let name = path.basename(newFilename)
+      for (const filename of files) {
+        const newFilename = filename.replace(oldPath, newPath)
+        const dstPath = path.dirname(newFilename)
+        const name = path.basename(newFilename)
         if (!pub.file_exists(dstPath)) {
           pub.mkdir(dstPath)
         }
 
-        let fStat = pub.stat(filename)
+        const fStat = pub.stat(filename)
 
         savePathConfig.copyStatus.fileCurrent++
 
         savePathConfig.copyStatus.message = pub.lang('正在复制文件: {}', name)
         savePathConfig.copyStatus.error = ''
         await fs.copyFile(filename, newFilename)
-        savePathConfig.copyStatus.current += fStat.size
-        lastCurrent += fStat.size
+        savePathConfig.copyStatus.current += fStat!.size
+        lastCurrent += fStat!.size
         savePathConfig.copyStatus.percent = Math.floor(
           (savePathConfig.copyStatus.current / savePathConfig.copyStatus.total) * 100,
         )
@@ -80,7 +80,7 @@ class IndexService {
         if (pub.file_exists(oldPath)) {
           savePathConfig.copyStatus.message = pub.lang('正在删除旧数据')
           pub.write_json(savePathConfigFile, savePathConfig)
-          await fs.rmdir(oldPath, { recursive: true })
+          await fs.remove(oldPath)
           savePathConfig.isClearOldPath = true
         }
       }
@@ -92,19 +92,19 @@ class IndexService {
       savePathConfig.copyStatus.message = pub.lang('复制完成')
       savePathConfig.copyStatus.error = ''
     } catch (e) {
-      let rmPath = savePathConfig.currentPath
+      const rmPath = savePathConfig.currentPath
       savePathConfig.copyStatus.status = -1
-      savePathConfig.copyStatus.message = pub.lang('复制失败，已撤回操作: {}', e.message)
+      savePathConfig.copyStatus.message = pub.lang('复制失败，已撤回操作: {}', (e as Error).message)
       savePathConfig.currentPath = savePathConfig.oldPath
       savePathConfig.isMove = false
       savePathConfig.oldPath = ''
       savePathConfig.isMoveSuccess = false
-      savePathConfig.copyStatus.error = e.message
+      savePathConfig.copyStatus.error = (e as Error).message
       // 删除已复制的文件
-      fs.rmdir(rmPath, { recursive: true })
+      fs.removeSync(rmPath)
     } finally {
       pub.write_json(savePathConfigFile, savePathConfig)
-      global.isCopyDataPath = false
+      ;(global as any).isCopyDataPath = false
     }
   }
 }

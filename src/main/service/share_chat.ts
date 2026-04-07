@@ -240,7 +240,7 @@ export class ShareChatService {
     chatContext: ChatContext,
     contextLength: number,
   ): any[] {
-    let contextList = this.read_history(shareId, contextId)
+    const contextList = this.read_history(shareId, contextId)
     let totalTokens = chatContext.content.length
     for (const item of contextList) {
       totalTokens += item.content.length
@@ -283,7 +283,7 @@ export class ShareChatService {
 
     historyRes.content = pub.lang('意外中断')
     if (regenerate_id) {
-      let index = historyList.findIndex((item) => item.id == regenerate_id)
+      const index = historyList.findIndex((item) => item.id == regenerate_id)
       if (index > -1) {
         // 移除指定ID之后的所有历史记录
         historyList = historyList.slice(0, index)
@@ -321,7 +321,7 @@ export class ShareChatService {
     }
 
     let historyList = this.read_history(shareId, contextId)
-    let index = historyList.findIndex((item) => item.id == id)
+    const index = historyList.findIndex((item) => item.id == id)
     historyList[index] = history
     this.save_history(shareId, contextId, historyList)
   }

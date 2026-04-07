@@ -11,7 +11,8 @@ import { pub } from '../class/public'
 import path from 'path'
 import { logger } from '../lib/utils'
 import { mcpService } from './mcp'
-import Stream from 'openai/streaming'
+import type { Stream } from 'openai/streaming'
+// @ts-expect-error no types available for punycode/
 import punycode from 'punycode/'
 
 // MCP配置对象
@@ -48,7 +49,6 @@ export class MCPClient {
   private transports: Map<string, StdioClientTransport | SSEClientTransport> = new Map()
   // 缓存工具列表
   private toolListCache: any[] | null = null
-  private supplierName: string = ''
   private model: string = ''
   private openai: OpenAI | null = null
   private push: Function | null = null
@@ -184,8 +184,8 @@ export class MCPClient {
   ): Promise<StdioClientTransport | SSEClientTransport> {
     if (serverConfig.type === 'stdio' && serverConfig.command) {
       let command = serverConfig.command
-      let args = serverConfig.args || []
-      let env = serverConfig.env || {}
+      const args = serverConfig.args || []
+      const env = serverConfig.env || {}
       if (command === 'npx') {
         command = mcpService.get_bun_bin()
         args.unshift('x', '--bun')
@@ -205,7 +205,7 @@ export class MCPClient {
    * @returns {Promise<void>} - 连接操作的 Promise
    */
   async connectToServer(serverConfigList: ServerConfig[]): Promise<void> {
-    for (let serverConfig of serverConfigList) {
+    for (const serverConfig of serverConfigList) {
       try {
         const validatedConfig = this.validateServerConfig(serverConfig)
         const transport = await this.createTransport(validatedConfig)
@@ -216,11 +216,7 @@ export class MCPClient {
             version: '1.0.0',
           },
           {
-            capabilities: {
-              prompts: {},
-              resources: {},
-              tools: {},
-            },
+            capabilities: {},
           },
         )
         await client.connect(transport)
@@ -338,14 +334,14 @@ export class MCPClient {
       if (!this.isValidToolCall(toolCall)) {
         continue
       }
-      let [serverName, toolName] = toolCall.function.name.split('__')
+      let [serverName, toolName] = (toolCall as any).function.name.split('__')
       serverName = this.dePunycode(serverName)
       const session = this.sessions.get(serverName)
 
       if (!session) {
         continue
       }
-      const toolArgs = JSON.parse(toolCall.function.arguments)
+      const toolArgs = JSON.parse((toolCall as any).function.arguments)
       const toolResult = await this.executeToolCall(session, toolName, toolArgs)
       const toolResultContent = this.processToolResult(toolResult)
 
@@ -368,9 +364,7 @@ export class MCPClient {
    * @param {OpenAI.Chat.Completions.ChatCompletionMessageToolCall} toolCall - 工具调用对象
    * @returns {boolean} - 工具调用是否有效的布尔值
    */
-  private isValidToolCall(
-    toolCall: OpenAI.Chat.Completions.ChatCompletionMessageToolCall,
-  ): boolean {
+  private isValidToolCall(toolCall: any): boolean {
     if (toolCall.function && toolCall.function.name && toolCall.function.arguments) return true
     return false
   }
@@ -426,7 +420,7 @@ export class MCPClient {
    * @param {any} message - 要推送的消息
    */
   private pushMessage(message: any): void {
-    this.push('<mcptool>\n\n' + JSON.stringify(message, null, 4) + '\n\n</mcptool>\n\n')
+    this.push!('<mcptool>\n\n' + JSON.stringify(message, null, 4) + '\n\n</mcptool>\n\n')
   }
 
   /**
@@ -464,15 +458,15 @@ export class MCPClient {
    * @returns {Promise<ChatCompletionMessageParam[]>} - 处理后的消息列表的 Promise
    */
   private async handleOpenAIToolCalls(
-    completion: Stream.Stream<OpenAI.Chat.Completions.ChatCompletionChunk>,
+    completion: Stream<OpenAI.Chat.Completions.ChatCompletionChunk>,
     messages: ChatCompletionMessageParam[],
     availableTools: any[],
   ): Promise<ChatCompletionMessageParam[]> {
     let toolId = ''
-    let toolCallMap: Record<string, OpenAI.Chat.Completions.ChatCompletionMessageToolCall> = {}
+    const toolCallMap: Record<string, OpenAI.Chat.Completions.ChatCompletionMessageToolCall> = {}
     let toolsContent = ''
     for await (const chunk of completion) {
-      for (let choice of chunk.choices) {
+      for (const choice of chunk.choices) {
         const message = choice.delta
 
         // 合并工具调用
@@ -496,15 +490,15 @@ export class MCPClient {
             if (toolCall.type) toolCallMap[toolId].type = toolCall.type
             if (toolCall.function) {
               if (toolCall.function.name) {
-                toolCallMap[toolId].function.name = toolCall.function.name
+                ;(toolCallMap[toolId] as any).function.name = toolCall.function.name
               }
               if (toolCall.function.arguments) {
-                toolCallMap[toolId].function.arguments += toolCall.function.arguments
+                ;(toolCallMap[toolId] as any).function.arguments += toolCall.function.arguments
               }
             }
           }
         } else {
-          this.callback(chunk)
+          this.callback!(chunk)
         }
       }
     }
@@ -516,7 +510,7 @@ export class MCPClient {
       if (last_message.content) {
         // 内容以<end>开头，且以</end>结束的,不递归工具调用，原样输出
         let content = last_message.content.toString().trim()
-        let toolMessage = JSON.parse(content)
+        const toolMessage = JSON.parse(content)
         if (toolMessage && toolMessage.length > 0 && toolMessage[0].text) {
           content = toolMessage[0].text
           if (content.startsWith('<end>') && content.endsWith('</end>')) {
@@ -533,8 +527,8 @@ export class MCPClient {
                 },
               ],
             }
-            this.callback(chunk)
-            return
+            this.callback!(chunk)
+            return messages
           }
 
           if (content.startsWith('<echo>') && content.endsWith('</echo>')) {
@@ -551,7 +545,7 @@ export class MCPClient {
                 },
               ],
             }
-            this.callback(chunk)
+            this.callback!(chunk)
           }
         }
       }
@@ -571,11 +565,11 @@ export class MCPClient {
   async handleToolCalls(
     availableTools: any,
     messages: ChatCompletionMessageParam[],
-    isRecursive = false,
+    _isRecursive = false,
   ) {
     // 调用OpenAI API
     try {
-      const completion = await this.openai.chat.completions.create({
+      const completion = await this.openai!.chat.completions.create({
         model: this.model,
         messages,
         tools: availableTools,
@@ -603,7 +597,7 @@ export class MCPClient {
    */
   async processQuery(
     openai: OpenAI,
-    supplierName: string,
+    _supplierName: string,
     model: string,
     messages: ChatCompletionMessageParam[],
     callback: Function,
@@ -615,7 +609,6 @@ export class MCPClient {
     const availableTools = await this.getAllAvailableTools()
 
     try {
-      this.supplierName = supplierName
       this.model = model
       this.openai = openai
       this.push = push
@@ -633,7 +626,7 @@ export class MCPClient {
           {
             finish_reason: 'stop',
             delta: {
-              content: 'Error: ' + error.message,
+              content: 'Error: ' + (error as Error).message,
             },
           },
         ],

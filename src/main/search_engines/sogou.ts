@@ -55,7 +55,7 @@ export const localSogouSearch = async (query: string): Promise<SearchResult[]> =
     const searchResultsPromises = nodes.map((node) => processSearchResultNode($(node)))
     const searchResults = await Promise.all(searchResultsPromises)
 
-    let searchResultList = searchResults.filter(
+    const searchResultList = searchResults.filter(
       (result) => result.link && result.title && result.content,
     )
     return getUrlsContent(searchResultList)

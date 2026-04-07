@@ -1,13 +1,6 @@
 import { Tray, Menu } from 'electron'
 import path from 'path'
-import {
-  logger,
-  isDev,
-  getBaseDir,
-  getMainWindow,
-  getCloseAndQuit,
-  setCloseAndQuit,
-} from '../../lib/utils'
+import { logger, getBaseDir, getMainWindow } from '../../lib/utils'
 import { app as electronApp } from 'electron'
 
 import { pub } from '../../class/public'
@@ -61,7 +54,7 @@ class TrayService {
 
     // 设置关闭行为
     // setCloseAndQuit(true);
-    mainWindow.on('close', (event: any) => {
+    mainWindow.on('close', (_event: any) => {
       // if (getCloseAndQuit()) {
       //   return;
       // }

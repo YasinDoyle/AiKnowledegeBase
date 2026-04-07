@@ -1,4 +1,4 @@
-import { pub } from '../class/public'
+import { pub, ReturnMsg as Result } from '../class/public'
 import { logger } from '../lib/utils'
 import path from 'path'
 
@@ -63,9 +63,9 @@ class ShareController {
    * @param {string} shareId - 分享ID
    * @returns {object|null} - 分享配置对象，如果不存在则返回 null
    */
-  read_share_config(shareId: string): object | null {
+  read_share_config(shareId: string): Record<string, unknown> | null {
     const shareFilePath = this.getShareConfigFilePath(shareId)
-    return this.readJsonFile(shareFilePath)
+    return this.readJsonFile(shareFilePath) as Record<string, unknown> | null
   }
 
   /**
@@ -84,7 +84,7 @@ class ShareController {
       shareConfig.url = `${SHARE_URL}/${shareIdPrefix}/${shareId}`
       if (shareConfig) {
         // 异步获取分享的聊天历史记录
-        let historys = await this.get_share_chat_history({ share_id: shareId })
+        const historys = await this.get_share_chat_history({ share_id: shareId })
         shareConfig['chats'] = historys.message
         if (!shareConfig.rag_list) {
           shareConfig.rag_list = []
@@ -108,7 +108,7 @@ class ShareController {
    * @param {string} args.share_id - 分享ID
    * @returns {Promise<any>} - 表示删除成功的响应对象
    */
-  async remove_share(args: { share_id: string }): Promise<any> {
+  async remove_share(args: { share_id: string }): Promise<Result> {
     const sharePath = path.resolve(pub.get_data_path(), 'share', args.share_id)
     if (pub.file_exists(sharePath)) {
       try {
@@ -142,7 +142,7 @@ class ShareController {
     rag_list?: string
     agent_name?: string
     mcp_servers?: string[]
-  }): Promise<any> {
+  }): Promise<Result> {
     const shareId = pub.uuid()
     const sharePath = path.resolve(pub.get_data_path(), 'share', shareId)
 
@@ -154,9 +154,9 @@ class ShareController {
       return pub.return_error(pub.lang('创建分享目录失败'), null)
     }
 
-    let supplierName = args.supplierName || 'ollama'
-    let rag_list = args.rag_list ? JSON.parse(args.rag_list) : ''
-    let agent_name = args.agent_name || ''
+    const supplierName = args.supplierName || 'ollama'
+    const rag_list = args.rag_list ? JSON.parse(args.rag_list) : ''
+    const agent_name = args.agent_name || ''
 
     const shareConfig = {
       supplierName: supplierName,
@@ -174,8 +174,8 @@ class ShareController {
     const shareConfigPath = this.getShareConfigFilePath(shareId)
     this.saveJsonFile(shareConfigPath, shareConfig)
 
-    let shareIdPrefix = pub.C('shareIdPrefix') || 'none'
-    let url = `${SHARE_URL}/${shareIdPrefix}/${shareId}`
+    const shareIdPrefix = pub.C('shareIdPrefix') || 'none'
+    const url = `${SHARE_URL}/${shareIdPrefix}/${shareId}`
 
     return pub.return_success(pub.lang('创建成功'), { url: url, password: args.password })
   }
@@ -203,20 +203,20 @@ class ShareController {
     rag_list?: string
     agent_name?: string
     mcp_servers?: string[]
-  }): Promise<any> {
+  }): Promise<Result> {
     const sharePath = path.resolve(pub.get_data_path(), 'share', args.share_id)
     if (!pub.file_exists(sharePath)) {
       return pub.return_error(pub.lang('分享不存在'), null)
     }
 
-    let supplierName = args.supplierName || 'ollama'
-    let rag_list = args.rag_list ? JSON.parse(args.rag_list) : ''
-    let agent_name = args.agent_name || ''
+    const supplierName = args.supplierName || 'ollama'
+    const rag_list = args.rag_list ? JSON.parse(args.rag_list) : ''
+    const agent_name = args.agent_name || ''
 
     const shareConfigPath = this.getShareConfigFilePath(args.share_id)
 
     // 修改分享配置文件
-    let shareConfig = this.read_share_config(args.share_id)
+    const shareConfig = this.read_share_config(args.share_id)
     if (!shareConfig) {
       return pub.return_error(pub.lang('获取分享配置失败'), null)
     }
@@ -241,7 +241,7 @@ class ShareController {
    * @param {string} args.share_id - 分享ID
    * @returns {Promise<any>} - 包含分享聊天历史记录的成功响应对象
    */
-  async get_share_chat_history(args: { share_id: string }): Promise<any> {
+  async get_share_chat_history(args: { share_id: string }): Promise<Result> {
     const historyPath = this.getShareContextPath(args.share_id)
     const historyList = pub.readdir(historyPath)
     const historyData: object[] = []
@@ -256,7 +256,7 @@ class ShareController {
         // 获取对话历史
         const chatHistoryFile = path.resolve(contextPath, 'history.json')
         const chatHistory = this.readJsonFile(chatHistoryFile)
-        contextConfig['history'] = chatHistory || []
+        ;(contextConfig as Record<string, unknown>)['history'] = chatHistory || []
         historyData.push(contextConfig)
       }
     }
@@ -270,8 +270,8 @@ class ShareController {
    * @param {string} args.status - 分享服务状态 true/false
    * @returns {Promise<any>} - 包含分享服务状态的成功响应对象
    */
-  async set_share_service_status(args: { status: string }): Promise<any> {
-    let status = args.status
+  async set_share_service_status(args: { status: string }): Promise<Result> {
+    const status = args.status
     pub.C('shareServiceStatus', status == 'true')
     return pub.return_success('设置成功')
   }

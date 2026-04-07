@@ -104,7 +104,7 @@ class Public {
     if (!fs.existsSync(dir)) {
       return
     }
-    fs.rmdirSync(dir, { recursive: true })
+    fs.rmSync(dir, { recursive: true, force: true })
   }
 
   // 读取文件夹
@@ -112,8 +112,8 @@ class Public {
     if (!fs.existsSync(dir)) {
       return []
     }
-    let dirList = fs.readdirSync(dir)
-    let resultList: string[] = []
+    const dirList = fs.readdirSync(dir)
+    const resultList: string[] = []
 
     for (let i = 0; i < dirList.length; i++) {
       resultList.push(dir + '/' + dirList[i])
@@ -122,17 +122,17 @@ class Public {
   }
 
   // 获取文件信息
-  stat(file: string): fs.Stats {
+  stat(file: string): fs.Stats | null {
     if (!fs.existsSync(file)) {
-      return new fs.Stats()
+      return null
     }
     return fs.statSync(file)
   }
 
   // 获取文件大小
   filesize(file: string): number {
-    let fileStat = this.stat(file)
-    if (fileStat.size == undefined) {
+    const fileStat = this.stat(file)
+    if (!fileStat || fileStat.size == undefined) {
       return 0
     }
     return fileStat.size
@@ -140,8 +140,8 @@ class Public {
 
   // 获取文件创建时间
   filectime(file: string): number {
-    let fileStat = this.stat(file)
-    if (fileStat.ctimeMs == undefined) {
+    const fileStat = this.stat(file)
+    if (!fileStat || fileStat.ctimeMs == undefined) {
       return 0
     }
     return Math.floor(fileStat.ctimeMs / 1000)
@@ -149,8 +149,8 @@ class Public {
 
   // 获取文件修改时间
   filemtime(file: string): number {
-    let fileStat = this.stat(file)
-    if (!fileStat.mtimeMs) {
+    const fileStat = this.stat(file)
+    if (!fileStat || !fileStat.mtimeMs) {
       return 0
     }
     // 返回秒级时间戳（整数）
@@ -176,7 +176,7 @@ class Public {
    * @returns {bool} 是否为文件
    * @example is_file('/www/wwwroot/index.html')
    */
-  is_file(path) {
+  is_file(path: string) {
     return fs.existsSync(path) && fs.statSync(path).isFile()
   }
 
@@ -196,7 +196,7 @@ class Public {
     url: string,
     options: {
       method?: string // 请求方法 ('GET', 'POST', 'PUT', 'DELETE' 等)
-      headers?: any // 请求头
+      headers?: Record<string, string> // 请求头
       data?: any // 发送的数据
       timeout?: number // 超时时间(毫秒)
       encoding?: string // 响应编码
@@ -236,8 +236,8 @@ class Public {
         body: response.data,
         headers: response.headers,
       }
-    } catch (error: any) {
-      if (error.response) {
+    } catch (error: unknown) {
+      if (axios.isAxiosError(error) && error.response) {
         // 服务器响应了，但状态码不在2xx范围
         return {
           statusCode: error.response.status,
@@ -245,12 +245,12 @@ class Public {
           headers: error.response.headers,
           error: true,
         }
-      } else if (error.request) {
+      } else if (axios.isAxiosError(error) && error.request) {
         // 请求已发送但没有收到响应
         throw new Error(`请求超时或无响应: ${error.message}`)
       } else {
         // 请求配置有问题
-        throw new Error(`请求配置错误: ${error.message}`)
+        throw new Error(`请求配置错误: ${error instanceof Error ? error.message : String(error)}`)
       }
     }
   }
@@ -261,7 +261,7 @@ class Public {
    * @example get_root_path()
    */
   get_root_path(): string {
-    let result = utils.getRootDir()
+    const result = utils.getRootDir()
     if (!result) return path.resolve(__dirname, '../')
     return result
   }
@@ -278,10 +278,10 @@ class Public {
    */
   get_data_path(): string {
     // 尝试获取用户设置的目录
-    let savePathConfigFile = path.resolve(this.get_system_data_path(), 'save_path.json')
+    const savePathConfigFile = path.resolve(this.get_system_data_path(), 'save_path.json')
     if (fs.existsSync(savePathConfigFile)) {
-      let savePathConfig = this.read_json(savePathConfigFile)
-      let currentPath = savePathConfig.currentPath
+      const savePathConfig = this.read_json(savePathConfigFile)
+      const currentPath = savePathConfig.currentPath
       if (currentPath) {
         if (this.file_exists(currentPath)) {
           return currentPath
@@ -319,7 +319,7 @@ class Public {
    * @returns
    */
   get_system_data_path(): string {
-    let sys_path = path.resolve(this.get_user_data_path(), 'sys_data')
+    const sys_path = path.resolve(this.get_user_data_path(), 'sys_data')
     if (!fs.existsSync(sys_path)) {
       fs.mkdirSync(sys_path)
     }
@@ -332,7 +332,7 @@ class Public {
    */
   get_context_path(uuid: string): string {
     // 获取用户数据目录
-    let context_save_path = path.resolve(this.get_data_path(), 'context')
+    const context_save_path = path.resolve(this.get_data_path(), 'context')
 
     // 如果不存在则创建
     if (!fs.existsSync(context_save_path)) {
@@ -340,7 +340,7 @@ class Public {
     }
 
     // 创建uuid目录
-    let context_path = path.resolve(context_save_path, uuid)
+    const context_path = path.resolve(context_save_path, uuid)
     if (!fs.existsSync(context_path)) {
       fs.mkdirSync(context_path)
     }
@@ -355,7 +355,7 @@ class Public {
    */
   get_share_context_path(shareId: string, contextId: string): string {
     // 获取用户数据目录
-    let context_save_path = path.resolve(this.get_data_path(), 'share', shareId, 'context')
+    const context_save_path = path.resolve(this.get_data_path(), 'share', shareId, 'context')
 
     // 如果不存在则创建
     if (!fs.existsSync(context_save_path)) {
@@ -363,7 +363,7 @@ class Public {
     }
 
     // 创建uuid目录
-    let context_path = path.resolve(context_save_path, contextId)
+    const context_path = path.resolve(context_save_path, contextId)
     if (!fs.existsSync(context_path)) {
       fs.mkdirSync(context_path)
     }
@@ -378,12 +378,12 @@ class Public {
    * @returns {any}
    */
   config_get(key: string): any {
-    let config_file = path.resolve(this.get_data_path(), 'config.json')
+    const config_file = path.resolve(this.get_data_path(), 'config.json')
     if (!fs.existsSync(config_file)) {
-      let default_config = { max_common_use: 10 }
+      const default_config = { max_common_use: 10 }
       this.write_file(config_file, JSON.stringify(default_config))
     }
-    let config = {}
+    let config: Record<string, unknown> = {}
     try {
       config = JSON.parse(this.read_file(config_file))
     } catch (e) {
@@ -414,8 +414,8 @@ class Public {
     if (!key) return
     if (value === undefined) return this.config_get(key)
 
-    let config_file = path.resolve(this.get_data_path(), 'config.json')
-    let config = {}
+    const config_file = path.resolve(this.get_data_path(), 'config.json')
+    let config: Record<string, unknown> = {}
     if (fs.existsSync(config_file)) {
       try {
         config = JSON.parse(this.read_file(config_file))
@@ -461,7 +461,7 @@ class Public {
     let data = this.cache_get('languages')
     if (data) return data
 
-    let filename = path.resolve(this.get_language_path(), 'settings.json')
+    const filename = path.resolve(this.get_language_path(), 'settings.json')
     let body = this.read_file(filename)
     if (!body) {
       body = `{
@@ -477,7 +477,7 @@ class Public {
                 "cn": "英语"
             }`
     }
-    let current = this.get_language()
+    const current = this.get_language()
     data = {
       languages: JSON.parse(body),
       current: current,
@@ -496,8 +496,8 @@ class Public {
     let client_lang = this.cache_get('client_lang')
     if (client_lang) return client_lang
 
-    let language = this.get_language()
-    let language_path = this.get_language_path()
+    const language = this.get_language()
+    const language_path = this.get_language_path()
     let filename = path.resolve(language_path, language + '/client.json')
     if (!this.is_file(filename)) {
       filename = path.resolve(language_path, 'en/client.json')
@@ -524,12 +524,12 @@ class Public {
    * @example lang('Hello {} {}', 'World', '!')
    * @example lang('Hello')
    */
-  lang(content, ...args) {
+  lang(content: string, ...args: unknown[]) {
     // 获取语言包
-    let lang_dataValue = this.cache_get('lang_data')
-    let lang_data: object = {}
+    const lang_dataValue = this.cache_get('lang_data')
+    let lang_data: Record<string, string> = {}
     if (lang_dataValue && typeof lang_dataValue == 'object') {
-      lang_data = lang_dataValue as object
+      lang_data = lang_dataValue as Record<string, string>
     }
 
     if (Object.keys(lang_data).length == 0) {
@@ -537,8 +537,8 @@ class Public {
       if (typeof lang !== 'string') {
         lang = 'zh'
       }
-      let lang_file = path.resolve(this.get_language_path(), lang as string, 'server.json')
-      lang_data = {}
+      const lang_file = path.resolve(this.get_language_path(), lang as string, 'server.json')
+      lang_data = {} as Record<string, string>
       if (fs.existsSync(lang_file)) {
         lang_data = JSON.parse(this.read_file(lang_file))
       }
@@ -546,7 +546,7 @@ class Public {
 
     // 尝试从语言包中获取内容
     let lang_content = content
-    let hash = this.md5(content)
+    const hash = this.md5(content)
     if (lang_data[hash]) {
       lang_content = lang_data[hash]
     }
@@ -554,7 +554,7 @@ class Public {
     // 替换参数
     if (args.length > 0) {
       lang_content = lang_content.replace(/{}/g, function () {
-        return args.shift()
+        return String(args.shift())
       })
     }
 
@@ -567,7 +567,7 @@ class Public {
    * @param {any} key 缓存键
    * @returns
    */
-  cache_get(key: any): any {
+  cache_get(key: string): any {
     return Cache.get(key)
   }
 
@@ -578,7 +578,7 @@ class Public {
    * @param {number} expire 过期时间
    * @returns
    */
-  cache_set(key: any, value: any, expire: number) {
+  cache_set(key: string, value: any, expire: number) {
     if (!expire) expire = 0
     return Cache.set(key, value, expire)
   }
@@ -588,7 +588,7 @@ class Public {
    * @param {any} key 缓存键
    * @returns
    */
-  cache_del(key: any) {
+  cache_del(key: string) {
     return Cache.del(key)
   }
 
@@ -606,7 +606,7 @@ class Public {
    * @returns
    * @example cache_has('key')
    */
-  cache_has(key: any) {
+  cache_has(key: string) {
     return Cache.has(key)
   }
 
@@ -773,7 +773,7 @@ class Public {
     const parts = line.split(separator)
     if (Array.isArray(parts) && parts.length === 2) {
       const key = parts[0].trim()
-      let value = parts[1].trim()
+      const value = parts[1].trim()
       return [key, value]
     }
     return null
@@ -800,11 +800,12 @@ class Public {
    */
   get_mac_address(): string {
     let mac = ''
-    let interfaces = import('os').networkInterfaces()
-    for (let dev in interfaces) {
-      let iface = interfaces[dev]
+    const os = require('os')
+    const interfaces = os.networkInterfaces()
+    for (const dev in interfaces) {
+      const iface = interfaces[dev]
       for (let i = 0; i < iface.length; i++) {
-        let alias = iface[i]
+        const alias = iface[i]
         if (alias.family === 'IPv4' && alias.mac !== '00:00:00:00:00:00') {
           mac = alias.mac
           break
@@ -820,7 +821,7 @@ class Public {
    * @returns string
    */
   get_device_id(): string {
-    let mac = this.get_mac_address()
+    const mac = this.get_mac_address()
     if (mac) return this.md5(mac)
     return this.md5(this.uuid())
   }
@@ -874,9 +875,9 @@ class Public {
       size = (limit / (1024 * 1024 * 1024)).toFixed(2) + 'GB'
     }
 
-    let sizeStr = size + ''
-    let index = sizeStr.indexOf('.')
-    let dou = sizeStr.substring(index + 1, index + 3)
+    const sizeStr = size + ''
+    const index = sizeStr.indexOf('.')
+    const dou = sizeStr.substring(index + 1, index + 3)
     if (dou === '00') {
       return sizeStr.substring(0, index) + sizeStr.substring(index + 3, index + 5)
     }
@@ -890,12 +891,12 @@ class Public {
    * @returns string
    */
   imageToBase64(file: string): string {
-    let data = fs.readFileSync(file)
-    let base64Data = data.toString('base64')
+    const data = fs.readFileSync(file)
+    const base64Data = data.toString('base64')
 
     // 增加图片格式前缀
-    let ext = path.extname(file).replace('.', '')
-    let imgBase64 = `data:image/${ext};base64,${base64Data}`
+    const ext = path.extname(file).replace('.', '')
+    const imgBase64 = `data:image/${ext};base64,${base64Data}`
     return imgBase64
   }
 
@@ -941,13 +942,13 @@ class Public {
   // 获取用户所在地区
   getUserLocation = () => {
     if (pub.get_language() == 'zh') {
-      return global.area || this.lang('未知地区')
+      return (global as Record<string, unknown>).area || this.lang('未知地区')
     }
     return this.lang('未知地区')
   }
 
   // 打开文件
-  openFile(filePath) {
+  openFile(filePath: string) {
     let command
     // 根据操作系统确定命令
     switch (process.platform) {
@@ -1006,7 +1007,7 @@ class Public {
     if (!ollamaHost) {
       ollama = new Ollama()
     } else {
-      let config = {
+      const config = {
         host: ollamaHost,
       }
       ollama = new Ollama(config)
@@ -1033,6 +1034,7 @@ class Public {
     const files = pub.readdir(dirPath)
     for (const file of files) {
       const stats = pub.stat(file)
+      if (!stats) continue
       if (stats.isDirectory()) {
         totalSize += this.getDirSize(file) // 递归计算子目录大小
       } else {

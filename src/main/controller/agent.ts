@@ -1,4 +1,4 @@
-import { pub } from '../class/public'
+import { pub, ReturnMsg as Result } from '../class/public'
 import { logger } from '../lib/utils'
 import path from 'path'
 
@@ -21,11 +21,11 @@ class AgentController {
    * 读取指定知能体配置文件
    * @returns object
    */
-  read_agent_config(agent_name: string) {
-    let agentConfigFile = path.resolve(this.agentPath, agent_name + '.json')
+  read_agent_config(agent_name: string): Record<string, unknown> | null {
+    const agentConfigFile = path.resolve(this.agentPath, agent_name + '.json')
     if (pub.file_exists(agentConfigFile)) {
       try {
-        let agentConfig = pub.read_json(agentConfigFile)
+        const agentConfig = pub.read_json(agentConfigFile)
         return agentConfig
       } catch (e) {
         logger.error(pub.lang('读取智能体配置文件失败'), e)
@@ -33,10 +33,10 @@ class AgentController {
       }
     }
 
-    let systemAgentConfigFile = path.resolve(this.systemAgentPath, agent_name + '.json')
+    const systemAgentConfigFile = path.resolve(this.systemAgentPath, agent_name + '.json')
     if (pub.file_exists(systemAgentConfigFile)) {
       try {
-        let agentConfig = pub.read_json(systemAgentConfigFile)
+        const agentConfig = pub.read_json(systemAgentConfigFile)
         return agentConfig
       } catch (e) {
         logger.error(pub.lang('读取智能体配置文件失败'), e)
@@ -54,7 +54,7 @@ class AgentController {
    * @returns
    */
   write_agent_config(agent_name: string, config: object) {
-    let agentConfigFile = path.resolve(this.agentPath, agent_name + '.json')
+    const agentConfigFile = path.resolve(this.agentPath, agent_name + '.json')
     pub.write_json(agentConfigFile, config)
   }
 
@@ -74,12 +74,13 @@ class AgentController {
     agent_title: string
     prompt: string
     icon?: string
-  }): Promise<any> {
-    let { agent_type, agent_name, agent_title, prompt, icon } = args
+  }): Promise<Result> {
+    const { agent_title, prompt } = args
+    let { agent_type, agent_name, icon } = args
     if (!agent_name) {
       while (true) {
         agent_name = pub.randomString(8)
-        let agentConfigFile = path.resolve(this.agentPath, agent_name + '.json')
+        const agentConfigFile = path.resolve(this.agentPath, agent_name + '.json')
         if (!pub.file_exists(agentConfigFile)) {
           break
         }
@@ -91,7 +92,7 @@ class AgentController {
     if (!icon) {
       icon = ''
     }
-    let agentConfig = {
+    const agentConfig = {
       agent_name: agent_name,
       agent_title: agent_title,
       prompt: prompt,
@@ -112,29 +113,28 @@ class AgentController {
    * @param args.agent_type - 智能体分类
    * @returns {Promise<any>}
    */
-  async get_agent_list(args: { agent_type?: string }): Promise<any> {
-    let agentList: any[] = []
-    let systemAgentDirList = pub.readdir(this.systemAgentPath)
-    for (let agentDir of systemAgentDirList) {
-      let agentName = path.basename(agentDir, '.json')
-      let agentConfig = this.read_agent_config(agentName)
+  async get_agent_list(_args: { agent_type?: string }): Promise<Result> {
+    const agentList: Record<string, unknown>[] = []
+    const systemAgentDirList = pub.readdir(this.systemAgentPath)
+    for (const agentDir of systemAgentDirList) {
+      const agentName = path.basename(agentDir, '.json')
+      const agentConfig = this.read_agent_config(agentName)
       if (agentConfig) {
         agentList.push(agentConfig)
       }
     }
 
-    let agentDirList = pub.readdir(this.agentPath)
-    for (let agentDir of agentDirList) {
-      let agentName = path.basename(agentDir, '.json')
-      let agentConfig = this.read_agent_config(agentName)
+    const agentDirList = pub.readdir(this.agentPath)
+    for (const agentDir of agentDirList) {
+      const agentName = path.basename(agentDir, '.json')
+      const agentConfig = this.read_agent_config(agentName)
       if (agentConfig) {
         agentList.push(agentConfig)
       }
     }
 
-    // 根据create_time降序排序
-    agentList = agentList.sort((a, b) => {
-      return b.create_time - a.create_time
+    agentList.sort((a, b) => {
+      return (b.create_time as number) - (a.create_time as number)
     })
 
     return pub.return_success(pub.lang('获取成功'), agentList)
@@ -156,9 +156,10 @@ class AgentController {
     agent_title: string
     prompt: string
     icon?: string
-  }): Promise<any> {
-    let { agent_type, agent_name, agent_title, prompt, icon } = args
-    let agentConfig = this.read_agent_config(agent_name)
+  }): Promise<Result> {
+    const { agent_name, agent_title, prompt } = args
+    let { agent_type, icon } = args
+    const agentConfig = this.read_agent_config(agent_name)
     if (!agentConfig) {
       return pub.return_error(pub.lang('智能体不存在'))
     }
@@ -183,16 +184,16 @@ class AgentController {
    * @param args.agent_name - 智能体名称
    * @returns {Promise<void>}
    */
-  async remove_agent(args: { agent_name: string }): Promise<any> {
-    let { agent_name } = args
-    let agentConfig = this.read_agent_config(agent_name)
+  async remove_agent(args: { agent_name: string }): Promise<Result> {
+    const { agent_name } = args
+    const agentConfig = this.read_agent_config(agent_name)
     if (!agentConfig) {
       return pub.return_error(pub.lang('智能体不存在'))
     }
     if (agentConfig.is_system) {
       return pub.return_error(pub.lang('系统智能体不可删除'))
     }
-    let agentConfigFile = path.resolve(this.agentPath, agent_name + '.json')
+    const agentConfigFile = path.resolve(this.agentPath, agent_name + '.json')
     pub.delete_file(agentConfigFile)
     return pub.return_success(pub.lang('删除成功'))
   }
@@ -203,9 +204,9 @@ class AgentController {
    * @param args.agent_name - 智能体名称
    * @returns {Promise<void>}
    */
-  async get_agent_info(args: { agent_name: string }): Promise<any> {
-    let { agent_name } = args
-    let agentConfig = this.read_agent_config(agent_name)
+  async get_agent_info(args: { agent_name: string }): Promise<Result> {
+    const { agent_name } = args
+    const agentConfig = this.read_agent_config(agent_name)
     if (!agentConfig) {
       return pub.return_error(pub.lang('智能体不存在'))
     }

@@ -21,7 +21,7 @@ export const localBaiduSearch = async (query: string): Promise<SearchResult[]> =
     // 处理搜索结果数据
     const searchResults: SearchResult[] = data.map((result: any) => {
       const title = result?.title || ''
-      let link = result?.url
+      const link = result?.url
       const content = result?.abs || ''
       return { title, link, content }
     })

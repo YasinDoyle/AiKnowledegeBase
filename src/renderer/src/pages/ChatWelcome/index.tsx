@@ -1,4 +1,3 @@
-import { Button, Image } from 'antd'
 import { useTranslation } from 'react-i18next'
 import useChatContentStore from '@/stores/chatContent'
 import useAgentStore from '@/stores/agent'

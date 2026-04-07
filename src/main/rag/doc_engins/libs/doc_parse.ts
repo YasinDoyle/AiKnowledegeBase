@@ -1,3 +1,4 @@
+// @ts-expect-error no types available for word-extractor
 import WordExtractor from 'word-extractor'
 
 /**
@@ -5,7 +6,7 @@ import WordExtractor from 'word-extractor'
  * @param filename 文件名
  * @returns 解析后的文本
  */
-export async function parse(filename: string, ragName: string): Promise<string> {
+export async function parse(filename: string, _ragName: string): Promise<string> {
   try {
     const extractor = new WordExtractor()
     const extracted = await extractor.extract(filename)

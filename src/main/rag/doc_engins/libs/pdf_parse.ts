@@ -28,7 +28,7 @@ export class PdfParser {
    * 构造函数
    * @param filename PDF文件路径
    */
-  constructor(filename: string, ragName: string) {
+  constructor(filename: string, _ragName: string) {
     this.filename = filename
   }
 
@@ -109,13 +109,13 @@ export class PdfParser {
     let abort = new AbortController()
 
     // 发起下载请求
-    let headers = {
+    let headers: Record<string, string> = {
       'User-Agent': 'AiKnowledgeBase/' + pub.version(),
     }
     let downloadBytes = 0
     if (pub.file_exists(saveFile)) {
       const stats = pub.stat(saveFile)
-      downloadBytes = stats.size
+      downloadBytes = stats ? stats.size : 0
     }
 
     if (downloadBytes > 0) {
@@ -158,7 +158,7 @@ export class PdfParser {
         })
       })
     } catch (e) {
-      if (e.message.indexOf('status code 416') !== -1) {
+      if (e instanceof Error && e.message.indexOf('status code 416') !== -1) {
         logger.info(`文件 ${saveFile} 已经下载完成，跳过下载`)
         return true
       }
@@ -186,7 +186,7 @@ export class PdfParser {
     if (pub.file_exists(popplerFile)) {
       return pub.return_success(pub.lang('已安装'))
     }
-    global.popplerInstall = true
+    ;(global as Record<string, unknown>).popplerInstall = true
     let binPath = path.dirname(this.get_poppler_path())
     let os_path = this.get_os_path()
 
@@ -266,7 +266,7 @@ export class PdfParser {
 
     // 使用exec执行命令防止主进程阻塞，同时等待命令执行完成，以便获取输出
     await new Promise((resolve, reject) => {
-      exec(command, (error, stdout, stderr) => {
+      exec(command, (error, stdout, _stderr) => {
         if (error) {
           console.error(`pdf to images error: ${error.message}`)
           reject(error)

@@ -13,6 +13,7 @@ interface SiderState {
   newChatTitle: string
   currentChatTitle: string
   chatClearConfirm: boolean
+  isNewChat: boolean
 
   setSiderWidth: (w: number) => void
   setIsFold: (f: boolean) => void
@@ -25,6 +26,7 @@ interface SiderState {
   setNewChatTitle: (t: string) => void
   setCurrentChatTitle: (t: string) => void
   setChatClearConfirm: (v: boolean) => void
+  setIsNewChat: (v: boolean) => void
 }
 
 const useSiderStore = create<SiderState>((set) => ({
@@ -39,6 +41,7 @@ const useSiderStore = create<SiderState>((set) => ({
   newChatTitle: '',
   currentChatTitle: '',
   chatClearConfirm: false,
+  isNewChat: false,
 
   setSiderWidth: (w) => set({ siderWidth: w }),
   setIsFold: (f) => set({ isFold: f }),
@@ -51,6 +54,7 @@ const useSiderStore = create<SiderState>((set) => ({
   setNewChatTitle: (t) => set({ newChatTitle: t }),
   setCurrentChatTitle: (t) => set({ currentChatTitle: t }),
   setChatClearConfirm: (v) => set({ chatClearConfirm: v }),
+  setIsNewChat: (v) => set({ isNewChat: v }),
 }))
 
 export default useSiderStore

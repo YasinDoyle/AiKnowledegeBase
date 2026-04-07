@@ -16,9 +16,9 @@ export const FETCH_HEADERS = {
 }
 // 定义搜索结果项的类型
 export type SearchResult = {
-  title: string | any
-  link: string | any
-  content: string | any
+  title: string
+  link: string
+  content: string
 }
 
 // 封装超时逻辑的函数
@@ -88,7 +88,7 @@ const extractContentFromHtml = (html: string): string => {
     }
 
     // 过滤不相关的内容
-    let result: string[] = []
+    const result: string[] = []
     text.split('\n').filter((line) => {
       line = line.trim()
       if (line.length > 30) {

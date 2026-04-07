@@ -13,12 +13,12 @@ export class RagTask {
    * @returns Promise<any>
    */
   async getNotParseDocument(): Promise<any> {
-    let result = await LanceDBManager.queryRecord(this.docTable, 'is_parsed=0')
+    const result = await LanceDBManager.queryRecord(this.docTable, 'is_parsed=0')
     return result
   }
 
   async getNotEmbeddingDocument(): Promise<any> {
-    let result = await LanceDBManager.queryRecord(this.docTable, 'is_parsed=2')
+    const result = await LanceDBManager.queryRecord(this.docTable, 'is_parsed=2')
     return result
   }
 
@@ -197,8 +197,8 @@ export class RagTask {
     currentSep: string,
     overlapSize: number,
   ): string[] {
-    let chunks: string[] = []
-    let currentSepIsString = typeof currentSep == 'string'
+    const chunks: string[] = []
+    const currentSepIsString = typeof currentSep == 'string'
     for (let chunk of chunkList) {
       if (chunk.length == 0) {
         continue
@@ -296,7 +296,7 @@ export class RagTask {
       ]
 
       for (let patt of patt_list) {
-        let keys = text.match(patt)
+        const keys = text.match(patt)
         if (keys && keys.length > 3) {
           separators.push('/' + patt.source + '/')
         }
@@ -307,7 +307,7 @@ export class RagTask {
 
   // 格式化分割符
   formatSep(sep: string[]): any[] {
-    let sepList: any[] = []
+    const sepList: any[] = []
     for (let s of sep) {
       // 判断是否为正则表达式
       if (s.length > 3 && s.startsWith('/') && (s.endsWith('/') || s.endsWith('/g'))) {
@@ -358,29 +358,29 @@ export class RagTask {
     overlapSize?: number,
   ): string[] {
     let chunks: string[] = []
-    let i = 0
+    const i = 0
     if (separators.length == 0) {
       // 尝试自动识别分隔符
       separators = this.defaultSeparators(separators, filename, text)
       if (separators.length == 0) {
         // 如果没有分隔符，则直接按长度分割
-        return this.docChunk(text, chunkSize, overlapSize)
+        return this.docChunk(text, chunkSize, overlapSize ?? 0)
       }
     }
 
-    let docName = this.getDocName(filename)
-    let sepList: any[] = this.formatSep(separators)
-    let sep = sepList[i]
-    let chunkList: string[] = this.split(text, sep)
-    chunks = this.recursionSplit(chunkList, sepList.slice(1), chunkSize, sep, overlapSize)
+    const docName = this.getDocName(filename)
+    const sepList: any[] = this.formatSep(separators)
+    const sep = sepList[i]
+    const chunkList: string[] = this.split(text, sep)
+    chunks = this.recursionSplit(chunkList, sepList.slice(1), chunkSize, sep, overlapSize ?? 0)
 
     // 为每个块添加文档名称和块索引、起始位置和结束位置
     for (let i = 0; i < chunks.length; i++) {
-      let chunk = chunks[i].trim()
+      const chunk = chunks[i].trim()
       if (chunk.length > 0) {
         // 计算块起始位置和结束位置
-        let startPos = text.indexOf(chunk)
-        let endPos = startPos + chunk.length
+        const startPos = text.indexOf(chunk)
+        const endPos = startPos + chunk.length
         chunks[i] = `[${docName}]#${i + 1} POS[${startPos}-${endPos}]\n` + chunk
       }
     }
@@ -391,11 +391,11 @@ export class RagTask {
   // 后台解析任务
   public async parseTask() {
     const sleep = 5 * 1000
-    let self = this
+    const self = this
 
     setTimeout(async () => {
-      if (global.changePath) {
-        global.changePath = false
+      if ((global as Record<string, unknown>).changePath) {
+        ;(global as Record<string, unknown>).changePath = false
         indexService.copyDataPath()
       }
       // await LanceDBManager.optimizeAllTable()
@@ -407,14 +407,14 @@ export class RagTask {
 
   // 当向量数据足够多时，切换到余弦相似度索引
   public async switchToCosineIndex() {
-    let tableList = pub.readdir(pub.get_data_path() + '/rag/vector_db')
-    let indexTipsPath = pub.get_data_path() + '/rag/index_tips'
+    const tableList = pub.readdir(pub.get_data_path() + '/rag/vector_db')
+    const indexTipsPath = pub.get_data_path() + '/rag/index_tips'
     if (!pub.file_exists(indexTipsPath)) {
       pub.mkdir(indexTipsPath)
     }
 
     for (let tablePath of tableList) {
-      let tableName = tablePath.split('/').pop()?.replace('.lance', '')
+      const tableName = tablePath.split('/').pop()?.replace('.lance', '')
       // console.log(tableName,tableName?.length)
       if (tableName?.length !== 32) {
         continue
@@ -423,7 +423,7 @@ export class RagTask {
       // 创建全文索引
       await LanceDBManager.createDocFtsIndex(tableName)
 
-      let indexTipFile = indexTipsPath + '/' + tableName + '.pl'
+      const indexTipFile = indexTipsPath + '/' + tableName + '.pl'
       if (pub.file_exists(indexTipFile)) {
         continue
       }
@@ -440,15 +440,15 @@ export class RagTask {
    * @returns Promise<void>
    */
   public async parse() {
-    let notParseDocument = await this.getNotParseDocument()
-    let dataDir = pub.get_data_path()
-    let repDataDir = '{DATA_DIR}'
+    const notParseDocument = await this.getNotParseDocument()
+    const dataDir = pub.get_data_path()
+    const repDataDir = '{DATA_DIR}'
 
-    let ragObj = new Rag()
+    const ragObj = new Rag()
     for (let doc of notParseDocument) {
       try {
-        let filename = doc.doc_file.replace(repDataDir, dataDir)
-        let parseDoc = await ragObj.parseDocument(filename, doc.doc_rag, true)
+        const filename = doc.doc_file.replace(repDataDir, dataDir)
+        const parseDoc = await ragObj.parseDocument(filename, doc.doc_rag, true)
         if (!parseDoc.content) {
           // 标记为解析失败
           await LanceDBManager.updateRecord(this.docTable, {
@@ -457,7 +457,7 @@ export class RagTask {
           })
           continue
         }
-        let pdata = {
+        const pdata = {
           md_file: parseDoc.savedPath?.replace(dataDir, repDataDir),
           doc_abstract: await ragObj.generateAbstract(parseDoc.content),
           doc_keywords: await ragObj.generateKeywords(parseDoc.content, 5),
@@ -485,27 +485,27 @@ export class RagTask {
    */
   public async embed() {
     try {
-      let notEmbeddingDocument = await this.getNotEmbeddingDocument()
-      let dataDir = pub.get_data_path()
-      let repDataDir = '{DATA_DIR}'
-      let ragObj = new Rag()
-      let ragNameList: string[] = []
+      const notEmbeddingDocument = await this.getNotEmbeddingDocument()
+      const dataDir = pub.get_data_path()
+      const repDataDir = '{DATA_DIR}'
+      const ragObj = new Rag()
+      const ragNameList: string[] = []
       for (let doc of notEmbeddingDocument) {
-        let md_file = doc.md_file.replace(repDataDir, dataDir)
+        const md_file = doc.md_file.replace(repDataDir, dataDir)
         if (!pub.file_exists(md_file)) {
           continue
         }
-        let md_body = pub.read_file(md_file)
-        let chunks = this.splitText(
+        const md_body = pub.read_file(md_file)
+        const chunks = this.splitText(
           doc.doc_file,
           md_body,
           doc.separators,
           doc.chunk_size,
           doc.overlap_size,
         )
-        let chunkList: any[] = []
+        const chunkList: any[] = []
         for (let chunk of chunks) {
-          let chunkInfo = {
+          const chunkInfo = {
             text: chunk,
             docId: doc.doc_id,
             tokens: pub.cutForSearch(chunk).join(' '),
@@ -514,8 +514,8 @@ export class RagTask {
           chunkList.push(chunkInfo)
         }
 
-        let table = pub.md5(doc.doc_rag)
-        let ragInfo: any = await ragObj.getRagInfo(doc.doc_rag)
+        const table = pub.md5(doc.doc_rag)
+        const ragInfo: any = await ragObj.getRagInfo(doc.doc_rag)
         for (let checkInfo of chunkList) {
           try {
             await LanceDBManager.addDocument(
@@ -550,7 +550,7 @@ export class RagTask {
 
       // 更新知识库FIT索引
       for (let ragName of ragNameList) {
-        let encryptTableName = pub.md5(ragName)
+        const encryptTableName = pub.md5(ragName)
         await LanceDBManager.createDocFtsIndex(encryptTableName)
         await LanceDBManager.optimizeTable(encryptTableName)
       }

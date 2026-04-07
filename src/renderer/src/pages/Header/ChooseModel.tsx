@@ -1,9 +1,7 @@
-import { useMemo } from 'react'
 import { Popover, Button, Tooltip } from 'antd'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 import { useTranslation } from 'react-i18next'
 import useHeaderStore from '@/stores/header'
-import useThirdPartyApiStore from '@/stores/thirdPartyApi'
 import useChatToolsStore from '@/stores/chatTools'
 import ModelList from './ModelList'
 import { changeCurrentModel } from './controller'
@@ -20,8 +18,6 @@ export default function ChooseModel(props: {
   const { hasMinus = false, hasPlus = true } = props
   const { t } = useTranslation()
   const currentModel = useHeaderStore((s) => s.currentModel)
-  const multipleModelList = useHeaderStore((s) => s.multipleModelList)
-
   const displayModel = props.value || currentModel
 
   function handleChooseModel(modelName: string, supplierName: string) {

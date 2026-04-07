@@ -28,7 +28,7 @@ export class ModelService {
   private baseUrl: string = ''
   private apiKey: string = ''
   public client: OpenAI | null = null
-  public error: any = null
+  public error: unknown = null
   private apiConfigPath: string = ''
   private apiConfigFile: string = ''
   private embeddingFile: string = ''
@@ -287,7 +287,7 @@ export function getModelContextLength(model: string): number {
 }
 
 function isTools(model: string): boolean {
-  let notTools = [
+  const notTools = [
     'deepseek-r1',
     'deepseek-v3',
     'deepseek-reasoner',
@@ -370,7 +370,7 @@ async function readSupplierModels(
         }
         newModels.push(modelInfo)
       }
-      result[supplierConfig.supplierTitle] = newModels
+      result[supplierConfig.supplierTitle || supplierConfig.supplierName] = newModels
     } catch (error) {
       console.error(`Error reading models for supplier ${supplier}:`, error)
     }
@@ -395,18 +395,18 @@ export async function GetSupplierEmbeddingModels(): Promise<{ [key: string]: Mod
  * @returns
  */
 export function setModelUsedTotal(supplierName: string, modelName: string) {
-  let totalFile = path.resolve(pub.get_data_path(), 'modelTotal.json')
+  const totalFile = path.resolve(pub.get_data_path(), 'modelTotal.json')
   if (!pub.file_exists(totalFile)) {
     pub.write_file(totalFile, '{}')
   }
-  let models = {}
+  let models: Record<string, number> = {}
   try {
     models = pub.read_json(totalFile)
   } catch (e) {
     pub.write_file(totalFile, '{}')
     models = {}
   }
-  let key = `${supplierName}/${modelName}`
+  const key = `${supplierName}/${modelName}`
   if (!models[key]) {
     models[key] = 0
   }
@@ -419,12 +419,12 @@ export function setModelUsedTotal(supplierName: string, modelName: string) {
  * @returns
  */
 export function getModelUsedTotalList() {
-  let totalFile = path.resolve(pub.get_data_path(), 'modelTotal.json')
+  const totalFile = path.resolve(pub.get_data_path(), 'modelTotal.json')
   if (!pub.file_exists(totalFile)) {
     return {}
   }
   try {
-    let models = pub.read_json(totalFile)
+    const models = pub.read_json(totalFile)
     return models
   } catch (e) {
     return {}
@@ -438,8 +438,8 @@ export function getModelUsedTotalList() {
  * @returns
  */
 export function getModelUsedTotal(supplierName: string, modelName: string) {
-  let totalObj = getModelUsedTotalList()
-  let key = `${supplierName}/${modelName}`
+  const totalObj = getModelUsedTotalList()
+  const key = `${supplierName}/${modelName}`
   if (!totalObj[key]) {
     return 0
   }

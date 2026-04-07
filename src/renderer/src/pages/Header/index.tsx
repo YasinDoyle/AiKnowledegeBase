@@ -13,8 +13,6 @@ export default function Header() {
   const { t } = useTranslation()
   const siderWidth = useSiderStore((s) => s.siderWidth)
   const activeKnowledge = useKnowledgeStore((s) => s.activeKnowledge)
-  const shareShow = useHeaderStore((s) => s.shareShow)
-
   useEffect(() => {
     getModelList()
   }, [])

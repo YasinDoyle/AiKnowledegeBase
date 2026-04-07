@@ -47,7 +47,7 @@ export const filterLowConfidenceLines = (lines: any[], threshold: number) => {
  * @param filename 图片文件路径
  * @returns Markdown格式的字符串
  */
-export async function parse(filename: string, ragName: string): Promise<string> {
+export async function parse(filename: string, _ragName: string): Promise<string> {
   try {
     // 初始化 worker
     const worker = await initializeWorker()

@@ -41,7 +41,7 @@ class OsController {
       defaultId: 0, // Set default selected button
       buttons: ['confirm', 'cancel'],
     })
-    let data = res === 0 ? 'click the confirm button' : 'click the cancel button'
+    const data = res === 0 ? 'click the confirm button' : 'click the cancel button'
 
     return data
   }
@@ -64,7 +64,7 @@ class OsController {
   /**
    * open directory
    */
-  openDirectory(args: { id: any }): boolean {
+  openDirectory(args: { id: string }): boolean {
     const { id } = args
     if (!id) {
       return false
@@ -73,7 +73,7 @@ class OsController {
     if (path.isAbsolute(id)) {
       dir = id
     } else {
-      dir = electronApp.getPath(id)
+      dir = electronApp.getPath(id as Parameters<typeof electronApp.getPath>[0])
     }
 
     shell.openPath(dir)
@@ -140,7 +140,7 @@ class OsController {
    */
   sendNotification(
     args: { title?: string; subtitle?: string; body?: string; silent?: boolean },
-    event: any,
+    event: unknown,
   ): boolean {
     const { title, subtitle, body, silent } = args
 

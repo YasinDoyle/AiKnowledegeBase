@@ -19,7 +19,6 @@ interface CsvStatistics {
  */
 export class CsvParser {
   private filename: string
-  private ragName: string
   private baseDocName: string
   private content: string = ''
   private records: CsvRecord[] = []
@@ -30,9 +29,8 @@ export class CsvParser {
    * 构造函数
    * @param filename CSV文件路径
    */
-  constructor(filename: string, ragName: string) {
+  constructor(filename: string, _ragName: string) {
     this.filename = filename
-    this.ragName = ragName
     this.baseDocName = path.basename(filename)
   }
 
@@ -157,7 +155,7 @@ export class CsvParser {
       }
 
       // 获取表头并清理可能的BOM标记
-      this.headers = parsedData[0].map((header) => {
+      this.headers = parsedData[0].map((header: string) => {
         // 清除BOM标记和特殊字符
         return header.replace(/^\uFEFF/, '').trim()
       })

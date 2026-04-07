@@ -1,7 +1,7 @@
-import { pub } from '../class/public'
+import { pub, ReturnMsg as Result } from '../class/public'
 import * as path from 'path'
 import { logger } from '../lib/utils'
-import { ServerConfig, ToolInfo, MCPClient, McpConfig } from '../service/mcp_client'
+import { ServerConfig, ToolInfo, MCPClient } from '../service/mcp_client'
 import { mcpService } from '../service/mcp'
 
 /**
@@ -14,8 +14,8 @@ class McpController {
    * @param args
    * @returns {Promise<any>} - 返回已安装的MCP服务器列表
    */
-  async get_mcp_server_list(args): Promise<any> {
-    let mcpServers: ServerConfig[] = mcpService.get_mcp_servers()
+  async get_mcp_server_list(_args: unknown): Promise<Result> {
+    const mcpServers: ServerConfig[] = mcpService.get_mcp_servers()
 
     // 获取服务器工具列表
     for (let server of mcpServers) {
@@ -30,18 +30,18 @@ class McpController {
    * @param args
    * @returns {Promise<any>} - 返回常用的MCP服务器列表
    */
-  async get_common_server_list(args): Promise<any> {
-    let commonMcpConfig = mcpService.read_common_mcp_config()
+  async get_common_server_list(_args: unknown): Promise<Result> {
+    const commonMcpConfig = mcpService.read_common_mcp_config()
     let mcpServers: any[] = []
     if (commonMcpConfig && commonMcpConfig) {
       mcpServers = commonMcpConfig
 
       // 判断是否已安装
-      let lastMcpServers = mcpService.get_mcp_servers()
+      const lastMcpServers = mcpService.get_mcp_servers()
       for (let i = 0; i < mcpServers.length; i++) {
-        let server = mcpServers[i]
+        const server = mcpServers[i]
         if (lastMcpServers && lastMcpServers.length > 0) {
-          let installedServer = lastMcpServers.find((s: ServerConfig) => s.name === server.name)
+          const installedServer = lastMcpServers.find((s: ServerConfig) => s.name === server.name)
           if (installedServer) {
             server.is_install = true
           } else {
@@ -61,16 +61,16 @@ class McpController {
    * @param args
    * @returns {Promise<any>} - 返回MCP服务器信息
    */
-  async get_mcp_server_info(args: { name: string }): Promise<any> {
-    let mcpServers: ServerConfig[] = mcpService.get_mcp_servers()
-    let server = mcpServers.find((s: ServerConfig) => s.name === args.name)
+  async get_mcp_server_info(args: { name: string }): Promise<Result> {
+    const mcpServers: ServerConfig[] = mcpService.get_mcp_servers()
+    const server = mcpServers.find((s: ServerConfig) => s.name === args.name)
     if (!server) {
       return pub.return_error(pub.lang('未找到该服务器'))
     }
 
     // 获取服务器工具列表
     // todo: 需要根据服务器类型获取对应的工具列表
-    let tools: ToolInfo[] = []
+    const tools: ToolInfo[] = []
     server.tools = tools
     return pub.return_success(pub.lang('获取成功'), server)
   }
@@ -97,13 +97,13 @@ class McpController {
     args: string[]
     is_active: boolean
   }) {
-    let mcpConfig = mcpService.read_mcp_config()
+    const mcpConfig = mcpService.read_mcp_config()
     let mcpServers: ServerConfig[] = []
     if (mcpConfig && mcpConfig.mcpServers) {
       mcpServers = mcpConfig.mcpServers
     }
 
-    let server = mcpServers.find((s: ServerConfig) => s.name === args.name)
+    const server = mcpServers.find((s: ServerConfig) => s.name === args.name)
     if (!server) {
       return pub.return_error(pub.lang('未找到该服务器'))
     }
@@ -127,13 +127,13 @@ class McpController {
    * @return {Promise<any>} - 返回操作结果
    */
   async remove_mcp_server(args: { name: string }) {
-    let mcpConfig = mcpService.read_mcp_config()
+    const mcpConfig = mcpService.read_mcp_config()
     let mcpServers: ServerConfig[] = []
     if (mcpConfig && mcpConfig.mcpServers) {
       mcpServers = mcpConfig.mcpServers
     }
 
-    let serverIndex = mcpServers.findIndex((s: ServerConfig) => s.name === args.name)
+    const serverIndex = mcpServers.findIndex((s: ServerConfig) => s.name === args.name)
     if (serverIndex === -1) {
       return pub.return_error(pub.lang('未找到该服务器'))
     }
@@ -166,7 +166,7 @@ class McpController {
     env: Record<string, string>
     args: string[]
   }) {
-    let mcpConfig = mcpService.read_mcp_config()
+    const mcpConfig = mcpService.read_mcp_config()
     let mcpServers: ServerConfig[] = []
     if (mcpConfig && mcpConfig.mcpServers) {
       mcpServers = mcpConfig.mcpServers
@@ -219,20 +219,20 @@ class McpController {
    * @return {Promise<any>} - 返回操作结果
    */
   async modify_mcp_tools(args: { name: string; tools: Record<string, boolean> }) {
-    let mcpConfig = mcpService.read_mcp_config()
+    const mcpConfig = mcpService.read_mcp_config()
     let mcpServers: ServerConfig[] = []
     if (mcpConfig && mcpConfig.mcpServers) {
       mcpServers = mcpConfig.mcpServers
     }
 
-    let server = mcpServers.find((s: ServerConfig) => s.name === args.name)
+    const server = mcpServers.find((s: ServerConfig) => s.name === args.name)
     if (!server) {
       return pub.return_error(pub.lang('未找到该服务器'))
     }
 
     // 修改工具可用性
-    for (let i = 0; i < server.tools.length; i++) {
-      let tool = server.tools[i]
+    for (let i = 0; i < (server.tools ?? []).length; i++) {
+      const tool = server.tools![i]
       if (args.tools[tool.name] !== undefined) {
         tool.is_active = args.tools[tool.name]
       }
@@ -248,19 +248,19 @@ class McpController {
    * @param args.name <string> - MCP服务器名称
    */
   async get_mcp_tools(args: { name: string }) {
-    let mcpConfig = mcpService.read_mcp_config()
+    const mcpConfig = mcpService.read_mcp_config()
     let mcpServers: ServerConfig[] = []
     if (mcpConfig && mcpConfig.mcpServers) {
       mcpServers = mcpConfig.mcpServers
     }
 
-    let server = mcpServers.find((s: ServerConfig) => s.name === args.name)
+    const server = mcpServers.find((s: ServerConfig) => s.name === args.name)
     if (!server) {
       return pub.return_error(pub.lang('未找到该服务器'))
     }
 
-    let mcpClient = new MCPClient()
-    let tools = await mcpClient.getTools(server)
+    const mcpClient = new MCPClient()
+    const tools = await mcpClient.getTools(server)
 
     // 保存工具信息
     if (tools) {
@@ -274,27 +274,27 @@ class McpController {
    * 检查环境状态
    * @param args - 参数对象
    */
-  async get_status(args: any) {
-    let bunFile = mcpService.get_bun_bin()
+  async get_status(_args: unknown) {
+    const bunFile = mcpService.get_bun_bin()
     let isBun = 1
     if (!pub.file_exists(bunFile)) {
       isBun = 0
     }
 
     if (isBun === 0) {
-      if (global.bunInstall) {
+      if ((global as Record<string, unknown>).bunInstall) {
         isBun = 2
       }
     }
 
-    let uvFile = mcpService.get_uv_bin()
+    const uvFile = mcpService.get_uv_bin()
     let isUv = 1
     if (!pub.file_exists(uvFile)) {
       isUv = 0
     }
 
     if (isUv === 0) {
-      if (global.uvInstall) {
+      if ((global as Record<string, unknown>).uvInstall) {
         isUv = 2
       }
     }
@@ -309,7 +309,7 @@ class McpController {
    * 安装 node.js环境
    * @param args - 参数对象
    */
-  async install_npx(args: any) {
+  async install_npx(_args: unknown) {
     return mcpService.install_npx()
   }
 
@@ -317,24 +317,24 @@ class McpController {
    * 安装 python环境
    * @param args - 参数对象
    */
-  async install_uv(args: any) {
-    let uvFile = mcpService.get_uv_bin()
+  async install_uv(_args: unknown) {
+    const uvFile = mcpService.get_uv_bin()
     if (pub.file_exists(uvFile)) {
       return pub.return_success(pub.lang('已安装'))
     }
-    global.uvInstall = true
-    let binPath = mcpService.get_bin_path()
-    let os_path = mcpService.get_os_path()
+    ;(global as Record<string, unknown>).uvInstall = true
+    const binPath = mcpService.get_bin_path()
+    const os_path = mcpService.get_os_path()
 
-    let downloadUrl = `https://aingdesk.bt.cn/bin/${os_path}/uv.zip`
-    let uvzipFile = path.resolve(binPath, 'uv.zip')
+    const downloadUrl = `https://aingdesk.bt.cn/bin/${os_path}/uv.zip`
+    const uvzipFile = path.resolve(binPath, 'uv.zip')
 
     await mcpService.download_file(downloadUrl, uvzipFile)
 
     // 解压缩
     const unzip = await import('unzipper')
     const fs = await import('fs')
-    let unzipStream = fs.createReadStream(uvzipFile).pipe(unzip.Extract({ path: binPath }))
+    const unzipStream = fs.createReadStream(uvzipFile).pipe(unzip.Extract({ path: binPath }))
     return new Promise((resolve, reject) => {
       unzipStream.on('close', () => {
         // 删除压缩包
@@ -342,7 +342,7 @@ class McpController {
 
         resolve(pub.return_success(pub.lang('安装成功')))
       })
-      unzipStream.on('error', (error: any) => {
+      unzipStream.on('error', (error: unknown) => {
         reject(pub.return_error(pub.lang('安装失败'), error))
       })
     })
@@ -353,8 +353,8 @@ class McpController {
    * @param args - 参数对象
    * @returns {Promise<any>} - 返回MCP配置文件内容
    */
-  async get_mcp_config_body(args: any) {
-    let mcpConfig = mcpService.read_mcp_config()
+  async get_mcp_config_body(_args: unknown) {
+    const mcpConfig = mcpService.read_mcp_config()
     if (mcpConfig && mcpConfig.mcpServers) {
       return pub.return_success(pub.lang('获取成功'), {
         mcp_config_body: JSON.stringify(mcpConfig, null, 4),
@@ -370,14 +370,14 @@ class McpController {
    * @returns {Promise<any>} - 返回操作结果
    */
   async save_mcp_config_body(args: { mcp_config_body: string }) {
-    let mcpConfig = mcpService.read_mcp_config()
+    const mcpConfig = mcpService.read_mcp_config()
     if (mcpConfig && mcpConfig.mcpServers) {
       try {
-        let newMcpConfig = JSON.parse(args.mcp_config_body)
+        const newMcpConfig = JSON.parse(args.mcp_config_body)
         if (!newMcpConfig.mcpServers) {
           return pub.return_error(pub.lang('配置文件格式错误'))
         }
-        let mcpServers = newMcpConfig.mcpServers
+        const mcpServers = newMcpConfig.mcpServers
         mcpService.save_mcp_config(mcpServers)
         return pub.return_success(pub.lang('保存成功'))
       } catch (e) {
@@ -394,8 +394,8 @@ class McpController {
    * @param args - 参数对象
    * @returns
    */
-  async get_registry_list(args: any) {
-    let registryListFile = path.resolve(pub.get_resource_path(), 'index_list.json')
+  async get_registry_list(_args: unknown) {
+    const registryListFile = path.resolve(pub.get_resource_path(), 'index_list.json')
     let defaultList = {
       pypi: [
         {
@@ -435,7 +435,7 @@ class McpController {
    * @param args - 参数对象
    * @returns {Promise<any>} - 返回操作结果
    */
-  async sync_cloud_mcp(args: any) {
+  async sync_cloud_mcp(_args: unknown) {
     return await mcpService.sync_cloud_mcp()
   }
 }

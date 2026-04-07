@@ -43,7 +43,7 @@ class TotalService {
               pub.C('shareIdPrefix', result.data.shareid_prefix)
             }
 
-            global.area = result.data.area
+            ;(global as any).area = result.data.area
           }
         }
       })

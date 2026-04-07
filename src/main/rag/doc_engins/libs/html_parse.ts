@@ -1,5 +1,4 @@
 import * as fs from 'fs'
-import * as path from 'path'
 import * as cheerio from 'cheerio'
 import { pub } from '../../../class/public'
 
@@ -8,18 +7,14 @@ import { pub } from '../../../class/public'
  */
 export class HtmlParser {
   private filename: string
-  private ragName: string
-  private baseDocName: string
   private $: cheerio.CheerioAPI | any = null
 
   /**
    * 构造函数
    * @param filename HTML文件路径
    */
-  constructor(filename: string, ragName: string) {
+  constructor(filename: string, _ragName: string) {
     this.filename = filename
-    this.ragName = ragName
-    this.baseDocName = path.basename(filename, path.extname(filename))
   }
 
   /**
@@ -116,7 +111,7 @@ export class HtmlParser {
     }
 
     // 处理段落
-    this.$('p').each((_, element) => {
+    this.$('p').each((_: number, element: unknown) => {
       const text = this.$(element).text().trim()
       if (text) {
         markdown += `${text}\n\n`
@@ -124,7 +119,7 @@ export class HtmlParser {
     })
 
     // 处理直接包含文本的div
-    this.$('div').each((_, element) => {
+    this.$('div').each((_: number, element: unknown) => {
       const $el = this.$(element)
       const hasBlockElements =
         $el.find('p, h1, h2, h3, h4, h5, h6, ul, ol, table, blockquote').length > 0
@@ -138,7 +133,7 @@ export class HtmlParser {
 
     // 处理标题
     for (let i = 1; i <= 6; i++) {
-      this.$(`h${i}`).each((_, element) => {
+      this.$(`h${i}`).each((_: number, element: unknown) => {
         const text = this.$(element).text().trim()
         if (text) {
           markdown += `${'#'.repeat(i)} ${text}\n\n`
@@ -147,9 +142,9 @@ export class HtmlParser {
     }
 
     // 处理列表
-    this.$('ul, ol').each((_, listElement) => {
+    this.$('ul, ol').each((_: number, listElement: unknown) => {
       const isList = this.$(listElement).is('ul')
-      this.$('li', listElement).each((index, item) => {
+      this.$('li', listElement).each((index: number, item: unknown) => {
         const text = this.$(item).text().trim()
         if (text) {
           markdown += isList ? `* ${text}\n` : `${index + 1}. ${text}\n`
@@ -159,18 +154,18 @@ export class HtmlParser {
     })
 
     // 处理表格
-    this.$('table').each((_, table) => {
+    this.$('table').each((_: number, table: unknown) => {
       let tableMarkdown = ''
-      this.$('thead tr', table).each((_, row) => {
+      this.$('thead tr', table).each((_: number, row: unknown) => {
         const headers = this.$('th', row)
-          .map((_, cell) => this.$(cell).text().trim())
+          .map((_: number, cell: unknown) => this.$(cell).text().trim())
           .get()
         tableMarkdown += `| ${headers.join(' | ')} |\n`
         tableMarkdown += `| ${headers.map(() => '---').join(' | ')} |\n`
       })
-      this.$('tbody tr', table).each((_, row) => {
+      this.$('tbody tr', table).each((_: number, row: unknown) => {
         const cells = this.$('td', row)
-          .map((_, cell) => this.$(cell).text().trim())
+          .map((_: number, cell: unknown) => this.$(cell).text().trim())
           .get()
         tableMarkdown += `| ${cells.join(' | ')} |\n`
       })
@@ -178,7 +173,7 @@ export class HtmlParser {
     })
 
     // 处理代码块
-    this.$('pre, code').each((_, element) => {
+    this.$('pre, code').each((_: number, element: unknown) => {
       const code = this.$(element).text().trim()
       if (code) {
         markdown += '```\n' + code + '\n```\n\n'

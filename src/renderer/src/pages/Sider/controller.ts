@@ -276,7 +276,7 @@ export function doFold() {
 /**
  * 知识库操作
  */
-export function dealPopOperation(val: string, knowledge: any) {
+export function dealPopOperation(val: string, knowledge: { ragName: string }) {
   const knowledgeStore = useKnowledgeStore.getState()
   if (val === 'delChat') {
     knowledgeStore.setActiveKnowledge(knowledge.ragName)

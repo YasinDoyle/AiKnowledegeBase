@@ -15,7 +15,7 @@ const nodes = [
 ]
 
 // 测试单个节点的下载速度
-function testNodeDownloadSpeed(url) {
+function testNodeDownloadSpeed(url: string) {
   return new Promise((resolve, reject) => {
     const protocol = url.startsWith('https') ? https : http
     const fullUrl = url + '/ollama/test.bin'

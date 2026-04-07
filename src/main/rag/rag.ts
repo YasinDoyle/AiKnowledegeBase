@@ -15,10 +15,10 @@ const getTemplate = (
   QUERY_PROMPT_TPL: string
 } => {
   agent_name = agent_name || ''
-  let agentInfo = agentService.get_agent_config(agent_name)
+  const agentInfo = agentService.get_agent_config(agent_name)
 
   // 提取模板常量
-  let TEMPLATES_LANG = [
+  const TEMPLATES_LANG = [
     agentInfo ? agentInfo.prompt : pub.lang('以下内容是基于用户发送的消息的知识库检索结果'),
     pub.lang(
       '在我给你的检索结果中，每个结果都是[检索结果 X begin]...[检索结果 X end]格式的，X代表每段知识内容的的数字索引。另外检索结果中可能包含一些不相关的信息，你可以根据需要选择其中的内容。',
@@ -56,7 +56,7 @@ const getTemplate = (
     pub.lang('用户消息为'),
   ]
 
-  let OTHER_SYSTEM_PROMPT_TPL_LANG = [
+  const OTHER_SYSTEM_PROMPT_TPL_LANG = [
     agentInfo
       ? agentInfo.prompt
       : pub.lang('你是一个擅长根据知识库检索结果回答用户查询的人工智能模型。'),
@@ -94,7 +94,7 @@ const getTemplate = (
     pub.lang('以下内容是基于用户发送的消息的检索结果'),
   ]
 
-  let QUERY_PROMPT_TPL_LANG = [
+  const QUERY_PROMPT_TPL_LANG = [
     pub.lang(
       '根据用户的问题，和上一个对话的内容，理解用户意图，生成一个用于检索引擎检索的问题，这个问题的检索结果将会用于帮助智能模型回答用户问题，回答内容中只有一个问题，且只包含问题内容，不包含其它信息。',
     ),
@@ -105,7 +105,7 @@ const getTemplate = (
     pub.lang('用于检索的问题'),
   ]
 
-  let DEEPSEEK_PROMPT_TPL = `# ${TEMPLATES_LANG[0]}:
+  const DEEPSEEK_PROMPT_TPL = `# ${TEMPLATES_LANG[0]}:
 {search_results}
 ${TEMPLATES_LANG[1]}
 ${TEMPLATES_LANG[2]}:
@@ -126,10 +126,10 @@ ${TEMPLATES_LANG[2]}:
 # ${TEMPLATES_LANG[14]}:
 {question}`
 
-  let DEEPSEEK_SYSTEM_PROMPT_TPL = ''
-  let OTHER_PROMPT_TPL = '{question}'
+  const DEEPSEEK_SYSTEM_PROMPT_TPL = ''
+  const OTHER_PROMPT_TPL = '{question}'
 
-  let OTHER_SYSTEM_PROMPT_TPL = `# ${OTHER_SYSTEM_PROMPT_TPL_LANG[0]}:
+  const OTHER_SYSTEM_PROMPT_TPL = `# ${OTHER_SYSTEM_PROMPT_TPL_LANG[0]}:
 ## ${OTHER_SYSTEM_PROMPT_TPL_LANG[1]}:
 - ${OTHER_SYSTEM_PROMPT_TPL_LANG[2]}
 - ${OTHER_SYSTEM_PROMPT_TPL_LANG[3]} {current_date_time}
@@ -150,7 +150,7 @@ ${TEMPLATES_LANG[2]}:
 </search-results>
 {doc_files}`
 
-  let QUERY_PROMPT_TPL = `# ${QUERY_PROMPT_TPL_LANG[0]}
+  const QUERY_PROMPT_TPL = `# ${QUERY_PROMPT_TPL_LANG[0]}
 ## ${QUERY_PROMPT_TPL_LANG[1]}: {current_date_time}
 ## ${QUERY_PROMPT_TPL_LANG[2]}: {user_location}
 ## ${QUERY_PROMPT_TPL_LANG[3]}:
@@ -197,9 +197,9 @@ const getCurrentDateTime = () => {
 }
 
 // 获取用户所在地区
-const getUserLocation = () => {
+const getUserLocation = (): string => {
   if (pub.get_language() == 'zh') {
-    return global.area || pub.lang('未知地区')
+    return ((global as Record<string, unknown>).area as string) || pub.lang('未知地区')
   }
   return pub.lang('未知地区')
 }
@@ -288,7 +288,7 @@ export const getDefaultPrompt = (
 ): { userPrompt: string; systemPrompt: string; searchResultList: any; query: string } => {
   let userPrompt = ''
   let systemPrompt = ''
-  let searchResultList = []
+  let searchResultList: unknown[] = []
   const currentDateTime = getCurrentDateTime()
   const userLocation = getUserLocation()
   const { DEEPSEEK_SYSTEM_PROMPT_TPL, OTHER_SYSTEM_PROMPT_TPL } = getTemplate()
@@ -329,16 +329,16 @@ export class Rag {
    * @returns Promise<boolean>
    */
   public async checkDocTable(tableName: string): Promise<boolean> {
-    let tablePath = path.join(pub.get_data_path(), 'rag', 'vector_db', tableName + '.lance')
+    const tablePath = path.join(pub.get_data_path(), 'rag', 'vector_db', tableName + '.lance')
     return pub.file_exists(tablePath)
   }
 
   public async checkDocTableSchema(tableName: string) {
-    let db = await LanceDBManager.connect()
-    let tableObj = await db.openTable(tableName)
-    let schema = await tableObj.schema()
-    let fields = schema.fields
-    let newFields = {
+    const db = await LanceDBManager.connect()
+    const tableObj = await db.openTable(tableName)
+    const schema = await tableObj.schema()
+    const fields = schema.fields
+    const newFields = {
       doc_id: '0',
       doc_name: '',
       doc_file: '',
@@ -352,9 +352,9 @@ export class Rag {
       chunk_size: 500,
       overlap_size: 50,
     }
-    let newFieldsKeys = Object.keys(newFields)
+    const newFieldsKeys = Object.keys(newFields)
     let isSame = true
-    let oldFieldsKeys: string[] = []
+    const oldFieldsKeys: string[] = []
     for (let field of fields) {
       oldFieldsKeys.push(field.name)
     }
@@ -375,17 +375,17 @@ export class Rag {
     }
 
     // 导出旧表数据
-    let oldDocList = await tableObj.query().limit(100000).toArray()
+    const oldDocList = await tableObj.query().limit(100000).toArray()
     // 删除旧表
     await LanceDBManager.dropTable(tableName)
 
     // 为旧表添加新字段和默认值
 
-    let newDocList: any[] = []
+    const newDocList: any[] = []
     for (let item of oldDocList) {
-      let newItem = {}
+      const newItem: Record<string, unknown> = {}
       for (let field of newFieldsKeys) {
-        newItem[field] = item[field] || newFields[field]
+        newItem[field] = item[field] || (newFields as Record<string, unknown>)[field]
       }
       newItem['doc_keywords'] = await this.generateKeywords(item['doc_abstract'])
       newDocList.push(newItem)
@@ -471,7 +471,7 @@ export class Rag {
   }
 
   public async getDocNameByDocId(docId: string): Promise<string> {
-    let docContentList = await LanceDBManager.queryRecord(this.docTable, `doc_id='${docId}'`)
+    const docContentList = await LanceDBManager.queryRecord(this.docTable, `doc_id='${docId}'`)
     if (docContentList.length > 0) {
       return docContentList[0].doc_name
     }
@@ -518,9 +518,9 @@ export class Rag {
     await this.createDocTable(this.docTable)
     await this.checkDocTableSchema(this.docTable)
 
-    let dataDir = pub.get_data_path()
-    let repDataDir = '{DATA_DIR}'
-    let pdata: any = [
+    const dataDir = pub.get_data_path()
+    const repDataDir = '{DATA_DIR}'
+    const pdata: any = [
       {
         doc_id: pub.uuid(),
         doc_name: path.basename(filename),
@@ -554,9 +554,9 @@ export class Rag {
    * @returns Promise<any>
    */
   public async getRagInfo(ragName: string) {
-    let ragConfigFile = path.resolve(pub.get_data_path(), 'rag', ragName, 'config.json')
+    const ragConfigFile = path.resolve(pub.get_data_path(), 'rag', ragName, 'config.json')
     if (pub.file_exists(ragConfigFile)) {
-      let result = JSON.parse(pub.read_file(ragConfigFile))
+      const result = JSON.parse(pub.read_file(ragConfigFile))
       if (!result.supplierName) result.supplierName = 'ollama'
       return result
     }
@@ -571,11 +571,11 @@ export class Rag {
    */
   public async searchDocument(ragList: string[], queryText: string): Promise<any> {
     // 生成关键词
-    let keywords = pub.cutForSearch(queryText)
+    const keywords = pub.cutForSearch(queryText)
 
     // 并行执行所有知识库的检索请求
     const searchPromises = ragList.map(async (ragName) => {
-      let ragInfo = await this.getRagInfo(ragName)
+      const ragInfo = await this.getRagInfo(ragName)
       if (!ragInfo) {
         return []
       }
@@ -588,7 +588,7 @@ export class Rag {
     return results.flat()
   }
 
-  private cutRagResult(searchResultList: any[], supplierName: string, docLength): any[] {
+  private cutRagResult(searchResultList: any[], supplierName: string, docLength: number): any[] {
     // 计算内容长度，超过限制则截断，ollama最大限制4K，其它最大限制32K
     let maxLength = 4096 * 1.5
     if (supplierName !== 'ollama') {
@@ -640,14 +640,14 @@ export class Rag {
   ): Promise<{ userPrompt: string; systemPrompt: string; searchResultList: any; query: string }> {
     try {
       if (!rag_results || !rag_results.length) {
-        if (ragList.length > 0) {
+        if (ragList && ragList.length > 0) {
           rag_results = await this.searchDocument(ragList, queryText)
         }
       }
       // 兼容搜索引擎的格式，link => doc_file,title=>doc_name,content=>doc
       let searchResultList: any[] = []
       let docLength = 0
-      for (let docContent of rag_results) {
+      for (let docContent of rag_results ?? []) {
         if (!docContent.docFile || !docContent.docName) {
           continue
         }
@@ -667,12 +667,12 @@ export class Rag {
       } else {
         return generateOtherPrompt(searchResultList, queryText, doc_files, agent_name)
       }
-    } catch (e: any) {
+    } catch (e: unknown) {
       return {
         userPrompt: queryText,
         systemPrompt: '',
         searchResultList: [],
-        query: `${queryText}, error: ${e.message}`,
+        query: `${queryText}, error: ${e instanceof Error ? e.message : String(e)}`,
       }
     }
   }
@@ -684,7 +684,7 @@ export class Rag {
    * @returns Promise<any>
    */
   public async reindexDocument(ragName: string, docId: string): Promise<boolean> {
-    let docContentList = await LanceDBManager.queryRecord(this.docTable, 'doc_id=' + docId)
+    const docContentList = await LanceDBManager.queryRecord(this.docTable, 'doc_id=' + docId)
     if (docContentList.length > 0) {
       await LanceDBManager.updateRecord(ragName, {
         where: `doc_id='${docId}'`,
@@ -714,8 +714,8 @@ export class Rag {
    * @returns Promise<any[]>
    */
   public async getDocChunkList(ragName: string, docId: string): Promise<any[]> {
-    let where = "`docId` = '" + docId + "'"
-    let chunkList = await LanceDBManager.queryRecord(pub.md5(ragName), where, [
+    const where = "`docId` = '" + docId + "'"
+    const chunkList = await LanceDBManager.queryRecord(pub.md5(ragName), where, [
       'id',
       'docId',
       'doc',

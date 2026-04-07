@@ -1,4 +1,4 @@
-import { pub } from '../class/public'
+import { pub, type ReturnMsg as Result } from '../class/public'
 import * as path from 'path'
 import { logger } from '../lib/utils'
 import { dialog } from 'electron'
@@ -8,7 +8,7 @@ import { dialog } from 'electron'
  * @class
  */
 class IndexController {
-  async get_version(): Promise<any> {
+  async get_version(): Promise<Result> {
     return pub.return_success(pub.lang('获取成功'), { version: pub.version() })
   }
 
@@ -16,7 +16,7 @@ class IndexController {
    * 获取当前语言和支持的语言列表
    * @returns {Promise<Object>} 包含语言列表和当前语言的对象，封装在成功响应中返回
    */
-  async get_languages(): Promise<any> {
+  async get_languages(): Promise<Result> {
     try {
       // 构建 settings.json 文件的完整路径
       const settingsFilePath = path.resolve(pub.get_language_path(), 'settings.json')
@@ -66,7 +66,7 @@ class IndexController {
    * @param {string} args.language - 要设置的语言
    * @returns {Promise<Object>} 封装了设置成功信息的响应对象
    */
-  async set_language(args: { language: string }): Promise<any> {
+  async set_language(args: { language: string }): Promise<Result> {
     try {
       const { language } = args
       // 设置语言配置
@@ -93,7 +93,7 @@ class IndexController {
    * 获取客户端语言包
    * @returns {Promise<Object>} 包含客户端语言包内容的对象，封装在成功响应中返回
    */
-  async get_client_language(): Promise<any> {
+  async get_client_language(): Promise<Result> {
     try {
       return this.getLanguagePack('client')
     } catch (error) {
@@ -108,7 +108,7 @@ class IndexController {
    * 获取服务端语言包
    * @returns {Promise<Object>} 包含服务端语言包内容的对象，封装在成功响应中返回
    */
-  async get_server_language(): Promise<any> {
+  async get_server_language(): Promise<Result> {
     try {
       return this.getLanguagePack('server')
     } catch (error) {
@@ -124,7 +124,7 @@ class IndexController {
    * @param {string} type - 语言包类型，如 'client' 或 'server'
    * @returns {Promise<Object>} 包含指定类型语言包内容的对象，封装在成功响应中返回
    */
-  private async getLanguagePack(type: string): Promise<any> {
+  private async getLanguagePack(type: string): Promise<Result> {
     // 获取当前语言
     const currentLanguage = pub.get_language()
     // 构建当前语言对应的语言包文件路径
@@ -156,9 +156,9 @@ class IndexController {
    * @param args - 参数
    * @param event - 事件
    */
-  async select_folder(args: {}, event): Promise<any> {
+  async select_folder(_args: unknown, _event: unknown): Promise<Result> {
     // 通过electron选择目录
-    let result = await dialog.showOpenDialog({
+    const result = await dialog.showOpenDialog({
       properties: ['openDirectory'],
       title: pub.lang('选择目录'),
       message: pub.lang('请选择一个目录'),
@@ -180,7 +180,7 @@ class IndexController {
    * @param args
    * @returns
    */
-  async write_logs(args: { logs: string }): Promise<any> {
+  async write_logs(args: { logs: string }): Promise<Result> {
     const { logs } = args
     // 记录日志
     logger.error(logs)
@@ -191,11 +191,11 @@ class IndexController {
    * 获取数据保存路径
    * @returns {Promise<any>} 返回成功响应，包含数据保存路径
    */
-  async get_data_save_path(): Promise<any> {
-    let savePathConfigFile = path.resolve(pub.get_system_data_path(), 'save_path.json')
+  async get_data_save_path(): Promise<Result> {
+    const savePathConfigFile = path.resolve(pub.get_system_data_path(), 'save_path.json')
     if (!pub.file_exists(savePathConfigFile)) {
-      let currentPath = pub.get_data_path()
-      let config = {
+      const currentPath = pub.get_data_path()
+      const config = {
         oldPath: '',
         currentPath: currentPath,
         isMove: false, // 是否要移动数据到新路径
@@ -219,7 +219,7 @@ class IndexController {
       pub.write_json(savePathConfigFile, config)
     }
 
-    let savePathConfig = pub.read_json(savePathConfigFile)
+    const savePathConfig = pub.read_json(savePathConfigFile)
 
     // 返回成功响应
     return pub.return_success(pub.lang('获取成功'), savePathConfig)
@@ -230,14 +230,14 @@ class IndexController {
    * @param args - 参数对象
    * @returns {Promise<any>} 返回成功响应，包含设置结果
    */
-  async set_data_save_path(args: { newPath: string }): Promise<any> {
-    if (global.isOptimizeAllTable) {
+  async set_data_save_path(args: { newPath: string }): Promise<Result> {
+    if ((global as Record<string, unknown>).isOptimizeAllTable) {
       return pub.return_error(pub.lang('当前正在执行向量数据优化操作，请等待几分钟后再试'))
     }
-    if (global.isCopyDataPath) {
+    if ((global as Record<string, unknown>).isCopyDataPath) {
       return pub.return_error(pub.lang('正在复制数据，请稍后再试'))
     }
-    let { newPath } = args
+    const { newPath } = args
     if (!newPath) {
       return pub.return_error(pub.lang('请选择目录'))
     }
@@ -247,16 +247,16 @@ class IndexController {
     }
 
     // 检查指定目录是否为空目录
-    let files = pub.readdir(newPath)
+    const files = pub.readdir(newPath)
     if (files.length > 0) {
       return pub.return_error(pub.lang('指定的目录不是空目录'))
     }
 
-    let savePathConfigFile = path.resolve(pub.get_system_data_path(), 'save_path.json')
+    const savePathConfigFile = path.resolve(pub.get_system_data_path(), 'save_path.json')
     if (!pub.file_exists(savePathConfigFile)) {
       return pub.return_error(pub.lang('配置文件不存在，请先调用获取数据保存路径接口'))
     }
-    let savePathConfig = pub.read_json(savePathConfigFile)
+    const savePathConfig = pub.read_json(savePathConfigFile)
 
     // 设置新的数据保存路径
     savePathConfig.oldPath = savePathConfig.currentPath
@@ -277,7 +277,7 @@ class IndexController {
     savePathConfig.copyStatus.error = ''
 
     pub.write_json(savePathConfigFile, savePathConfig)
-    global.changePath = true
+    ;(global as Record<string, unknown>).changePath = true
     // 返回成功响应
     return pub.return_success(pub.lang('设置成功,正在复制数据，请稍后查看进度'))
   }

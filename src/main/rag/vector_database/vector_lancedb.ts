@@ -78,21 +78,21 @@ export class LanceDBManager {
       return pub.lang('优化成功,释放空间: {}', pub.bytesChange(size))
     } catch (e) {
       logger.error('优化表失败', e)
-      return pub.lang('优化失败: {}', e.message)
+      return pub.lang('优化失败: {}', e instanceof Error ? e.message : String(e))
     }
   }
 
   // 优化所有表
   public static async optimizeAllTable() {
     try {
-      if (global.isOptimizeAllTable) {
+      if ((global as Record<string, unknown>).isOptimizeAllTable) {
         return
       }
-      global.isOptimizeAllTable = true
+      ;(global as Record<string, unknown>).isOptimizeAllTable = true
       let tipPath = path.join(pub.get_data_path(), 'rag', 'index_tips')
       let tipFile = path.join(tipPath, `optimize-${pub.getCurrentDate()}.pl`)
       if (fs.existsSync(tipFile)) {
-        global.isOptimizeAllTable = false
+        ;(global as Record<string, unknown>).isOptimizeAllTable = false
         return
       }
       const db = await lancedb.connect(pub.get_db_path())
@@ -117,7 +117,7 @@ export class LanceDBManager {
     } catch (e) {
       logger.error('优化表失败', e)
     } finally {
-      global.isOptimizeAllTable = false
+      ;(global as Record<string, unknown>).isOptimizeAllTable = false
     }
   }
 
@@ -162,7 +162,7 @@ export class LanceDBManager {
    * 清理过期的向量缓存
    */
   public static async clearExpiredCache() {
-    if (global.isClearExpiredCache) {
+    if ((global as Record<string, unknown>).isClearExpiredCache) {
       return
     }
     let cache_path = this.getEmbeddingCachePath()
@@ -179,7 +179,7 @@ export class LanceDBManager {
         fs.unlinkSync(file)
       }
     }
-    global.isClearExpiredCache = true
+    ;(global as Record<string, unknown>).isClearExpiredCache = true
   }
 
   /**
@@ -267,7 +267,7 @@ export class LanceDBManager {
         res = await modelService.embedding(model, text)
         modelService.destroy()
         if (!res) {
-          throw new Error(modelService.error)
+          throw new Error(String(modelService.error))
         }
       }
 
@@ -1040,7 +1040,7 @@ export class LanceDBManager {
     queryText: string,
     keywords: string[] = [],
   ): Promise<QueryResult[]> {
-    const metrics = this.startMetrics(`在表 ${tableName} 中执行混合搜索`)
+    this.startMetrics(`在表 ${tableName} 中执行混合搜索`)
     this.ensureDatabaseDirectory()
 
     const db = await lancedb.connect(pub.get_db_path())
@@ -1696,7 +1696,7 @@ export class LanceDBManager {
         // 通过删除表文件来解决IO错误
         const tablePath = path.join(pub.get_db_path(), `${tableName}.lance`)
         if (fs.existsSync(tablePath)) {
-          fs.rmdirSync(tablePath, { recursive: true })
+          fs.rmSync(tablePath, { recursive: true })
           return true
         }
       }

@@ -19,7 +19,6 @@ interface WorkbookData {
  */
 export class ExcelParser {
   private filename: string
-  private ragName: string
   private baseDocName: string
   private workbook: XLSX.WorkBook | null = null
   private workbookData: WorkbookData | null = null
@@ -28,8 +27,7 @@ export class ExcelParser {
    * 构造函数
    * @param filename Excel文件路径
    */
-  constructor(filename: string, ragName: string) {
-    this.ragName = ragName
+  constructor(filename: string, _ragName: string) {
     this.filename = filename
     this.baseDocName = path.basename(filename, path.extname(filename))
   }

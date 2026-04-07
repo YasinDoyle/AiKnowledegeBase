@@ -18,7 +18,7 @@ export let ModelListInfo: ModelInfo[] = []
  * 存储对话上下文状态的映射，键为对话ID，值为是否继续生成的布尔值
  * @type {Map<string, boolean>}
  */
-export let ContextStatusMap = new Map<string, boolean>()
+export const ContextStatusMap = new Map<string, boolean>()
 export const clearModelListInfo = () => {
   ModelListInfo = []
 }
@@ -133,11 +133,11 @@ const handleRag = async (
 // 提取处理搜索的函数
 const handleSearch = async (
   args: any,
-  chatService: ChatService,
+  _chatService: ChatService,
   history: any[],
   chatHistoryRes: ChatHistory,
   contextInfo: any,
-  supplierName: string,
+  _supplierName: string,
   modelStr: string,
   user_content: string,
   search_results: any[],
@@ -173,11 +173,11 @@ const handleSearch = async (
 }
 
 // 提取处理文档的函数
-const handleDocuments = (letHistory: any, modelName: string, user_content: string) => {
+const handleDocuments = (letHistory: ChatHistory, modelName: string, user_content: string) => {
   if (letHistory.content === user_content && letHistory.doc_files.length > 0) {
     if (modelName.toLocaleLowerCase().indexOf('qwen') === -1) {
       const doc_files_str = letHistory.doc_files
-        .map((doc_file, idx) => {
+        .map((doc_file: string, idx: number) => {
           if (!doc_file) return ''
           return `[${pub.lang('用户文档')} ${idx + 1} begin]
             ${pub.lang('内容')}: ${doc_file}
@@ -192,7 +192,7 @@ ${doc_files_str}
 ${user_content}`
     } else {
       const doc_files_str = letHistory.doc_files
-        .map((doc_file, idx) => {
+        .map((doc_file: string, idx: number) => {
           if (!doc_file) return ''
           return `${pub.lang('用户文档')} ${idx + 1} begin
 ${doc_file}
@@ -206,10 +206,10 @@ ${pub.lang('用户文档')} ${idx + 1} end
 }
 
 // 提取处理图片的函数
-const handleImages = (letHistory: any, isVision: boolean) => {
+const handleImages = (letHistory: ChatHistory, isVision: boolean) => {
   if (!isVision && letHistory.images.length > 0) {
     const ocrContent = letHistory.images
-      .map((image, idx) => {
+      .map((image: string, idx: number) => {
         if (!image) return ''
         return `${pub.lang('图片')} ${idx + 1} ${pub.lang('OCR解析结果')} begin
 ${image}
@@ -324,14 +324,10 @@ export class ToChatService {
     },
     webContents: WebContents | null,
   ): Promise<any> {
-    let {
+    const {
       context_id: uuid,
       model: modelName,
-      parameters,
       user_content,
-      search,
-      regenerate_id,
-      supplierName,
       images,
       doc_files,
       temp_chat,
@@ -340,6 +336,7 @@ export class ToChatService {
       compare_id,
       mcp_servers,
     } = args
+    let { supplierName, parameters, search, regenerate_id } = args
     if (!supplierName) {
       supplierName = 'ollama'
     }
@@ -400,7 +397,7 @@ export class ToChatService {
     )
     const chatHistory: ChatHistory = {
       id: '',
-      compare_id: compare_id,
+      compare_id: compare_id || '',
       role: 'user',
       reasoning: '',
       stat: {},
@@ -419,7 +416,7 @@ export class ToChatService {
     const resUUID = pub.uuid()
     const chatHistoryRes: ChatHistory = {
       id: resUUID,
-      compare_id: compare_id,
+      compare_id: compare_id || '',
       role: 'assistant',
       reasoning: '',
       stat: {
@@ -454,7 +451,7 @@ export class ToChatService {
     await chatService.update_chat_config(uuid, 'search_type', search)
 
     // 2. 内容增强：RAG / 搜索 / Agent / 文档 / 图片
-    let isSystemPrompt = false
+    const isSystemPrompt = false
     search = await handleRag(
       args,
       chatService,
@@ -475,7 +472,7 @@ export class ToChatService {
       supplierName,
       modelStr,
       user_content,
-      search_results,
+      search_results || [],
     )
     const letHistory = history[history.length - 1]
     if (!isSystemPrompt && history[0].role !== 'system' && letHistory.content === user_content) {
@@ -525,11 +522,11 @@ export class ToChatService {
         webContents.send('chat:chunk', { context_id: uuid, text })
       }
     }
-    const PushOther = async (msg) => {
+    const PushOther = async (msg: string) => {
       if (msg) {
         sendChunk(msg)
         if (msg.indexOf('<mcptool>') !== -1) {
-          chatHistoryRes.tools_result.push(msg)
+          chatHistoryRes.tools_result?.push(msg)
         }
       }
     }
@@ -540,9 +537,9 @@ export class ToChatService {
     let resTimeMs = 0
     let isThinking = false
     let isThinkingEnd = false
-    const ResEvent = async (chunk) => {
+    const ResEvent = async (chunk: Record<string, unknown>) => {
       if (!(adapter instanceof OllamaChatAdapter)) resTimeMs = new Date().getTime()
-      if (chunk.choices && chunk.choices.length === 0) {
+      if ((chunk.choices as unknown[])?.length === 0) {
         return
       }
       // 结束帧处理
@@ -606,17 +603,18 @@ export class ToChatService {
     if (adapter instanceof MCPChatAdapter) {
       try {
         await adapter.sendMCPRequest(supplierName, modelStr, history, ResEvent, PushOther)
-      } catch (error: any) {
-        return pub.lang('出错了: {}', error.message)
+      } catch (error: unknown) {
+        return pub.lang('出错了: {}', (error as Error).message)
       }
     } else {
       try {
         res = await adapter.sendRequest(requestOption, supplierName)
-      } catch (error: any) {
-        if (error.error && error.error.message) {
-          return pub.lang('调用模型接口时出错了: {}', error.error.message)
+      } catch (error: unknown) {
+        const err = error as any
+        if (err.error && err.error.message) {
+          return pub.lang('调用模型接口时出错了: {}', err.error.message)
         }
-        return pub.lang('调用模型接口时出错了: {}', error.message)
+        return pub.lang('调用模型接口时出错了: {}', (error as Error).message)
       }
       ;(async () => {
         for await (const chunk of res) {

@@ -3,18 +3,6 @@ import { pub } from '../class/public'
 import * as path from 'path'
 import { parseDocument } from '../rag/doc_engins/doc'
 import { agentService } from './agent'
-import {
-  ModelService,
-  GetSupplierModels,
-  getModelContextLength,
-  setModelUsedTotal,
-  getModelUsedTotalList,
-} from '../service/model'
-
-import { getPromptForWeb } from '../search_engines/search'
-import { Rag } from '../rag/rag'
-import { Stream } from 'stream'
-import { MCPClient } from './mcp_client'
 
 /**
  * 定义聊天历史记录的类型
@@ -247,8 +235,8 @@ export class ChatService {
    */
   mergeHistory(chatHistory: ChatHistory[]): ChatHistory[] {
     // 合并同一个compare_id的历史记录，注意：不合并compare_id==undefined的记录，只合并role=="assistant"的记录
-    let mergedHistory: ChatHistory[] = []
-    for (let history of chatHistory) {
+    const mergedHistory: ChatHistory[] = []
+    for (const history of chatHistory) {
       if (history.compare_id == undefined) {
         mergedHistory.push(history)
         continue
@@ -303,10 +291,10 @@ export class ChatService {
    */
   checkHistory(chatHistory: ChatHistory[]): ChatHistory[] {
     // 确保历史记录的顺序是user在前，assistant在后，不能同时出现两个user或assistant
-    let newChatHistory: ChatHistory[] = []
+    const newChatHistory: ChatHistory[] = []
     let userNumber = 0
     let assistantNumber = 0
-    for (let history of chatHistory) {
+    for (const history of chatHistory) {
       if (history.role == 'user') {
         if (userNumber == 0) {
           newChatHistory.push(history)
@@ -338,8 +326,8 @@ export class ChatService {
    * @returns {any} - 格式化后的聊天历史记录数组
    */
   formatHistory(chatHistory: ChatHistory[]): any {
-    let mergedHistory = this.mergeHistory(chatHistory)
-    let newChatHistory = this.checkHistory(mergedHistory)
+    const mergedHistory = this.mergeHistory(chatHistory)
+    const newChatHistory = this.checkHistory(mergedHistory)
     return newChatHistory
   }
 
@@ -349,7 +337,7 @@ export class ChatService {
    * @returns {any[]} - 对话的历史记录数组，如果不存在则返回空数组
    */
   read_history(uuid: string): any[] {
-    let chatHistory = this.readJsonFile(this.getHistoryFilePath(uuid))
+    const chatHistory = this.readJsonFile(this.getHistoryFilePath(uuid))
     return chatHistory
   }
 
@@ -403,8 +391,8 @@ export class ChatService {
       }
 
       // 遍历知识库，移除不存在的知识库配置
-      let rag_list: string[] = []
-      for (let ragName of contextConfigObj.rag_list) {
+      const rag_list: string[] = []
+      for (const ragName of contextConfigObj.rag_list) {
         const ragDir = ragPath + '/' + ragName
         const ragConfigFilePath = path.resolve(ragDir, 'config.json')
         if (!pub.file_exists(ragConfigFilePath)) {
@@ -443,13 +431,13 @@ export class ChatService {
    */
   async handle_files(chatContext: ChatContext, isVision: boolean): Promise<ChatContext> {
     // 将图片转换为base64格式
-    let images: string[] = []
-    for (let image of chatContext.images) {
+    const images: string[] = []
+    for (const image of chatContext.images ?? []) {
       if (isVision) {
-        let base64 = pub.imageToBase64(image)
+        const base64 = pub.imageToBase64(image)
         images.push(base64)
       } else {
-        let imageOcr = await parseDocument(image, 'temp', false)
+        const imageOcr = await parseDocument(image, 'temp', false)
         if (imageOcr.content) {
           images.push(imageOcr.content)
         }
@@ -458,9 +446,9 @@ export class ChatService {
     chatContext.images = images
 
     // 处理文档文件
-    let doc_files: string[] = []
-    for (let doc_file of chatContext.doc_files) {
-      let parseDocBody = await parseDocument(doc_file, 'temp', false)
+    const doc_files: string[] = []
+    for (const doc_file of chatContext.doc_files ?? []) {
+      const parseDocBody = await parseDocument(doc_file, 'temp', false)
       doc_files.push(parseDocBody.content)
     }
 
@@ -486,7 +474,7 @@ export class ChatService {
     isVision: boolean,
   ): Promise<any[]> {
     // 读取对话的历史记录
-    let contextList = this.checkHistory(this.read_history(uuid))
+    const contextList = this.checkHistory(this.read_history(uuid))
     // 计算当前聊天上下文和历史记录的总 tokens 数量
     let totalTokens = chatContext.content.length
     for (const item of contextList) {
@@ -508,7 +496,11 @@ export class ChatService {
 
     // 添加当前聊天上下文到历史记录中
     // 如果有images或doc_files的情况下，不引用上下文
-    if (chatContext.images.length > 0 || chatContext.doc_files.length > 0 || isTempChat) {
+    if (
+      (chatContext.images?.length ?? 0) > 0 ||
+      (chatContext.doc_files?.length ?? 0) > 0 ||
+      isTempChat
+    ) {
       historyList = []
     }
     historyList.push(chatContext)
@@ -571,8 +563,8 @@ export class ChatService {
    * @param history <ChatHistory> 修正后的聊天历史记录
    */
   set_chat_history(uuid: string, id: string, history: ChatHistory): void {
-    let historyList = this.checkHistory(this.read_history(uuid))
-    let index = historyList.findIndex((item) => item.id == id)
+    const historyList = this.checkHistory(this.read_history(uuid))
+    const index = historyList.findIndex((item) => item.id == id)
     historyList[index] = history
     this.save_history(uuid, historyList)
   }

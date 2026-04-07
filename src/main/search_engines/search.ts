@@ -17,7 +17,7 @@ const getTemplate = (
   QUERY_PROMPT_TPL: string
 } => {
   agent_name = agent_name || ''
-  let agentInfo = agentService.get_agent_config(agent_name)
+  const agentInfo = agentService.get_agent_config(agent_name)
   // 提取模板常量
   const TEMPLATES_LANG = [
     agentInfo ? agentInfo.prompt : pub.lang('以下内容是基于用户发送的消息的搜索结果'),
@@ -192,16 +192,17 @@ export const searchEngines = {
 
 // 搜索网页函数
 export const searchWeb = async (provider: string, query: string): Promise<SearchResult[]> => {
-  let queryKey = pub.md5(`${provider}-${query}`)
+  const queryKey = pub.md5(`${provider}-${query}`)
   // 本地搜索缓存
-  let cache = pub.cache_get(queryKey)
+  const cache = pub.cache_get(queryKey)
   if (cache) {
     return cache
   }
-  if (!searchEngines[provider]) {
+  const engineMap = searchEngines as Record<string, (query: string) => Promise<SearchResult[]>>
+  if (!engineMap[provider]) {
     throw new Error(`Search provider ${provider} not found`)
   }
-  const searchResults = await searchEngines[provider](query)
+  const searchResults = await engineMap[provider](query)
   // 设置搜索结果缓存
   pub.cache_set(queryKey, searchResults, 3600)
   return searchResults
@@ -236,9 +237,9 @@ const getCurrentDateTime = () => {
 }
 
 // 获取用户所在地区
-const getUserLocation = () => {
+const getUserLocation = (): string => {
   if (pub.get_language() == 'zh') {
-    return global.area || pub.lang('未知地区')
+    return ((global as Record<string, unknown>).area as string) || pub.lang('未知地区')
   }
   return pub.lang('未知地区')
 }
@@ -246,8 +247,8 @@ const getUserLocation = () => {
 // 获取用于搜索的问题
 export const getSearchQuery = async (
   query: string,
-  model: string,
-  chatHistory: string,
+  _model: string,
+  _chatHistory: string,
 ): Promise<string> => {
   // try {
   // 调整为直接响应
@@ -341,7 +342,7 @@ const generateOtherPrompt = (
   searchResultList: SearchResult[],
   query: string,
   doc_files: string[],
-  agent_name,
+  agent_name: string,
 ): { userPrompt: string; systemPrompt: string; searchResultList: any; query: string } => {
   const currentDateTime = getCurrentDateTime()
   const userLocation = getUserLocation()
@@ -378,7 +379,7 @@ export const getDefaultPrompt = (
 ): { userPrompt: string; systemPrompt: string; searchResultList: any; query: string } => {
   let userPrompt = ''
   let systemPrompt = ''
-  let searchResultList = []
+  let searchResultList: SearchResult[] = []
   const currentDateTime = getCurrentDateTime()
   const userLocation = getUserLocation()
   const { DEEPSEEK_SYSTEM_PROMPT_TPL, OTHER_SYSTEM_PROMPT_TPL } = getTemplate(agent_name)
@@ -416,7 +417,7 @@ export const getPromptForWeb = async (
       }
     }
 
-    if (agent_name) {
+    if (agent_name && searchResultList) {
       // 如果是智能体，只保留3个搜索结果，且内容长度不超过4096个字符
       searchResultList = searchResultList.slice(0, 3)
       searchResultList = searchResultList.map((result) => {
@@ -426,9 +427,9 @@ export const getPromptForWeb = async (
     }
 
     if (model.indexOf('deepseek') !== -1) {
-      return generateDeepSeekPrompt(searchResultList, searchQuery, doc_files, agent_name)
+      return generateDeepSeekPrompt(searchResultList ?? [], searchQuery, doc_files, agent_name)
     } else {
-      return generateOtherPrompt(searchResultList, searchQuery, doc_files, agent_name)
+      return generateOtherPrompt(searchResultList ?? [], searchQuery, doc_files, agent_name)
     }
   } catch (error) {
     console.error('Error getting prompt for web:', error)

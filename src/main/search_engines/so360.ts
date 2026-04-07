@@ -17,13 +17,13 @@ export const local360Search = async (query: string): Promise<SearchResult[]> => 
     const $ = cheerio.load(htmlString)
     const items = $('.res-list')
     const searchResults: any[] = []
-    items.each(function (index, item) {
-      var link = $(item).find('a').attr('data-mdurl')
-      var title = $(item).find('a').text()
-      var content = $(item).find('.res-desc').text()
+    items.each(function (_index, item) {
+      const link = $(item).find('a').attr('data-mdurl')
+      const title = $(item).find('a').text()
+      const content = $(item).find('.res-desc').text()
       searchResults.push({ title, link, content })
     })
-    let searchResultList = searchResults.filter(
+    const searchResultList = searchResults.filter(
       (result) => result.link && result.title && result.content,
     )
     return getUrlsContent(searchResultList)

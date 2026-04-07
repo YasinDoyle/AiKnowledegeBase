@@ -12,7 +12,7 @@ import {
   removeModelConfirm,
   installModelConfirm,
 } from './controller'
-import Install from './Install'
+import Install from './install'
 import DelModelProgress from './DelModelProgress'
 import InstallModelManagerConfirm from './InstallModelManagerConfirm'
 import ModelInstallProgress from './ModelInstallProgress'

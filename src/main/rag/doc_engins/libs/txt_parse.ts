@@ -5,7 +5,7 @@ import * as fs from 'fs'
  * @param filename txt文件路径
  * @returns 处理后的txt内容
  */
-export async function parse(filename: string, ragName: string): Promise<string> {
+export async function parse(filename: string, _ragName: string): Promise<string> {
   try {
     let body = fs.readFileSync(filename)
     return body.toString()

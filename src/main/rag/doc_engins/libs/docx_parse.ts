@@ -101,7 +101,7 @@ export class DocxParser {
   private parseImageRelationships(relationshipsXml: string): ImageRelationship {
     const imageRelationships: ImageRelationship = {}
 
-    const relMatches: RegExpMatchArray = relationshipsXml.match(/<Relationship[^>]*>/g)
+    const relMatches = relationshipsXml.match(/<Relationship[^>]*>/g)
 
     if (!relMatches) return imageRelationships
     relMatches.forEach((rel) => {

@@ -68,7 +68,6 @@ describe('Document Engines', () => {
 
       expect(result.content).toContain('Test Heading')
       expect(result.savedPath).toBeUndefined()
-      expect(result.originalPath).toBeUndefined()
     })
 
     it('should parse document and save files when requested', async () => {
@@ -77,13 +76,11 @@ describe('Document Engines', () => {
       // Create a test markdown file
       fs.writeFileSync(testFilePath, '# Save Test\nThis should be saved')
 
-      const result = await parseDocument(testFilePath, true, true)
+      const result = await parseDocument(testFilePath, 'test_rag', true)
 
       expect(result.content).toContain('Save Test')
       expect(result.savedPath).toBeDefined()
-      expect(result.originalPath).toBeDefined()
       expect(fs.existsSync(result.savedPath!)).toBe(true)
-      expect(fs.existsSync(result.originalPath!)).toBe(true)
     })
 
     it('should handle non-existent files gracefully', async () => {

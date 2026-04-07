@@ -99,25 +99,25 @@ class ModelController {
       pub.mkdir(dstPath)
     }
     for (const supplier of supplierTemplates) {
-      let supplierName = path.basename(supplier)
+      const supplierName = path.basename(supplier)
       if (!supplierName) {
         continue
       }
-      let dstSupplierPath = path.resolve(dstPath, supplierName as string)
+      const dstSupplierPath = path.resolve(dstPath, supplierName)
       if (!pub.file_exists(dstSupplierPath)) {
         pub.mkdir(dstSupplierPath)
       }
 
-      let srcConfigFile = path.resolve(supplier, 'config.json')
-      let dstConfigFile = path.resolve(dstSupplierPath, 'config.json')
+      const srcConfigFile = path.resolve(supplier, 'config.json')
+      const dstConfigFile = path.resolve(dstSupplierPath, 'config.json')
       if (!pub.file_exists(dstConfigFile)) {
         pub.write_file(dstConfigFile, pub.read_file(srcConfigFile))
       } else {
         // 合并配置
-        let srcConfigJson = await this.readJsonFile(srcConfigFile)
-        let dstConfigJson = await this.readJsonFile(dstConfigFile)
+        const srcConfigJson = await this.readJsonFile(srcConfigFile)
+        const dstConfigJson = await this.readJsonFile(dstConfigFile)
         let isWrite = false
-        for (let key in srcConfigJson) {
+        for (const key in srcConfigJson) {
           // 忽略status, baseUrl, apiKey
           if (key === 'status' || key === 'baseUrl' || key === 'apiKey') {
             continue
@@ -134,22 +134,17 @@ class ModelController {
         }
       }
 
-      let srcModelsFile = path.resolve(supplier, 'models.json')
-      let dstModelsFile = path.resolve(dstSupplierPath, 'models.json')
+      const srcModelsFile = path.resolve(supplier, 'models.json')
+      const dstModelsFile = path.resolve(dstSupplierPath, 'models.json')
       if (!pub.file_exists(dstModelsFile)) {
         pub.write_file(dstModelsFile, pub.read_file(srcModelsFile))
       } else {
         // 合并配置
-        let srcModels: any[] = await this.readJsonFile(srcModelsFile)
-        let dstModels: any[] = await this.readJsonFile(dstModelsFile)
+        const srcModels: ModelInfo[] = await this.readJsonFile(srcModelsFile)
+        const dstModels: ModelInfo[] = await this.readJsonFile(dstModelsFile)
         let isWrite = false
-        for (let srcModel of srcModels) {
-          let isExist = false
-          for (let dstModel of dstModels) {
-            if (dstModel.modelName === srcModel.modelName) {
-              isExist = true
-            }
-          }
+        for (const srcModel of srcModels) {
+          const isExist = dstModels.some((d) => d.modelName === srcModel.modelName)
           if (!isExist) {
             isWrite = true
             dstModels.push(srcModel)
@@ -161,22 +156,17 @@ class ModelController {
         }
       }
 
-      let srcEmbeddingFile = path.resolve(supplier, 'embedding.json')
-      let dstEmbeddingFile = path.resolve(dstSupplierPath, 'embedding.json')
+      const srcEmbeddingFile = path.resolve(supplier, 'embedding.json')
+      const dstEmbeddingFile = path.resolve(dstSupplierPath, 'embedding.json')
       if (!pub.file_exists(dstEmbeddingFile)) {
         pub.write_file(dstEmbeddingFile, pub.read_file(srcEmbeddingFile))
       } else {
         // 合并配置
-        let srcEmbedding: any[] = await this.readJsonFile(srcEmbeddingFile)
-        let dstEmbedding: any[] = await this.readJsonFile(dstEmbeddingFile)
+        const srcEmbedding: ModelInfo[] = await this.readJsonFile(srcEmbeddingFile)
+        const dstEmbedding: ModelInfo[] = await this.readJsonFile(dstEmbeddingFile)
         let isWrite = false
-        for (let srcEmbed of srcEmbedding) {
-          let isExist = false
-          for (let dstEmbed of dstEmbedding) {
-            if (dstEmbed.modelName === srcEmbed.modelName) {
-              isExist = true
-            }
-          }
+        for (const srcEmbed of srcEmbedding) {
+          const isExist = dstEmbedding.some((d) => d.modelName === srcEmbed.modelName)
           if (!isExist) {
             isWrite = true
             dstEmbedding.push(srcEmbed)
@@ -195,7 +185,7 @@ class ModelController {
    * @param args
    * @returns
    */
-  async get_supplier_list(args: any): Promise<Result> {
+  async get_supplier_list(_args?: unknown): Promise<Result> {
     await this.sync_supplier_template()
     const suppliers = pub.readdir(this.modelsPath)
     const supplierList: SupplierInfo[] = []
@@ -256,11 +246,11 @@ class ModelController {
     }
 
     // 获取嵌入模型
-    let embeddingFile = path.resolve(this.getSupplierPath(args.supplierName), 'embedding.json')
+    const embeddingFile = path.resolve(this.getSupplierPath(args.supplierName), 'embedding.json')
     if (pub.file_exists(embeddingFile)) {
-      let embeddingModels = await this.readJsonFile(embeddingFile)
-      for (let embeddingModel of embeddingModels) {
-        let model = models.find((model: ModelInfo) => model.modelName === embeddingModel.modelName)
+      const embeddingModels: ModelInfo[] = await this.readJsonFile(embeddingFile)
+      for (const embeddingModel of embeddingModels) {
+        const model = models.find((m: ModelInfo) => m.modelName === embeddingModel.modelName)
         if (!model) {
           embeddingModel.title = supplierInfo.supplierTitle + '/' + embeddingModel.modelName
           models.push(embeddingModel)
@@ -296,13 +286,13 @@ class ModelController {
 
       // 是否为嵌入模型
       let modelsFile = this.getModelsFilePath(args.supplierName)
-      if (model.capability.find((c: any) => c === 'embedding')) {
+      if (model.capability.find((c: string) => c === 'embedding')) {
         modelsFile = path.resolve(this.getSupplierPath(args.supplierName), 'embedding.json')
       }
 
       // 检查模型是否已存在
       if (!pub.file_exists(modelsFile)) {
-        let supplierPath = path.dirname(modelsFile)
+        const supplierPath = path.dirname(modelsFile)
         if (!pub.file_exists(supplierPath)) {
           return this.handleResult(false, pub.lang('模型供应商不存在'))
         }
@@ -316,8 +306,8 @@ class ModelController {
       models.push(model)
       await this.writeJsonFile(modelsFile, models)
       return this.handleResult(true, pub.lang('添加成功'))
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 
@@ -345,8 +335,8 @@ class ModelController {
       const newModels = models.filter((model: ModelInfo) => model.modelName !== args.modelName)
       await this.writeJsonFile(modelsFile, newModels)
       return this.handleResult(true, pub.lang('删除成功'))
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 
@@ -378,8 +368,8 @@ class ModelController {
       // 尝试获取在线模型列表
       await this.get_online_models({ supplierName: args.supplierName })
       return this.handleResult(true, pub.lang('设置成功'))
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 
@@ -404,8 +394,11 @@ class ModelController {
 
     try {
       return this.handleResult(true, pub.lang('API配置正确'))
-    } catch (error: any) {
-      return this.handleResult(false, pub.lang('连接失败，请检查') + ', ' + error.message)
+    } catch (error: unknown) {
+      return this.handleResult(
+        false,
+        pub.lang('连接失败，请检查') + ', ' + (error as Error).message,
+      )
     }
   }
 
@@ -425,8 +418,8 @@ class ModelController {
     try {
       const supplierInfo = await this.readJsonFile(configFile)
       return this.handleResult(true, pub.lang('获取成功'), supplierInfo)
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 
@@ -449,8 +442,8 @@ class ModelController {
       supplierInfo.status = args.status === 'true'
       await this.writeJsonFile(configFile, supplierInfo)
       return this.handleResult(true, pub.lang('设置成功'))
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 
@@ -475,9 +468,9 @@ class ModelController {
 
     try {
       const models = await this.readJsonFile(modelsFile)
-      let modelNameList = args.modelName.split(',')
-      for (let modelName of modelNameList) {
-        const model = models.find((model: ModelInfo) => model.modelName === modelName)
+      const modelNameList = args.modelName.split(',')
+      for (const modelName of modelNameList) {
+        const model = models.find((m: ModelInfo) => m.modelName === modelName)
         if (!model) {
           continue
         }
@@ -486,10 +479,10 @@ class ModelController {
       await this.writeJsonFile(modelsFile, models)
 
       // 修改嵌入模型状态
-      let embeddingFile = path.resolve(this.getSupplierPath(args.supplierName), 'embedding.json')
+      const embeddingFile = path.resolve(this.getSupplierPath(args.supplierName), 'embedding.json')
       if (pub.file_exists(embeddingFile)) {
-        let embeddingModels = await this.readJsonFile(embeddingFile)
-        for (let embeddingModel of embeddingModels) {
+        const embeddingModels: ModelInfo[] = await this.readJsonFile(embeddingFile)
+        for (const embeddingModel of embeddingModels) {
           if (modelNameList.includes(embeddingModel.modelName)) {
             embeddingModel.status = args.status === 'true'
           }
@@ -498,8 +491,8 @@ class ModelController {
       }
 
       return this.handleResult(true, pub.lang('设置成功'))
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 
@@ -548,8 +541,8 @@ class ModelController {
       // 尝试获取在线模型列表
       await this.get_online_models({ supplierName: args.supplierName })
       return this.handleResult(true, pub.lang('添加成功'))
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 
@@ -569,8 +562,8 @@ class ModelController {
     try {
       pub.rmdir(supplierPath)
       return this.handleResult(true, pub.lang('删除成功'))
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 
@@ -581,8 +574,8 @@ class ModelController {
    * @returns {Promise<Result>}
    */
   async get_online_models(args: { supplierName: string }): Promise<Result> {
-    let modelService = new ModelService(args.supplierName)
-    let models = await modelService.getOnlineModels()
+    const modelService = new ModelService(args.supplierName)
+    const models = await modelService.getOnlineModels()
     if (!models) {
       console.error(modelService.error)
     }
@@ -620,8 +613,8 @@ class ModelController {
       model.title = args.title
       await this.writeJsonFile(modelsFile, models)
       return this.handleResult(true, pub.lang('设置成功'))
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 
@@ -655,8 +648,8 @@ class ModelController {
       model.capability = JSON.parse(args.capability)
       await this.writeJsonFile(modelsFile, models)
       return this.handleResult(true, pub.lang('修改成功'))
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 
@@ -693,8 +686,8 @@ class ModelController {
       model.title = args.title
       await this.writeJsonFile(modelsFile, models)
       return this.handleResult(true, pub.lang('修改成功'))
-    } catch (error: any) {
-      return this.handleResult(false, error.message)
+    } catch (error: unknown) {
+      return this.handleResult(false, (error as Error).message)
     }
   }
 }

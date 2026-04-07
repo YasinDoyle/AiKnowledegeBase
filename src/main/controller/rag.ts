@@ -1,4 +1,4 @@
-import { pub } from '../class/public'
+import { pub, type ReturnMsg as Result } from '../class/public'
 import * as path from 'path'
 import * as fs from 'fs'
 import { Rag } from '../rag/rag'
@@ -19,18 +19,18 @@ class RagController {
   async rag_status() {
     try {
       // 检查是否有嵌套模型
-      let result = await GetSupplierEmbeddingModels()
+      const result = await GetSupplierEmbeddingModels()
       if (Object.keys(result).length > 0) {
         return pub.return_success(pub.lang('知识库组件正常'))
       }
 
-      let ollamaResult = await ollamaService.get_embedding_model_list()
+      const ollamaResult = await ollamaService.get_embedding_model_list()
       if (ollamaResult.length > 0) {
         return pub.return_success(pub.lang('知识库组件正常'))
       }
       return pub.return_error(pub.lang('请选安装或接入嵌入模型'))
-    } catch (e: any) {
-      return pub.return_error(pub.lang('请选安装或接入嵌入模型'), e.message)
+    } catch (e: unknown) {
+      return pub.return_error(pub.lang('请选安装或接入嵌入模型'), (e as Error).message)
     }
   }
 
@@ -39,7 +39,7 @@ class RagController {
    * @returns {Promise<any>} - 嵌套模型列表
    */
   async get_embedding_models() {
-    let result = await GetSupplierEmbeddingModels()
+    const result = await GetSupplierEmbeddingModels()
     result['ollama'] = await ollamaService.get_embedding_model_list()
     return pub.return_success(pub.lang('获取成功'), result)
   }
@@ -64,7 +64,7 @@ class RagController {
     vectorWeight: number // 向量权重
     keywordWeight: number // 关键词权重
     savePath?: string // 保存路径
-  }): Promise<any> {
+  }): Promise<Result> {
     let {
       ragName,
       ragDesc,
@@ -119,7 +119,7 @@ class RagController {
 
     // 创建知识库描述文件
     const ragDescFile = ragPath + '/config.json'
-    let pdata = {
+    const pdata = {
       ragName: ragName, // 知识库名称
       ragDesc: ragDesc, // 知识库描述
       ragCreateTime: pub.time(), // 创建时间
@@ -153,7 +153,7 @@ class RagController {
    * @param {string} ragName - 知识库名称
    * @returns {Promise<any>} - 删除结果
    */
-  async remove_rag(args: { ragName: string }): Promise<any> {
+  async remove_rag(args: { ragName: string }): Promise<Result> {
     // logger.info("delete rag");
     if (args.ragName == 'vector_db') {
       return pub.return_error(pub.lang('知识库名称不能为vector_db'))
@@ -172,7 +172,7 @@ class RagController {
     }
 
     // 删除知识库所有文档和向量索引
-    let ragObj = new Rag()
+    const ragObj = new Rag()
     ragObj.removeRag(args.ragName)
 
     // 删除知识库文件
@@ -197,19 +197,19 @@ class RagController {
    * @returns {Promise<any>} - 嵌套
    */
   async get_embedding_map() {
-    let ollamaEmbeddingList = await ollamaService.get_embedding_model_list()
-    let supplierEmbeddingList = await GetSupplierEmbeddingModels()
+    const ollamaEmbeddingList = await ollamaService.get_embedding_model_list()
+    const supplierEmbeddingList = await GetSupplierEmbeddingModels()
 
-    let embeddingMap = new Map<string, Map<string, Boolean>>()
-    let ollamaEmbeddingMap = new Map<string, Boolean>()
-    for (let embed of ollamaEmbeddingList) {
+    const embeddingMap = new Map<string, Map<string, Boolean>>()
+    const ollamaEmbeddingMap = new Map<string, Boolean>()
+    for (const embed of ollamaEmbeddingList) {
       ollamaEmbeddingMap.set(embed.model, true)
     }
     embeddingMap.set('ollama', ollamaEmbeddingMap)
-    for (let supplierTitle in supplierEmbeddingList) {
-      let supplierEmbeddingMap = new Map<string, Boolean>()
+    for (const supplierTitle in supplierEmbeddingList) {
+      const supplierEmbeddingMap = new Map<string, Boolean>()
       let supplierName = ''
-      for (let embed of supplierEmbeddingList[supplierTitle]) {
+      for (const embed of supplierEmbeddingList[supplierTitle]) {
         supplierName = embed.supplierName
         supplierEmbeddingMap.set(embed.model, true)
       }
@@ -223,7 +223,7 @@ class RagController {
    * 获取知识库列表
    * @returns {Promise<any>} - 知识库列表
    */
-  async get_rag_list(): Promise<any> {
+  async get_rag_list(): Promise<Result> {
     // logger.info("get rag list");
 
     // 获取知识库列表
@@ -260,7 +260,7 @@ class RagController {
 
         ragDesc.embeddingModelExist = true
         ragDesc.errorMsg = ''
-        let supplierMap = embeddingMap.get(ragDesc.supplierName)
+        const supplierMap = embeddingMap.get(ragDesc.supplierName)
         if (!supplierMap || !supplierMap.get(ragDesc.embeddingModel)) {
           ragDesc.embeddingModelExist = false
           ragDesc.errorMsg = pub.lang('指定嵌入模型不存在: {}', ragDesc.embeddingModel)
@@ -291,8 +291,8 @@ class RagController {
     queryRewrite?: number // 查询重写 1=开启 0=关闭   PS: 未实现
     vectorWeight?: number // 向量权重
     keywordWeight?: number // 关键词权重
-  }): Promise<any> {
-    let {
+  }): Promise<Result> {
+    const {
       ragName,
       ragDesc,
       searchStrategy,
@@ -322,7 +322,7 @@ class RagController {
     }
 
     const ragDescFile = ragPath + '/config.json'
-    let ragConfig = pub.read_json(ragDescFile)
+    const ragConfig = pub.read_json(ragDescFile)
 
     ragConfig.ragDesc = ragDesc
     ragConfig.searchStrategy =
@@ -354,7 +354,7 @@ class RagController {
     separators?: string[]
     chunkSize?: number
     overlapSize?: number
-  }): Promise<any> {
+  }): Promise<Result> {
     let { ragName, filePath, separators, chunkSize, overlapSize } = args
 
     // 检查参数
@@ -406,13 +406,13 @@ class RagController {
     if (!pub.file_exists(ragDescFile)) {
       return pub.return_error(pub.lang('知识库配置文件不存在'))
     }
-    let ragConfig = pub.read_json(ragDescFile)
+    const ragConfig = pub.read_json(ragDescFile)
     ragConfig.separators = separators
     ragConfig.chunkSize = chunkSize
     ragConfig.overlapSize = overlapSize
     pub.write_json(ragDescFile, ragConfig)
 
-    let ragObj = new Rag()
+    const ragObj = new Rag()
     // 遍历文件列表
     for (const srcFile of filePathList) {
       // 检查文件是否存在
@@ -445,7 +445,7 @@ class RagController {
    * @param {string} ragName - 知识库名称
    * @returns {Promise<any>} - 文件列表
    */
-  async get_rag_doc_list(args: { ragName: string }): Promise<any> {
+  async get_rag_doc_list(args: { ragName: string }): Promise<Result> {
     // logger.info("get rag file list");
 
     // 检查参数
@@ -461,7 +461,7 @@ class RagController {
       return pub.return_error(pub.lang('知识库不存在'))
     }
 
-    let result = await LanceDBManager.queryRecord('doc_table', "doc_rag='" + args.ragName + "'")
+    const result = await LanceDBManager.queryRecord('doc_table', "doc_rag='" + args.ragName + "'")
 
     return pub.return_success(pub.lang('获取成功'), result)
   }
@@ -472,8 +472,9 @@ class RagController {
    * @param {string} docName - 文档名称
    * return {Promise<any>} - 文档内容
    */
-  async get_doc_content(args: { ragName: string; docName: string }): Promise<any> {
-    let mdFile = pub.get_data_path() + '/rag/' + args.ragName + '/markdown/' + args.docName + '.md'
+  async get_doc_content(args: { ragName: string; docName: string }): Promise<Result> {
+    const mdFile =
+      pub.get_data_path() + '/rag/' + args.ragName + '/markdown/' + args.docName + '.md'
     if (pub.file_exists(mdFile)) {
       let content = pub.read_file(mdFile)
       content = content.replace(/{URL}/g, 'http://127.0.0.1:7071')
@@ -514,7 +515,7 @@ class RagController {
     // 设置响应头
     event.response.set('Content-Type', 'application/octet-stream')
     // 设置下载文件名
-    let filename = encodeURIComponent(args.docName)
+    const filename = encodeURIComponent(args.docName)
     event.response.set('Content-Disposition', `attachment; filename="${filename}"`)
 
     // 返回文件流
@@ -522,7 +523,7 @@ class RagController {
     return stream
   }
 
-  async remove_doc(args: { ragName: string; docIdList: string }): Promise<any> {
+  async remove_doc(args: { ragName: string; docIdList: string }): Promise<Result> {
     // 检查参数
     if (!args.ragName) {
       return pub.return_error(pub.lang('知识库名称不能为空'))
@@ -539,17 +540,17 @@ class RagController {
       return pub.return_error(pub.lang('知识库不存在'))
     }
 
-    let docList = JSON.parse(args.docIdList)
+    const docList = JSON.parse(args.docIdList)
     if (docList.length == 0) {
       return pub.return_error(pub.lang('文档名称列表不能为空'))
     }
 
-    let ragObj = new Rag()
+    const ragObj = new Rag()
 
     // 遍历文件列表
     for (const docId of docList) {
       // 获取docName
-      let docName = await ragObj.getDocNameByDocId(docId)
+      const docName = await ragObj.getDocNameByDocId(docId)
       if (!docName) {
         return pub.return_error(pub.lang('文档不存在'))
       }
@@ -631,8 +632,8 @@ class RagController {
    * @param args.docName <string> 文档名称
    * @returns
    */
-  async reindex_document(args: { ragName: string; docId: string }): Promise<any> {
-    let result = await new Rag().reindexDocument(args.ragName, args.docId)
+  async reindex_document(args: { ragName: string; docId: string }): Promise<Result> {
+    const result = await new Rag().reindexDocument(args.ragName, args.docId)
     if (!result) {
       return pub.return_error(pub.lang('操作失败'))
     }
@@ -645,8 +646,8 @@ class RagController {
    * @param args.ragName <string> 知识库名称
    * @returns
    */
-  async reindex_rag(args: { ragName: string }): Promise<any> {
-    let result = await new Rag().reindexRag(args.ragName)
+  async reindex_rag(args: { ragName: string }): Promise<Result> {
+    const result = await new Rag().reindexRag(args.ragName)
     if (!result) {
       return pub.return_error(pub.lang('操作失败'))
     }
@@ -660,8 +661,8 @@ class RagController {
    * @param args.queryText <string> 查询文本
    * @returns
    */
-  async search_document(args: { ragList: string; queryText: string }): Promise<any> {
-    let result = await new Rag().searchDocument(JSON.parse(args.ragList), args.queryText)
+  async search_document(args: { ragList: string; queryText: string }): Promise<Result> {
+    const result = await new Rag().searchDocument(JSON.parse(args.ragList), args.queryText)
     return pub.return_success(pub.lang('操作成功'), result)
   }
 
@@ -690,7 +691,7 @@ class RagController {
     }
 
     // 检查图片是否存在
-    let imgFile = ragPath + '/images/' + args.n
+    const imgFile = ragPath + '/images/' + args.n
     if (!pub.file_exists(imgFile)) {
       let imgFile1 = imgFile + '.png'
       if (!pub.file_exists(imgFile1)) {
@@ -723,25 +724,31 @@ class RagController {
     chunkSize: number
     overlapSize: number
     separators: string[]
-  }): Promise<any> {
+  }): Promise<Result> {
     let { filename, chunkSize, overlapSize, separators } = args
-    let ragObj = new Rag()
-    let result = await ragObj.parseDocument(filename, '')
-    let ragTask = new RagTask()
+    const ragObj = new Rag()
+    const result = await ragObj.parseDocument(filename, '')
+    const ragTask = new RagTask()
     if (typeof separators == 'string') {
       separators = [separators]
     }
 
-    let chunkList = ragTask.splitText(filename, result.content, separators, chunkSize, overlapSize)
+    const chunkList = ragTask.splitText(
+      filename,
+      result.content,
+      separators,
+      chunkSize,
+      overlapSize,
+    )
     result.chunkList = chunkList
 
     return pub.return_success(pub.lang('操作成功'), result)
   }
 
   // 优化表
-  async optimize_table(args: { ragName: string }): Promise<any> {
+  async optimize_table(args: { ragName: string }): Promise<Result> {
     await LanceDBManager.optimizeTable('doc_table')
-    let res = await LanceDBManager.optimizeTable(pub.md5(args.ragName))
+    const res = await LanceDBManager.optimizeTable(pub.md5(args.ragName))
     return pub.return_success(res)
   }
 
@@ -752,7 +759,7 @@ class RagController {
    * @param args.docId <string> 文档ID
    * @returns
    **/
-  async get_doc_chunk_list(args: { ragName: string; docId: string }): Promise<any> {
+  async get_doc_chunk_list(args: { ragName: string; docId: string }): Promise<Result> {
     // 检查参数
     if (!args.ragName) {
       return pub.return_error(pub.lang('知识库名称不能为空'))
@@ -769,8 +776,8 @@ class RagController {
       return pub.return_error(pub.lang('知识库不存在'))
     }
 
-    let ragObj = new Rag()
-    let result = await ragObj.getDocChunkList(args.ragName, args.docId)
+    const ragObj = new Rag()
+    const result = await ragObj.getDocChunkList(args.ragName, args.docId)
     return pub.return_success(pub.lang('操作成功'), result)
   }
 }

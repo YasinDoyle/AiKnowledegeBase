@@ -1,23 +1,18 @@
 import { pub } from '../../class/public'
-import axios from 'axios'
 import path from 'path'
 
 const supplierName = 'VolcEngine'
 const supplierPath = path.resolve(pub.get_data_path(), 'models', supplierName)
-class VolcEngine {
+export class VolcEngine {
   private baseUrl: string
   private apiKey: string
   private configFile: string
-  private modelFile: string
-  private embeddingFile: string
   private config: any
 
   constructor() {
     this.baseUrl = ''
     this.apiKey = ''
     this.configFile = path.resolve(supplierPath, 'config.json')
-    this.modelFile = path.resolve(supplierPath, 'models.json')
-    this.embeddingFile = path.resolve(supplierPath, 'embedding.json')
     this.getConfig()
   }
 
@@ -39,8 +34,8 @@ class VolcEngine {
    * @memberof VolcEngine
    */
   async getOnlineModels() {
-    let url = `${this.baseUrl}/models?Action=ListFoundationModels&Version=2024-01-01`
-    let res = await pub.httpRequest(url, {
+    const url = `${this.baseUrl}/models?Action=ListFoundationModels&Version=2024-01-01`
+    const res = await pub.httpRequest(url, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

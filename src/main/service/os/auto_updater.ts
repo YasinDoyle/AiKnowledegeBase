@@ -75,13 +75,13 @@ class AutoUpdaterService {
       this.sendStatusToWindow(info)
     })
     autoUpdater.on('download-progress', (progressObj: any) => {
-      let percentNumber = progressObj.percent
-      let totalSize = this.bytesChange(progressObj.total)
-      let transferredSize = this.bytesChange(progressObj.transferred)
+      const percentNumber = progressObj.percent
+      const totalSize = this.bytesChange(progressObj.total)
+      const transferredSize = this.bytesChange(progressObj.transferred)
       let text = pub.lang('已下载 ') + percentNumber + '%'
       text = text + ' (' + transferredSize + '/' + totalSize + ')'
 
-      let info = {
+      const info = {
         status: status.downloading,
         desc: text,
         percentNumber: percentNumber,
@@ -137,9 +137,9 @@ class AutoUpdaterService {
       size = (limit / (1024 * 1024 * 1024)).toFixed(2) + 'GB'
     }
 
-    let sizeStr = size + ''
-    let index = sizeStr.indexOf('.')
-    let dou = sizeStr.substring(index + 1, index + 3)
+    const sizeStr = size + ''
+    const index = sizeStr.indexOf('.')
+    const dou = sizeStr.substring(index + 1, index + 3)
     if (dou == '00') {
       return sizeStr.substring(0, index) + sizeStr.substring(index + 3, index + 5)
     }

@@ -14,7 +14,6 @@ import Share from '@/pages/Header/Share'
 import KnowledgeStore from '@/pages/KnowledgeStore'
 import { scrollMove, handleScrollCallback, handleMouseLeave } from './controller'
 import { eventBus } from '@/utils/tools'
-import type { AnswerInfo, MultipeQuestionDto } from '@/types'
 import './chatContent.scss'
 
 const doScroll = scrollMove()
@@ -24,7 +23,6 @@ export default function ChatContent() {
   const chatHistory = useChatContentStore((s) => s.chatHistory)
   const activeKnowledge = useKnowledgeStore((s) => s.activeKnowledge)
   const multipleModelList = useHeaderStore((s) => s.multipleModelList)
-  const compareId = useChatToolsStore((s) => s.compareId)
   const chatWindowRef = useRef<HTMLDivElement>(null)
 
   // 订阅 doScroll 事件

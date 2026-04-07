@@ -8,7 +8,7 @@ import { selectFastestNode } from '../class/test_node'
 import { exec, execSync } from 'child_process'
 
 // 存储每个模型的下载速度和进度信息，键为模型全名，值为包含下载信息的对象
-let ModelDownloadSpeed = new Map<string, Object>()
+const ModelDownloadSpeed = new Map<string, Object>()
 // 模型下载断开重连标志，若模型下载速度变得很慢，可设置该标志重连下载
 let ReconnectModelDownload = false
 let ReconnectOllamaDownload = false
@@ -53,9 +53,9 @@ class OllamaService {
     }
 
     // 构建 Linux OR macos 系统下 Ollama 可执行文件的完整路径
-    let result: string[] = []
-    let bins = ['/usr/local/bin/ollama', '/usr/bin/ollama', '/sbin/ollama']
-    for (let bin of bins) {
+    const result: string[] = []
+    const bins = ['/usr/local/bin/ollama', '/usr/bin/ollama', '/sbin/ollama']
+    for (const bin of bins) {
       if (pub.file_exists(bin)) {
         result.push(bin)
       }
@@ -73,8 +73,8 @@ class OllamaService {
     try {
       try {
         // 尝试从11434端口获取版本信息
-        let url = `${pub.get_ollama_host()}/api/version`
-        let res = await pub.httpRequest(url, {
+        const url = `${pub.get_ollama_host()}/api/version`
+        const res = await pub.httpRequest(url, {
           timeout: 1000,
           method: 'GET',
           json: true,
@@ -156,10 +156,10 @@ class OllamaService {
 
     // 构建模型信息
     result = result.map((model) => {
-      let supplierName = 'ollama'
-      let title = `${supplierName}/${model.full_name}`
+      const supplierName = 'ollama'
+      const title = `${supplierName}/${model.full_name}`
 
-      let modelInfo = {
+      const modelInfo = {
         title: title,
         supplierName,
         model: model.full_name,
@@ -193,15 +193,15 @@ class OllamaService {
       const ollama = pub.init_ollama()
       const { models } = await ollama.list()
 
-      let isCn = pub.get_language() == 'zh'
+      const isCn = pub.get_language() == 'zh'
 
       // 将models中存在，但modelListSrc中不存在的模型添加到modelListSrc中
-      for (let model of models) {
+      for (const model of models) {
         let isExist = false
-        for (let modelSrc of modelListSrc) {
+        for (const modelSrc of modelListSrc) {
           // 转小写后比较
-          let srcName = modelSrc['full_name'].toLowerCase()
-          let dstName = model.name.toLowerCase()
+          const srcName = modelSrc['full_name'].toLowerCase()
+          const dstName = model.name.toLowerCase()
           if (srcName === dstName) {
             isExist = true
             break
@@ -209,8 +209,8 @@ class OllamaService {
         }
 
         if (!isExist) {
-          let arr = model.name.split(':')
-          let modelSrc = {
+          const arr = model.name.split(':')
+          const modelSrc = {
             full_name: model.name,
             name: arr[1],
             parameters: '',
@@ -226,7 +226,7 @@ class OllamaService {
           }
 
           // 读取模型的详细信息
-          for (let modelInfo of modelListSrc) {
+          for (const modelInfo of modelListSrc) {
             if (modelInfo['name'].toLowerCase() === arr[0]) {
               modelSrc['pull_count'] = modelInfo.pull_count
               modelSrc['tag_count'] = modelInfo.tag_count
@@ -313,7 +313,7 @@ class OllamaService {
     }
 
     // 获取最近1分钟的平均下载速度和最近10秒钟的平均下载速度
-    let { average, average10s } = this.get_average_speed()
+    const { average, average10s } = this.get_average_speed()
 
     // 如果最近10秒钟的平均下载速度小于最近1分钟的平均下载速度的1/3，则认为下载速度很慢，重新下载
     if (average10s < average / 3) {
@@ -358,7 +358,7 @@ class OllamaService {
       total += ModelDownLoadSpeedList[i]
     }
 
-    let average = total / ModelDownLoadSpeedList.length
+    const average = total / ModelDownLoadSpeedList.length
 
     // 最近10秒钟的平均下载速度
     total = 0
@@ -366,7 +366,7 @@ class OllamaService {
       total += ModelDownLoadSpeedList10s[i]
     }
 
-    let average10s = total / ModelDownLoadSpeedList10s.length
+    const average10s = total / ModelDownLoadSpeedList10s.length
 
     return { average, average10s }
   }
@@ -379,7 +379,7 @@ class OllamaService {
    */
   async install_model(model: string, parameters: string): Promise<boolean> {
     // 构建模型全名
-    let fullModel = `${model}:${parameters}`
+    const fullModel = `${model}:${parameters}`
     // 若该模型的下载信息已存在，则删除
 
     if (ModelDownloadSpeed.has(fullModel) && !ReconnectModelDownload) {
@@ -390,12 +390,12 @@ class OllamaService {
     try {
       // 发起模型拉取请求，并开启流式响应
       const ollama = pub.init_ollama()
-      let stream = await ollama.pull({ model: fullModel, stream: true })
+      const stream = await ollama.pull({ model: fullModel, stream: true })
       let lastTime = pub.time()
       let lastCompleted = 0
       let speed = 0
       let setEnd = false
-      for await (let part of stream) {
+      for await (const part of stream) {
         if (part.digest) {
           // 计算完成百分比
           let percent = 0
@@ -403,9 +403,9 @@ class OllamaService {
             percent = Math.round((part.completed / part.total) * 100)
           }
           // 计算每秒速度
-          let currentTime = pub.time()
+          const currentTime = pub.time()
           if (currentTime - lastTime > 0) {
-            let completed = part.completed - lastCompleted
+            const completed = part.completed - lastCompleted
             speed = completed / (currentTime - lastTime)
             lastTime = currentTime
             lastCompleted = part.completed
@@ -416,7 +416,7 @@ class OllamaService {
             speed = 0
           }
           // 构建包含下载信息的对象
-          let data = {
+          const data = {
             digest: part.digest,
             status: setEnd ? 2 : 1,
             progress: percent,
@@ -448,7 +448,7 @@ class OllamaService {
           ModelDownLoadSpeedList = []
           ModelDownLoadSpeedList10s = []
           // 模型安装成功，更新下载信息
-          let data = {
+          const data = {
             digest: '',
             status: 3,
             progress: 100,
@@ -552,7 +552,7 @@ class OllamaService {
       }
 
       // 发起下载请求
-      let headers = {
+      const headers: Record<string, string> = {
         'User-Agent': 'AiKnowledgeBase/' + pub.version(),
       }
 
@@ -560,7 +560,7 @@ class OllamaService {
         headers['Range'] = `bytes=${downloadBytes}-`
       }
 
-      let abort = new AbortController()
+      const abort = new AbortController()
       const response = await axios({
         url: downloadUrl,
         method: 'GET',
@@ -618,7 +618,7 @@ class OllamaService {
       }
 
       // 监听数据事件，更新下载进度
-      response.data.on('data', (chunk) => {
+      response.data.on('data', (chunk: Buffer) => {
         OllamaDownloadSpeed.completed += chunk.length
         downloadSize += chunk.length
         speed += chunk.length
@@ -630,7 +630,7 @@ class OllamaService {
         await this.ollama_download_end(downloadFile)
       })
       // 监听错误事件，处理下载错误
-      const handleError = async (error) => {
+      const handleError = async (error: NodeJS.ErrnoException) => {
         if (error.code === 'ERR_CANCELED') {
           return
         }
@@ -643,16 +643,17 @@ class OllamaService {
       response.data.pipe(writer)
 
       return true
-    } catch (error: any) {
+    } catch (error: unknown) {
       // 检查是否Request failed with status code 416错误
-      if (error.code === 'ERR_BAD_REQUEST' || error.status == 416) {
+      const err = error as Record<string, unknown>
+      if (err.code === 'ERR_BAD_REQUEST' || err.status == 416) {
         OllamaDownloadSpeed.status = 2
         OllamaDownloadSpeed.progress = 100
         OllamaDownloadSpeed.completed = OllamaDownloadSpeed.total
         writer.close()
         this.ollama_download_end(downloadFile)
         return true
-      } else if (error.code === 'ERR_CANCELED') {
+      } else if (err.code === 'ERR_CANCELED') {
         return false
       } else {
         logger.error(pub.lang('安装过程中出现未知错误:'), error)
@@ -776,29 +777,32 @@ class OllamaService {
         if (pub.is_windows()) {
           // 设置环境变量 OLLAMA_HOST=127.0.0.1
           exec('setx OLLAMA_HOST "127.0.0.1"', () => {
-            exec(`"${downloadFile}" /SILENT /NORESTART`, (error: any, stdout: any, stderr: any) => {
-              if (error) {
-                logger.error(`ollama install error: ${error.message}`)
-                resolve(false)
-              }
-              if (stderr) {
-                logger.error(`ollama install stderr: ${stderr}`)
-                resolve(false)
-              }
-              if (stdout) {
-                logger.info(`ollama install stdout: ${stdout}`)
-              }
+            exec(
+              `"${downloadFile}" /SILENT /NORESTART`,
+              (error: Error | null, stdout: string, stderr: string) => {
+                if (error) {
+                  logger.error(`ollama install error: ${error.message}`)
+                  resolve(false)
+                }
+                if (stderr) {
+                  logger.error(`ollama install stderr: ${stderr}`)
+                  resolve(false)
+                }
+                if (stdout) {
+                  logger.info(`ollama install stdout: ${stdout}`)
+                }
 
-              OllamaDownloadSpeed = {
-                total: 0,
-                completed: 0,
-                speed: 0,
-                progress: 0,
-                status: 0,
-              }
+                OllamaDownloadSpeed = {
+                  total: 0,
+                  completed: 0,
+                  speed: 0,
+                  progress: 0,
+                  status: 0,
+                }
 
-              checkInstallStatus()
-            })
+                checkInstallStatus()
+              },
+            )
           })
         } else if (pub.is_mac()) {
           try {
@@ -859,16 +863,16 @@ WantedBy=default.target
         execSync('pkill -f ollama', { shell })
       }
       logger.info(pub.lang('Ollama 进程已结束。'))
-    } catch (killError: any) {
-      logger.warn(pub.lang('结束 Ollama 进程时可能未找到进程:'), killError.message)
+    } catch (killError: unknown) {
+      logger.warn(pub.lang('结束 Ollama 进程时可能未找到进程:'), (killError as Error).message)
     }
   }
 
   private async test_ollama_host(ollamaHost: string): Promise<boolean> {
     try {
       // 尝试从11434端口获取版本信息
-      let url = `${ollamaHost}/api/version`
-      let res = await pub.httpRequest(url, {
+      const url = `${ollamaHost}/api/version`
+      const res = await pub.httpRequest(url, {
         timeout: 1000,
         method: 'GET',
         json: true,
