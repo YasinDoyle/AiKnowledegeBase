@@ -256,7 +256,10 @@ export function doChatOperateSelect(val: string, context_id: string) {
  * 新建对话
  */
 export function makeNewChat() {
+  const sider = useSiderStore.getState()
   const agent = useAgentStore.getState()
+  // 已经在新对话状态，无需重复操作
+  if (!sider.currentContextId) return
   agent.setCurrentChatAgent(null)
   createNewComu()
 }

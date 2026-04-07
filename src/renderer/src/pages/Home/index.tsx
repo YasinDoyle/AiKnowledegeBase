@@ -4,6 +4,11 @@ import useSiderStore from '@/stores/sider'
 import Sider from '@/pages/Sider'
 import HeaderBar from '@/pages/Header'
 import ChatContent from '@/pages/ChatContent'
+import Agent from '@/pages/Agent'
+import ThirdPartyApi from '@/pages/ThirdPartyApi'
+import Settings from '@/pages/Settings'
+import SoftSettings from '@/pages/SoftSettings'
+import CreateKnowledgeStore from '@/pages/KnowledgeStore/CreateKnowledgeStore'
 import './index.scss'
 
 const { Header, Content } = Layout
@@ -32,6 +37,13 @@ function Home() {
           <ChatContent />
         </Content>
       </Layout>
+
+      {/* 全局弹窗层 */}
+      <Agent />
+      <ThirdPartyApi />
+      <Settings />
+      <SoftSettings />
+      <CreateKnowledgeStore />
     </Layout>
   )
 }

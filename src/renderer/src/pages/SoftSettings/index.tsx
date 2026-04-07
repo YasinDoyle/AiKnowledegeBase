@@ -22,12 +22,20 @@ export default function SoftSettings() {
         onCancel={closeSoftSettings}
         title={t('软件设置')}
         footer={null}
-        width="auto"
+        width={panelWidth + 120 + 40}
+        centered
         destroyOnClose
       >
-        <div className="flex" style={{ minWidth: 600 }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '120px 1fr',
+            gap: 10,
+            minHeight: 300,
+          }}
+        >
           {/* Tab sidebar */}
-          <div className="w-120 flex flex-col">
+          <div className="flex flex-col">
             <div
               className={`p-10 cursor-pointer ${currentTab === 'general' ? 'bg-[var(--bt-theme-color-hover)]' : ''}`}
               onClick={() => changeSettingTab('general')}
@@ -44,7 +52,7 @@ export default function SoftSettings() {
           {/* Panel */}
           <div
             className="p-10 overflow-hidden transition-all"
-            style={{ width: panelWidth, borderLeft: settingPanelBorder }}
+            style={{ borderLeft: settingPanelBorder }}
           >
             {currentTab === 'general' && <GeneralSettings />}
             {currentTab === 'mcp' && <McpServer />}

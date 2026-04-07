@@ -2,6 +2,7 @@ import { Modal, Form, Input, Select, Slider } from 'antd'
 import { useTranslation } from 'react-i18next'
 import useKnowledgeStore from '@/stores/knowledge'
 import { closeCreateKnowledge, createNewKnowledgeStore, doSelectModel } from './controller'
+import { SliderMarks } from 'antd/es/slider'
 
 export default function CreateKnowledgeStore() {
   const { t } = useTranslation()
@@ -15,6 +16,10 @@ export default function CreateKnowledgeStore() {
     value: m.model,
     supplierName: m.supplierName,
   }))
+  const marks: SliderMarks = {
+    1: '1',
+    20: '20',
+  }
 
   return (
     <Modal
@@ -50,11 +55,15 @@ export default function CreateKnowledgeStore() {
         </Form.Item>
         <Form.Item label={t('最大召回数量')}>
           <Slider
+            marks={marks}
             min={1}
             max={20}
             value={formData.maxRecall ?? 5}
             onChange={(v) => setFormData({ maxRecall: v })}
           />
+          <span className="text-3 text-gray-4">
+            {t('检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条')}
+          </span>
         </Form.Item>
       </Form>
     </Modal>

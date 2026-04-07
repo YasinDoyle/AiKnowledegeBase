@@ -13,6 +13,9 @@ export default defineConfig({
     electron({
       main: {
         entry: 'src/main/index.ts',
+        onstart({ startup }) {
+          startup(['.', '--no-sandbox', '--remote-debugging-port=9222'])
+        },
         vite: {
           build: {
             rollupOptions: {

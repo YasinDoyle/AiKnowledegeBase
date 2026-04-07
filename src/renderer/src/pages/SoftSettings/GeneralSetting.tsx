@@ -8,14 +8,12 @@ import {
   changeDataSavePath,
   toStar,
   toIssue,
-  jumpToTutorial,
   guideChange,
   setSearch,
   changeThemeMode,
   changeLanguage,
   getLanguages,
 } from './controller'
-import wechat from '@/assets/images/wechat.png'
 
 export default function GeneralSettings() {
   const { t } = useTranslation()
@@ -102,19 +100,11 @@ export default function GeneralSettings() {
           </Button.Group>
         </div>
       </List.Item>
-      <List.Item>
-        <div className="w-full flex flex-col items-center gap-2">
-          <span>{t('加入AiKnowledgeBase交流群')}</span>
-          <img src={wechat} alt="wechat" width={100} />
-        </div>
-      </List.Item>
+
       <List.Item>
         <div className="w-full flex justify-center gap-2 text-gray-5">
           <span>
             {t('当前版本')}: v{version}
-          </span>
-          <span className="underline text-green-6 cursor-pointer" onClick={jumpToTutorial}>
-            {t('文档教程')}
           </span>
         </div>
       </List.Item>
