@@ -48,6 +48,15 @@ export default defineConfig({
       },
       preload: {
         input: path.join(__dirname, 'src/preload/index.ts'),
+        vite: {
+          build: {
+            rollupOptions: {
+              output: {
+                entryFileNames: 'preload.mjs',
+              },
+            },
+          },
+        },
       },
       renderer: process.env.NODE_ENV === 'test' ? undefined : {},
     }),
