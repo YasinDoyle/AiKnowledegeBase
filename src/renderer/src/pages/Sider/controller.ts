@@ -9,6 +9,7 @@ import useKnowledgeStore from '@/stores/knowledge'
 import useAgentStore from '@/stores/agent'
 import useChatContentStore from '@/stores/chatContent'
 import { openDelKnowledge, optimizeTable, singleActive } from '../KnowledgeStore/controller'
+import { eventBus } from '@/utils/tools'
 import type { ChatInfo, ChatItemInfo } from '@/types'
 
 const t = i18n.t.bind(i18n)
@@ -122,6 +123,8 @@ export async function getChatInfo(context_id: string) {
     const res = await ipcInvoke('chat:get_chat_info', { context_id })
     if (res.code === 200) {
       chatContent.setChatHistory(generateObject(res.message))
+      chatContent.setUserScrollSelf(false)
+      setTimeout(() => eventBus.$emit('doScroll'), 50)
     }
   } catch (error) {
     console.error(error)

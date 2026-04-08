@@ -78,7 +78,9 @@ export async function sendChat(params: ChatParams, multiModelList?: MultipleMode
         // 单模型：累积文本
         accumulated = (accumulated as string) + data.text
         const newHistory = new Map(useChatContentStore.getState().chatHistory)
+        const currentEntry = newHistory.get(currentChat)
         newHistory.set(currentChat, {
+          ...currentEntry,
           content: accumulated as string,
           stat: { model: header.currentModel },
           id: '',

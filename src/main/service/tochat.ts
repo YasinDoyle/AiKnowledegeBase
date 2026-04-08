@@ -616,7 +616,7 @@ export class ToChatService {
         }
         return pub.lang('调用模型接口时出错了: {}', (error as Error).message)
       }
-      ;(async () => {
+      await (async () => {
         for await (const chunk of res) {
           await ResEvent(chunk)
         }
