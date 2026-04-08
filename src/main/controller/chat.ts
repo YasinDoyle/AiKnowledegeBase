@@ -1,7 +1,6 @@
 import type { WebContents } from 'electron'
 import { ChatService, ModelInfo } from '../service/chat'
 import { pub, ReturnMsg as Result } from '../class/public'
-import { logger } from '../lib/utils'
 import { GetSupplierModels, getModelUsedTotalList } from '../service/model'
 import { ollamaService } from '../service/ollama'
 import {
@@ -10,9 +9,6 @@ import {
   ToChatService,
   clearModelListInfo,
 } from '../service/tochat'
-
-// 模型列表获取重试次数
-let MODEL_LIST_RETRY = 0
 
 /**
  * chat controller 类，处理与聊天相关的各种操作
@@ -86,60 +82,63 @@ class ChatController {
 
   /**
    * 获取模型列表
-   * @returns {Promise<any>} - 包含模型列表信息的成功响应
+   * @returns {Promise<Result>} - 包含模型列表信息的成功响应
    */
   async get_model_list(): Promise<Result> {
-    clearModelListInfo()
     const ollamaModelList = await ollamaService.model_list()
-    try {
-      // 获取所有模型信息
-      MODEL_LIST_RETRY++
-      const ollama = pub.init_ollama()
-      const res = await ollama.list()
-      // 遍历模型信息，将其添加到 ModelListInfo 中
-      res.models.forEach((modelInfo) => {
-        if (
-          modelInfo.name.indexOf('embed') == -1 &&
-          modelInfo.name.indexOf('bge-m3') == -1 &&
-          modelInfo.name.indexOf('all-minilm') == -1 &&
-          modelInfo.name.indexOf('multilingual') == -1 &&
-          modelInfo.name.indexOf('r1-1776') == -1
-        ) {
-          let capability: string[] = ['llm']
-          const lastName = modelInfo.name.split(':')[0].toLocaleLowerCase()
-          for (const mod of ollamaModelList) {
-            if (mod.model == lastName) {
-              capability = mod.capability
-              break
-            }
-          }
 
-          ModelListInfo.push({
-            title: 'Ollama/' + modelInfo.name,
-            supplierName: 'ollama',
-            model: modelInfo.name,
-            size: modelInfo.size,
-            contextLength: 0,
-            capability: capability,
-          })
-        }
-      })
-    } catch (error) {
-      // 重试3次
-      if (MODEL_LIST_RETRY < 4) {
-        await pub.sleep(1000)
-        return this.get_model_list()
+    // 使用局部数组，避免并发调用共享 ModelListInfo 导致重复
+    const ollamaModels: ModelInfo[] = []
+
+    // 从 ollamaModelList 中提取已安装的非嵌入模型（无需再次调用 ollama.list()）
+    for (const mod of ollamaModelList) {
+      if (!mod.install) continue
+      const name: string = mod.full_name || ''
+      const nameLower = name.toLowerCase()
+      // 过滤嵌入模型
+      if (
+        nameLower.includes('embed') ||
+        nameLower.includes('bge-m3') ||
+        nameLower.includes('all-minilm') ||
+        nameLower.includes('multilingual') ||
+        nameLower.includes('r1-1776')
+      ) {
+        continue
       }
-      // 记录错误信息
-      logger.error(pub.lang('获取模型列表时出错:'), error)
+
+      ollamaModels.push({
+        title: 'Ollama/' + name,
+        supplierName: 'ollama',
+        model: name,
+        size: mod.size || 0,
+        contextLength: 0,
+        capability: mod.capability?.length ? mod.capability : ['llm'],
+      })
     }
 
     let result = await GetSupplierModels()
-    result['ollama'] = ModelListInfo
+    result['ollama'] = ollamaModels
+
+    // 同步更新 ModelListInfo 供 tochat 中 getModelInfo 使用
+    clearModelListInfo()
+    ollamaModels.forEach((m) => ModelListInfo.push(m))
 
     result = this.get_model_top5(result)
 
-    return pub.return_success(pub.lang('大模型列表获取成功'), result)
+    // 将后端 ModelInfo 映射为前端 SupplierModelItem 格式
+    const mapped: Record<string, Array<Record<string, unknown>>> = {}
+    for (const [key, models] of Object.entries(result)) {
+      mapped[key] = models.map((m) => ({
+        modelName: m.model,
+        supplierName: m.supplierName,
+        title: m.title,
+        capability: m.capability || [],
+        status: true,
+        ...(m.total != null ? { total: m.total } : {}),
+      }))
+    }
+
+    return pub.return_success(pub.lang('大模型列表获取成功'), mapped)
   }
 
   /**

@@ -19,19 +19,26 @@ export default function ModelList({ onChoose }: Props) {
     const result: Record<string, SupplierModelItem[]> = {}
     const key = filterKey.toLowerCase()
     Object.entries(modelListSource).forEach(([supplier, models]) => {
+      // commonModelList 由后端 top5 逻辑生成，不作为独立分类展示
+      if (supplier === 'commonModelList') return
       const filtered = models.filter(
         (m) =>
-          m.modelName.toLowerCase().includes(key) || (m.title || '').toLowerCase().includes(key),
+          (m.modelName || '').toLowerCase().includes(key) ||
+          (m.title || '').toLowerCase().includes(key),
       )
       if (filtered.length) result[supplier] = filtered
     })
     return result
   }, [modelListSource, filterKey])
 
-  /** 常用模型 — 取每个 supplier 的第一个 */
+  /** 常用模型 — 优先使用后端统计的 top5，没有则取每个 supplier 的第一个 */
   const commonModels = useMemo(() => {
+    if (modelListSource['commonModelList']?.length) {
+      return modelListSource['commonModelList']
+    }
     const list: SupplierModelItem[] = []
-    Object.values(modelListSource).forEach((models) => {
+    Object.entries(modelListSource).forEach(([key, models]) => {
+      if (key === 'commonModelList') return
       if (models.length) list.push(models[0])
     })
     return list
