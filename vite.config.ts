@@ -14,10 +14,11 @@ export default defineConfig({
       main: {
         entry: 'src/main/index.ts',
         onstart({ startup }) {
-          startup(['.', '--no-sandbox', '--remote-debugging-port=9222'])
+          startup(['.', '--no-sandbox', '--remote-debugging-port=9222', '--inspect=9229'])
         },
         vite: {
           build: {
+            sourcemap: true,
             rollupOptions: {
               output: {
                 // 禁止 code splitting，确保所有代码在同一文件

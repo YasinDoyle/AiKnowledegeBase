@@ -1,0 +1,53 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Electron: Renderer",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}",
+      "sourceMapPathOverrides": {
+        "webpack:///./src/*": "${workspaceFolder}/src/*"
+      }
+    },
+    {
+      "name": "Electron: Main (attach)",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "outFiles": ["${workspaceFolder}/dist-electron/**/*.{js,mjs}"],
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"],
+      "restart": true,
+      "timeout": 10000
+    },
+    {
+      "name": "Electron: Main (launch)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+      "runtimeArgs": [".", "--remote-debugging-port=9222"],
+      "cwd": "${workspaceFolder}",
+      "outFiles": ["${workspaceFolder}/dist-electron/**/*.{js,mjs}"],
+      "sourceMaps": true
+    },
+    {
+      "name": "Electron: Main (with build)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+      "runtimeArgs": [".", "--remote-debugging-port=9222"],
+      "cwd": "${workspaceFolder}",
+      "outFiles": ["${workspaceFolder}/dist-electron/**/*.{js,mjs}"],
+      "sourceMaps": true,
+      "preLaunchTask": "vite-build"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Electron: All (attach)",
+      "configurations": ["Electron: Main (attach)", "Electron: Renderer"]
+    }
+  ]
+}
