@@ -22,6 +22,7 @@ type ChatParams = {
   doc_files?: string
   images?: string
   regenerate_id?: string
+  chatKey?: MultipeQuestionDto
   [key: string]: any
 }
 
@@ -58,11 +59,13 @@ export async function sendChat(params: ChatParams, multiModelList?: MultipleMode
 
     chatContent.setCurrentTalkingChatId(sider.currentContextId)
 
-    // 查找对应的 chatKey
-    let currentChat: MultipeQuestionDto | null = null
-    for (const [key] of chatContent.chatHistory) {
-      if (key.content === params.user_content) {
-        currentChat = key
+    // 查找对应的 chatKey：优先使用调用方直接传入的引用，否则按 content 匹配最后一个
+    let currentChat: MultipeQuestionDto | null = params.chatKey ?? null
+    if (!currentChat) {
+      for (const [key] of useChatContentStore.getState().chatHistory) {
+        if (key.content === params.user_content) {
+          currentChat = key
+        }
       }
     }
 
@@ -91,13 +94,16 @@ export async function sendChat(params: ChatParams, multiModelList?: MultipleMode
     }
     ipcOn('chat:chunk', onChunk)
 
+    // chatKey 仅前端使用，不传给后端
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { chatKey: _chatKey, ...ipcParams } = params
     const commonParams = {
       context_id: sider.currentContextId,
       search: chatTools.netActive ? softSettings.targetNet : '',
       rag_list: JSON.stringify(knowledge.activeKnowledgeForChat),
       temp_chat: String(chatTools.tempChat),
       mcp_servers: chatTools.mcpListChoosed,
-      ...params,
+      ...ipcParams,
     }
 
     if (!multiModelList) {
@@ -323,6 +329,7 @@ export function sendChatToModel() {
       user_content: formatQuestion,
       images: chatTools.questionImages.join(','),
       doc_files: chatTools.questionFiles.join(','),
+      chatKey,
     })
   } else {
     // 多模型
@@ -346,6 +353,7 @@ export function sendChatToModel() {
         user_content: formatQuestion,
         images: chatTools.questionImages.join(','),
         doc_files: chatTools.questionFiles.join(','),
+        chatKey,
       },
       modelParams,
     )

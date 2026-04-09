@@ -63,8 +63,20 @@ export function answerAgain(question: MultipeQuestionDto, id: string) {
   }
 
   chatContent.setIsInChat(true)
-  const chatKey: MultipeQuestionDto = {
-    content: question.content.replace(/^\d+--/, ''),
+
+  // 找到原有的 key 引用（Map 用引用相等），直接复用原 key 原地更新
+  // 避免创建新 key 对象导致 Map 追加重复条目
+  const strippedContent = question.content.replace(/^\d+--/, '')
+  let existingKey: MultipeQuestionDto | null = null
+  for (const [key] of chatContent.chatHistory) {
+    if (key.content === strippedContent || key.content === question.content) {
+      existingKey = key
+    }
+  }
+
+  // 如果找到原 key 则复用，否则创建新 key（兜底）
+  const chatKey = existingKey ?? {
+    content: strippedContent,
     files: question.files,
     images: question.images,
   }
@@ -73,27 +85,22 @@ export function answerAgain(question: MultipeQuestionDto, id: string) {
   newHistory.set(chatKey, { content: '', stat: { model: header.currentModel }, search_result: [] })
   chatContent.setChatHistory(newHistory)
 
+  const sendParams = {
+    user_content: chatKey.content,
+    images: chatKey.images?.join(','),
+    doc_files: chatKey.files?.join(','),
+    regenerate_id: id,
+    chatKey,
+  }
+
   if (header.multipleModelList.length) {
     const modelList = [
       ...header.multipleModelList,
       { model: header.currentModel, supplierName: thirdParty.currentSupplierName },
     ]
-    sendChat(
-      {
-        user_content: chatKey.content,
-        images: chatKey.images?.join(','),
-        doc_files: chatKey.files?.join(','),
-        regenerate_id: id,
-      },
-      modelList,
-    )
+    sendChat(sendParams, modelList)
   } else {
-    sendChat({
-      user_content: chatKey.content,
-      images: chatKey.images?.join(','),
-      doc_files: chatKey.files?.join(','),
-      regenerate_id: id,
-    })
+    sendChat(sendParams)
   }
 }
 

@@ -19,7 +19,7 @@ import { agentService } from './agent'
  */
 export type ChatHistory = {
   id: string
-  compare_id: string
+  compare_id?: string
   reasoning: any
   role: string
   content: any
@@ -234,10 +234,10 @@ export class ChatService {
    * @returns {ChatHistory[]} - 合并后的聊天历史记录数组
    */
   mergeHistory(chatHistory: ChatHistory[]): ChatHistory[] {
-    // 合并同一个compare_id的历史记录，注意：不合并compare_id==undefined的记录，只合并role=="assistant"的记录
+    // 合并同一个compare_id的历史记录，注意：不合并compare_id为空的记录，只合并role=="assistant"的记录
     const mergedHistory: ChatHistory[] = []
     for (const history of chatHistory) {
-      if (history.compare_id == undefined) {
+      if (!history.compare_id) {
         mergedHistory.push(history)
         continue
       }

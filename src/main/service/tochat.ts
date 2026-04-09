@@ -397,7 +397,7 @@ export class ToChatService {
     )
     const chatHistory: ChatHistory = {
       id: '',
-      compare_id: compare_id || '',
+      compare_id: compare_id,
       role: 'user',
       reasoning: '',
       stat: {},
@@ -416,7 +416,7 @@ export class ToChatService {
     const resUUID = pub.uuid()
     const chatHistoryRes: ChatHistory = {
       id: resUUID,
-      compare_id: compare_id || '',
+      compare_id: compare_id,
       role: 'assistant',
       reasoning: '',
       stat: {

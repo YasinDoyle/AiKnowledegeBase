@@ -136,28 +136,51 @@ export async function getChatInfo(context_id: string) {
  */
 function generateObject(arr: any): ChatInfo {
   const result: ChatInfo = new Map()
+  // 后端 formatHistory 保证 [user, assistant, user, assistant, ...]
+  // 但仍需校验 role 以防数据异常
   for (let i = 0; i < arr.length; i += 2) {
+    // 跳过非 user 记录
+    if (arr[i].role !== 'user') {
+      i-- // 抵消 i += 2 使下次只前进 1
+      continue
+    }
     const key = {
       content: arr[i].content,
       files: arr[i].doc_files || [],
       images: arr[i].images || [],
     }
+    const answer = arr[i + 1]
+    // 确保下一条是 assistant
+    if (!answer || answer.role !== 'assistant') {
+      result.set(key, {
+        content: t('模型异常，请重新生成'),
+        stat: undefined,
+        search_result: [],
+        tools_result: [],
+        id: undefined,
+      })
+      if (answer && answer.role !== 'assistant') {
+        i-- // answer 实际是下一个 user，回退
+      }
+      continue
+    }
     let value: string | string[]
-    if (Array.isArray(arr[i + 1]?.content)) {
+    if (Array.isArray(answer.content)) {
       const contentArr: string[] = []
-      for (let j = 0; j < arr[i + 1].content.length; j++) {
-        contentArr.push(arr[i + 1].reasoning[j] + arr[i + 1].content[j])
+      for (let j = 0; j < answer.content.length; j++) {
+        contentArr.push(answer.reasoning[j] + answer.content[j])
       }
       value = contentArr
     } else {
-      value = arr[i + 1] ? arr[i + 1].reasoning + arr[i + 1].content : t('模型异常，请重新生成')
+      value = (answer.reasoning || '') + (answer.content || '')
+      if (!value) value = t('模型异常，请重新生成')
     }
     result.set(key, {
       content: value,
-      stat: arr[i + 1]?.stat,
-      search_result: arr[i + 1]?.search_result,
-      tools_result: arr[i + 1]?.tools_result,
-      id: arr[i + 1]?.id,
+      stat: answer.stat,
+      search_result: answer.search_result,
+      tools_result: answer.tools_result,
+      id: answer.id,
     })
   }
   return result

@@ -12,11 +12,14 @@
     margin: var(--bt-mg-large) auto 0;
     position: relative;
     height: 100%;
+    min-height: 0;
+    overflow: hidden;
   }
 }
 
 .chat-scroll-area {
   height: 100%;
+  max-height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 0 var(--bt-pd-small);
@@ -39,12 +42,33 @@
   }
 }
 
+.answer-scroll-wrapper {
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
 .answer-wrapper {
   @include base.row-flex-between;
   justify-content: flex-start;
   align-items: stretch;
-  width: 100%;
-  overflow-x: auto;
+  width: max-content;
+  min-width: 100%;
   gap: 10px;
 }
 
