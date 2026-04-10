@@ -38,7 +38,7 @@ export default function Settings() {
 
   useEffect(() => {
     if (settingsShow) {
-      getVisibleModelList()
+      handleSearch()
       getDiskList()
     } else {
       setModeType('all')
