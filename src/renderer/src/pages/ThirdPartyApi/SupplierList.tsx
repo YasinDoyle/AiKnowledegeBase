@@ -23,7 +23,7 @@ export default function SupplierList() {
           </div>
         ))}
       </div>
-      <Button className="w-full mt-20" ghost onClick={() => setAddSupplierShow(true)}>
+      <Button className="w-full mt-20" onClick={() => setAddSupplierShow(true)}>
         {t('添加模型服务商')}
       </Button>
     </div>

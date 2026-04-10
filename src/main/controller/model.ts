@@ -393,7 +393,14 @@ class ModelController {
     }
 
     try {
-      return this.handleResult(true, pub.lang('API配置正确'))
+      const modelService = new ModelService(args.supplierName)
+      modelService.setApiKey(args.baseUrl, args.apiKey)
+      const ok = await modelService.testApi()
+      modelService.destroy()
+      if (ok) {
+        return this.handleResult(true, pub.lang('API配置正确'))
+      }
+      return this.handleResult(false, pub.lang('连接失败，请检查'))
     } catch (error: unknown) {
       return this.handleResult(
         false,
