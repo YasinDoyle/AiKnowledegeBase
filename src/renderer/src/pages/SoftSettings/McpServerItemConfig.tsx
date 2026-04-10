@@ -97,7 +97,7 @@ export default function McpServerItemConfig() {
               </Form.Item>
               {envStatus.node_npx === 0 && commadType === 'npx' && (
                 <div className="mb-10">
-                  {t('当前未安装Nodejs环境，点击')}
+                  {t('当前未安装Bun环境，点击')}
                   <Button type="link" size="small" onClick={() => installEnv('nodejs')}>
                     {t('立即安装')}
                   </Button>
@@ -134,7 +134,7 @@ export default function McpServerItemConfig() {
       <Button
         type="primary"
         size="small"
-        className="absolute bottom-0 right-0"
+        className="absolute bottom-4 right-6"
         onClick={handleAddMcpServer}
       >
         {editMode ? t('保存') : t('添加')}

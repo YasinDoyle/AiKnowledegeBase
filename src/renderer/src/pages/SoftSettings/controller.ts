@@ -288,7 +288,7 @@ export async function handleCurrentMcpStatus() {
 export async function handleAddMcpServer() {
   const store = useSoftSettingsStore.getState()
   if (store.envStatus.node_npx === 0) {
-    message.error(t('请先安装Node.js环境'))
+    message.error(t('请先安装Bun环境'))
     return
   }
   const params = JSON.parse(JSON.stringify(store.currentMcpChoose))
