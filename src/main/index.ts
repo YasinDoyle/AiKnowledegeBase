@@ -58,10 +58,14 @@ function createWindow() {
     return { action: 'deny' }
   })
 
-  // 拦截页面内导航
+  // 拦截页面内导航（只拦截外部链接，不拦截应用自身导航）
   win.webContents.on('will-navigate', (event, url) => {
-    event.preventDefault()
-    shell.openExternal(url)
+    const isDevServer = VITE_DEV_SERVER_URL && url.startsWith(VITE_DEV_SERVER_URL)
+    const isLocalFile = url.startsWith('file://')
+    if (!isDevServer && !isLocalFile) {
+      event.preventDefault()
+      shell.openExternal(url)
+    }
   })
 
   // 加载页面
