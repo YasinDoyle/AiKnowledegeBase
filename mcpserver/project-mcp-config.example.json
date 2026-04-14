@@ -1,0 +1,22 @@
+{
+  "mcpServers": [
+    {
+      "name": "local-stdio-test",
+      "description": "Local stdio MCP test server for AiKnowledegeBase",
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "__ABSOLUTE_PROJECT_PATH__/mcpserver/custom_stdio_server.mjs"
+      ],
+      "env": {},
+      "isActive": true
+    },
+    {
+      "name": "local-sse-test",
+      "description": "Local SSE MCP test server for AiKnowledegeBase",
+      "type": "sse",
+      "baseUrl": "http://127.0.0.1:3333/sse",
+      "isActive": true
+    }
+  ]
+}

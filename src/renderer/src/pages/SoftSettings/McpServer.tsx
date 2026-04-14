@@ -26,7 +26,7 @@ export default function McpServer() {
   }, [])
 
   return (
-    <div className="flex gap-10" style={{ width: 680 }}>
+    <div className="flex gap-10">
       {/* MCP 列表 */}
       <div className="w-160 border-r border-gray-2 pr-10">
         <Popover trigger="hover" content={<McpSeverDropdown />} placement="bottom">
@@ -59,9 +59,7 @@ export default function McpServer() {
       </div>
 
       {/* MCP 配置面板 */}
-      <div className="flex-1 relative" style={{ minWidth: 590 }}>
-        {mcpServerFormShow && <McpServerItemConfig />}
-      </div>
+      <div className="flex-1 relative">{mcpServerFormShow && <McpServerItemConfig />}</div>
       <McpConfigFile />
     </div>
   )

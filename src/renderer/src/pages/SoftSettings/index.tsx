@@ -22,7 +22,7 @@ export default function SoftSettings() {
         onCancel={closeSoftSettings}
         title={t('软件设置')}
         footer={null}
-        width={panelWidth + 120 + 40}
+        width={panelWidth}
         centered
         destroyOnClose
       >

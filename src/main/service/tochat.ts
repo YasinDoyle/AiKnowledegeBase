@@ -557,6 +557,16 @@ export class ToChatService {
         await this.set_chat_history(uuid, resUUID, chatHistoryRes)
         return false
       }
+      // 用户手动停止（在处理 delta 之前检查，避免停止后继续输出内容）
+      if (!ContextStatusMap.get(uuid)) {
+        adapter.abort(res)
+        const endContent = pub.lang('\n\n---\n**内容不完整:** 用户手动停止生成')
+        chatHistoryRes.content += endContent
+        sendChunk(endContent)
+        sendChunk(null)
+        await this.set_chat_history(uuid, resUUID, chatHistoryRes)
+        return false
+      }
       // 正文 delta 处理
       const reasoningDelta = adapter.getReasoningDelta(chunk)
       if (reasoningDelta !== null) {
@@ -586,16 +596,6 @@ export class ToChatService {
         sendChunk(contentDelta)
         chatHistoryRes.content += contentDelta
       }
-      // 用户手动停止
-      if (!ContextStatusMap.get(uuid)) {
-        adapter.abort(res)
-        const endContent = pub.lang('\n\n---\n**内容不完整:** 用户手动停止生成')
-        chatHistoryRes.content += endContent
-        sendChunk(endContent)
-        sendChunk(null)
-        await this.set_chat_history(uuid, resUUID, chatHistoryRes)
-        return false
-      }
       return true
     }
 
@@ -618,7 +618,8 @@ export class ToChatService {
       }
       await (async () => {
         for await (const chunk of res) {
-          await ResEvent(chunk)
+          const shouldContinue = await ResEvent(chunk)
+          if (shouldContinue === false) break
         }
       })()
     }

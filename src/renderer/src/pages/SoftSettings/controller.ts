@@ -4,6 +4,7 @@ import i18n, { setLang } from '@/i18n'
 import storage from '@/utils/storage'
 import useSoftSettingsStore from '@/stores/softSettings'
 import useGlobalStore from '@/stores/global'
+import { getMcpServerListForChat } from '@/pages/ChatTools/controller'
 import type { CloudMcpServerListDto } from '@/types'
 
 const t = i18n.t.bind(i18n)
@@ -148,7 +149,7 @@ export function changeLanguage(val: string) {
 
 export function changeSettingTab(tab: string) {
   const store = useSoftSettingsStore.getState()
-  store.setSettingPanelWidth(tab === 'general' ? 480 : 780)
+  store.setSettingPanelWidth(tab === 'general' ? 700 : 850)
   store.setCurrentSettingTab(tab)
 }
 
@@ -254,35 +255,79 @@ export function onChangeCommadType(type: string) {
   const current = { ...store.currentMcpChoose }
   current.command = type === 'npx' ? 'npx' : ''
   store.setCurrentMcpChoose(current)
+  store.setCommadType(type)
 }
 
 export async function installEnv(type: string) {
   const envType = type === 'py' ? 'install_uv' : 'install_npx'
   const store = useSoftSettingsStore.getState()
   store.setEnvInstallShow(true)
+  store.setEnvInstallProgress({
+    name: type === 'py' ? 'uv' : 'bun',
+    total: 0,
+    completed: 0,
+    progress: 0,
+    speed: 0,
+    status: 1,
+  })
+
+  // 轮询下载进度
+  const progressTimer = setInterval(async () => {
+    try {
+      const progressRes = await ipcInvoke('mcp:get_env_install_progress')
+      if (progressRes.code === 200 && progressRes.message) {
+        store.setEnvInstallProgress(progressRes.message)
+        // 完成、失败或取消时停止轮询
+        if ([3, -1, -2].includes(progressRes.message.status)) {
+          clearInterval(progressTimer)
+        }
+      }
+    } catch {
+      /* ignore polling errors */
+    }
+  }, 500)
+
   const res = await ipcInvoke(`mcp:${envType}`)
+  clearInterval(progressTimer)
+
   if (res.code === 200) {
     message.success(t('环境安装成功'))
     store.setEnvInstallShow(false)
     await checkEnvStatus()
   } else {
-    message.error(t('环境安装失败'))
+    const progress = store.envInstallProgress
+    if (progress.status === -2) {
+      message.info(t('下载已取消'))
+    } else {
+      message.error(t(res.msg || '环境安装失败'))
+    }
     store.setEnvInstallShow(false)
   }
 }
 
-export async function handleCurrentMcpStatus() {
-  const store = useSoftSettingsStore.getState()
-  const backup = JSON.parse(JSON.stringify(store.currentMcpConfigBackup))
-  if ('isActive' in store.currentMcpChoose) {
-    backup.is_active = (store.currentMcpChoose as any).isActive
+export async function cancelEnvDownload() {
+  try {
+    await ipcInvoke('mcp:cancel_env_download')
+  } catch {
+    /* ignore */
   }
-  backup.args = receveArgs(backup.args)
-  backup.env = receveEnv(backup.env)
-  delete backup.isActive
+}
+
+export async function handleCurrentMcpStatus(checked: boolean) {
+  const store = useSoftSettingsStore.getState()
+
+  // 更新 UI 状态
+  const updated = { ...store.currentMcpChoose, isActive: checked }
+  store.setCurrentMcpChoose(updated)
+
+  // 构建后端参数：从 backup 获取原始数据（args/env 已是数组/对象）
+  const backup = JSON.parse(JSON.stringify(store.currentMcpConfigBackup))
+  backup.isActive = checked
+
   const res = await ipcInvoke('mcp:modify_mcp_server', backup)
   message.success(res.msg || t('操作成功'))
   await getMcpServerList()
+  getMcpServerListForChat()
 }
 
 export async function handleAddMcpServer() {
@@ -295,14 +340,14 @@ export async function handleAddMcpServer() {
   let api = 'add_mcp_server'
   if (store.mcpServerEditMode) {
     api = 'modify_mcp_server'
-    params.is_active = params.isActive
-    delete params.isActive
+    // editMode 下 isActive 已在 params 中，无需转换
   }
   params.args = receveArgs(params.args)
   params.env = receveEnv(params.env)
   const res = await ipcInvoke(`mcp:${api}`, params)
   message.success(res.msg || t('操作成功'))
   await getMcpServerList()
+  getMcpServerListForChat()
   if (!store.mcpServerEditMode) {
     handleEditMcp(params.name)
   }
@@ -327,6 +372,7 @@ export async function confirmDeleteMcpServer() {
     message.error(res.msg || t('操作失败'))
   }
   await getMcpServerList()
+  getMcpServerListForChat()
   store.setDelMcpConfirmShow(false)
 }
 

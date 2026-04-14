@@ -56,6 +56,14 @@ interface SoftSettingsState {
   mcpServerCloud: boolean
   envStatus: { node_npx: number; python_uv: number }
   envInstallShow: boolean
+  envInstallProgress: {
+    name: string
+    total: number
+    completed: number
+    progress: number
+    speed: number
+    status: number
+  }
   mcpConfigFileShow: boolean
   mcpConfigFileContent: string
   currentMcpConfigBackup: McpServerListDto | null
@@ -83,6 +91,14 @@ interface SoftSettingsState {
   setMcpServerCloud: (v: boolean) => void
   setEnvStatus: (s: { node_npx: number; python_uv: number }) => void
   setEnvInstallShow: (v: boolean) => void
+  setEnvInstallProgress: (p: {
+    name: string
+    total: number
+    completed: number
+    progress: number
+    speed: number
+    status: number
+  }) => void
   setMcpConfigFileShow: (v: boolean) => void
   setMcpConfigFileContent: (c: string) => void
   setCurrentMcpConfigBackup: (b: McpServerListDto | null) => void
@@ -135,7 +151,7 @@ const useSoftSettingsStore = create<SoftSettingsState>((set) => ({
     error: '',
   },
   currentSettingTab: 'general',
-  settingPanelWidth: 480,
+  settingPanelWidth: 700,
   currentMcpName: '',
   commadType: 'npx',
   mcpServerFormShow: false,
@@ -146,6 +162,7 @@ const useSoftSettingsStore = create<SoftSettingsState>((set) => ({
   mcpServerCloud: false,
   envStatus: { node_npx: 0, python_uv: 0 },
   envInstallShow: false,
+  envInstallProgress: { name: '', total: 0, completed: 0, progress: 0, speed: 0, status: 0 },
   mcpConfigFileShow: false,
   mcpConfigFileContent: '',
   currentMcpConfigBackup: null,
@@ -174,6 +191,7 @@ const useSoftSettingsStore = create<SoftSettingsState>((set) => ({
   setMcpServerCloud: (v) => set({ mcpServerCloud: v }),
   setEnvStatus: (s) => set({ envStatus: s }),
   setEnvInstallShow: (v) => set({ envInstallShow: v }),
+  setEnvInstallProgress: (p) => set({ envInstallProgress: p }),
   setMcpConfigFileShow: (v) => set({ mcpConfigFileShow: v }),
   setMcpConfigFileContent: (c) => set({ mcpConfigFileContent: c }),
   setCurrentMcpConfigBackup: (b) => set({ currentMcpConfigBackup: b }),

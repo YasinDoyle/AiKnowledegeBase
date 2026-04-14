@@ -4,6 +4,7 @@ import { pub } from '../../../class/public'
 import { logger } from '../../../lib/utils'
 import axios from 'axios'
 import { exec } from 'child_process'
+import { getPopplerDownloadUrl } from '../../../config/download_urls'
 import {
   initializeWorker,
   postProcessText,
@@ -190,7 +191,7 @@ export class PdfParser {
     let binPath = path.dirname(this.get_poppler_path())
     let os_path = this.get_os_path()
 
-    let downloadUrl = `https://aingdesk.bt.cn/bin/${os_path}/poppler.zip`
+    let downloadUrl = getPopplerDownloadUrl(os_path)
     let popplerzipFile = path.resolve(binPath, 'poppler.zip')
 
     await this.download_file(downloadUrl, popplerzipFile).then(async () => {

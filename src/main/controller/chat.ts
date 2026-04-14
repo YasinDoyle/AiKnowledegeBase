@@ -237,6 +237,23 @@ class ChatController {
     }
   }
 
+  async change_model(args: {
+    context_id: string
+    model: string
+    supplierName: string
+  }): Promise<Result> {
+    const { context_id: uuid, model, supplierName } = args
+    const chatService = new ChatService()
+    const parts = model.split(':')
+    const modelName = parts[0]
+    const parameters = parts[1] || ''
+    if (chatService.update_chat_model(uuid, modelName, parameters, supplierName)) {
+      return pub.return_success(pub.lang('模型切换成功'), null)
+    } else {
+      return pub.return_error(pub.lang('模型切换失败'), pub.lang('指定对话不可用'))
+    }
+  }
+
   /**
    * 删除指定对话历史
    * @param {Object} args - 删除对话历史所需的参数

@@ -4,6 +4,7 @@ import axios from 'axios'
 import * as fs from 'fs'
 import { logger } from '../lib/utils'
 import { selectFastestNode } from '../class/test_node'
+import { OLLAMA_WINDOWS_URL, OLLAMA_DARWIN_URL } from '../config/download_urls'
 // const { exec, execSync } = require('child_process');
 import { exec, execSync } from 'child_process'
 
@@ -729,12 +730,12 @@ class OllamaService {
   private async getOllamaDownloadInfo(): Promise<{ downloadUrl: string; downloadFile: string }> {
     if (pub.is_windows()) {
       return {
-        downloadUrl: `http://aingdesk.bt.cn/OllamaSetup.exe`,
+        downloadUrl: OLLAMA_WINDOWS_URL,
         downloadFile: path.resolve(pub.get_resource_path(), 'OllamaSetup.exe'),
       }
     } else if (pub.is_mac()) {
       return {
-        downloadUrl: `http://aingdesk.bt.cn/Ollama-darwin.zip`,
+        downloadUrl: OLLAMA_DARWIN_URL,
         downloadFile: path.resolve(pub.get_resource_path(), 'ollama-darwin.zip'),
       }
     } else if (pub.is_linux()) {

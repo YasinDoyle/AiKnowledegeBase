@@ -3,6 +3,7 @@ import * as path from 'path'
 import { logger } from '../lib/utils'
 import { ServerConfig, ToolInfo, MCPClient } from '../service/mcp_client'
 import { mcpService } from '../service/mcp'
+import { getUvDownloadUrl } from '../config/download_urls'
 
 /**
  * mcp controller 类，用于处理MCP相关逻辑
@@ -84,7 +85,7 @@ class McpController {
    * @param args.baseUrl <string> - 服务器URL地址
    * @param args.env <object> - 环境变量
    * @param args.args <string[]> - 参数
-   * @param args.is_active <boolean> - 是否可用
+   * @param args.isActive <boolean> - 是否可用
    * @return {Promise<any>} - 返回操作结果
    */
   async modify_mcp_server(args: {
@@ -95,7 +96,7 @@ class McpController {
     baseUrl: string
     env: Record<string, string>
     args: string[]
-    is_active: boolean
+    isActive: boolean
   }) {
     const mcpConfig = mcpService.read_mcp_config()
     let mcpServers: ServerConfig[] = []
@@ -114,7 +115,7 @@ class McpController {
     server.baseUrl = args.baseUrl
     server.env = args.env
     server.args = args.args
-    server.isActive = args.is_active
+    server.isActive = args.isActive
 
     // 保存配置文件
     mcpService.save_mcp_config(mcpServers)
@@ -234,7 +235,7 @@ class McpController {
     for (let i = 0; i < (server.tools ?? []).length; i++) {
       const tool = server.tools![i]
       if (args.tools[tool.name] !== undefined) {
-        tool.is_active = args.tools[tool.name]
+        tool.isActive = args.tools[tool.name]
       }
     }
 
@@ -314,7 +315,7 @@ class McpController {
   }
 
   /**
-   * 安装 python环境
+   * 安装 python环境（uv）
    * @param args - 参数对象
    */
   async install_uv(_args: unknown) {
@@ -326,10 +327,24 @@ class McpController {
     const binPath = mcpService.get_bin_path()
     const os_path = mcpService.get_os_path()
 
-    const downloadUrl = `https://aingdesk.bt.cn/bin/${os_path}/uv.zip`
+    const downloadUrl = getUvDownloadUrl(os_path)
     const uvzipFile = path.resolve(binPath, 'uv.zip')
 
-    await mcpService.download_file(downloadUrl, uvzipFile)
+    const downloaded = await mcpService.download_file(downloadUrl, uvzipFile, (info) => {
+      // 进度通过 mcpService.get_env_install_progress() 暴露
+      const progress = mcpService.get_env_install_progress()
+      progress.name = 'uv'
+      progress.total = info.total
+      progress.completed = info.completed
+      progress.progress = info.progress
+      progress.speed = info.speed
+      progress.status = 1
+    })
+
+    if (!downloaded) {
+      ;(global as Record<string, unknown>).uvInstall = false
+      return pub.return_error(pub.lang('下载失败'))
+    }
 
     // 解压缩
     const unzip = await import('unzipper')
@@ -339,13 +354,32 @@ class McpController {
       unzipStream.on('close', () => {
         // 删除压缩包
         pub.delete_file(uvzipFile)
-
+        ;(global as Record<string, unknown>).uvInstall = false
         resolve(pub.return_success(pub.lang('安装成功')))
       })
       unzipStream.on('error', (error: unknown) => {
+        ;(global as Record<string, unknown>).uvInstall = false
         reject(pub.return_error(pub.lang('安装失败'), error))
       })
     })
+  }
+
+  /**
+   * 获取环境安装下载进度
+   */
+  async get_env_install_progress(_args: unknown) {
+    return pub.return_success(pub.lang('获取成功'), mcpService.get_env_install_progress())
+  }
+
+  /**
+   * 取消当前环境下载
+   */
+  async cancel_env_download(_args: unknown) {
+    const cancelled = mcpService.cancel_download()
+    if (cancelled) {
+      return pub.return_success(pub.lang('已取消'))
+    }
+    return pub.return_error(pub.lang('没有正在进行的下载'))
   }
 
   /**

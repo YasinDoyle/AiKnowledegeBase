@@ -31,29 +31,29 @@ export async function getChatList() {
     const list: ChatItemInfo[] = res.message
     sider.setChatList(list)
 
-    if (list.length && sider.currentContextId === sider.contextIdForDel) {
-      const first = list[0]
-      sider.setCurrentContextId(first.context_id)
+    const deletedCurrent = sider.currentContextId === sider.contextIdForDel
 
-      // 智能体判断
-      if (first.agent_info) {
-        sider.setCurrentChatTitle(first.agent_info.agent_title)
-        agent.setCurrentChatAgent(first.agent_info)
-      } else {
-        sider.setCurrentChatTitle(first.title)
+    if (deletedCurrent) {
+      // 清空当前对话相关状态
+      sider.setCurrentContextId('')
+      sider.setCurrentChatTitle('')
+      agent.setCurrentChatAgent(null)
+      useChatContentStore.getState().setChatHistory(new Map())
+
+      // 如果还有其他对话，切换到第一条
+      if (list.length) {
+        const first = list[0]
+        sider.setCurrentContextId(first.context_id)
+
+        if (first.agent_info) {
+          sider.setCurrentChatTitle(first.agent_info.agent_title)
+          agent.setCurrentChatAgent(first.agent_info)
+        } else {
+          sider.setCurrentChatTitle(first.title)
+        }
+
+        getChatInfo(first.context_id)
       }
-
-      // 模型判断
-      if (first.supplierName === 'ollama') {
-        header.setCurrentModel(first.model + ':' + first.parameters)
-      } else {
-        header.setCurrentModel(first.model)
-      }
-      thirdParty.setCurrentSupplierName(first.supplierName!)
-      chatTools.setNetActive(!!first.search_type)
-      knowledge.setActiveKnowledgeForChat(first.rag_list || [])
-
-      getChatInfo(first.context_id)
     }
   } catch (error) {
     console.error(error)
@@ -96,7 +96,9 @@ export async function createChat() {
   const chatTools = useChatToolsStore.getState()
   const agent = useAgentStore.getState()
 
-  const [model, parameters] = header.currentModel.split(':')
+  const parts = header.currentModel.split(':')
+  const model = parts[0]
+  const parameters = parts[1] || ''
 
   try {
     const res = await ipcInvoke('chat:create_chat', {

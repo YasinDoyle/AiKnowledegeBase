@@ -12,8 +12,6 @@ import path from 'path'
 import { logger } from '../lib/utils'
 import { mcpService } from './mcp'
 import type { Stream } from 'openai/streaming'
-// @ts-expect-error no types available for punycode/
-import punycode from 'punycode/'
 
 // MCP配置对象
 export type McpConfig = {
@@ -27,7 +25,7 @@ export interface MCPToolResult {
 export interface ToolInfo {
   name: string
   description: string
-  is_active: boolean
+  isActive: boolean
 }
 
 export interface ServerConfig {
@@ -256,21 +254,20 @@ export class MCPClient {
   }
 
   /**
-   * 编码 Punycode
-   * @param {string} data - 要编码的字符串
-   * @returns {string} - 编码后的字符串
+   * 将服务器名转为 OpenAI function name 合法字符 [a-zA-Z0-9_-]
    */
-  private enPunycode(data: string): string {
-    return punycode.toASCII(data)
+  private sanitizeName(name: string): string {
+    return name.replace(/[^a-zA-Z0-9_-]/g, '_')
   }
 
   /**
-   * 解码 Punycode
-   * @param {string} data - 要解码的字符串
-   * @returns {string} - 解码后的字符串
+   * 根据 sanitize 后的名字查找原始服务器名
    */
-  private dePunycode(data: string): string {
-    return punycode.toUnicode(data)
+  private findServerName(sanitized: string): string | undefined {
+    for (const name of this.sessions.keys()) {
+      if (this.sanitizeName(name) === sanitized) return name
+    }
+    return undefined
   }
 
   /**
@@ -285,10 +282,11 @@ export class MCPClient {
     try {
       for (const [serverName, session] of this.sessions) {
         const response = await session.listTools()
+        const safeName = this.sanitizeName(serverName)
         const tools = response.tools.map((tool: Tool) => ({
           type: 'function' as const,
           function: {
-            name: `${this.enPunycode(serverName)}__${tool.name}`,
+            name: `${safeName}__${tool.name}`,
             description: `[${serverName}] ${tool.description}`,
             parameters: tool.inputSchema,
           },
@@ -334,8 +332,9 @@ export class MCPClient {
       if (!this.isValidToolCall(toolCall)) {
         continue
       }
-      let [serverName, toolName] = (toolCall as any).function.name.split('__')
-      serverName = this.dePunycode(serverName)
+      const [safeName, toolName] = (toolCall as any).function.name.split('__')
+      const serverName = this.findServerName(safeName)
+      if (!serverName) continue
       const session = this.sessions.get(serverName)
 
       if (!session) {
@@ -498,11 +497,14 @@ export class MCPClient {
             }
           }
         } else {
-          this.callback!(chunk)
+          const shouldContinue = await this.callback!(chunk)
+          if (shouldContinue === false) return messages
         }
       }
     }
-
+    // 调试
+    logger.info('toolCallMap:', JSON.stringify(toolCallMap))
+    logger.info('toolsContent:', toolsContent)
     // 处理工具调用
     if (Object.keys(toolCallMap).length > 0) {
       messages = await this.callTools(toolCallMap, messages, toolsContent)
@@ -608,6 +610,11 @@ export class MCPClient {
     }
     const availableTools = await this.getAllAvailableTools()
 
+    // 只取最后一条用户消息，避免完整历史导致 LLM 重复回答之前的问题
+    const lastUserIndex = messages.findLastIndex((m) => m.role === 'user')
+    const mcpMessages: ChatCompletionMessageParam[] =
+      lastUserIndex >= 0 ? [messages[lastUserIndex]] : [...messages]
+
     try {
       this.model = model
       this.openai = openai
@@ -615,7 +622,7 @@ export class MCPClient {
       this.callback = callback
 
       // 处理工具调用
-      await this.handleToolCalls(availableTools, messages)
+      await this.handleToolCalls(availableTools, mcpMessages)
     } catch (error) {
       // push("Failed to process query:" + error.message);
 

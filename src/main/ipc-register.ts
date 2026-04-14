@@ -51,6 +51,7 @@ export function registerIpcHandlers() {
   ipcMain.handle('chat:get_chat_info', (_e, args) => chatCtrl.get_chat_info(args))
   ipcMain.handle('chat:remove_chat', (_e, args) => chatCtrl.remove_chat(args))
   ipcMain.handle('chat:modify_chat_title', (_e, args) => chatCtrl.modify_chat_title(args))
+  ipcMain.handle('chat:change_model', (_e, args) => chatCtrl.change_model(args))
   ipcMain.handle('chat:delete_chat_history', (_e, args) => chatCtrl.delete_chat_history(args))
   ipcMain.handle('chat:stop_generate', (_e, args) => chatCtrl.stop_generate(args))
   ipcMain.handle('chat:get_last_chat_history', (_e, args) => chatCtrl.get_last_chat_history(args))
@@ -95,6 +96,10 @@ export function registerIpcHandlers() {
   ipcMain.handle('mcp:get_status', (_e, args) => mcpCtrl.get_status(args))
   ipcMain.handle('mcp:install_npx', (_e, args) => mcpCtrl.install_npx(args))
   ipcMain.handle('mcp:install_uv', (_e, args) => mcpCtrl.install_uv(args))
+  ipcMain.handle('mcp:get_env_install_progress', (_e, args) =>
+    mcpCtrl.get_env_install_progress(args),
+  )
+  ipcMain.handle('mcp:cancel_env_download', (_e, args) => mcpCtrl.cancel_env_download(args))
   ipcMain.handle('mcp:get_mcp_config_body', (_e, args) => mcpCtrl.get_mcp_config_body(args))
   ipcMain.handle('mcp:save_mcp_config_body', (_e, args) => mcpCtrl.save_mcp_config_body(args))
   ipcMain.handle('mcp:get_registry_list', (_e, args) => mcpCtrl.get_registry_list(args))
