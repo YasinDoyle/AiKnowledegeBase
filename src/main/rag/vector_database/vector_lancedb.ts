@@ -867,7 +867,8 @@ export class LanceDBManager {
         query = query.select(field)
       }
       const results = await query.toArray()
-      return results
+      // Arrow 对象含不可序列化类型（Buffer 等），必须深度转换为纯 JSON 才能通过 IPC 传输
+      return JSON.parse(JSON.stringify(results))
     } catch (error: any) {
       logger.error(`查询文档失败: ${error.message}`)
       return []

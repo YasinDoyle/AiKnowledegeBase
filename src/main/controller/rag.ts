@@ -53,7 +53,7 @@ class RagController {
   async create_rag(args: {
     ragName: string
     ragDesc: string
-    enbeddingModel?: string
+    embeddingModel?: string
     supplierName?: string
     searchStrategy: number // 检索策略 1=混合检索 2=向量检索 3=全文检索
     maxRecall: number // 最大召回数
@@ -68,7 +68,7 @@ class RagController {
     let {
       ragName,
       ragDesc,
-      enbeddingModel,
+      embeddingModel,
       supplierName,
       searchStrategy,
       maxRecall,
@@ -98,8 +98,8 @@ class RagController {
       return pub.return_error(pub.lang('知识库名称不能为vector_db'))
     }
 
-    if (!enbeddingModel) {
-      enbeddingModel = 'bge-m3:latest'
+    if (!embeddingModel) {
+      embeddingModel = 'bge-m3:latest'
     }
 
     if (!supplierName) {
@@ -124,7 +124,7 @@ class RagController {
       ragDesc: ragDesc, // 知识库描述
       ragCreateTime: pub.time(), // 创建时间
       supplierName: supplierName, // 嵌套模型供应商名称
-      embeddingModel: enbeddingModel, // 嵌套模型
+      embeddingModel: embeddingModel, // 嵌入模型
       searchStrategy: searchStrategy, // 检索策略 1=混合检索 2=向量检索 3=全文检索
       maxRecall: maxRecall, // 最大召回数
       recallAccuracy: recallAccuracy, // 召回精度

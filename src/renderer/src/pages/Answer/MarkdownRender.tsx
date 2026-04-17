@@ -174,7 +174,7 @@ export default function MarkdownRender({ content, searchResult, toolsResult }: P
             items={[
               {
                 key: 'search',
-                label: t('共参考{0}份资料', { 0: searchResult.length }),
+                label: t('共参考{{0}}份资料', { 0: searchResult.length }),
                 children: (
                   <List
                     size="small"

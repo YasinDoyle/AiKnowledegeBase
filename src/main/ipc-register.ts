@@ -38,6 +38,7 @@ export function registerIpcHandlers() {
   ipcMain.handle('index:set_language', (_e, args) => indexCtrl.set_language(args))
   ipcMain.handle('index:get_client_language', () => indexCtrl.get_client_language())
   ipcMain.handle('index:get_server_language', () => indexCtrl.get_server_language())
+  ipcMain.handle('index:select_file', (_e, args) => indexCtrl.select_file(args, _e))
   ipcMain.handle('index:select_folder', (_e, args) => indexCtrl.select_folder(args, _e))
   ipcMain.handle('index:write_logs', (_e, args) => indexCtrl.write_logs(args))
   ipcMain.handle('index:get_data_save_path', () => indexCtrl.get_data_save_path())

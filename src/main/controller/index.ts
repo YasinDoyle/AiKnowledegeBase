@@ -152,6 +152,34 @@ class IndexController {
   }
 
   /**
+   * 选择文件
+   * @param args - 参数
+   * @param event - 事件
+   */
+  async select_file(_args: unknown, _event: unknown): Promise<Result> {
+    const result = await dialog.showOpenDialog({
+      properties: ['openFile', 'multiSelections'],
+      title: pub.lang('选择文件'),
+      message: pub.lang('请选择文件'),
+      filters: [
+        {
+          name: pub.lang('支持的文件'),
+          extensions: ['txt', 'md', 'pdf', 'docx', 'xlsx', 'csv', 'html', 'json'],
+        },
+        { name: pub.lang('所有文件'), extensions: ['*'] },
+      ],
+    })
+
+    if (!result.canceled && result.filePaths.length > 0) {
+      return pub.return_success(pub.lang('选择成功'), {
+        files: result.filePaths,
+      })
+    }
+
+    return pub.return_error(pub.lang('未选择文件'))
+  }
+
+  /**
    * 选择目录
    * @param args - 参数
    * @param event - 事件

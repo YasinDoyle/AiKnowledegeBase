@@ -1,12 +1,18 @@
 import { Modal, Form, Input, Select, Slider } from 'antd'
 import { useTranslation } from 'react-i18next'
 import useKnowledgeStore from '@/stores/knowledge'
-import { closeCreateKnowledge, createNewKnowledgeStore, doSelectModel } from './controller'
+import {
+  closeCreateKnowledge,
+  createNewKnowledgeStore,
+  confirmModifyKnowledge,
+  doSelectModel,
+} from './controller'
 import { SliderMarks } from 'antd/es/slider'
 
 export default function CreateKnowledgeStore() {
   const { t } = useTranslation()
   const show = useKnowledgeStore((s) => s.createKnowledgeShow)
+  const isEdit = useKnowledgeStore((s) => s.isEditKnowledge)
   const formData = useKnowledgeStore((s) => s.createKnowledgeFormData)
   const embeddingModels = useKnowledgeStore((s) => s.embeddingModelsList)
   const setFormData = useKnowledgeStore((s) => s.setCreateKnowledgeFormData)
@@ -25,8 +31,8 @@ export default function CreateKnowledgeStore() {
     <Modal
       open={show}
       onCancel={closeCreateKnowledge}
-      onOk={createNewKnowledgeStore}
-      title={t('创建知识库')}
+      onOk={isEdit ? confirmModifyKnowledge : createNewKnowledgeStore}
+      title={isEdit ? t('修改知识库') : t('创建知识库')}
       width={520}
       destroyOnClose
     >
@@ -36,6 +42,7 @@ export default function CreateKnowledgeStore() {
             placeholder={t('请输入知识库名称')}
             value={formData.ragName}
             onChange={(e) => setFormData({ ragName: e.target.value })}
+            disabled={isEdit}
           />
         </Form.Item>
         <Form.Item label={t('描述')}>
@@ -61,7 +68,7 @@ export default function CreateKnowledgeStore() {
             value={formData.maxRecall ?? 5}
             onChange={(v) => setFormData({ maxRecall: v })}
           />
-          <span className="text-3 text-gray-4">
+          <span className="text-15 text-gray-4">
             {t('检索知识库时的最大返回条数，建议：本地模型3条，线上模型5条')}
           </span>
         </Form.Item>

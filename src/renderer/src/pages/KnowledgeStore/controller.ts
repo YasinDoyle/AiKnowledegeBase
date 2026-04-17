@@ -21,7 +21,7 @@ export async function getRagList() {
 /** 获取知识库文档列表 */
 export async function getRagDocList(ragName: string) {
   try {
-    const res = await ipcInvoke('rag:get_doc_list', { ragName })
+    const res = await ipcInvoke('rag:get_rag_doc_list', { ragName })
     if (res.code === 200) {
       useKnowledgeStore.getState().setActiveKnowledgeDocList(res.message)
     }
@@ -34,6 +34,7 @@ export async function getRagDocList(ragName: string) {
 export async function singleActive(ragName: string) {
   const store = useKnowledgeStore.getState()
   store.setActiveKnowledge(ragName)
+  store.setDocContent('')
   const found = store.knowledgeList.find((k) => k.ragName === ragName)
   store.setActiveKnowledgeDto(found || null)
   await getRagDocList(ragName)
@@ -49,15 +50,18 @@ export async function openKnowledgeStore() {
 }
 
 /** 打开创建知识库弹窗 */
-export function openCreateKnowledge() {
+export async function openCreateKnowledge() {
   const store = useKnowledgeStore.getState()
   store.resetCreateKnowledgeFormData()
   store.setCreateKnowledgeShow(true)
+  await getEmbeddingModels()
 }
 
 /** 关闭创建知识库弹窗 */
 export function closeCreateKnowledge() {
-  useKnowledgeStore.getState().setCreateKnowledgeShow(false)
+  const store = useKnowledgeStore.getState()
+  store.setCreateKnowledgeShow(false)
+  store.setIsEditKnowledge(false)
 }
 
 /** 创建新知识库 */
@@ -134,6 +138,47 @@ export async function modifyRag(params: Record<string, any>) {
     }
   } catch (err) {
     console.error('modifyRag', err)
+  }
+}
+
+/** 打开修改知识库弹窗（复用创建弹窗） */
+export async function openModifyKnowledge(knowledgeInfo: {
+  ragName: string
+  ragDesc?: string
+  embeddingModel?: string
+  supplierName?: string
+  maxRecall?: number
+}) {
+  const store = useKnowledgeStore.getState()
+  store.setIsEditKnowledge(true)
+  store.setCreateKnowledgeFormData({
+    ragName: knowledgeInfo.ragName,
+    ragDesc: knowledgeInfo.ragDesc || '',
+    embeddingModel: knowledgeInfo.embeddingModel || '',
+    supplierName: knowledgeInfo.supplierName || '',
+    maxRecall: knowledgeInfo.maxRecall ?? 5,
+  })
+  store.setCreateKnowledgeShow(true)
+  await getEmbeddingModels()
+}
+
+/** 确认修改知识库 */
+export async function confirmModifyKnowledge() {
+  const store = useKnowledgeStore.getState()
+  const { createKnowledgeFormData } = store
+  try {
+    const res = await ipcInvoke('rag:modify_rag', createKnowledgeFormData)
+    if (res.code === 200) {
+      message.success(t('修改知识库成功'))
+      store.setCreateKnowledgeShow(false)
+      store.setIsEditKnowledge(false)
+      store.resetCreateKnowledgeFormData()
+      await getRagList()
+    } else {
+      message.error(res.msg || t('修改知识库失败'))
+    }
+  } catch (err) {
+    console.error('confirmModifyKnowledge', err)
   }
 }
 

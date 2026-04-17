@@ -213,20 +213,21 @@ class OllamaService {
           const arr = model.name.split(':')
           const modelSrc = {
             full_name: model.name,
-            name: arr[1],
-            parameters: '',
+            name: arr[0],
+            parameters: model.details?.parameter_size || '',
             size: pub.bytesChange(model.size),
             msg: '',
             zh_cn_msg: '',
-            link: '',
+            link: `https://ollama.com/library/${arr[0]}`,
             pull_count: 0,
             tag_count: 0,
             updated: '',
             updated_time: 0,
-            capability: [],
+            capability: [] as string[],
           }
 
           // 读取模型的详细信息
+          let matched = false
           for (const modelInfo of modelListSrc) {
             if (modelInfo['name'].toLowerCase() === arr[0]) {
               modelSrc['pull_count'] = modelInfo.pull_count
@@ -237,7 +238,35 @@ class OllamaService {
               modelSrc['zh_cn_msg'] = modelInfo.zh_cn_msg
               modelSrc['msg'] = modelInfo.msg
               modelSrc['link'] = modelInfo.link
+              matched = true
               break
+            }
+          }
+
+          // 如果在预置列表中没有匹配到，通过 ollama.show 获取模型详细信息
+          if (!matched || modelSrc.capability.length === 0) {
+            try {
+              const showInfo = await ollama.show({ model: model.name })
+              // 使用 ollama 返回的 capabilities
+              if (showInfo.capabilities && showInfo.capabilities.length > 0) {
+                modelSrc.capability = [...showInfo.capabilities]
+              } else {
+                // 兜底：根据模型族信息推断
+                const families = showInfo.details?.families || []
+                const family = showInfo.details?.family || ''
+                if (families.some((f: string) => f.includes('bert')) || family.includes('bert')) {
+                  modelSrc.capability = ['embedding']
+                } else {
+                  modelSrc.capability = ['llm']
+                }
+              }
+              // 补充 parameters
+              if (!modelSrc.parameters && showInfo.details?.parameter_size) {
+                modelSrc.parameters = showInfo.details.parameter_size
+              }
+            } catch (e) {
+              logger.error(`Failed to get show info for model ${model.name}:`, e)
+              modelSrc.capability = ['llm']
             }
           }
 

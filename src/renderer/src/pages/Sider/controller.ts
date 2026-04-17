@@ -8,7 +8,7 @@ import useChatToolsStore from '@/stores/chatTools'
 import useKnowledgeStore from '@/stores/knowledge'
 import useAgentStore from '@/stores/agent'
 import useChatContentStore from '@/stores/chatContent'
-import { openDelKnowledge, optimizeTable, singleActive } from '../KnowledgeStore/controller'
+import { openDelKnowledge, optimizeTable, openModifyKnowledge } from '../KnowledgeStore/controller'
 import { eventBus } from '@/utils/tools'
 import type { ChatInfo, ChatItemInfo } from '@/types'
 
@@ -260,6 +260,10 @@ export async function handleChoose(chat: ChatItemInfo) {
     supplierName: chat.supplierName!,
   })
 
+  // 如果当前在知识库视图，切换回聊天视图
+  knowledge.setActiveKnowledge(null)
+  knowledge.setActiveKnowledgeDto(null)
+
   getChatInfo(chat.context_id)
   knowledge.setActiveKnowledgeForChat(chat.rag_list || [])
   chatTools.setNetActive(!!chat.search_type)
@@ -310,7 +314,10 @@ export function dealPopOperation(val: string, knowledge: { ragName: string }) {
     knowledgeStore.setActiveKnowledge(knowledge.ragName)
     openDelKnowledge()
   } else if (val === 'modifyTitle') {
-    singleActive(knowledge.ragName)
+    const found = knowledgeStore.knowledgeList.find((k) => k.ragName === knowledge.ragName)
+    if (found) {
+      openModifyKnowledge(found)
+    }
   } else if (val === 'optimization') {
     optimizeTable(knowledge.ragName)
   }

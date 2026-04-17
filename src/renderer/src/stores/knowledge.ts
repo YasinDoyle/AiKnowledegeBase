@@ -47,6 +47,8 @@ interface KnowledgeState {
   knowledgeChoosePanelShow: boolean
   // 文档通用配置
   knowledgeDocConfigShow: boolean
+  // 编辑知识库模式
+  isEditKnowledge: boolean
 
   setKnowledgeList: (l: KnowledgeDocumentInfo[]) => void
   setActiveKnowledge: (k: string | null) => void
@@ -75,6 +77,7 @@ interface KnowledgeState {
   setKnowledgeChoosePanelShow: (v: boolean) => void
   setKnowledgeDocConfigShow: (v: boolean) => void
   setActiveKnowledgeDocList: (l: ActiveKnowledgeDocDto[]) => void
+  setIsEditKnowledge: (v: boolean) => void
 }
 
 const defaultCreateForm: CreateKnowledgeFormData = {
@@ -120,6 +123,7 @@ const useKnowledgeStore = create<KnowledgeState>((set) => ({
   optimizeKnowledgeShow: false,
   knowledgeChoosePanelShow: false,
   knowledgeDocConfigShow: false,
+  isEditKnowledge: false,
 
   setKnowledgeList: (l) => set({ knowledgeList: l }),
   setActiveKnowledge: (k) => set({ activeKnowledge: k }),
@@ -150,6 +154,7 @@ const useKnowledgeStore = create<KnowledgeState>((set) => ({
   setKnowledgeChoosePanelShow: (v) => set({ knowledgeChoosePanelShow: v }),
   setKnowledgeDocConfigShow: (v) => set({ knowledgeDocConfigShow: v }),
   setActiveKnowledgeDocList: (l) => set({ activeKnowledgeDocList: l }),
+  setIsEditKnowledge: (v) => set({ isEditKnowledge: v }),
 }))
 
 export default useKnowledgeStore

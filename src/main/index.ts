@@ -97,6 +97,15 @@ if (!gotTheLock) {
     if (app.isPackaged) {
       autoUpdaterService.create()
     }
+
+    // RAG 后台任务：延迟 1 秒启动解析/嵌入轮询 + 创建余弦索引
+    setTimeout(() => {
+      import('./rag/rag_task').then(({ RagTask }) => {
+        const ragTaskObj = new RagTask()
+        ragTaskObj.parseTask()
+        ragTaskObj.switchToCosineIndex()
+      })
+    }, 1000)
   })
 }
 
