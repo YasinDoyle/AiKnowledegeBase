@@ -25,15 +25,26 @@ export async function ipcInvoke<T = any>(channel: string, params?: T): Promise<I
 }
 
 /**
+ * listener 注册表：存储 listener → preload 返回的 ID，用于 off 时精确移除
+ */
+const listenerIdMap = new Map<Function, number>()
+
+/**
  * 监听主进程推送的消息（用于流式数据等）
+ * preload on() 返回数字 ID，contextBridge 同步传递原始类型
  */
 export function ipcOn(channel: string, listener: (...args: any[]) => void) {
-  window.ipcRenderer.on(channel, listener)
+  const id = (window.ipcRenderer as any).on(channel, listener) as number
+  listenerIdMap.set(listener, id)
 }
 
 /**
  * 移除监听
  */
 export function ipcOff(channel: string, listener: (...args: any[]) => void) {
-  window.ipcRenderer.off(channel, listener)
+  const id = listenerIdMap.get(listener)
+  if (id != null) {
+    window.ipcRenderer.off(channel, id as any)
+    listenerIdMap.delete(listener)
+  }
 }

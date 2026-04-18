@@ -68,9 +68,16 @@ export function answerAgain(question: MultipeQuestionDto, id: string) {
   // 避免创建新 key 对象导致 Map 追加重复条目
   const strippedContent = question.content.replace(/^\d+--/, '')
   let existingKey: MultipeQuestionDto | null = null
-  for (const [key] of chatContent.chatHistory) {
-    if (key.content === strippedContent || key.content === question.content) {
-      existingKey = key
+
+  // 优先用引用相等匹配（最精确，不会误匹配重复内容的条目）
+  if (chatContent.chatHistory.has(question)) {
+    existingKey = question
+  } else {
+    // 引用丢失（例如 getChatInfo 重建了 Map），退回到按 content 匹配
+    for (const [key] of chatContent.chatHistory) {
+      if (key.content === strippedContent || key.content === question.content) {
+        existingKey = key
+      }
     }
   }
 

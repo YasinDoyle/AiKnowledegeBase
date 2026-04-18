@@ -1,14 +1,24 @@
 import { ipcRenderer, contextBridge } from 'electron'
 
+// contextIsolation 下函数引用跨 bridge 无法匹配，用自增 ID 跟踪 listener
+let nextListenerId = 1
+const listenerRegistry = new Map<number, (...args: any[]) => void>()
+
 // --------- Expose some API to the Renderer process ---------
 contextBridge.exposeInMainWorld('ipcRenderer', {
-  on(...args: Parameters<typeof ipcRenderer.on>) {
-    const [channel, listener] = args
-    return ipcRenderer.on(channel, (event, ...args) => listener(event, ...args))
+  on(channel: string, listener: (...args: any[]) => void): number {
+    const id = nextListenerId++
+    const wrapper = (event: Electron.IpcRendererEvent, ...args: any[]) => listener(event, ...args)
+    listenerRegistry.set(id, wrapper)
+    ipcRenderer.on(channel, wrapper)
+    return id
   },
-  off(...args: Parameters<typeof ipcRenderer.off>) {
-    const [channel, ...omit] = args
-    return ipcRenderer.off(channel, ...omit)
+  off(channel: string, id: number) {
+    const wrapper = listenerRegistry.get(id)
+    if (wrapper) {
+      ipcRenderer.off(channel, wrapper)
+      listenerRegistry.delete(id)
+    }
   },
   send(...args: Parameters<typeof ipcRenderer.send>) {
     const [channel, ...omit] = args

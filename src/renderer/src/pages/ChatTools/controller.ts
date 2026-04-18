@@ -28,7 +28,7 @@ type ChatParams = {
 
 export async function sendChat(params: ChatParams, multiModelList?: MultipleModelListDto[]) {
   const header = useHeaderStore.getState()
-  const sider = useSiderStore.getState()
+  let sider = useSiderStore.getState()
   const softSettings = useSoftSettingsStore.getState()
   const chatContent = useChatContentStore.getState()
   const knowledge = useKnowledgeStore.getState()
@@ -55,6 +55,8 @@ export async function sendChat(params: ChatParams, multiModelList?: MultipleMode
   try {
     if (!sider.currentContextId) {
       await createChat()
+      // createChat 内部更新了 store 中的 currentContextId，刷新快照以获取最新值
+      sider = useSiderStore.getState()
     }
 
     chatContent.setCurrentTalkingChatId(sider.currentContextId)

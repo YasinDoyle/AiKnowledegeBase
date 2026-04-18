@@ -12,7 +12,6 @@ interface AgentState {
   agentShow: boolean
   agentList: AgentItemDto[]
   chatForAgent: boolean
-  currentAgent: AgentItemDto | null
   currentChatAgent: AgentItemDto | null
   createAgentShow: boolean
   createAgentFormData: CreateAgentFormData
@@ -23,7 +22,6 @@ interface AgentState {
   setAgentShow: (v: boolean) => void
   setAgentList: (l: AgentItemDto[]) => void
   setChatForAgent: (v: boolean) => void
-  setCurrentAgent: (a: AgentItemDto | null) => void
   setCurrentChatAgent: (a: AgentItemDto | null) => void
   setCreateAgentShow: (v: boolean) => void
   setCreateAgentFormData: (d: Partial<CreateAgentFormData>) => void
@@ -44,7 +42,6 @@ const useAgentStore = create<AgentState>((set) => ({
   agentShow: false,
   agentList: [],
   chatForAgent: false,
-  currentAgent: null,
   currentChatAgent: null,
   createAgentShow: false,
   createAgentFormData: { ...defaultFormData },
@@ -55,7 +52,6 @@ const useAgentStore = create<AgentState>((set) => ({
   setAgentShow: (v) => set({ agentShow: v }),
   setAgentList: (l) => set({ agentList: l }),
   setChatForAgent: (v) => set({ chatForAgent: v }),
-  setCurrentAgent: (a) => set({ currentAgent: a }),
   setCurrentChatAgent: (a) => set({ currentChatAgent: a }),
   setCreateAgentShow: (v) => set({ createAgentShow: v }),
   setCreateAgentFormData: (d) =>

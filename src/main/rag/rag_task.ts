@@ -548,7 +548,7 @@ export class RagTask {
         }
       }
 
-      // 更新知识库FIT索引
+      // 更新知识库FTS索引
       for (let ragName of ragNameList) {
         const encryptTableName = pub.md5(ragName)
         await LanceDBManager.createDocFtsIndex(encryptTableName)

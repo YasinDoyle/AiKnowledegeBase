@@ -80,8 +80,8 @@ export function createNewComu() {
   knowledge.setActiveKnowledgeDto(null)
 
   // 如果是智能体对话
-  if (agent.chatForAgent && agent.currentAgent) {
-    sider.setCurrentChatTitle(agent.currentAgent.agent_name)
+  if (agent.chatForAgent && agent.currentChatAgent) {
+    sider.setCurrentChatTitle(agent.currentChatAgent.agent_name)
   }
 
   knowledgeIsClose()
@@ -105,12 +105,11 @@ export async function createChat() {
       model,
       parameters,
       title: chatTools.questionContent,
-      agent_name: agent.currentAgent?.agent_name,
+      agent_name: agent.currentChatAgent?.agent_name,
     })
     sider.setCurrentContextId(res.message.context_id)
     await getChatList()
     agent.setChatForAgent(false)
-    agent.setCurrentAgent(null)
   } catch (error) {
     console.error(error)
   }
