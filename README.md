@@ -9,6 +9,10 @@
 
 ![screenshot](./docs/images/screenshot.png)
 
+## 特别说明
+
+[原项目](https://github.com/aingdesk/AingDesk)基于Vue+ElectronEgg框架，出于学习的目的，基于React重写了该项目。
+
 ## 功能特性
 
 - **本地模型对话** — 基于 Ollama 运行本地 LLM，数据完全离线，隐私安全
