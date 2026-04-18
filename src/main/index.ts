@@ -30,7 +30,7 @@ function createWindow() {
     minHeight: 300,
     frame: true,
     show: false, // 先隐藏，ready-to-show 再显示，避免白屏
-    icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
+    icon: path.join(process.env.VITE_PUBLIC, 'logo.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
       contextIsolation: true, // 安全：开启上下文隔离
